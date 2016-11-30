@@ -4,3 +4,10 @@
 Homestead.yaml
 Homestead.json
 .env
+
+### PhpStorm ###
+/*.iml
+.idea/
+*.ipr
+*.iws
+out/

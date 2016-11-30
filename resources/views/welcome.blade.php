@@ -9,27 +9,23 @@
             html, body {
                 height: 100%;
             }
-
             body {
                 margin: 0;
                 padding: 0;
                 width: 100%;
                 display: table;
                 font-weight: 100;
-                font-family: 'Lato';
+                font-family: 'Lato', serif;
             }
-
             .container {
                 text-align: center;
                 display: table-cell;
                 vertical-align: middle;
             }
-
             .content {
                 text-align: center;
                 display: inline-block;
             }
-
             .title {
                 font-size: 96px;
             }
@@ -38,7 +34,10 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">TOM</div>
+                @if ($login_url)
+                    <a href="{{ $login_url }}">Iniciar sesión con Facebook</a>
+                @endif
             </div>
         </div>
     </body>
