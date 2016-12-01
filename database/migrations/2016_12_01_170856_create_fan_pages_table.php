@@ -23,6 +23,9 @@ class CreateFanPagesTable extends Migration
             $table->string('name');
             $table->string('category');
 
+            // Picture
+            $table->string('picture_200')->nullable();
+
             $table->timestamps();
         });
     }

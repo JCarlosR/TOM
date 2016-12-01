@@ -45,6 +45,12 @@ class HomeController extends Controller
             $fanPages->add($fanPage);
         }
 
-        return view('home')->with(compact('fanPages'));
+        return view('panel.home')->with(compact('fanPages'));
+    }
+
+    public function config()
+    {
+        $fanPages = auth()->user()->fanPages;
+        return view('panel.config')->with(compact('fanPages'));
     }
 }

@@ -1,22 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.home')
 
-@section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
+@section('dashboard_content')
+    <div class="col-md-10">
             <div class="panel panel-info">
-                <div class="panel-heading">Navegación</div>
-                <div class="panel-body">
-                    <a class="list-group-item" href="{{ url('/home') }}">Datos</a>
-                    <a class="list-group-item" href="{{ url('/config') }}">Configuración</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-10">
-            <div class="panel panel-info">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Datos principales</div>
 
                 <div class="panel-body">
                     @if (session('message'))
@@ -62,6 +49,4 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 @endsection
