@@ -9,6 +9,11 @@ class User extends Authenticatable
 {
     use SyncableGraphNodeTrait;
 
+    protected static $graph_node_field_aliases = [
+        'location.id' => 'location_id',
+        'location.name' => 'location_name'
+    ];
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
