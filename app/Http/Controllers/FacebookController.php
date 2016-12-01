@@ -19,7 +19,6 @@ class FacebookController extends Controller
         // Send an array of permissions to request
         $login_url = $fb->getLoginUrl(['email']);
 
-        // Obviously you'd do this in blade :)
         // return '<a href="' . $login_url . '">Login with Facebook</a>';
         return view('auth.facebook_login')->with(compact('login_url'));
     }

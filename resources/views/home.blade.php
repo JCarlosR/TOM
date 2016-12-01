@@ -8,10 +8,13 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    <p>You are logged in!</p>
                     @if (session('message'))
-                        <p>{{ session('message') }}</p>
+                        <div class="alert alert-success">
+                            <p>{{ session('message') }}</p>
+                        </div>
                     @endif
+
+                    <h3>Bienvenido {{ auth()->user()->name }} !</h3>
                 </div>
             </div>
         </div>
