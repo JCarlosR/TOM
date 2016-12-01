@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class FacebookController extends Controller
@@ -55,7 +58,7 @@ class FacebookController extends Controller
             // Extend the access token.
             try {
                 $token = $oauth_client->getLongLivedAccessToken($token);
-            } catch (Facebook\Exceptions\FacebookSDKException $e) {
+            } catch (FacebookSDKException $e) {
                 dd($e->getMessage());
             }
         }
@@ -68,7 +71,7 @@ class FacebookController extends Controller
         // Get basic info on the user from Facebook.
         try {
             $response = $fb->get('/me?fields=id,name,email');
-        } catch (Facebook\Exceptions\FacebookSDKException $e) {
+        } catch (FacebookSDKException $e) {
             dd($e->getMessage());
         }
 
@@ -77,11 +80,11 @@ class FacebookController extends Controller
 
         // Create the user if it does not exist or update the existing entry.
         // This will only work if you've added the SyncableGraphNodeTrait to your User model.
-        $user = App\User::createOrUpdateGraphNode($facebook_user);
+        $user = User::createOrUpdateGraphNode($facebook_user);
 
         // Log the user into Laravel
         Auth::login($user);
 
-        return redirect('/')->with('message', 'Successfully logged in with Facebook');
+        return redirect('/home')->with('message', 'Successfully logged in with Facebook');
     }
 }
