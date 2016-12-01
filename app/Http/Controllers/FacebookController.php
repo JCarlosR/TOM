@@ -13,6 +13,7 @@ use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class FacebookController extends Controller
 {
+
     public function login(LaravelFacebookSdk $fb)
     {
         // Send an array of permissions to request
@@ -25,7 +26,7 @@ class FacebookController extends Controller
 
     public function callback(LaravelFacebookSdk $fb)
     {
-        // Obtain an access token.
+        // Obtain an access token
         try {
             $token = $fb->getAccessTokenFromRedirect();
         } catch (FacebookSDKException $e) {
