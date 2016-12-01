@@ -17,7 +17,7 @@ class FacebookController extends Controller
     public function login(LaravelFacebookSdk $fb)
     {
         // Send an array of permissions to request
-        $login_url = $fb->getLoginUrl(['email']);
+        $login_url = $fb->getLoginUrl(['email', 'user_location']);
 
         // return '<a href="' . $login_url . '">Login with Facebook</a>';
         return view('auth.facebook_login')->with(compact('login_url'));
@@ -70,7 +70,7 @@ class FacebookController extends Controller
 
         // Get basic info on the user from Facebook.
         try {
-            $response = $fb->get('/me?fields=id,name,email');
+            $response = $fb->get('/me?fields=id,name,email,location');
         } catch (FacebookSDKException $e) {
             dd($e->getMessage());
         }
@@ -85,6 +85,6 @@ class FacebookController extends Controller
         // Log the user into Laravel
         Auth::login($user);
 
-        return redirect('/home')->with('message', 'Successfully logged in with Facebook');
+        return redirect('/home')->with('message', 'Ha iniciado sesión correctamente con Facebook !');
     }
 }
