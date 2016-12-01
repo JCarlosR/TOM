@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -15,8 +16,8 @@ class FacebookController extends Controller
         $login_url = $fb->getLoginUrl(['email']);
 
         // Obviously you'd do this in blade :)
-        // echo '<a href="' . $login_url . '">Login with Facebook</a>';
-        return view('welcome')->with(compact('login_url'));
+        return '<a href="' . $login_url . '">Login with Facebook</a>';
+        // return view('welcome')->with(compact('login_url'));
     }
 
     public function callback(LaravelFacebookSdk $fb)
@@ -24,7 +25,7 @@ class FacebookController extends Controller
         // Obtain an access token.
         try {
             $token = $fb->getAccessTokenFromRedirect();
-        } catch (FacebookSd $e) {
+        } catch (FacebookSDKException $e) {
             dd($e->getMessage());
         }
 
