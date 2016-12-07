@@ -12,5 +12,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/config', 'HomeController@config');
 Route::get('/config/page/{id}', 'FanPageController@index');
 
-// New promotion
+// Promotions
 Route::post('/promotion', 'PromotionController@store');
+Route::get('/promotion/{id}', 'PromotionController@show');

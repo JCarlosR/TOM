@@ -6,6 +6,7 @@ use App\Promotion;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Intervention\Image\Facades\Image;
 
 class PromotionController extends Controller
 {
@@ -39,10 +40,36 @@ class PromotionController extends Controller
             'fan_page_id' => $request->get('fan_page_id'),
             'description' => $request->get('description'),
             'end_date' => $request->get('end_date'),
-            'image' => ,
+            'image' => '',
             'attempts' => $request->get('attempts')
         ]);
 
+        // TODO: Use transactions
+
+        $user = auth()->user();
+        $extension = $request->file('image')->getClientOriginalExtension();
+        $file_name = $promotion->id . '.' . $extension;
+
+        $path = public_path('images/promotions/' . $file_name);
+
+        Image::make($request->file('image'))
+            ->fit(1280, 720, function ($c) {
+                $c->upsize(); // don't resize smaller images
+            })
+            ->save($path);
+
+        $promotion->image = $extension;
+        $promotion->save();
+
         return redirect('promotion/'.$promotion->id);
+    }
+
+    public function show($id)
+    {
+        $promotion = Promotion::find($id);
+        if (! $promotion)
+            return redirect('/');
+
+        return view('promotion.show')->with(compact('promotion'));
     }
 }
