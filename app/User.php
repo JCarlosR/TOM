@@ -10,6 +10,7 @@ class User extends Authenticatable
     use SyncableGraphNodeTrait;
 
     protected static $graph_node_field_aliases = [
+        'id' => 'facebook_user_id',
         'location.id' => 'location_id',
         'location.name' => 'location_name'
     ];

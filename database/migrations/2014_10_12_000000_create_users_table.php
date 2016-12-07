@@ -14,10 +14,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('password'); // Temporary is not used
 
+            // Facebook data
+            $table->string('facebook_user_id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('password');
 
             // Location
             $table->string('location_id');

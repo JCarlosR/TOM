@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('styles')
+    <style>
+        .img-responsive {
+            margin: 0 auto;
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="container-fluid">
     <div class="row">
