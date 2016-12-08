@@ -30,7 +30,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
 
-            // appending custom middleware
+            // the custom middleware isn't necessary because CloudFlare performs the redirect
             // \App\Http\Middleware\HttpsProtocol::class
         ],
 

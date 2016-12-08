@@ -15,6 +15,8 @@ class HttpsProtocol
      */
     public function handle($request, Closure $next)
     {
+        // the custom middleware isn't necessary because CloudFlare performs the redirect
+
         if (!$request->secure() && env('REDIRECT_HTTPS')) {
             return redirect()->secure($request->getRequestUri());
         }
