@@ -31,7 +31,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
 
             // appending custom middleware
-            \App\Http\Middleware\HttpsProtocol::class
+            // \App\Http\Middleware\HttpsProtocol::class
         ],
 
         'api' => [
