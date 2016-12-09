@@ -124,6 +124,7 @@ class PromotionController extends Controller
 
         // Now we can perform a Facebook SDK request
         $fanPageId = $promotion->fanPage->fan_page_id;
+        dd($fanPageId);
         $query = "/me/likes/$fanPageId";
         try {
             $response = $fb->get($query);
