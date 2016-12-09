@@ -131,7 +131,7 @@ class PromotionController extends Controller
         } catch (FacebookSDKException $e) {
             dd($e->getMessage());
         }
-
+        dd($response);
         // Parse the response
         $graphEdge = $response->getGraphEdge();
         dd($graphEdge);
