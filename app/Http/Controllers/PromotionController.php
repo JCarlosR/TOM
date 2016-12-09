@@ -133,8 +133,8 @@ class PromotionController extends Controller
         }
 
         // Parse the response
-        $graphNode = $response->getGraphNode();
-        dd($graphNode);
+        $graphEdge = $response->getGraphEdge();
+        dd($graphEdge);
 
         return view('promotion.show')->with(compact('promotion'));
     }
