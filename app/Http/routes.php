@@ -14,5 +14,5 @@ Route::get('/config/page/{id}', 'FanPageController@index');
 
 // Promotions
 Route::post('/promotion', 'PromotionController@store');
-// Route::get('/promotion/{id}', 'PromotionController@show');
-Route::match(['get', 'post'], '/promotion/{id}', 'PromotionController@show');
+Route::get('/promotion/{id}', 'PromotionController@show');
+Route::match(['get', 'post'], '/facebook/promotion/{id}', 'PromotionController@showFacebookTab');

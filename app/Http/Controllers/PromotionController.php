@@ -66,7 +66,16 @@ class PromotionController extends Controller
         return redirect('promotion/'.$promotion->id);
     }
 
-    public function show($id, LaravelFacebookSdk $fb)
+    public function show($id)
+    {
+        $promotion = Promotion::find($id);
+        if (! $promotion)
+            return redirect('/');
+
+        return view('promotion.show')->with(compact('promotion'));
+    }
+
+    public function showFacebookTab($id, LaravelFacebookSdk $fb)
     {
         // Get the appropriate promotion or redirect
         $promotion = Promotion::find($id);
