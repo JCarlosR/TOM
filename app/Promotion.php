@@ -13,7 +13,7 @@ class Promotion extends Model
         return $this->id . '.' . $this->image;
     }
 
-    public function page()
+    public function fanPage()
     {
         return $this->belongsTo('App\FanPage');
     }
