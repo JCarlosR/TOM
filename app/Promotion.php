@@ -12,4 +12,9 @@ class Promotion extends Model
     {
         return $this->id . '.' . $this->image;
     }
+
+    public function page()
+    {
+        return $this->belongsTo('App\FanPage');
+    }
 }

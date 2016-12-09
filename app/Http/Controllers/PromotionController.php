@@ -123,6 +123,15 @@ class PromotionController extends Controller
         Session::put('fb_user_access_token', (string) $token);
 
         // Now we can perform a Facebook SDK request
+        $fanPageId = $promotion->page->fan_page_id;
+        $query = "/me/likes/$fanPageId";
+        try {
+            $response = $fb->get($query);
+        } catch (FacebookSDKException $e) {
+            dd($e->getMessage());
+        }
+
+        dd($response);
 
         return view('promotion.show')->with(compact('promotion'));
     }
