@@ -23,7 +23,7 @@ class FacebookController extends Controller
         return view('auth.facebook_login')->with(compact('login_url'));
     }
 
-    public function callback(LaravelFacebookSdk $fb)
+    public function callback(LaravelFacebookSdk $fb, Request $request)
     {
         // Obtain an access token
         try {
@@ -84,6 +84,11 @@ class FacebookController extends Controller
 
         // Log the user into Laravel
         Auth::login($user);
+
+        // If the promotion param exists redirect to the proper TOM page
+        $promotion_id = $request->get('promotion');
+        if ($promotion_id)
+            return redirect('/facebook/promotion/'.$promotion_id);
 
         return redirect('/home')->with('message', 'Ha iniciado sesión correctamente con Facebook !');
     }

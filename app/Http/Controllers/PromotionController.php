@@ -91,20 +91,10 @@ class PromotionController extends Controller
         }
         // $token will be null if the user hasn't authenticated your app yet
         if (! $token) {
-            // Get the redirect helper
-            $helper = $fb->getRedirectLoginHelper();
+            $loginLink = $fb
+                ->getLoginUrl('/facebook/callback?promotion='.$promotion->id, ['email', 'user_location', 'user_likes']);
 
-            if (! $helper->getError()) {
-                abort(403, 'Unauthorized action.');
-            }
-
-            // User denied the request
-            dd(
-                $helper->getError(),
-                $helper->getErrorCode(),
-                $helper->getErrorReason(),
-                $helper->getErrorDescription()
-            );
+            return redirect($loginLink);
         }
         if (! $token->isLongLived()) {
             // OAuth 2.0 client handler
