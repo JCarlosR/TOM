@@ -94,7 +94,10 @@ class PromotionController extends Controller
             $loginLink = $fb->getRedirectLoginHelper()
                 ->getLoginUrl('/facebook/callback?promotion='.$promotion->id, ['email', 'user_location', 'user_likes']);
 
-            return redirect($loginLink);
+            $htmlResponse = "<script>" .
+                "window.top.location = '$loginLink';" .
+                "</script>";
+            return $htmlResponse;
         }
         if (! $token->isLongLived()) {
             // OAuth 2.0 client handler
