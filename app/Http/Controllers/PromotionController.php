@@ -124,7 +124,7 @@ class PromotionController extends Controller
 
         // Now we can perform a Facebook SDK request
         $fanPageId = $promotion->fanPage->fan_page_id;
-        dd($fanPageId);
+
         $query = "/me/likes/$fanPageId";
         try {
             $response = $fb->get($query);
@@ -132,7 +132,9 @@ class PromotionController extends Controller
             dd($e->getMessage());
         }
 
-        dd($response);
+        // Parse the response
+        $graphNode = $response->getGraphNode();
+        dd($graphNode);
 
         return view('promotion.show')->with(compact('promotion'));
     }
