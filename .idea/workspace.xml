@@ -54,18 +54,18 @@
       <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="117" column="54" lean-forward="false" selection-start-line="117" selection-start-column="54" selection-end-line="117" selection-end-column="54" />
+            <state relative-caret-position="249">
+              <caret line="117" column="47" lean-forward="false" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Promotion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Promotion.php">
+      <file leaf-file-name="FacebookPageTabHelper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Helpers/FacebookPageTabHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="-187">
+              <caret line="66" column="20" lean-forward="false" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -335,12 +335,12 @@
       <workItem from="1481163869503" duration="1683000" />
       <workItem from="1481214485069" duration="595000" />
       <workItem from="1481241643923" duration="5759000" />
-      <workItem from="1481284843311" duration="2833000" />
+      <workItem from="1481284843311" duration="3026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45189000" />
+    <option name="totallyTimeSpent" value="45382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="738" extended-state="0" />
@@ -383,13 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/fan_page.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -742,10 +735,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Helpers/FacebookPageTabHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="66" column="20" lean-forward="false" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="117" column="54" lean-forward="false" selection-start-line="117" selection-start-column="54" selection-end-line="117" selection-end-column="54" />
+        <state relative-caret-position="249">
+          <caret line="117" column="47" lean-forward="false" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
           <folding />
         </state>
       </provider>
