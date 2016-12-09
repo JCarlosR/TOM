@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Promotion;
+use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Session;
 use Intervention\Image\Facades\Image;
+use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class PromotionController extends Controller
 {
@@ -46,7 +49,6 @@ class PromotionController extends Controller
 
         // TODO: Use transactions
 
-        $user = auth()->user();
         $extension = $request->file('image')->getClientOriginalExtension();
         $file_name = $promotion->id . '.' . $extension;
 
@@ -64,12 +66,56 @@ class PromotionController extends Controller
         return redirect('promotion/'.$promotion->id);
     }
 
-    public function show($id)
+    public function show($id, LaravelFacebookSdk $fb)
     {
+        // Get the appropriate promotion or redirect
         $promotion = Promotion::find($id);
         if (! $promotion)
             return redirect('/');
 
+        // Get access token from facebook page tab
+        try {
+            $token = $fb->getPageTabHelper()->getAccessToken();
+        } catch (FacebookSDKException $e) {
+            // Failed to obtain access token
+            dd($e->getMessage());
+        }
+        // $token will be null if the user hasn't authenticated your app yet
+        if (! $token) {
+            // Get the redirect helper
+            $helper = $fb->getRedirectLoginHelper();
+
+            if (! $helper->getError()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            // User denied the request
+            dd(
+                $helper->getError(),
+                $helper->getErrorCode(),
+                $helper->getErrorReason(),
+                $helper->getErrorDescription()
+            );
+        }
+        if (! $token->isLongLived()) {
+            // OAuth 2.0 client handler
+            $oauth_client = $fb->getOAuth2Client();
+
+            // Extend the access token.
+            try {
+                $token = $oauth_client->getLongLivedAccessToken($token);
+            } catch (FacebookSDKException $e) {
+                dd($e->getMessage());
+            }
+        }
+        $fb->setDefaultAccessToken($token);
+
+        // Save for later
+        Session::put('fb_user_access_token', (string) $token);
+
+        // Now we can perform a Facebook SDK request
+
         return view('promotion.show')->with(compact('promotion'));
     }
+
 }
