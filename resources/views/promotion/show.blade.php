@@ -20,6 +20,11 @@
                 </div>
 
                 {{-- This user has liked the page? --}}
+                <button class="btn btn-primary">
+                    Participar en el sorteo
+                </button>
+
+                <p>Ya has participado 3 veces en este sorteo !</p>
             </div>
         </div>
     </div>

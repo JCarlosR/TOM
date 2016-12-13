@@ -87,8 +87,11 @@ class FacebookController extends Controller
 
         // If the promotion param exists redirect to the proper TOM page
         $promotion_id = session()->get('promotion_id');
-        if ($promotion_id)
+        if ($promotion_id) {
+            // clear to avoid future redirects
+            session()->put('promotion_id', '');
             return redirect('/promotion/'.$promotion_id);
+        }
 
         return redirect('/home')->with('message', 'Ha iniciado sesión correctamente con Facebook !');
     }
