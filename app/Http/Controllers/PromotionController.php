@@ -118,10 +118,10 @@ class PromotionController extends Controller
         // dd($fb->getPageTabHelper()->getPageId());
 
         // Now we can perform a Facebook SDK request
-        $fanPageId = $promotion->fanPage->fan_page_id;
-        dd($fb->getPageTabHelper()->getSignedRequest());
-/*
-        $query = "/me/likes/$fanPageId";
+        // $fanPageId = $promotion->fanPage->fan_page_id;
+        // dd($fb->getPageTabHelper()->getSignedRequest());
+
+        $query = "/me/likes";
         try {
             $response = $fb->get($query);
         } catch (FacebookSDKException $e) {
@@ -131,7 +131,7 @@ class PromotionController extends Controller
         // Parse the response
         $graphEdge = $response->getGraphEdge();
         dd($graphEdge);
-*/
+
         return view('promotion.show')->with(compact('promotion'));
     }
 
