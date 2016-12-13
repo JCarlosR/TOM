@@ -121,7 +121,7 @@ class PromotionController extends Controller
         // $fanPageId = $promotion->fanPage->fan_page_id;
         // dd($fb->getPageTabHelper()->getSignedRequest());
 
-        $query = "/me/likes";
+        $query = "/me/permissions";
         try {
             $response = $fb->get($query);
         } catch (FacebookSDKException $e) {
