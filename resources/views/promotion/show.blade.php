@@ -15,7 +15,7 @@
             <div class="panel panel-info">
                 <div class="panel-heading">{{ $promotion->description }}</div>
 
-                <div class="panel-body">
+                <div class="panel-body text-center">
                     <img src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
                 </div>
 
