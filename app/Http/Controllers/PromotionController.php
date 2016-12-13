@@ -89,16 +89,18 @@ class PromotionController extends Controller
             // Failed to obtain access token
             dd($e->getMessage());
         }
-        // $token will be null if the user hasn't authenticated your app yet
-        if (! $token) {
-            // $callbackUrl = url('/facebook/callback?promotion='.$promotion->id, [], env('REDIRECT_HTTPS'));
-            $loginLink = $fb->getLoginUrl(['email', 'user_location', 'user_likes']);
 
-            $htmlResponse = "<script>" .
-                "window.top.location = '$loginLink';" .
-                "</script>";
-            return $htmlResponse;
-        }
+        session()->put('promotion_id', $promotion->id);
+
+        // $token will be null if the user hasn't authenticated your app yet
+        // $callbackUrl = url('/facebook/callback?promotion='.$promotion->id, [], env('REDIRECT_HTTPS'));
+        $loginLink = $fb->getLoginUrl(['email', 'user_location', 'user_likes']);
+
+        $htmlResponse = "<script>" .
+            "window.top.location = '$loginLink';" .
+            "</script>";
+        return $htmlResponse;
+        /*
         if (! $token->isLongLived()) {
             // OAuth 2.0 client handler
             $oauth_client = $fb->getOAuth2Client();
@@ -131,7 +133,7 @@ class PromotionController extends Controller
         $graphEdge = $response->getGraphEdge();
         dd($graphEdge);
 
-        return view('promotion.show')->with(compact('promotion'));
+        return view('promotion.show')->with(compact('promotion'));*/
     }
 
 }

@@ -86,9 +86,9 @@ class FacebookController extends Controller
         Auth::login($user);
 
         // If the promotion param exists redirect to the proper TOM page
-        $promotion_id = $request->get('promotion');
+        $promotion_id = session()->get('promotion_id');
         if ($promotion_id)
-            return redirect('/facebook/promotion/'.$promotion_id);
+            return redirect('/promotion/'.$promotion_id);
 
         return redirect('/home')->with('message', 'Ha iniciado sesión correctamente con Facebook !');
     }
