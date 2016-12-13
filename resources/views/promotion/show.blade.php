@@ -17,14 +17,14 @@
 
                 <div class="panel-body text-center">
                     <img src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
+
+                    {{-- This user has liked the page? --}}
+                    <button class="btn btn-primary">
+                        Participar en el sorteo
+                    </button>
+
+                    <p>Ya has participado 3 veces en este sorteo !</p>
                 </div>
-
-                {{-- This user has liked the page? --}}
-                <button class="btn btn-primary">
-                    Participar en el sorteo
-                </button>
-
-                <p>Ya has participado 3 veces en este sorteo !</p>
             </div>
         </div>
     </div>
