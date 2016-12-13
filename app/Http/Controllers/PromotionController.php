@@ -91,9 +91,8 @@ class PromotionController extends Controller
         }
         // $token will be null if the user hasn't authenticated your app yet
         if (! $token) {
-            $callbackUrl = url('/facebook/callback?promotion='.$promotion->id, [], env('REDIRECT_HTTPS'));
-            $loginLink = $fb->getRedirectLoginHelper()
-                ->getLoginUrl($callbackUrl, ['email', 'user_location', 'user_likes']);
+            // $callbackUrl = url('/facebook/callback?promotion='.$promotion->id, [], env('REDIRECT_HTTPS'));
+            $loginLink = $fb->getLoginUrl(['email', 'user_location', 'user_likes']);
 
             $htmlResponse = "<script>" .
                 "window.top.location = '$loginLink';" .
