@@ -115,7 +115,7 @@ class PromotionController extends Controller
 
         // Save for later
         Session::put('fb_user_access_token', (string) $token);
-        dd($fb->getPageTabHelper()->getPageId());
+        // dd($fb->getPageTabHelper()->getPageId());
 
         // Now we can perform a Facebook SDK request
         $fanPageId = $promotion->fanPage->fan_page_id;
