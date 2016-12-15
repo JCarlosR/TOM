@@ -16,11 +16,10 @@ class FacebookController extends Controller
 
     public function login(LaravelFacebookSdk $fb)
     {
-        // Send an array of permissions to request
+        // Array of permissions
         $login_url = $fb->getLoginUrl(['email', 'user_location', 'manage_pages', 'user_likes']);
 
-        // return '<a href="' . $login_url . '">Login with Facebook</a>';
-        return view('auth.facebook_login')->with(compact('login_url'));
+        return redirect($login_url);
     }
 
     public function callback(LaravelFacebookSdk $fb, Request $request)

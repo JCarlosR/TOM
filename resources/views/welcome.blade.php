@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('styles')
+    <link href="{{ asset('assets/css/main.css', env('REDIRECT_HTTPS')) }}" rel="stylesheet">
+@endsection
+
 @section('content')
 <!-- Page Wrapper -->
 <div id="page-wrapper">
@@ -14,10 +18,7 @@
                     <div id="menu">
                         <ul>
                             <li><a href="{{ url('/') }}">Inicio</a></li>
-                            {{--<li><a href="generic.html">Generic</a></li>--}}
-                            {{--<li><a href="elements.html">Elements</a></li>--}}
-                            <li><a href="#">Registro</a></li>
-                            <li><a href="{{ url('/login') }}">Ingresar</a></li>
+                            <li><a href="{{ url('/facebook/login') }}">Ingresar</a></li>
                         </ul>
                     </div>
                 </li>
