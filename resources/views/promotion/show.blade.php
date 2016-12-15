@@ -35,8 +35,8 @@
                 <hr />
 
                 {{-- This user has liked the page? --}}
-                <button class="button special fit">
-                    Participar en el sorteo
+                <button class="button facebook fit">
+                    Haz click para participar !
                 </button>
 
                 <p class="small">Ya has participado 3 veces en este sorteo !</p>

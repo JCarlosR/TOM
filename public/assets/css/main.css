@@ -2303,6 +2303,14 @@
 			font-size: 1.35em;
 		}
 
+		.button.facebook {
+			background-color: #4267b2;
+			color: #ffffff !important;
+		}
+		.button.facebook:hover {
+			background-color: #476cbd !important;
+		}
+
 		input[type="submit"].special,
 		input[type="reset"].special,
 		input[type="button"].special,
