@@ -39,7 +39,7 @@
                     Haz click para participar !
                 </button>
 
-                <p class="small">Ya has participado 3 veces en este sorteo !</p>
+                <p class="small">Ya has participado 3 veces en este sorteo ...</p>
             </div>
         </section>
     </article>
