@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('styles')
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
     <style>
         .img-responsive {
             margin: 0 auto;
@@ -9,24 +10,41 @@
 @endsection
 
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-info">
-                <div class="panel-heading">{{ $promotion->description }}</div>
+<!-- Page Wrapper -->
+<div id="page-wrapper">
 
-                <div class="panel-body text-center">
-                    <img src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="#">Tombo Fans</a></h1>
+    </header>
 
-                    {{-- This user has liked the page? --}}
-                    <button class="btn btn-primary">
-                        Participar en el sorteo
-                    </button>
+    <!-- Main -->
+    <article id="main">
+        <header>
+            <h2>Tombo Fans</h2>
+            <p>Participa y gana (Cambiar por texto fijo)</p>
+        </header>
+        <section class="wrapper style5">
+            <div class="inner text-center">
 
-                    <p>Ya has participado 3 veces en este sorteo !</p>
-                </div>
+                <h3>{{ $promotion->fanPage->name }}</h3>
+                <p>{{ $promotion->description }}</p>
+
+                <img src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
+
+                <hr />
+
+                {{-- This user has liked the page? --}}
+                <button class="button special fit">
+                    Participar en el sorteo
+                </button>
+
+                <p class="small">Ya has participado 3 veces en este sorteo !</p>
             </div>
-        </div>
-    </div>
+        </section>
+    </article>
+
+    <!-- Footer -->
+    @include('includes.footer')
 </div>
 @endsection
