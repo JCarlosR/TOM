@@ -88,7 +88,8 @@ class PromotionController extends Controller
         try {
             $response = $fb->get($query);
         } catch (FacebookSDKException $e) {
-            die($e->getMessage());
+            // Generally it happens when the user revoke the permissions after generate an acces token
+            return redirect("/facebook/promotion/$id");
         }
         $graphEdge = $response->getGraphEdge();
         dd($graphEdge);
