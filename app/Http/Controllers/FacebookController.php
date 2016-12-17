@@ -22,17 +22,16 @@ class FacebookController extends Controller
         return redirect($login_url);
     }
 
-    public function callback(LaravelFacebookSdk $fb, Request $request)
+    public function callback(LaravelFacebookSdk $fb)
     {
         // Obtain an access token
         try {
             $token = $fb->getAccessTokenFromRedirect();
         } catch (FacebookSDKException $e) {
-            dd($e->getMessage());
+            die($e->getMessage());
         }
 
-        // Access token will be null if the user denied the request
-        // or if someone just hit this URL outside of the OAuth flow.
+        // Token will be null if the user denied the request
         if (! $token) {
             // Get the redirect helper
             $helper = $fb->getRedirectLoginHelper();
@@ -65,13 +64,13 @@ class FacebookController extends Controller
         $fb->setDefaultAccessToken($token);
 
         // Save for later
-        Session::put('fb_user_access_token', (string) $token);
+        session()->put('fb_user_access_token', (string) $token);
 
-        // Get basic info on the user from Facebook.
+        // Get basic user info from Facebook
         try {
             $response = $fb->get('/me?fields=id,name,email,location');
         } catch (FacebookSDKException $e) {
-            dd($e->getMessage());
+            die($e->getMessage());
         }
 
         // Convert the response to a `Facebook/GraphNodes/GraphUser` collection

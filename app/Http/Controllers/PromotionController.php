@@ -13,6 +13,7 @@ use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class PromotionController extends Controller
 {
+
     public function store(Request $request)
     {
         $rules = [
@@ -66,74 +67,50 @@ class PromotionController extends Controller
         return redirect('promotion/'.$promotion->id);
     }
 
-    public function show($id)
+    public function show($id, LaravelFacebookSdk $fb)
     {
         $promotion = Promotion::find($id);
         if (! $promotion)
             return redirect('/');
 
+        // Request permissions if the user still have not authenticated
+        $token = session('fb_user_access_token');
+        if (! $token)
+            return redirect("/facebook/promotion/$id");
+
+        // Fan page associated with the promotion
+        $fanPage = $promotion->fanPage;
+        $fanPageFbId = $fanPage->fan_page_id;
+
+        // The user has liked the page?
+        $fb->setDefaultAccessToken($token);
+        $query = "/me/likes/$fanPageFbId";
+        try {
+            $response = $fb->get($query);
+        } catch (FacebookSDKException $e) {
+            die($e->getMessage());
+        }
+        $graphNode = $response->getGraphNode();
+        dd($graphNode);
+
         return view('promotion.show')->with(compact('promotion'));
     }
 
-    public function showFacebookTab($id, LaravelFacebookSdk $fb)
+    public function requestFbPermissions($id, LaravelFacebookSdk $fb)
     {
         // Get the appropriate promotion or redirect
         $promotion = Promotion::find($id);
         if (! $promotion)
             return redirect('/');
 
-        // Get access token from facebook page tab
-        try {
-            $token = $fb->getPageTabHelper()->getAccessToken();
-        } catch (FacebookSDKException $e) {
-            // Failed to obtain access token
-            dd($e->getMessage());
-        }
-
         session()->put('promotion_id', $promotion->id);
 
-        // $token will be null if the user hasn't authenticated your app yet
-        // $callbackUrl = url('/facebook/callback?promotion='.$promotion->id, [], env('REDIRECT_HTTPS'));
         $loginLink = $fb->getLoginUrl(['email', 'user_location', 'user_likes']);
 
         $htmlResponse = "<script>" .
             "window.top.location = '$loginLink';" .
             "</script>";
         return $htmlResponse;
-        /*
-        if (! $token->isLongLived()) {
-            // OAuth 2.0 client handler
-            $oauth_client = $fb->getOAuth2Client();
-
-            // Extend the access token.
-            try {
-                $token = $oauth_client->getLongLivedAccessToken($token);
-            } catch (FacebookSDKException $e) {
-                dd($e->getMessage());
-            }
-        }
-        $fb->setDefaultAccessToken($token);
-
-        // Save for later
-        Session::put('fb_user_access_token', (string) $token);
-        // dd($fb->getPageTabHelper()->getPageId());
-
-        // Now we can perform a Facebook SDK request
-        // $fanPageId = $promotion->fanPage->fan_page_id;
-        // dd($fb->getPageTabHelper()->getSignedRequest());
-
-        $query = "/me/permissions";
-        try {
-            $response = $fb->get($query);
-        } catch (FacebookSDKException $e) {
-            dd($e->getMessage());
-        }
-        dd($response);
-        // Parse the response
-        $graphEdge = $response->getGraphEdge();
-        dd($graphEdge);
-
-        return view('promotion.show')->with(compact('promotion'));*/
     }
 
 }

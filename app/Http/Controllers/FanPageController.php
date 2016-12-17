@@ -11,6 +11,11 @@ use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class FanPageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index($id, LaravelFacebookSdk $fb)
     {
         $fanPage = FanPage::find($id);
@@ -28,7 +33,7 @@ class FanPageController extends Controller
             try {
                 $response = $fb->get($query);
             } catch (FacebookSDKException $e) {
-                dd($e->getMessage());
+                die($e->getMessage());
             }
             $graphNode = $response->getGraphNode();
             $fanPage->picture_200 = $graphNode->getField('url');
