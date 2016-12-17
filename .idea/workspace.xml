@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FanPageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FanPageController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PromotionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,11 +56,11 @@
       <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+            <state relative-caret-position="420">
+              <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
               <folding>
                 <element signature="e#339#2536#0#PHP" expanded="false" />
-                <marker date="1482018594126" expanded="true" signature="3863:3902" ph="..." />
+                <marker date="1482018714448" expanded="true" signature="3863:3902" ph="..." />
               </folding>
             </state>
           </provider>
@@ -385,12 +381,12 @@
       <workItem from="1481639992237" duration="695000" />
       <workItem from="1481648021989" duration="7016000" />
       <workItem from="1481814618973" duration="10095000" />
-      <workItem from="1482007289658" duration="2996000" />
+      <workItem from="1482007289658" duration="3116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66782000" />
+    <option name="totallyTimeSpent" value="66902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="738" extended-state="0" />
@@ -817,11 +813,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+        <state relative-caret-position="420">
+          <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
           <folding>
             <element signature="e#339#2536#0#PHP" expanded="false" />
-            <marker date="1482018594126" expanded="true" signature="3863:3902" ph="..." />
+            <marker date="1482018714448" expanded="true" signature="3863:3902" ph="..." />
           </folding>
         </state>
       </provider>

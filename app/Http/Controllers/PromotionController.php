@@ -90,8 +90,8 @@ class PromotionController extends Controller
         } catch (FacebookSDKException $e) {
             die($e->getMessage());
         }
-        $graphNode = $response->getGraphNode();
-        dd($graphNode);
+        $graphEdge = $response->getGraphEdge();
+        dd($graphEdge);
 
         return view('promotion.show')->with(compact('promotion'));
     }
