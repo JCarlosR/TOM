@@ -73,6 +73,9 @@ class PromotionController extends Controller
         if (! $promotion)
             return redirect('/');
 
+        $referrer = @$_SERVER['HTTP_REFERER'];
+        dd($referrer);
+
         // Request permissions if the user still have not authenticated
         $token = session('fb_user_access_token');
         if (! $token)
@@ -92,8 +95,7 @@ class PromotionController extends Controller
             return redirect("/facebook/promotion/$id");
         }
         $graphEdge = $response->getGraphEdge();
-        $items = $graphEdge->getField('items');
-        dd($items);
+        $pageIsLiked = $graphEdge->count() > 0; // 1 when the page is liked
 
         return view('promotion.show')->with(compact('promotion'));
     }
