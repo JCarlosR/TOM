@@ -74,7 +74,7 @@ class PromotionController extends Controller
             return redirect('/');
 
         $referrer = @$_SERVER['HTTP_REFERER'];
-        dd($referrer);
+        dd($_SERVER);
 
         // Request permissions if the user still have not authenticated
         $token = session('fb_user_access_token');
