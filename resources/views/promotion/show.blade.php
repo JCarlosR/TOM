@@ -21,8 +21,8 @@
     <!-- Main -->
     <article id="main">
         <header>
-            <h2>Tombo Fans</h2>
-            <p>Participa y gana (Cambiar por texto fijo)</p>
+            <h2>Bienvenido a Tombo Fans</h2>
+            <p>Mucha suerte porque hoy puedes ganar ...</p>
         </header>
         <section class="wrapper style5">
             <div class="inner text-center">
@@ -34,12 +34,14 @@
 
                 <hr />
 
+                <p>Solo da clic en el botón azul para participar.</p>
+
                 {{-- This user has liked the page? --}}
-                <button class="button facebook fit">
+                <button class="button facebook fit" id="btnGo" data-token="{{ csrf_token() }}" data-action="{{ url("/promotion/$promotion->id/go") }}">
                     Haz click para participar !
                 </button>
 
-                <p class="small">Ya has participado 3 veces en este sorteo ...</p>
+                <p class="text-muted">Cantidad de veces que has participado en esta promoción: {{ $participationsCount }}</p>
             </div>
         </section>
     </article>
@@ -47,4 +49,8 @@
     <!-- Footer -->
     @include('includes.footer')
 </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('/promotion/show.js') }}"></script>
 @endsection

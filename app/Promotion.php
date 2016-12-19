@@ -17,4 +17,14 @@ class Promotion extends Model
     {
         return $this->belongsTo('App\FanPage');
     }
+
+    public function participations()
+    {
+        return $this->hasMany('App\Participation');
+    }
+
+    public function getLastTicketAttribute()
+    {
+        return $this->participations->count();
+    }
 }

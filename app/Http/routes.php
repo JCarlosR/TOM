@@ -16,3 +16,6 @@ Route::get('/config/page/{id}', 'FanPageController@index');
 Route::post('/promotion', 'PromotionController@store');
 Route::get('/promotion/{id}', 'PromotionController@show');
 Route::match(['get', 'post'], '/facebook/promotion/{id}', 'PromotionController@requestFbPermissions');
+
+// Participations
+Route::post('/promotion/{id}/go', 'PromotionController@go');
