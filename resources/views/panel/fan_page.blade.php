@@ -68,7 +68,7 @@
                                         </ul>
                                     </div>
                                 @endif
-                                <form action="{{ url('/promotion', [], env('REDIRECT_HTTPS')) }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('/promotion') }}" method="POST" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
                                     <input type="hidden" name="fan_page_id" value="{{ $fanPage->id }}">
