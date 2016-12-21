@@ -1,12 +1,18 @@
-var $alertMessage;
+var $alertMessage, $pBackLing;
 var $alertLike;
+var $btnGo, $pInstructions;
+var $pCount;
 
 $(function () {
-    $('#btnGo').on('click', onClickButtonGo);
-    $alertMessage = $('#alertMessage');
-
-    $('#closeAlertLike').on('click', onClickCloseAlertLike);
+    $btnGo = $('#btnGo');
+    $pCount = $('#pCount');
     $alertLike = $('#alertLike');
+    $pBackLing = $('#pBackLink');
+    $alertMessage = $('#alertMessage');
+    $pInstructions = $('#pInstructions');
+
+    $btnGo.on('click', onClickButtonGo);
+    $('#closeAlertLike').on('click', onClickCloseAlertLike);
 });
 function onClickCloseAlertLike() {
     event.preventDefault();
@@ -53,6 +59,9 @@ function showGoResponse(data) {
             case 'must_wait':
                 errorMessage = 'Ya has participado en esta promo. Puedes volver a participar luego de 24 horas!';
                 break;
+            case 'invalid_promotion':
+                errorMessage = 'Ups algo falló en tu TomboFan, contacta de inmediato a '+data.name+' al correo '+data.email;
+                break;
             default:
                 errorMessage = 'Ha ocurrido un error inesperado. Por favor inténtalo en unos minutos.';
                 break;
@@ -64,17 +73,29 @@ function showGoResponse(data) {
 function displayIsWinnerMessage() {
     displaySuccessfulAlert('Felicidades has ganado!');
     // show winner image
+    participationPerformed();
 }
 function displayNonWinnerMessage() {
-    displayInfoAlert('Vuelve a intentarlo el día de mañana!');
+    displayWarningAlert('Vuelve a intentarlo el día de mañana!');
     // show non-winner image
+    participationPerformed();
+}
+function participationPerformed() {
+    $pCount.hide();
+    $btnGo.slideUp(function () {
+        $(this).remove();
+    });
+    $pInstructions.slideUp(function () {
+        $(this).remove();
+    });
+    $pBackLing.show();
 }
 
 function displaySuccessfulAlert(message) {
     displayAlert('success', message);
 }
-function displayInfoAlert(message) {
-    displayAlert('info', message);
+function displayWarningAlert(message) {
+    displayAlert('warning', message);
 }
 function displayErrorAlert(message) {
     displayAlert('danger', message);

@@ -34,6 +34,7 @@
 
                 <hr />
 
+                {{-- If the user still has not like the page, show this alert from the beginning --}}
                 <div class="alert alert-info" id="alertLike" style="display: @if($pageIsLiked) none @else block @endif">
                     <a href="#" class="close" id="closeAlertLike">&times;</a>
                     <p>Recuerda dar like a la página para poder participar:</p>
@@ -41,14 +42,17 @@
                 </div>
 
                 <div id="alertMessage"></div>
-                <p>Solo da clic en el botón azul para participar.</p>
 
-                {{-- This user has liked the page? --}}
+                <p id="pBackLink" style="display: none">
+                    <a href="https://fb.com/{{ $fanPageFbId }}">Haz clic aquí para volver a la fanpage.</a>
+                </p>
+
+                <p id="pInstructions">Solo da clic en el botón azul para participar.</p>
                 <button class="button facebook fit" id="btnGo" data-token="{{ csrf_token() }}" data-action="{{ url("/promotion/$promotion->id/go") }}">
                     Haz click para participar !
                 </button>
 
-                <p class="text-muted">Cantidad de veces que has participado en esta promoción: {{ $participationsCount }}</p>
+                <p class="text-muted" id="pCount">Cantidad de veces que has participado en esta promoción: {{ $participationsCount }}</p>
             </div>
         </section>
     </article>

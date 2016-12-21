@@ -159,10 +159,21 @@ class PromotionController extends Controller
             return $data;
         }
 
+        // There are valid credits in the promotion?
+        // Free package only allows a max of 10 participations
+        if ($promotion->participations->count() >= 10) {
+            $data['success'] = false;
+            $data['error_type'] = 'invalid_promotion';
+            // Contact information of the user
+            $responsible = $fanPage->user;
+            $data['name'] = $responsible->name;
+            $data['email'] = $responsible->email;
+            return $data;
+        }
+
         // Is the user authenticated?
         if (! auth()->check())
             return redirect("/facebook/promotion/$id");
-
         // Check last participation
         $userId = auth()->user()->id;
         $lastParticipation = Participation::where('user_id', $userId)->where('promotion_id', $id)
