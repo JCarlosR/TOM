@@ -65,7 +65,19 @@ class PromotionController extends Controller
         $promotion->image = $extension;
         $promotion->save();
 
-        return redirect('promotion/'.$promotion->id);
+        return redirect("promotion/$promotion->id/instructions");
+    }
+
+    public function instructions($id)
+    {
+        $promotion = Promotion::find($id);
+        if (! $promotion)
+            return redirect('/');
+
+        $promotionId = $id;
+        $fanPageFbId = $promotion->fanPage->fan_page_id;
+
+        return view('panel.instructions')->with(compact('promotionId', 'fanPageFbId'));
     }
 
     public function show($id, LaravelFacebookSdk $fb)

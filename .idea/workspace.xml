@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PromotionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/config.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/config.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/fan_page.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/fan_page.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,52 +22,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="fan_page.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/fan_page.blade.php">
+      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="96" column="123" lean-forward="false" selection-start-line="96" selection-start-column="123" selection-end-line="96" selection-end-column="123" />
+            <state relative-caret-position="396">
+              <caret line="77" column="20" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="20" />
               <folding>
-                <element signature="e#4725#4746#0#HTML" expanded="true" />
+                <element signature="e#40#62#0#PHP" expanded="true" />
+                <element signature="e#317#2715#0#PHP" expanded="false" />
+                <element signature="e#2389#2546#0#PHP" expanded="false" />
+                <element signature="e#2455#2545#1#PHP" expanded="false" />
+                <element signature="e#2389#2572#0#PHP" expanded="false" />
+                <element signature="e#3050#4518#0#PHP" expanded="false" />
+                <element signature="e#3683#3944#0#PHP" expanded="false" />
+                <element signature="e#3741#3944#0#PHP" expanded="false" />
+                <element signature="e#4524#5041#0#PHP" expanded="false" />
+                <element signature="e#5047#8018#0#PHP" expanded="false" />
+                <element signature="e#5263#5457#0#PHP" expanded="false" />
+                <element signature="e#5731#5992#0#PHP" expanded="false" />
+                <element signature="e#5789#5992#0#PHP" expanded="false" />
+                <element signature="e#6126#6268#0#PHP" expanded="false" />
+                <element signature="e#6394#6759#0#PHP" expanded="false" />
+                <element signature="e#6989#7101#0#PHP" expanded="false" />
+                <element signature="e#7128#7524#0#PHP" expanded="false" />
+                <element signature="e#7347#7514#0#PHP" expanded="false" />
+                <marker date="1482336061497" expanded="true" signature="4924:4963" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_12_01_235534_create_promotions_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_01_235534_create_promotions_table.php">
+      <file leaf-file-name="instructions.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/instructions.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="354">
+              <caret line="37" column="82" lean-forward="false" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
-              <folding>
-                <element signature="e#40#62#0#PHP" expanded="true" />
-                <element signature="e#2389#2546#0#PHP" expanded="false" />
-                <element signature="e#2455#2545#1#PHP" expanded="false" />
-                <element signature="e#2389#2572#0#PHP" expanded="false" />
-                <element signature="e#2709#4177#0#PHP" expanded="false" />
-                <element signature="e#3342#3603#0#PHP" expanded="false" />
-                <element signature="e#3400#3603#0#PHP" expanded="false" />
-                <element signature="e#4183#4700#0#PHP" expanded="false" />
-                <element signature="e#4706#7677#0#PHP" expanded="false" />
-                <element signature="e#4922#5116#0#PHP" expanded="false" />
-                <element signature="e#5390#5651#0#PHP" expanded="false" />
-                <element signature="e#5448#5651#0#PHP" expanded="false" />
-                <element signature="e#5785#5927#0#PHP" expanded="false" />
-                <element signature="e#6053#6418#0#PHP" expanded="false" />
-                <element signature="e#6648#6760#0#PHP" expanded="false" />
-                <element signature="e#6787#7183#0#PHP" expanded="false" />
-                <element signature="e#7006#7173#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="336">
+              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,8 +136,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/FanPageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_12_18_130025_create_participations_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Promotion.php" />
         <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Participation.php" />
         <option value="$PROJECT_DIR$/app/Listeners/ParticipationListener.php" />
@@ -152,8 +148,11 @@
         <option value="$PROJECT_DIR$/resources/views/promotion/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/config.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PromotionController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/fan_page.blade.php" />
+        <option value="$PROJECT_DIR$/app/Promotion.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PromotionController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/instructions.blade.php" />
       </list>
     </option>
   </component>
@@ -276,15 +275,15 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\TOM\resources\views\panel" />
+      <recent name="C:\wamp\www\TOM\app\Http" />
+      <recent name="C:\wamp\www\TOM\resources\views\promotion" />
+      <recent name="C:\wamp\www\TOM\resources\views\auth" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\TOM\public\assets" />
       <recent name="C:\wamp\www\TOM\resources\views\layouts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\TOM\app\Http" />
-      <recent name="C:\wamp\www\TOM\resources\views\promotion" />
-      <recent name="C:\wamp\www\TOM\resources\views\panel" />
-      <recent name="C:\wamp\www\TOM\resources\views\auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -384,12 +383,12 @@
       <workItem from="1482122703349" duration="5725000" />
       <workItem from="1482174606268" duration="662000" />
       <workItem from="1482190365697" duration="615000" />
-      <workItem from="1482328749387" duration="5021000" />
+      <workItem from="1482328749387" duration="6612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95396000" />
+    <option name="totallyTimeSpent" value="96987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -455,13 +454,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/laravel-facebook-sdk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -716,25 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="3824" column="21" lean-forward="false" selection-start-line="3824" selection-start-column="21" selection-end-line="3824" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Promotion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="27" column="46" lean-forward="false" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -805,32 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-            <element signature="e#2389#2546#0#PHP" expanded="false" />
-            <element signature="e#2455#2545#1#PHP" expanded="false" />
-            <element signature="e#2389#2572#0#PHP" expanded="false" />
-            <element signature="e#2709#4177#0#PHP" expanded="false" />
-            <element signature="e#3342#3603#0#PHP" expanded="false" />
-            <element signature="e#3400#3603#0#PHP" expanded="false" />
-            <element signature="e#4183#4700#0#PHP" expanded="false" />
-            <element signature="e#4706#7677#0#PHP" expanded="false" />
-            <element signature="e#4922#5116#0#PHP" expanded="false" />
-            <element signature="e#5390#5651#0#PHP" expanded="false" />
-            <element signature="e#5448#5651#0#PHP" expanded="false" />
-            <element signature="e#5785#5927#0#PHP" expanded="false" />
-            <element signature="e#6053#6418#0#PHP" expanded="false" />
-            <element signature="e#6648#6760#0#PHP" expanded="false" />
-            <element signature="e#6787#7183#0#PHP" expanded="false" />
-            <element signature="e#7006#7173#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/fan_page.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
@@ -838,6 +789,58 @@
           <folding>
             <element signature="e#4725#4746#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Promotion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PromotionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="77" column="20" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="20" />
+          <folding>
+            <element signature="e#40#62#0#PHP" expanded="true" />
+            <element signature="e#317#2715#0#PHP" expanded="false" />
+            <element signature="e#2389#2546#0#PHP" expanded="false" />
+            <element signature="e#2455#2545#1#PHP" expanded="false" />
+            <element signature="e#2389#2572#0#PHP" expanded="false" />
+            <element signature="e#3050#4518#0#PHP" expanded="false" />
+            <element signature="e#3683#3944#0#PHP" expanded="false" />
+            <element signature="e#3741#3944#0#PHP" expanded="false" />
+            <element signature="e#4524#5041#0#PHP" expanded="false" />
+            <element signature="e#5047#8018#0#PHP" expanded="false" />
+            <element signature="e#5263#5457#0#PHP" expanded="false" />
+            <element signature="e#5731#5992#0#PHP" expanded="false" />
+            <element signature="e#5789#5992#0#PHP" expanded="false" />
+            <element signature="e#6126#6268#0#PHP" expanded="false" />
+            <element signature="e#6394#6759#0#PHP" expanded="false" />
+            <element signature="e#6989#7101#0#PHP" expanded="false" />
+            <element signature="e#7128#7524#0#PHP" expanded="false" />
+            <element signature="e#7347#7514#0#PHP" expanded="false" />
+            <marker date="1482336061497" expanded="true" signature="4924:4963" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/instructions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="37" column="82" lean-forward="false" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
