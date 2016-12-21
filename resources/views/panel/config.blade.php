@@ -20,7 +20,7 @@
                         </div>
                     @endif
 
-                    <p>Seleccione la página que desea administrar.</p>
+                    <p>Selecciona la fanpage en la que quieres aplicar tu promoción con TomboFans.</p>
                     @foreach ($fanPages as $fanPage)
                         <div class="well bs-component">
                             <a href="{{ url('config/page/'.$fanPage->id) }}" class="btn btn-primary pull-right">

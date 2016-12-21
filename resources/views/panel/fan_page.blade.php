@@ -78,15 +78,23 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="end_date">¿Hasta cuándo estará vigente?</label>
-                                        <input type="date" class="form-control" name="end_date" id="end_date" value="{{ old('end_date') }}">
+
+                                        <div class="radio">
+                                            <label><input type="radio" name="infinite" value="1" checked>Promoción permanente (no aplica vigencia)</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label><input type="radio" name="infinite" value="0">Seleccionar fecha de vigencia</label>
+                                        </div>
+
+                                        <input style="display: none" type="date" class="form-control" name="end_date" id="end_date" value="{{ old('end_date') }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="image">Sube la imagen de tu promoción</label>
                                         <input type="file" class="form-control" name="image" id="image">
                                     </div>
                                     <div class="form-group">
-                                        <label for="attempts">Ganar cada X veces</label>
-                                        <input type="number" class="form-control" placeholder="¿Cada cuántas veces se gana? Mín 1, Máx 10." min="1" max="10" value="{{ old('attempts') }}" name="attempts">
+                                        <label for="attempts">Define la frecuencia de participantes ganadores <em>(Mín 1 y Máx 10)</em></label>
+                                        <input type="number" class="form-control" placeholder="¿Cada cuántas veces se gana?" min="1" max="10" value="{{ old('attempts') }}" name="attempts">
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary">
@@ -104,13 +112,27 @@
 
 @section('scripts')
     <script>
+        var $endDate;
+
         $(function () {
+            $endDate = $('#end_date');
+
             $('#btnNewPromotion').on('click', onClickNewPromotion);
+            $('input[type=radio][name=infinite]').change(onChangeInfinite);
         });
 
         function onClickNewPromotion() {
             $('#panelOptions').slideUp();
             $('#panelNewPromotion').show();
+        }
+
+        function onChangeInfinite() {
+            if (this.value == 1) {
+                $endDate.slideUp();
+            }
+            else if (this.value == 0) {
+                $endDate.slideDown();
+            }
         }
     </script>
 @endsection

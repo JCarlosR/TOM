@@ -7,9 +7,6 @@ use App\Promotion;
 use Carbon\Carbon;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use Illuminate\Support\Facades\Session;
 use Intervention\Image\Facades\Image;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
@@ -21,7 +18,8 @@ class PromotionController extends Controller
         $rules = [
             'fan_page_id' => 'required|exists:fan_pages,id',
             'description' => 'required|max:180',
-            'end_date' => 'date|after:tomorrow',
+            'infinite' => 'integer|min:0|max:1',
+            'end_date' => 'required_if:infinite,0|date|after:tomorrow',
             'image' => 'required|image',
             'attempts' => 'required|min:1|max:10'
         ];
@@ -32,6 +30,7 @@ class PromotionController extends Controller
             'description.max' => 'La descripción excede los 180 caracteres permitidos.',
             'end_date.date' => 'Ingrese una fecha válidad.',
             'end_date.after' => 'Ingrese una fecha posterior a mañana.',
+            'end_date.required_if' => 'Olvidó ingresar la fecha de vigencia.',
             'image.required' => 'Debe subir una imagen para su promoción.',
             'image.image' => 'Solo se permiten subir imágenes.',
             'attempts.required' => 'Debe indicar la frecuencia con que se gana la promoción.',
@@ -45,7 +44,7 @@ class PromotionController extends Controller
         $promotion = Promotion::create([
             'fan_page_id' => $request->get('fan_page_id'),
             'description' => $request->get('description'),
-            'end_date' => $request->get('end_date'),
+            'end_date' => $request->get('infinite')==1 ? null : $request->get('end_date'),
             'image' => '',
             'attempts' => $request->get('attempts')
         ]);

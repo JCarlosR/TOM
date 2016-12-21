@@ -34,7 +34,7 @@
                 e interacciones en tu fanpage,<br />
                 además de conseguir <a href="#">clientes más felices</a>.</p>
             <ul class="actions">
-                <li><a href="#" class="button special">Ingresar</a></li>
+                <li><a href="{{ url('/facebook/login') }}" class="button special">Ingresar</a></li>
             </ul>
         </div>
         <a href="#one" class="more scrolly">Ver más</a>
