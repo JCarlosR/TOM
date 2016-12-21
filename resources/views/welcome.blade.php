@@ -19,6 +19,7 @@
                         <ul>
                             <li><a href="{{ url('/') }}">Inicio</a></li>
                             <li><a href="{{ url('/facebook/login') }}">Ingresar</a></li>
+                            <li><a href="{{ url('/contact') }}">Contacto</a></li>
                         </ul>
                     </div>
                 </li>
