@@ -3820,3 +3820,10 @@
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+ul.no-bullet {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}

@@ -45,12 +45,13 @@
         <div class="inner">
             <header class="major">
                 <h2>¿Qué es TomboFans?</h2>
-                <p>Es la forma más fácil de impulsar tus ventas e interacciones en tu fanpage, además de conseguir clientes más felices cuando ganan tus promociones y descuentos.</p>
+                <p>TomboFans es una aplicación que desarrollamos para que uses en tu fanpage, así
+                    tus fans, clientes anteriores y posibles prospectos, si interactuan dándote like o haciendo check in en tu fanpage, pueden ganar promociones y descuentos que tu configuras en TomboFans.</p>
             </header>
             <ul class="icons major">
-                <li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
-                <li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
-                <li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
+                <li><span class="icon fa-diamond major style1"><span class="label">Diamong</span></span></li>
+                <li><span class="icon fa-heart-o major style2"><span class="label">Heart</span></span></li>
+                <li><span class="icon fa-code major style3"><span class="label">Code</span></span></li>
             </ul>
         </div>
     </section>
@@ -60,21 +61,21 @@
         <section class="spotlight">
             <div class="image"><img src="{{ asset('images/pic01.jpg') }}" alt="" /></div><div class="content">
                 <h3>Si eres emprendedora o emprendedor:</h3>
-                <ul>
-                    <li>Incrementar tus prospectos y  tus ventas cuando invitas a participar en TomboFans.</li>
-                    <li>Aumentas las interacciones de tus clientes en tu página de fans en facebook.</li>
-                    <li>Consigues testimonios de tus clientes en facebook que te generarán más ventas.</li>
-                    <li>Fidelizas a tus clientes, te compran más veces y los tienes cautivos en tu facebook.</li>
+                <ul class="no-bullet">
+                    <li><i class="fa fa-check"></i> Incrementar tus prospectos y  tus ventas cuando invitas a participar en TomboFans.</li>
+                    <li><i class="fa fa-check"></i> Aumentas las interacciones de tus clientes en tu página de fans en facebook.</li>
+                    <li><i class="fa fa-check"></i> Consigues testimonios de tus clientes en facebook que te generarán más ventas.</li>
+                    <li><i class="fa fa-check"></i> Fidelizas a tus clientes, te compran más veces y los tienes cautivos en tu facebook.</li>
                 </ul>
             </div>
         </section>
         <section class="spotlight">
             <div class="image"><img src="{{ asset('images/pic02.jpg') }}" alt="" /></div><div class="content">
                 <h3>Si eres participante de TomboFans:</h3>
-                <ul>
-                    <li>Obtienes descuentos o promociones GRATIS cuando te invitan a participar.</li>
-                    <li>Te enteras en facebook de las novedades de los productos o servicios que compras.</li>
-                    <li>Tienes los datos de los emprendedores que venden productos o servicios.</li>
+                <ul class="no-bullet">
+                    <li><i class="fa fa-check"></i> Obtienes descuentos o promociones GRATIS cuando te invitan a participar.</li>
+                    <li><i class="fa fa-check"></i> Te enteras en facebook de las novedades de los productos o servicios que compras.</li>
+                    <li><i class="fa fa-check"></i> Tienes los datos de los emprendedores que venden productos o servicios.</li>
                 </ul>
             </div>
         </section>
