@@ -20,4 +20,9 @@ class Participation extends Model
     {
         return $this->belongsTo('App\Promotion');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

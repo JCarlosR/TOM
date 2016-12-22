@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\FanPage;
+use App\Promotion;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Maatwebsite\Excel\Facades\Excel;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class FanPageController extends Controller
@@ -48,5 +50,33 @@ class FanPageController extends Controller
         $fanPage = FanPage::find($id);
         $promotions = $fanPage->promotions;
         return view('panel.promotions')->with(compact('fanPage', 'promotions'));
+    }
+
+    public function excel($id)
+    {
+
+        Excel::create('Participaciones', function($excel) use ($id) {
+            $excel->sheet('Datos', function($sheet) use ($id) {
+
+                // Header
+                $sheet->mergeCells('A1:D1');
+                $sheet->row(1, ['Relación de participaciones de la promoción #'.$id]);
+                $sheet->row(2, ['Folio', 'Nombre del participante', 'Ticket', 'E-mail', '¿Ha ganado?']);
+
+                // Data
+                $promotion = Promotion::find($id);
+                $participations = $promotion->participations;
+                foreach ($participations as $participation) {
+                    $row = [];
+                    $row[0] = $participation->id;
+                    $row[1] = $participation->user->name;
+                    $row[2] = $participation->ticket;
+                    $row[3] = $participation->user->email;
+                    $row[4] = $participation->is_winner ? 'Este usuario ha ganado' : 'Este usuario NO ha ganado';
+                    $sheet->appendRow($row);
+                }
+
+            });
+        })->export('xls');
     }
 }
