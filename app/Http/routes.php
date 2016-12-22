@@ -3,7 +3,10 @@
 Route::get('/', 'GuessController@index');
 Route::auth();
 
-// General
+// Stories
+Route::get('/stories', 'GuessController@getStories');
+
+// Contact
 Route::get('/contact', 'GuessController@getContact');
 Route::post('/contact', 'GuessController@postContact');
 

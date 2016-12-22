@@ -75,5 +75,5 @@
 
 @section('scripts')
     {{--<script src='https://www.google.com/recaptcha/api.js'></script>--}}
-    <script src="{{ asset('/assets/guess/contact.js') }}"></script>
+    {{--<script src="{{ asset('/assets/guess/contact.js') }}"></script>--}}
 @endsection

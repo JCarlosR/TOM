@@ -14,6 +14,11 @@ class GuessController extends Controller
         return view('welcome');
     }
 
+    public function getStories()
+    {
+        return view('guess.stories');
+    }
+
     public function getContact()
     {
         return view('guess.contact');

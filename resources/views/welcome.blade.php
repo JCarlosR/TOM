@@ -20,6 +20,7 @@
                             <li><a href="{{ url('/') }}">Inicio</a></li>
                             <li><a href="{{ url('/facebook/login') }}">Ingresar</a></li>
                             <li><a href="{{ url('/contact') }}">Contacto</a></li>
+                            <li><a href="{{ url('/stories') }}">Casos de éxito</a></li>
                         </ul>
                     </div>
                 </li>
@@ -60,7 +61,8 @@
     <!-- Two -->
     <section id="two" class="wrapper alt style2">
         <section class="spotlight">
-            <div class="image"><img src="{{ asset('images/pic01.jpg') }}" alt="" /></div><div class="content">
+            <div class="image"><img src="{{ asset('images/1.jpg') }}" alt="" /></div>
+            <div class="content">
                 <h3>Si eres emprendedora o emprendedor:</h3>
                 <ul class="no-bullet">
                     <li><i class="fa fa-check"></i> Incrementar tus prospectos y  tus ventas cuando invitas a participar en TomboFans.</li>
@@ -97,30 +99,24 @@
                 <p>En menos de 3 minutos configuras tu TomboFan, siguiendo estos simples pasos:</p>
             </header>
             <ul class="features">
-                <li class="icon fa-laptop">
-                    <h3>Paso 1</h3>
-                    <p>Escribe tu promoción y sube una imagen.</p>
+                <li>
+                    <img src="{{ asset('images/steps/1.png') }}" alt="Paso 1" width="320">
                 </li>
-                <li class="icon fa-paper-plane-o">
-                    <h3>Paso 2</h3>
-                    <p>Invita a que participen en tu TomboFan (fans, amigos, clientes anteriores y prospectos).</p>
+                <li>
+                    <img src="{{ asset('images/steps/2.png') }}" alt="Paso 2" width="320">
                 </li>
-                <li class="icon fa-code">
-                    <h3>Paso 3</h3>
-                    <p>Tus participantes, si tienen suerte, ganan tus promociones y/o descuentos.</p>
+                <li>
+                    <img src="{{ asset('images/steps/3.png') }}" alt="Paso 3" width="320">
                 </li>
-                <li class="icon fa-flag-o">
-                    <h3>Paso 4</h3>
-                    <p>Ve como aumentan tus ventas y ademas los likes e interacciones en tu fanpage.</p>
+                <li>
+                    <img src="{{ asset('images/steps/4.png') }}" alt="Paso 4" width="320">
                 </li>
-                <li class="icon fa-mail-forward">
-                    <h3>Paso 5</h3>
-                    <p>Recibes por correo los datos de tus participantes para que los contactes.</p>
+                <li>
+                    <img src="{{ asset('images/steps/5.png') }}" alt="Paso 5" width="320">
                 </li>
-                <li class="icon fa-heart-o">
-                    <h3>Finalmente</h3>
-                    <p>Obtienes múltiples beneficios y tus clientes están más satisfechos.</p>
-                </li>
+                <li>
+                    <img src="{{ asset('images/steps/6.png') }}" alt="Paso 6" width="320">
+                </li>                
             </ul>
         </div>
     </section>
@@ -133,8 +129,8 @@
                 <p>Mira nuestra sección de casos de éxito, de otros emprendedores que ya han usado TomboFans.</p>
             </header>
             <ul class="actions vertical">
-                <li><a href="#" class="button fit special">Registrarme</a></li>
-                <li><a href="#" class="button fit">Ver casos</a></li>
+                <li><a href="{{ url('/facebook/login') }}" class="button fit special">Registrarme</a></li>
+                <li><a href="{{ url('/stories') }}" class="button fit">Ver casos</a></li>
             </ul>
         </div>
     </section>
