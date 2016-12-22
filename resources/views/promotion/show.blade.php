@@ -21,7 +21,7 @@
     </header>
 
     <!-- Main -->
-    <article id="main">
+    <article id="main-welcome">
         <header id="header-welcome">
 
         </header>

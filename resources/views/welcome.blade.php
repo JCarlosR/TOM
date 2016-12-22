@@ -73,7 +73,7 @@
             </div>
         </section>
         <section class="spotlight">
-            <div class="image"><img src="{{ asset('images/pic02.jpg') }}" alt="" /></div><div class="content">
+            <div class="image"><img src="{{ asset('images/2.jpg') }}" alt="" /></div><div class="content">
                 <h3>Si eres participante de TomboFans:</h3>
                 <ul class="no-bullet">
                     <li><i class="fa fa-check"></i> Obtienes descuentos o promociones GRATIS cuando te invitan a participar.</li>
