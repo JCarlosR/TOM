@@ -33,16 +33,7 @@
                     <div class="well bs-component">
                         <div class="row">
                             <div class="col-md-6 text-center">
-                                <img src="{{ $fanPage->picture_200 }}" alt="Picture - Fan page" class="img-rounded img-center">
-                                <h2>{{ $fanPage->name }}</h2>
-                                <p>
-                                    <b>ID: </b>
-                                    {{ $fanPage->fan_page_id }}
-                                </p>
-                                <p>
-                                    <b>Categoría: </b>
-                                    {{ $fanPage->category }}
-                                </p>
+                                @include('includes.fan_page_data')
                             </div>
 
                             <div class="col-md-6" id="panelOptions" @if (count($errors) > 0) style="display: none" @endif>
@@ -50,7 +41,7 @@
                                 {{--<a href="{{ url('config/page/'.$fanPage->id.'/picture') }}" class="btn btn-sm btn-primary btn-block">--}}
                                     {{--Actualizar foto--}}
                                 {{--</a>--}}
-                                <a href="#" class="btn btn-primary btn-block">
+                                <a href="{{ url("config/page/$fanPage->id/promotions") }}" class="btn btn-primary btn-block">
                                     Gestionar promociones
                                 </a>
                                 <button href="" class="btn btn-info btn-block" id="btnNewPromotion">

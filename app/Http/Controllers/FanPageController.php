@@ -42,4 +42,11 @@ class FanPageController extends Controller
 
         return view('panel.fan_page')->with(compact('fanPage'));
     }
+
+    public function promotions($id)
+    {
+        $fanPage = FanPage::find($id);
+        $promotions = $fanPage->promotions;
+        return view('panel.promotions')->with(compact('fanPage', 'promotions'));
+    }
 }

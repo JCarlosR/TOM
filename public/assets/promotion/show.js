@@ -42,7 +42,7 @@ function showGoResponse(data) {
     if (data.success) {
         // The participation was registered
         if (data.participation.is_winner) {
-            displayIsWinnerMessage();
+            displayIsWinnerMessage(data.participation.id);
         } else {
             displayNonWinnerMessage();
         }
@@ -70,8 +70,8 @@ function showGoResponse(data) {
     }
 }
 
-function displayIsWinnerMessage() {
-    displaySuccessfulAlert('Felicidades has ganado!');
+function displayIsWinnerMessage(participationId) {
+    displaySuccessfulAlert('Felicidades has ganado! Folio de Promoción Ganador ('+participationId+')');
     // show winner image
     participationPerformed();
 }

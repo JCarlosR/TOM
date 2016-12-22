@@ -15,6 +15,7 @@ Route::get('/facebook/callback', 'FacebookController@callback');
 Route::get('/home', 'HomeController@index');
 Route::get('/config', 'HomeController@config');
 Route::get('/config/page/{id}', 'FanPageController@index');
+Route::get('/config/page/{id}/promotions', 'FanPageController@promotions');
 
 // Promotions
 Route::post('/promotion', 'ConfigController@store');

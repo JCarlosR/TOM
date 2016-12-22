@@ -12,4 +12,9 @@ class FanPage extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function promotions()
+    {
+        return $this->hasMany('App\Promotion');
+    }
 }
