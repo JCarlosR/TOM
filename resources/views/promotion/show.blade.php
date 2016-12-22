@@ -6,11 +6,13 @@
         .img-responsive {
             margin: 0 auto;
         }
+        #header-welcome {
+            height: 720px;
+        }
     </style>
 @endsection
 
 @section('content')
-<!-- Page Wrapper -->
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -20,9 +22,8 @@
 
     <!-- Main -->
     <article id="main">
-        <header>
-            <h2>Bienvenido a Tombo Fans</h2>
-            <p>Mucha suerte porque hoy puedes ganar ...</p>
+        <header id="header-welcome">
+
         </header>
         <section class="wrapper style5">
             <div class="inner text-center">
@@ -42,6 +43,8 @@
                 </div>
 
                 <div id="alertMessage"></div>
+                <img id="imgWon" src="{{ asset('images/participation/won.jpg') }}" alt="Ganaste" class="img-responsive" style="display: none;">
+                <img id="imgLost" src="{{ asset('images/participation/lost.jpg') }}" alt="Sigue intentando" class="img-responsive" style="display: none;">
 
                 <p id="pBackLink" style="display: none">
                     <a href="https://fb.com/{{ $fanPageFbId }}">Haz clic aquí para volver a la fanpage.</a>

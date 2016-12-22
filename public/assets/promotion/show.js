@@ -71,13 +71,15 @@ function showGoResponse(data) {
 }
 
 function displayIsWinnerMessage(participationId) {
-    displaySuccessfulAlert('Felicidades has ganado! Folio de Promoción Ganador ('+participationId+')');
+    displaySuccessfulAlert('Folio de Promoción Ganador ('+participationId+')');
     // show winner image
+    $('#imgWon').slideDown();
     participationPerformed();
 }
 function displayNonWinnerMessage() {
     displayWarningAlert('Vuelve a intentarlo el día de mañana!');
     // show non-winner image
+    $('#imgLost').slideDown();
     participationPerformed();
 }
 function participationPerformed() {
