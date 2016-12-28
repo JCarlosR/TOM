@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Promotion;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Intervention\Image\Facades\Image;
 
 class ConfigController extends Controller
 {
