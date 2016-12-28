@@ -3,11 +3,21 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Event;
 use SammyK\LaravelFacebookSdk\SyncableGraphNodeTrait;
 
 class User extends Authenticatable
 {
     use SyncableGraphNodeTrait;
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($user) {
+            Event::fire('user_created', $user);
+        });
+    }
 
     protected static $graph_node_field_aliases = [
         'id' => 'facebook_user_id',
