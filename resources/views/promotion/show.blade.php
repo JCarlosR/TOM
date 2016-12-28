@@ -29,8 +29,9 @@
             margin-bottom: 1.4em;
         }
         #header-welcome p.title {
-            font-size: 5em;
+            font-size: 4.5em;
             font-family: "PassionOne-Bold", serif;
+            max-width: 100%;
             margin-top: 0;
             margin-bottom: 0;
         }

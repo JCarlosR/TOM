@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/main.css" afterPath="$PROJECT_DIR$/public/assets/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/promotion/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/promotion/show.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +34,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/promotion/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="336">
+              <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -157,8 +155,8 @@
         <option value="$PROJECT_DIR$/resources/views/guess/privacy.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/terms.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ConfigController.php" />
-        <option value="$PROJECT_DIR$/resources/views/promotion/show.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/resources/views/promotion/show.blade.php" />
       </list>
     </option>
   </component>
@@ -398,12 +396,12 @@
       <workItem from="1482416479894" duration="1199000" />
       <workItem from="1482879280093" duration="3950000" />
       <workItem from="1482900622201" duration="443000" />
-      <workItem from="1482934196317" duration="4765000" />
+      <workItem from="1482934196317" duration="5168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128736000" />
+    <option name="totallyTimeSpent" value="129139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -821,8 +819,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/promotion/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="336">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding />
         </state>
       </provider>
