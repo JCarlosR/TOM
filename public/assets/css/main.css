@@ -3650,7 +3650,10 @@
 	}
 	#main-welcome > header {
 		padding: 12em 0 10em 0 ;
-		background-image: url("../../images/participation/welcome.jpg");
+		background-image: -moz-linear-gradient(top, rgba(56,90,154,0.70), rgba(56,90,154,0.98)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(56,90,154,0.70), rgba(56,90,154,0.98)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(56,90,154,0.70), rgba(56,90,154,0.98)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(56,90,154,0.70), rgba(56,90,154,0.98)), url("../../images/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;

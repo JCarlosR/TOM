@@ -3,11 +3,36 @@
 @section('styles')
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: "PassionOne";
+            src: url("../fonts/PassionOne-Regular.otf");
+        }
+        @font-face {
+            font-family: "PassionOne-Bold";
+            src: url("../fonts/PassionOne-Bold.otf");
+            font-weight: bold;
+        }
         .img-responsive {
             margin: 0 auto;
         }
         #header-welcome {
-            height: 720px;
+            font-family: "PassionOne", serif;
+            padding: 4em 0 !important;
+        }
+        #header-welcome p {
+            color: white;
+            font-size: 1.6em;
+            margin: 1em 0;
+        }
+        #header-welcome p.first-bold {
+            font-size: 2em;
+            margin-bottom: 1.4em;
+        }
+        #header-welcome p.title {
+            font-size: 5em;
+            font-family: "PassionOne-Bold", serif;
+            margin-top: 0;
+            margin-bottom: 0;
         }
     </style>
 @endsection
@@ -23,7 +48,11 @@
     <!-- Main -->
     <article id="main-welcome">
         <header id="header-welcome">
-
+            <p class="first-bold">Bienvenid@ a tu</p>
+            <p class="title">TomboFans</p>
+            <p>mucha suerte, porque hoy puedes ganar</p>
+            <img src="{{ asset('/images/participation/hand.png') }}" alt="Hand" height="140">
+            {{--<img src="{{ asset('/images/participation/welcome.jpg') }}" alt="Welcome" class="img-responsive">--}}
         </header>
         <section class="wrapper style5">
             <div class="inner text-center">
