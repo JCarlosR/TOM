@@ -52,4 +52,13 @@ class GuessController extends Controller
 
         return back()->with('notification', 'Tu mensaje se ha enviado correctamente. Te contactaremos muy pronto.');
     }
+
+    public function privacy()
+    {
+        return view('guess.privacy');
+    }
+    public function terms()
+    {
+        return view('guess.terms');
+    }
 }

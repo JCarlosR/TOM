@@ -10,6 +10,10 @@ Route::get('/stories', 'GuessController@getStories');
 Route::get('/contact', 'GuessController@getContact');
 Route::post('/contact', 'GuessController@postContact');
 
+// Privacy & terms
+Route::get('/privacy', 'GuessController@privacy');
+Route::get('/terms', 'GuessController@terms');
+
 // Generate a login URL
 Route::get('/facebook/login', 'FacebookController@login');
 // Endpoint that is redirected to after an authentication attempt
