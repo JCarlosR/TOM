@@ -15,11 +15,13 @@ window.fbAsyncInit = function() {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+var $btnShare;
 var $imgPromo;
 var $pDescription;
 $(function () {
     $imgPromo = $('#imgPromo');
     $pDescription = $('#pDescription');
+    $btnShare = $('#btnShare');
 
     $btnShare.on('click', onClickButtonShare);
 });

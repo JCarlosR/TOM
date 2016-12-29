@@ -1,11 +1,10 @@
 var $alertMessage, $pBackLing;
 var $alertLike;
-var $btnGo, $btnShare;
+var $btnGo;
 var $pInstructions, $pCount;
 
 $(function () {
     $btnGo = $('#btnGo');
-    $btnShare = $('#btnShare');
     $pCount = $('#pCount');
     $alertLike = $('#alertLike');
     $pBackLing = $('#pBackLink');

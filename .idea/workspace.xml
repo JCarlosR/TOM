@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/promotion/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/promotion/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/promotion/show-share.js" afterPath="$PROJECT_DIR$/public/assets/promotion/show-share.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/promotion/show.js" afterPath="$PROJECT_DIR$/public/assets/promotion/show.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,13 +33,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/promotion/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="77" column="127" lean-forward="false" selection-start-line="77" selection-start-column="127" selection-end-line="77" selection-end-column="127" />
+            <state relative-caret-position="543">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="e#2229#2287#0#HTML" expanded="true" />
+                <element signature="e#3276#3298#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,18 +49,18 @@
       <file leaf-file-name="show.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/promotion/show.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="58" />
+            <state relative-caret-position="42">
+              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show-share.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show-share.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/promotion/show-share.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            <state relative-caret-position="294">
+              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -163,9 +166,9 @@
         <option value="$PROJECT_DIR$/app/Listeners/ParticipationListener.php" />
         <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Participation.php" />
+        <option value="$PROJECT_DIR$/resources/views/promotion/show.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/promotion/show.js" />
         <option value="$PROJECT_DIR$/public/assets/promotion/show-share.js" />
-        <option value="$PROJECT_DIR$/resources/views/promotion/show.blade.php" />
       </list>
     </option>
   </component>
@@ -460,12 +463,12 @@
       <workItem from="1482879280093" duration="3950000" />
       <workItem from="1482900622201" duration="443000" />
       <workItem from="1482934196317" duration="5389000" />
-      <workItem from="1482962910900" duration="8625000" />
+      <workItem from="1482962910900" duration="8732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137985000" />
+    <option name="totallyTimeSpent" value="138092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -868,29 +871,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/promotion/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#2229#2287#0#HTML" expanded="true" />
+            <element signature="e#3276#3298#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/promotion/show.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="58" />
+        <state relative-caret-position="42">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/promotion/show-share.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        <state relative-caret-position="294">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/promotion/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="77" column="127" lean-forward="false" selection-start-line="77" selection-start-column="127" selection-end-line="77" selection-end-column="127" />
-          <folding>
-            <element signature="e#2229#2287#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
