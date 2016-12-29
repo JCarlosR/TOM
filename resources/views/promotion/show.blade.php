@@ -75,7 +75,9 @@
                 <div id="alertMessage"></div>
                 <img id="imgWon" src="{{ asset('images/participation/won.jpg') }}" alt="Ganaste" class="img-responsive" style="display: none;">
                 <img id="imgLost" src="{{ asset('images/participation/lost.jpg') }}" alt="Sigue intentando" class="img-responsive" style="display: none;">
-                <button type="button" id="btnShare" class="btn btn-success" data-id="{{ $promotion->id }}">Compartir en Facebook</button>
+                <button type="button" id="btnShare" class="btn btn-success" data-id="{{ $promotion->id }}" style="display: none;">
+                    Compartir en Facebook
+                </button>
 
                 <p id="pBackLink" style="display: none">
                     <a href="https://fb.com/{{ $fanPageFbId }}">Haz clic aquí para volver a la fanpage.</a>
