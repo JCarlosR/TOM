@@ -59,9 +59,9 @@
             <div class="inner text-center">
 
                 <h3>{{ $promotion->fanPage->name }}</h3>
-                <p>{{ $promotion->description }}</p>
+                <p id="pDescription">{{ $promotion->description }}</p>
 
-                <img src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
+                <img id="imgPromo" src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
 
                 <hr />
 
@@ -75,6 +75,7 @@
                 <div id="alertMessage"></div>
                 <img id="imgWon" src="{{ asset('images/participation/won.jpg') }}" alt="Ganaste" class="img-responsive" style="display: none;">
                 <img id="imgLost" src="{{ asset('images/participation/lost.jpg') }}" alt="Sigue intentando" class="img-responsive" style="display: none;">
+                <button type="button" id="btnShare" class="btn btn-success" data-id="{{ $promotion->id }}">Compartir en Facebook</button>
 
                 <p id="pBackLink" style="display: none">
                     <a href="https://fb.com/{{ $fanPageFbId }}">Haz clic aquí para volver a la fanpage.</a>
@@ -97,4 +98,5 @@
 
 @section('scripts')
     <script src="{{ asset('/assets/promotion/show.js') }}"></script>
+    <script src="{{ asset('/assets/promotion/show-share.js') }}"></script>
 @endsection

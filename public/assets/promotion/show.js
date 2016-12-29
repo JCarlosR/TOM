@@ -1,10 +1,11 @@
 var $alertMessage, $pBackLing;
 var $alertLike;
-var $btnGo, $pInstructions;
-var $pCount;
+var $btnGo, $btnShare;
+var $pInstructions, $pCount;
 
 $(function () {
     $btnGo = $('#btnGo');
+    $btnShare = $('#btnShare');
     $pCount = $('#pCount');
     $alertLike = $('#alertLike');
     $pBackLing = $('#pBackLink');
@@ -14,6 +15,7 @@ $(function () {
     $btnGo.on('click', onClickButtonGo);
     $('#closeAlertLike').on('click', onClickCloseAlertLike);
 });
+
 function onClickCloseAlertLike() {
     event.preventDefault();
     $alertLike.slideUp('slow'); // hide with animation
@@ -74,6 +76,7 @@ function displayIsWinnerMessage(participationId) {
     displaySuccessfulAlert('Folio de Promoción Ganador ('+participationId+')');
     // show winner image
     $('#imgWon').slideDown();
+    $btnShare.slideDown();
     participationPerformed();
 }
 function displayNonWinnerMessage() {
