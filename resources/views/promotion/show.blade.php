@@ -52,7 +52,7 @@
             <p class="first-bold">Bienvenid@ a tu</p>
             <p class="title">TomboFans</p>
             <p>mucha suerte, porque hoy puedes ganar</p>
-            <img src="{{ asset('/images/participation/hand.png') }}" alt="Hand" height="140">
+            <img src="{{ asset('/images/participation/hand.png') }}" alt="Hand" height="85">
             {{--<img src="{{ asset('/images/participation/welcome.jpg') }}" alt="Welcome" class="img-responsive">--}}
         </header>
         <section class="wrapper style5">

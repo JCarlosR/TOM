@@ -79,7 +79,7 @@ function displayIsWinnerMessage(participationId) {
     participationPerformed();
 }
 function displayNonWinnerMessage() {
-    displayWarningAlert('Vuelve a intentarlo el día de mañana!');
+    // displayWarningAlert('Vuelve a intentarlo el día de mañana!');
     // show non-winner image
     $('#imgLost').slideDown();
     participationPerformed();
