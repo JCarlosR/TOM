@@ -30,11 +30,13 @@ function onClickButtonGo() {
         _token: csrfToken
     };
 
+    $btnGo.prop('disabled', true);
     $.ajax({
         method: 'POST',
         url: url,
         data: data
     }).done(function(response) {
+        $btnGo.prop('disabled', false);
         showGoResponse(response);
     });
 }
