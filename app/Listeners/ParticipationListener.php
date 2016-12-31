@@ -39,15 +39,17 @@ class ParticipationListener
         $data['promotion'] = $promotion;
 
         // mail to the winner user
-        Mail::send('emails.participant_you_won', $data, function ($m) use ($winner) {
+        $subject = "Felicidades, has ganado $promotion->description!";
+        Mail::send('emails.participant_you_won', $data, function ($m) use ($winner, $subject) {
             $m->from('hola@tombofans.com', 'TomboFans');
-            $m->to($winner->email, $winner->name)->subject('Has ganado una promoción!');
+            $m->to($winner->email, $winner->name)->subject($subject);
         });
 
         // mail to the promo owner
-        Mail::send('emails.user_new_winner', $data, function ($m) use ($owner) {
+        $subject = "Felicidades, un nuevo prospecto ganó en tu promoción $promotion->description!";
+        Mail::send('emails.user_new_winner', $data, function ($m) use ($owner, $subject) {
             $m->from('hola@tombofans.com', 'TomboFans');
-            $m->to($owner->email, $owner->name)->subject('Hay un nuevo ganador en tu promo!');
+            $m->to($owner->email, $owner->name)->subject($subject);
         });
     }
 

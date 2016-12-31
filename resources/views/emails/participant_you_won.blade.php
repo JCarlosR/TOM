@@ -9,15 +9,27 @@
 </head>
 <body>
     <h1>Felicidades {{ $winner->name }}!</h1>
-    <p>Te escribimos este mensaje porque has ganado la siguiente promoción.</p>
-    <p><b>Promoción:</b> {{ $promotion->description }}</p>
-    <img src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="Imagen de {{ $promotion->description }}" class="img-responsive">
+    <p>Ganaste la siguiente promoción:</p>
+    <p><b>Nombre:</b> {{ $promotion->description }}</p>
+    <p>
+        <b>Imagen:</b>
+        <img src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="Imagen de {{ $promotion->description }}" class="img-responsive">
+    </p>
+    @if ($promotion->end_date)
+        <p><b>Fecha de vencimiento:</b> {{ $promotion->end_date }}</p>
+    @endif
     <hr>
-    <p>Por favor ponte en contacto con el administrador de esta promoción. A continuación sus datos:</p>
+    <p>Para hacerla válida solamente debes contactar al administrador de esta promoción. A continuación sus datos:</p>
     <ul>
         <li><b>Nombre:</b> {{ $owner->name }}</li>
-        <li><b>E-mail:</b> {{ $owner->email }}</li>
+        <li><b>Correo:</b> {{ $owner->email }}</li>
+        <li><b>Fanpage:</b> {{ $promotion->fanPage->name }}</li>
         {{--<li><b>Teléfono:</b> {{ $owner->phone }}</li>--}}
     </ul>
+    <hr>
+    <p>
+        <em>Si tu también quieres organizar promociones para aumentar tus prospectos, clientes y además interacciones en tu facebook, regístrate en www.tombofans.com</em>
+    </p>
+    <p>TomboFans</p>
 </body>
 </html>
