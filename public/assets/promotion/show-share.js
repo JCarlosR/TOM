@@ -24,7 +24,7 @@ $(function () {
     $btnShare = $('#btnShare');
 
     $btnShare.on('click', onClickButtonShare);
-    subscribeToClickLike();
+    $('#alertLike').on('click', listenPossibleLike);
 });
 
 function onClickButtonShare() {
@@ -53,8 +53,6 @@ function onClickButtonShare() {
     );
 }
 
-function subscribeToClickLike() {
-    FB.Event.subscribe('edge.create', function(response) {
-        console.log(response);
-    });
+function listenPossibleLike() {
+    alert('Like performed');
 }
