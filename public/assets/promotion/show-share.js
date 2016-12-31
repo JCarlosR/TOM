@@ -5,6 +5,10 @@ window.fbAsyncInit = function() {
         version    : 'v2.8'
     });
     FB.AppEvents.logPageView();
+    // Catch click on like
+    FB.Event.subscribe('edge.create', function(response) {
+        console.log(response);
+    });
 };
 
 (function(d, s, id){
@@ -24,7 +28,6 @@ $(function () {
     $btnShare = $('#btnShare');
 
     $btnShare.on('click', onClickButtonShare);
-    $('#alertLike').on('click', listenPossibleLike);
 });
 
 function onClickButtonShare() {
@@ -51,8 +54,4 @@ function onClickButtonShare() {
             }
         }
     );
-}
-
-function listenPossibleLike() {
-    alert('Like performed');
 }
