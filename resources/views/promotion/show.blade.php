@@ -17,7 +17,7 @@
         }
         #header-welcome {
             font-family: "PassionOne", serif;
-            padding: 4em 0 !important;
+            padding: 4em 0 1em 0 !important;
         }
         #header-welcome p {
             color: white;
