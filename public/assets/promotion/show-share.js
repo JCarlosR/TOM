@@ -24,6 +24,7 @@ $(function () {
     $btnShare = $('#btnShare');
 
     $btnShare.on('click', onClickButtonShare);
+    subscribeToClickLike();
 });
 
 function onClickButtonShare() {
@@ -50,4 +51,10 @@ function onClickButtonShare() {
             }
         }
     );
+}
+
+function subscribeToClickLike() {
+    FB.Event.subscribe('edge.create', function(response) {
+        console.log(response);
+    });
 }
