@@ -62,9 +62,8 @@
                     <h3>{{ $promotion->fanPage->name }}</h3>
                     <p id="pDescription">{{ $promotion->description }}</p>
                     <img id="imgPromo" src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
+                    <hr />
                 </div>
-
-                <hr />
 
                 {{-- If the user still has not like the page, show this alert from the beginning --}}
                 <div class="alert alert-info" id="alertLike" style="display: @if($pageIsLiked) none @else block @endif">

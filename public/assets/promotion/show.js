@@ -89,14 +89,12 @@ function displayNonWinnerMessage() {
     participationPerformed();
 }
 function participationPerformed() {
-    $promoData.hide();
+    $promoData.slideUp(function () {
+        $(this).remove();
+    });
     $pCount.hide();
-    $btnGo.slideUp(function () {
-        $(this).remove();
-    });
-    $pInstructions.slideUp(function () {
-        $(this).remove();
-    });
+    $btnGo.hide();
+    $pInstructions.hide();
     $pBackLing.show();
 }
 
