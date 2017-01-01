@@ -58,10 +58,11 @@
         <section class="wrapper style5">
             <div class="inner text-center">
 
-                <h3>{{ $promotion->fanPage->name }}</h3>
-                <p id="pDescription">{{ $promotion->description }}</p>
-
-                <img id="imgPromo" src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
+                <div id="promoData">
+                    <h3>{{ $promotion->fanPage->name }}</h3>
+                    <p id="pDescription">{{ $promotion->description }}</p>
+                    <img id="imgPromo" src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
+                </div>
 
                 <hr />
 

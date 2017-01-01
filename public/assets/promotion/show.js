@@ -2,6 +2,7 @@ var $alertMessage, $pBackLing;
 var $alertLike;
 var $btnGo;
 var $pInstructions, $pCount;
+var $promoData;
 
 $(function () {
     $btnGo = $('#btnGo');
@@ -10,6 +11,7 @@ $(function () {
     $pBackLing = $('#pBackLink');
     $alertMessage = $('#alertMessage');
     $pInstructions = $('#pInstructions');
+    $promoData = $('#promoData');
 
     $btnGo.on('click', onClickButtonGo);
     $('#closeAlertLike').on('click', onClickCloseAlertLike);
@@ -87,6 +89,7 @@ function displayNonWinnerMessage() {
     participationPerformed();
 }
 function participationPerformed() {
+    $promoData.hide();
     $pCount.hide();
     $btnGo.slideUp(function () {
         $(this).remove();
