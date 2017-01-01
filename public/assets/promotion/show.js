@@ -78,14 +78,14 @@ function showGoResponse(data) {
 function displayIsWinnerMessage(participationId) {
     displaySuccessfulAlert('Folio de Promoción Ganador ('+participationId+')');
     // show winner image
-    $('#imgWon').slideDown();
+    $('#imgWon').slideDown('slow');
     $btnShare.slideDown();
     participationPerformed();
 }
 function displayNonWinnerMessage() {
     // displayWarningAlert('Vuelve a intentarlo el día de mañana!');
     // show non-winner image
-    $('#imgLost').slideDown();
+    $('#imgLost').slideDown('slow');
     participationPerformed();
 }
 function participationPerformed() {
