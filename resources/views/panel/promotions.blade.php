@@ -48,7 +48,7 @@
                                                 </a>
 
                                                 <a href="{{ url("config/page/$promotion->id/excel") }}" class="btn btn-success btn-sm">
-                                                    Exportar a Excel
+                                                    Exportar <span class="fa fa-file-excel-o"></span>
                                                 </a>
                                             </td>
                                         </tr>
