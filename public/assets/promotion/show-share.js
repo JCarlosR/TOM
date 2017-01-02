@@ -25,7 +25,10 @@ $(function () {
     $btnCheckIn = $('#btnCheckIn');
 
     $btnShare.on('click', onClickButtonShare);
-    $btnCheckIn.on('click', onClickCheckInButton());
+
+    // Check-in request if the user has liked the page
+    if (! $alertLike.is(':visible'))
+        startCheckIn();
 });
 
 function onClickButtonShare() {
@@ -54,9 +57,18 @@ function onClickButtonShare() {
     );
 }
 
-function onClickCheckInButton() {
-    var body = 'Reading JS SDK documentation';
-    FB.api('/me/feed', 'post', { message: body }, function(response) {
+function startCheckIn() {
+    FB.login(checkInApiRequest, {scope: 'publish_actions'});
+}
+
+function checkInApiRequest() {
+    var body = 'Participando en una TomboFan!';
+    var data = {
+        message: body,
+        place: 100243956684767
+    };
+
+    FB.api('/me/feed', 'post', data, function(response) {
         if (!response || response.error) {
             alert('Ha ocurrido un error inesperado!');
         } else {
