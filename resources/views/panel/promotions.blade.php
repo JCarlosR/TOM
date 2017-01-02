@@ -43,12 +43,12 @@
                                         <tr>
                                             <td>{{ $promotion->description }}</td>
                                             <td>
-                                                <a href="{{ url("config/page/$promotion->id/edit") }}" class="btn btn-primary btn-sm">
-                                                    Editar <span class="glyphicon glyphicon-pencil"></span>
+                                                <a href="{{ url("config/page/$promotion->id/edit") }}" class="btn btn-primary btn-sm" title="Editar promoción">
+                                                    <span class="glyphicon glyphicon-pencil"></span>
                                                 </a>
 
-                                                <a href="{{ url("config/page/$promotion->id/excel") }}" class="btn btn-success btn-sm">
-                                                    Exportar <span class="fa fa-file-excel-o"></span>
+                                                <a href="{{ url("config/page/$promotion->id/excel") }}" class="btn btn-success btn-sm" title="Exportar a Excel">
+                                                    <span class="fa fa-file-excel-o"></span>
                                                 </a>
                                             </td>
                                         </tr>
