@@ -61,6 +61,11 @@
                 <div id="promoData">
                     <h3>{{ $promotion->fanPage->name }}</h3>
                     <p id="pDescription">{{ $promotion->description }}</p>
+                    @if ($promotion->end_date)
+                        <p><b>Fecha de vencimiento:</b> {{ $promotion->end_date }}</p>
+                    @endif
+                    <p class="text-muted">{{ $promotion->city }}</p>
+
                     <img id="imgPromo" src="{{ asset('/images/promotions/'.$promotion->image_path) }}" alt="TOM Promo" class="img-responsive">
                     <hr />
                 </div>
@@ -92,7 +97,7 @@
             </div>
         </section>
     </article>
-    
+
 </div>
 @endsection
 
