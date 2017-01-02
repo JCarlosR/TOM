@@ -66,27 +66,8 @@
 
 @section('scripts')
     <script>
-        var $endDate;
-
         $(function () {
-            $endDate = $('#end_date');
 
-            $('#btnNewPromotion').on('click', onClickNewPromotion);
-            $('input[type=radio][name=infinite]').change(onChangeInfinite);
         });
-
-        function onClickNewPromotion() {
-            $('#panelOptions').slideUp();
-            $('#panelNewPromotion').show();
-        }
-
-        function onChangeInfinite() {
-            if (this.value == 1) {
-                $endDate.slideUp();
-            }
-            else if (this.value == 0) {
-                $endDate.slideDown();
-            }
-        }
     </script>
 @endsection
