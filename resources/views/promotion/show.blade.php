@@ -92,9 +92,7 @@
             </div>
         </section>
     </article>
-
-    <!-- Footer -->
-    @include('includes.footer')
+    
 </div>
 @endsection
 

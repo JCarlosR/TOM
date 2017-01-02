@@ -79,7 +79,7 @@ function displayIsWinnerMessage(participationId) {
     displaySuccessfulAlert('Folio de Promoción Ganador ('+participationId+')');
     // show winner image
     $('#imgWon').slideDown('slow');
-    $btnShare.slideDown();
+    $btnShare.show();
     participationPerformed();
 }
 function displayNonWinnerMessage() {
