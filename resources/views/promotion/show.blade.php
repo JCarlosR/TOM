@@ -71,10 +71,15 @@
                 </div>
 
                 {{-- If the user still has not like the page, show this alert from the beginning --}}
-                <div class="alert alert-info" id="alertLike" style="display: @if($pageIsLiked) none @else block @endif">
+                <div class="alert alert-info" id="alertLike">
                     <a href="#" class="close" id="closeAlertLike">&times;</a>
-                    <p>Recuerda dar like a la página para poder participar:</p>
-                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $fanPageFbId }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    @if ($pageIsLiked)
+                        <p>Por favor comparte tu participación. Así crearemos más promociones!</p>
+                        <button class="btn btn-info" id="btnCheckIn">Hacer check-in</button>
+                    @else
+                        <p>Recuerda dar like a la página para poder participar:</p>
+                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $fanPageFbId }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    @endif
                 </div>
 
                 <div id="alertMessage"></div>

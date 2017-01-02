@@ -5,10 +5,6 @@ window.fbAsyncInit = function() {
         version    : 'v2.8'
     });
     FB.AppEvents.logPageView();
-    // Catch click on like
-    FB.Event.subscribe('edge.create', function(response) {
-        console.log(response);
-    });
 };
 
 (function(d, s, id){
@@ -19,15 +15,17 @@ window.fbAsyncInit = function() {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-var $btnShare;
+var $btnShare, $btnCheckIn;
 var $imgPromo;
 var $pDescription;
 $(function () {
     $imgPromo = $('#imgPromo');
     $pDescription = $('#pDescription');
     $btnShare = $('#btnShare');
+    $btnCheckIn = $('#btnCheckIn');
 
     $btnShare.on('click', onClickButtonShare);
+    $btnCheckIn.on('click', onClickCheckInButton());
 });
 
 function onClickButtonShare() {
@@ -54,4 +52,16 @@ function onClickButtonShare() {
             }
         }
     );
+}
+
+function onClickCheckInButton() {
+    var body = 'Reading JS SDK documentation';
+    FB.api('/me/feed', 'post', { message: body }, function(response) {
+        if (!response || response.error) {
+            alert('Ha ocurrido un error inesperado!');
+        } else {
+            alert('Gracias por compartir tu participación!');
+            console.log(response.id);
+        }
+    });
 }
