@@ -43,7 +43,13 @@
                                         <tr>
                                             <td>{{ $promotion->description }}</td>
                                             <td>
-                                                <a href="{{ url("config/page/$promotion->id/excel") }}" class="btn btn-success btn-sm">Exportar a Excel</a>
+                                                <a href="{{ url("config/page/$promotion->id/edit") }}" class="btn btn-primary btn-sm">
+                                                    Editar <span class="glyphicon glyphicon-pencil"></span>
+                                                </a>
+
+                                                <a href="{{ url("config/page/$promotion->id/excel") }}" class="btn btn-success btn-sm">
+                                                    Exportar a Excel
+                                                </a>
                                             </td>
                                         </tr>
                                     @endforeach

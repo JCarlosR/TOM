@@ -59,6 +59,7 @@
                                         </ul>
                                     </div>
                                 @endif
+
                                 <form action="{{ url('/promotion') }}" method="POST" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
