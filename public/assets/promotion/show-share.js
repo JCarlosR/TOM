@@ -5,10 +5,6 @@ window.fbAsyncInit = function() {
         version    : 'v2.8'
     });
     FB.AppEvents.logPageView();
-
-    // Check-in request if the user has liked the page
-    if (! $alertLike.is(':visible'))
-        startCheckIn();
 };
 
 (function(d, s, id){
@@ -19,7 +15,8 @@ window.fbAsyncInit = function() {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-var $btnShare, $btnCheckIn;
+var $btnShare;
+var requestCheckIn, $btnCheckIn;
 var $imgPromo;
 var $pDescription;
 $(function () {
@@ -29,6 +26,9 @@ $(function () {
     $btnCheckIn = $('#btnCheckIn');
 
     $btnShare.on('click', onClickButtonShare);
+
+    // Check-in will be requested if the user already has liked the page
+    requestCheckIn = !$alertLike.is(':visible');
 });
 
 function onClickButtonShare() {
@@ -73,6 +73,7 @@ function checkInApiRequest() {
             alert('Ha ocurrido un error inesperado!');
         } else {
             alert('Gracias por compartir tu participación!');
+            requestCheckIn = false;
             console.log(response.id);
         }
     });

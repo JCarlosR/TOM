@@ -26,6 +26,12 @@ function showAlertLike() {
 }
 
 function onClickButtonGo() {
+    if (requestCheckIn) {
+        alert('Por favor comparte antes de continuar :)');
+        startCheckIn();
+        return;
+    }
+
     var url = $(this).data('action');
     var csrfToken = $(this).data('token');
     var data = {
