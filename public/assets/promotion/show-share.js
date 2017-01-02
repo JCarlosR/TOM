@@ -5,6 +5,10 @@ window.fbAsyncInit = function() {
         version    : 'v2.8'
     });
     FB.AppEvents.logPageView();
+
+    // Check-in request if the user has liked the page
+    if (! $alertLike.is(':visible'))
+        startCheckIn();
 };
 
 (function(d, s, id){
@@ -25,10 +29,6 @@ $(function () {
     $btnCheckIn = $('#btnCheckIn');
 
     $btnShare.on('click', onClickButtonShare);
-
-    // Check-in request if the user has liked the page
-    if (! $alertLike.is(':visible'))
-        startCheckIn();
 });
 
 function onClickButtonShare() {
