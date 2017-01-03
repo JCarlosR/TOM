@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Participant;
 
+use App\Http\Controllers\Controller;
 use App\Participation;
 use App\Promotion;
 use Carbon\Carbon;
