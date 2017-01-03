@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="252">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="e#48#84#0#PHP" expanded="true" />
               </folding>
@@ -471,12 +470,12 @@
       <workItem from="1483196637952" duration="4196000" />
       <workItem from="1483305243611" duration="2083000" />
       <workItem from="1483380683379" duration="4494000" />
-      <workItem from="1483398048078" duration="5334000" />
+      <workItem from="1483398048078" duration="5373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157587000" />
+    <option name="totallyTimeSpent" value="157626000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -916,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="252">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="e#48#84#0#PHP" expanded="true" />
           </folding>
