@@ -14,7 +14,8 @@ class PromotionController extends Controller
     public function show($id)
     {
         $promotion = Promotion::findOrFail($id);
-        return view('panel.promotion.edit')->with(compact('promotion'));
+        $fanPage = $promotion->fanPage;
+        return view('panel.promotion.edit')->with(compact('promotion', 'fanPage'));
     }
 
 }
