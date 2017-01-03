@@ -22,12 +22,12 @@ Route::get('/home', 'HomeController@index');
 Route::get('/config', 'HomeController@config');
 Route::get('/config/page/{id}', 'FanPageController@index');
 Route::get('/config/page/{id}/promotions', 'FanPageController@promotions');
-Route::get('/config/page/{id}/excel', 'FanPageController@excel');
+Route::get('/config/promotion/{id}/excel', 'FanPageController@excel');
 
 // Promotions for creators
 Route::post('/promotion', 'Creator\PromotionController@store');
 Route::get('/promotion/{id}/instructions', 'Creator\PromotionController@instructions');
-Route::get('/config/promotion/{id}', 'Creator\PromotionController@show');
+Route::get('/config/promotion/{id}/edit', 'Creator\PromotionController@show');
 
 // Promotions for participants
 Route::get('/promotion/{id}', 'Participant\PromotionController@show');

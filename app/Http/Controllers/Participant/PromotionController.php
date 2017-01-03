@@ -45,7 +45,7 @@ class PromotionController extends Controller
         $userId = auth()->user()->id;
         $participationsCount = Participation::where('user_id', $userId)->where('promotion_id', $id)->count();
 
-        return view('promotion.show')->with(compact('promotion', 'participationsCount', 'pageIsLiked', 'fanPageFbId'));
+        return view('participant.promotion.show')->with(compact('promotion', 'participationsCount', 'pageIsLiked', 'fanPageFbId'));
     }
 
     public function requestFbPermissions($id, LaravelFacebookSdk $fb)

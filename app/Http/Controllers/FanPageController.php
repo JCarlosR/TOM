@@ -49,7 +49,7 @@ class FanPageController extends Controller
     {
         $fanPage = FanPage::find($id);
         $promotions = $fanPage->promotions;
-        return view('panel.promotions')->with(compact('fanPage', 'promotions'));
+        return view('panel.promotion.index')->with(compact('fanPage', 'promotions'));
     }
 
     public function excel($id)
