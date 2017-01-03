@@ -27,6 +27,7 @@ Route::get('/config/page/{id}/excel', 'FanPageController@excel');
 // Promotions for creators
 Route::post('/promotion', 'Creator\PromotionController@store');
 Route::get('/promotion/{id}/instructions', 'Creator\PromotionController@instructions');
+Route::get('/config/promotion/{id}', 'Creator\PromotionController@show');
 
 // Promotions for participants
 Route::get('/promotion/{id}', 'Participant\PromotionController@show');
