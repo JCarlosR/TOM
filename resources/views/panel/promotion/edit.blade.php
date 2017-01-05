@@ -35,11 +35,6 @@
                             <form action="" method="POST" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="fan-page">Fan page asociada</label>
-                                    <input type="text" readonly class="form-control" value="{{ $promotion->fanPage->name }}" id="fan-page">
-                                </div>
-
-                                <div class="form-group">
                                     <label for="description">Promoción</label>
                                     <textarea name="description" rows="2" placeholder="Describe aquí tu promoción. El límite es de 180 caracteres." class="form-control">{{ old('description', $promotion->description) }}</textarea>
                                 </div>
