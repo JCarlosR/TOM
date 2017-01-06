@@ -71,3 +71,7 @@
         </div>
     </div>
 @endsection
+
+@section('scripts')
+    <script src="{{ asset('/assets/promotion/end-date-radio.js') }}"></script>
+@endsection
