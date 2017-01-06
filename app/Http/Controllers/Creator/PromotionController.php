@@ -107,7 +107,19 @@ class PromotionController extends Controller
         }
 
         $promotion->save();
+        session()->flash('message', 'Los datos de su promoción se han modificado exitosamente!');
+
         return redirect('config/page/'.$promotion->fanPage->id.'/promotions');
+    }
+
+    public function delete($id)
+    {
+        $promotion = Promotion::findOrFail($id);
+        $promotion->delete();
+
+        session()->flash('message', 'La promoción seleccionada se ha dado de baja!');
+
+        return back();
     }
 
 }

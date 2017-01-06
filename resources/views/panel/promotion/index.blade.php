@@ -41,6 +41,10 @@
                                             <a href="{{ url("config/promotion/$promotion->id/excel") }}" class="btn btn-success btn-sm" title="Exportar a Excel">
                                                 <span class="fa fa-file-excel-o"></span>
                                             </a>
+
+                                            <a href="{{ url("config/promotion/$promotion->id/delete") }}" class="btn btn-danger btn-sm" title="Dar de baja" onclick="return confirmDelete();">
+                                                <span class="fa fa-remove"></span>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -53,4 +57,12 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function confirmDelete() {
+            return confirm('¿Está seguro que desea eliminar esta promoción?');
+        }
+    </script>
 @endsection
