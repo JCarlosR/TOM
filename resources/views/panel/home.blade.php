@@ -1,5 +1,9 @@
 @extends('layouts.dashboard')
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('/vendor/introjs/introjs.min.css') }}">
+@endsection
+
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
@@ -49,4 +53,9 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('/vendor/introjs/intro.min.js') }}"></script>
+    <script src="{{ asset('/assets/config/step-by-step.js') }}"></script>
 @endsection
