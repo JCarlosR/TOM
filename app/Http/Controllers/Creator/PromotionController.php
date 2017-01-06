@@ -11,6 +11,11 @@ use Intervention\Image\Facades\Image;
 
 class PromotionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     protected $messages = [
         'fan_page_id.required' => 'Es necesario seleccionar una fanpage.',
         'fan_page_id.exists' => 'La fan page indicada no existe.',

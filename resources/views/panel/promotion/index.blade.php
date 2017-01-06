@@ -35,7 +35,7 @@
                                         <td>{{ $promotion->description }}</td>
                                         <td>
                                             <a href="{{ url("config/promotion/$promotion->id/edit") }}" class="btn btn-primary btn-sm" title="Editar promoción">
-                                                <span class="glyphicon glyphicon-pencil"></span>
+                                                <span class="fa fa-pencil"></span>
                                             </a>
 
                                             <a href="{{ url("config/promotion/$promotion->id/excel") }}" class="btn btn-success btn-sm" title="Exportar a Excel">
