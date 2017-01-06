@@ -7,6 +7,7 @@ use App\Promotion;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Mail;
 use Intervention\Image\Facades\Image;
 
 class ConfigController extends Controller

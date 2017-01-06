@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Listeners/ParticipationListener.php" afterPath="$PROJECT_DIR$/app/Listeners/ParticipationListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Listeners/UserListener.php" afterPath="$PROJECT_DIR$/app/Listeners/UserListener.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,21 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
+            <state relative-caret-position="312">
               <caret line="79" column="67" lean-forward="false" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConfigController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="28" column="93" lean-forward="false" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
+            <state relative-caret-position="588">
+              <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
               <folding>
                 <element signature="e#48#84#0#PHP" expanded="true" />
               </folding>
@@ -409,12 +406,12 @@
       <workItem from="1483592293329" duration="678000" />
       <workItem from="1483668566889" duration="7376000" />
       <workItem from="1483708749761" duration="5046000" />
-      <workItem from="1483724441804" duration="2519000" />
+      <workItem from="1483724441804" duration="3058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177203000" />
+    <option name="totallyTimeSpent" value="177742000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -843,21 +840,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="28" column="93" lean-forward="false" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
-          <folding>
-            <element signature="e#48#84#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="312">
+          <caret line="79" column="67" lean-forward="false" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="79" column="67" lean-forward="false" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="67" />
-          <folding />
+        <state relative-caret-position="588">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="e#48#84#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
