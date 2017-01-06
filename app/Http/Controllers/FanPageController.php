@@ -59,9 +59,9 @@ class FanPageController extends Controller
             $excel->sheet('Datos', function($sheet) use ($id) {
 
                 // Header
-                $sheet->mergeCells('A1:D1');
+                $sheet->mergeCells('A1:E1');
                 $sheet->row(1, ['Relación de participaciones de la promoción #'.$id]);
-                $sheet->row(2, ['Folio', 'Nombre del participante', 'Ticket', 'E-mail', '¿Ha ganado?']);
+                $sheet->row(2, ['Folio', 'Nombre del participante', 'Ticket', 'E-mail', '¿Ha ganado?', 'Facebook ID']);
 
                 // Data
                 $promotion = Promotion::find($id);
@@ -73,6 +73,7 @@ class FanPageController extends Controller
                     $row[2] = $participation->ticket;
                     $row[3] = $participation->user->email;
                     $row[4] = $participation->is_winner ? 'Este usuario ha ganado' : 'Este usuario NO ha ganado';
+                    $row[5] = $participation->user->facebook_user_id;
                     $sheet->appendRow($row);
                 }
 
