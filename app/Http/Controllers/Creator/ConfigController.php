@@ -16,6 +16,20 @@ class ConfigController extends Controller
         $this->middleware('auth');
     }
 
+    public static function sendRightConfigurationMail(Promotion $promotion)
+    {
+        // creator
+        $user = $promotion->fanPage->user;
+
+        $data = [];
+        $data['promotion'] = $promotion;
+        $data['creator_name'] = $user->name;
+
+        Mail::send('emails.right_configuration', $data, function ($m) use ($user) {
+            $m->to($user->email, $user->name)->subject('Has creado correctamente tu promoción!');
+        });
+    }
+
     public function instructions($id)
     {
         $promotion = Promotion::find($id);

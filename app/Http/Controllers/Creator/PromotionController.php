@@ -75,7 +75,10 @@ class PromotionController extends Controller
             ->save($path);
 
         $promotion->image = $extension;
-        $promotion->save();
+
+        if ($promotion->save()) {
+            ConfigController::sendRightConfigurationMail($promotion);
+        }
 
         return redirect("promotion/$promotion->id/instructions");
     }
