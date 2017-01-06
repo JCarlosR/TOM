@@ -33,20 +33,19 @@ class FacebookController extends Controller
 
         // Token will be null if the user denied the request
         if (! $token) {
-            // Get the redirect helper
             $helper = $fb->getRedirectLoginHelper();
-
             if (! $helper->getError()) {
                 abort(403, 'Unauthorized action.');
             }
 
-            // User denied the request
-            dd(
-                $helper->getError(),
-                $helper->getErrorCode(),
-                $helper->getErrorReason(),
-                $helper->getErrorDescription()
-            );
+            // If the promotion param exists redirect to the proper TOM page
+            $promotion_id = session()->get('promotion_id');
+            if ($promotion_id) {
+                session()->put('promotion_id', '');
+                return redirect('/promotion/'.$promotion_id);
+            } else {
+                return redirect('/');
+            }
         }
 
         if (! $token->isLongLived()) {

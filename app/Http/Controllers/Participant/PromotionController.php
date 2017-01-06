@@ -24,10 +24,26 @@ class PromotionController extends Controller
 
         // Fan page associated with the promotion
         $fanPage = $promotion->fanPage;
+        $locationId = $fanPage->user->location_id;
+        $fanPageName = $fanPage->name;
         $fanPageFbId = $fanPage->fan_page_id;
 
-        // The user has liked the page?
+        // Use token to perform the queries
         $fb->setDefaultAccessToken($token);
+
+        // Authenticated user info
+        $query = "/me?fields=picture,name";
+        try {
+            $response = $fb->get($query);
+        } catch (FacebookSDKException $e) {
+            // It happens when the user revokes the permissions
+            return redirect("/facebook/promotion/$id");
+        }
+        $graphNode = $response->getGraphNode();
+        $participantName = $graphNode->getField('name');
+        $participantPicture = $graphNode->getField('picture')['url'];
+
+        // The user has liked the page?
         $query = "/me/likes/$fanPageFbId";
         try {
             $response = $fb->get($query);
@@ -45,7 +61,10 @@ class PromotionController extends Controller
         $userId = auth()->user()->id;
         $participationsCount = Participation::where('user_id', $userId)->where('promotion_id', $id)->count();
 
-        return view('participant.promotion.show')->with(compact('promotion', 'participationsCount', 'pageIsLiked', 'fanPageFbId'));
+        return view('participant.promotion.show')->with(compact(
+            'participantName', 'participantPicture',
+            'promotion', 'participationsCount', 'pageIsLiked', 'locationId', 'fanPageName', 'fanPageFbId'
+        ));
     }
 
     public function requestFbPermissions($id, LaravelFacebookSdk $fb)
@@ -79,11 +98,13 @@ class PromotionController extends Controller
             return $data;
         }
 
+        /*
+        // The user has liked the page?
+
         // Fan page associated with the promotion
         $fanPage = $promotion->fanPage;
         $fanPageFbId = $fanPage->fan_page_id;
 
-        // The user has liked the page?
         $fb->setDefaultAccessToken($token);
         $query = "/me/likes/$fanPageFbId";
         try {
@@ -100,6 +121,7 @@ class PromotionController extends Controller
             $data['error_type'] = 'not_liked';
             return $data;
         }
+        */
 
         // There are valid credits in the promotion?
         // Free package only allows a max of 10 participations

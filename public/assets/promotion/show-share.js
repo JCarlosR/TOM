@@ -19,6 +19,7 @@ var $btnShare;
 var requestCheckIn, $btnCheckIn;
 var $imgPromo;
 var $pDescription;
+var locationId;
 $(function () {
     $imgPromo = $('#imgPromo');
     $pDescription = $('#pDescription');
@@ -27,8 +28,10 @@ $(function () {
 
     $btnShare.on('click', onClickButtonShare);
 
-    // Check-in will be requested if the user already has liked the page
-    requestCheckIn = !$alertLike.is(':visible');
+    // Check-in will be requested to participate
+    requestCheckIn = true;
+    // Check-in location
+    locationId = $('#btnGo').data('location');
 });
 
 function onClickButtonShare() {
@@ -62,19 +65,25 @@ function startCheckIn() {
 }
 
 function checkInApiRequest() {
-    var body = 'Participando en una TomboFan!';
+    var promoLink = $pBackLink.find('a').attr('href');
+    var fanPageName = $titleFanPage.text();
+    var body = 'Estoy participando en una TomboFan! "' + $pDescription.text() + '". ';
+    body += 'Gracias a ' + fanPageName + '! ' + promoLink;
+
     var data = {
         message: body,
-        place: 100243956684767
+        place: locationId
     };
 
     FB.api('/me/feed', 'post', data, function(response) {
         if (!response || response.error) {
             alert('Ha ocurrido un error inesperado!');
+            console.error(response.error);
         } else {
-            alert('Gracias por compartir tu participación!');
+            // alert('Gracias por compartir tu participación!');
             requestCheckIn = false;
-            console.log(response.id);
+            $btnGo.click();
+            // console.log(response.id);
         }
     });
 }

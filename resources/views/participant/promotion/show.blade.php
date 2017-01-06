@@ -59,7 +59,7 @@
             <div class="inner text-center">
 
                 <div id="promoData">
-                    <h3>{{ $promotion->fanPage->name }}</h3>
+                    <h3 id="titleFanPage">{{ $fanPageName }}</h3>
                     <p id="pDescription">{{ $promotion->description }}</p>
                     @if ($promotion->end_date)
                         <p><b>Fecha de vencimiento:</b> {{ $promotion->end_date }}</p>
@@ -70,30 +70,42 @@
                     <hr />
                 </div>
 
-                {{-- If the user still has not like the page, show this alert from the beginning --}}
+                <div class="panel panel-default" id="participantData">
+                    <div class="panel-body">
+                        <p class="">Hola {{ $participantName }}.</p>
+                        <img src="{{ $participantPicture }}" alt="{{ $participantName }}" class="img-responsive">
+                    </div>
+                </div>
+
+                {{-- If the user has not liked the page, suggests --}}
                 <div class="alert alert-info" id="alertLike" style="display: @if($pageIsLiked) none @else block @endif">
                     <a href="#" class="close" id="closeAlertLike">&times;</a>
-                    <p>Recuerda dar like a la página para poder participar:</p>
+                    <p>Te recomendamos dar like a nuestra fanpage para estar al tanto de nuestras novedades!</p>
                     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $fanPageFbId }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </div>
 
                 <div id="alertMessage"></div>
+
+                <p id="pInstructions">Solo da clic en el botón azul para participar.</p>
+                <button class="button facebook fit" id="btnGo" data-token="{{ csrf_token() }}" data-action="{{ url("/promotion/$promotion->id/go") }}" data-location="{{ $locationId }}">
+                    Click aquí para participar !
+                </button>
+                <p class="text-muted" id="pCount">Cantidad de veces que has participado en esta promoción: {{ $participationsCount }}</p>
+
                 <img id="imgWon" src="{{ asset('images/participation/won.jpg') }}" alt="Ganaste" class="img-responsive" style="display: none;">
                 <img id="imgLost" src="{{ asset('images/participation/lost.jpg') }}" alt="Sigue intentando" class="img-responsive" style="display: none;">
-                <button type="button" id="btnShare" class="btn btn-success" data-id="{{ $promotion->id }}" style="display: none;">
-                    Compartir en Facebook
+
+
+                <button type="button" id="btnShare" class="button small" data-id="{{ $promotion->id }}" style="display: none; margin-top: 1em;">
+                    Compartir en <span class="icon fa-facebook"></span>
                 </button>
 
                 <p id="pBackLink" style="display: none">
-                    <a href="https://fb.com/{{ $fanPageFbId }}">Haz clic aquí para volver a la fanpage.</a>
+                    <a href="https://fb.com/{{ $fanPageFbId }}">Clic aquí para volver a la fanpage.</a>
                 </p>
-
-                <p id="pInstructions">Solo da clic en el botón azul para participar.</p>
-                <button class="button facebook fit" id="btnGo" data-token="{{ csrf_token() }}" data-action="{{ url("/promotion/$promotion->id/go") }}">
-                    Haz click para participar !
-                </button>
-
-                <p class="text-muted" id="pCount">Cantidad de veces que has participado en esta promoción: {{ $participationsCount }}</p>
+                <p id="pLogout">
+                    <em class="small">Si esta no es tu cuenta, <a href="{{ url("/facebook/promotion/$promotion->id") }}">haz clic aquí para cerrar sesión</a> e ingresar con tu facebook.</em>
+                </p>
             </div>
         </section>
     </article>

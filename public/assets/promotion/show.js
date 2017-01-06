@@ -1,17 +1,22 @@
-var $alertMessage, $pBackLing;
+var $titleFanPage;
+var $alertMessage, $pBackLink;
 var $alertLike;
 var $btnGo;
-var $pInstructions, $pCount;
-var $promoData;
+var $pInstructions, $pCount, $pLogout;
+var $promoData, $participantData;
 
 $(function () {
+    $titleFanPage = $('#titleFanPage');
     $btnGo = $('#btnGo');
     $pCount = $('#pCount');
     $alertLike = $('#alertLike');
-    $pBackLing = $('#pBackLink');
+    $pBackLink = $('#pBackLink');
     $alertMessage = $('#alertMessage');
     $pInstructions = $('#pInstructions');
+    $pLogout = $('#pLogout');
+
     $promoData = $('#promoData');
+    $participantData = $('#participantData');
 
     $btnGo.on('click', onClickButtonGo);
     $('#closeAlertLike').on('click', onClickCloseAlertLike);
@@ -64,9 +69,6 @@ function showGoResponse(data) {
             case 'token_has_expired':
                 errorMessage = 'Tu sesión ha caducado. Por favor actualiza la página e inténtalo nuevamente!';
                 break;
-            case 'not_liked':
-                showAlertLike();
-                return;
             case 'must_wait':
                 errorMessage = 'Ya has participado en esta promo. Puedes volver a participar luego de 24 horas!';
                 break;
@@ -84,24 +86,25 @@ function showGoResponse(data) {
 function displayIsWinnerMessage(participationId) {
     displaySuccessfulAlert('Folio de Promoción Ganador ('+participationId+')');
     // show winner image
-    $('#imgWon').slideDown('slow');
+    $('#imgWon').fadeIn('slow');
     $btnShare.show();
     participationPerformed();
 }
 function displayNonWinnerMessage() {
     // displayWarningAlert('Vuelve a intentarlo el día de mañana!');
     // show non-winner image
-    $('#imgLost').slideDown('slow');
+    $('#imgLost').fadeIn('slow');
     participationPerformed();
 }
 function participationPerformed() {
-    $promoData.slideUp(function () {
+    $('#promoData, #participantData').slideUp('slow', function () {
         $(this).remove();
     });
     $pCount.hide();
     $btnGo.hide();
     $pInstructions.hide();
-    $pBackLing.show();
+    $pBackLink.show();
+    $pLogout.hide();
 }
 
 function displaySuccessfulAlert(message) {
