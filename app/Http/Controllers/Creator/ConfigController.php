@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Creator;
 
+use App\Http\Controllers\Controller;
 use App\Promotion;
 use Illuminate\Http\Request;
 

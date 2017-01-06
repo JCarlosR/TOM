@@ -90,6 +90,6 @@ class FacebookController extends Controller
             return redirect('/promotion/'.$promotion_id);
         }
 
-        return redirect('/home')->with('message', 'Ha iniciado sesión correctamente con Facebook !');
+        return redirect('/home')->with('message', 'Has iniciado sesión correctamente con Facebook !');
     }
 }

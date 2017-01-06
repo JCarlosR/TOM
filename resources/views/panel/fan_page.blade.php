@@ -2,15 +2,12 @@
 
 @section('styles')
     <style>
-        .img-center {
-            display: block;
-            margin: 0 auto;
-        }
+
     </style>
 @endsection
 
 @section('dashboard_content')
-    <div class="col-md-10">
+    <div class="col-md-9">
         <div class="panel panel-info">
             <div class="panel-heading">Administrar fan page</div>
 

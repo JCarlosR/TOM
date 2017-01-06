@@ -10,7 +10,7 @@
 @endsection
 
 @section('dashboard_content')
-    <div class="col-md-10">
+    <div class="col-md-9">
         <div class="panel panel-info">
             <div class="panel-heading">Instrucciones</div>
 
