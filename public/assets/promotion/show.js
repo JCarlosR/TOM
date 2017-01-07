@@ -71,6 +71,7 @@ function showGoResponse(data) {
                 break;
             case 'must_wait':
                 errorMessage = 'Ya has participado en esta promo. Puedes volver a participar luego de 24 horas!';
+                $btnGo.remove();
                 break;
             case 'invalid_promotion':
                 errorMessage = 'Ups algo falló en tu TomboFan, contacta de inmediato a '+data.name+' al correo '+data.email;

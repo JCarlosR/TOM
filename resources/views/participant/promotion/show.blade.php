@@ -88,7 +88,7 @@
 
                 <p id="pInstructions">Solo da clic en el botón azul para participar.</p>
                 <button class="button facebook fit" id="btnGo" data-token="{{ csrf_token() }}" data-action="{{ url("/promotion/$promotion->id/go") }}" data-location="{{ $locationId }}">
-                    Click aquí para participar !
+                    Clic aquí para participar !
                 </button>
                 <p class="text-muted" id="pCount">Cantidad de veces que has participado en esta promoción: {{ $participationsCount }}</p>
 
@@ -103,7 +103,7 @@
                 <p id="pBackLink" style="display: none">
                     <a href="https://fb.com/{{ $fanPageFbId }}">Clic aquí para volver a la fanpage.</a>
                 </p>
-                <p id="pLogout">
+                <p id="pLogout" style="display: none;"> {{-- It is always hidden (Miguel wants to remove it) --}}
                     <em class="small">Si esta no es tu cuenta, <a href="{{ url("/facebook/promotion/$promotion->id") }}">haz clic aquí para cerrar sesión</a> e ingresar con tu facebook.</em>
                 </p>
             </div>

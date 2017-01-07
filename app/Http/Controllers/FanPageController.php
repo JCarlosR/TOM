@@ -59,7 +59,7 @@ class FanPageController extends Controller
             $excel->sheet('Datos', function($sheet) use ($id) {
 
                 // Header
-                $sheet->mergeCells('A1:E1');
+                $sheet->mergeCells('A1:F1');
                 $sheet->row(1, ['Relación de participaciones de la promoción #'.$id]);
                 $sheet->row(2, ['Folio', 'Nombre del participante', 'Ticket', 'E-mail', '¿Ha ganado?', 'Facebook ID']);
 
