@@ -60,8 +60,8 @@
             <div class="panel panel-info">
                 <div class="panel-heading">Navegación</div>
                 <div class="panel-body">
-                    <a class="list-group-item" href="{{ url('/home') }}" data-step="1" data-position="right" data-intro="Bienvenido! Ahora mismo te encuentras en esta página. Los datos que aparecen aquí son obtenidos a partir de tu facebook, y solo tú los puedes ver.">Datos principales</a>
-                    <a class="list-group-item" href="{{ url('/config') }}" data-step="2" data-position="right" data-intro="Lo primero que debes hacer es ingresar a esta opción para configurar tus promociones.">Configurar promociones</a>
+                    <a class="list-group-item" href="{{ url('/home') }}" id="menu-item-1">Datos principales</a>
+                    <a class="list-group-item" href="{{ url('/config') }}" id="menu-item-2">Configurar promociones</a>
                 </div>
             </div>
 
