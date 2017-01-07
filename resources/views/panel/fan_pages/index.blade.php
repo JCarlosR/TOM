@@ -3,9 +3,10 @@
 @section('dashboard_content')
     <div class="col-md-9">
             <div class="panel panel-info">
-                <div class="panel-heading">Configuración</div>
-
-                <div class="panel-body" data-step="3" data-intro="En esta sección se encuentran tus fanpages. Debes seleccionar una, y a continuación podrás registrar tu promoción.">
+                <div class="panel-heading" data-step="3" data-intro="En esta sección se encuentran tus fanpages. Debes seleccionar una, y a continuación podrás registrar tu promoción.">
+                    Configuración
+                </div>
+                <div class="panel-body">
                     @if (session('message'))
                         <div class="alert alert-success">
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

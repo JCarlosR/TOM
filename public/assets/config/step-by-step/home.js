@@ -6,6 +6,6 @@ $(function () {
         .setOption('skipLabel', 'Cerrar');
 
     intro.start().oncomplete(function() {
-        window.location.href = '/config';
+        window.location.href = '/config?tutorial=true';
     });
 });
