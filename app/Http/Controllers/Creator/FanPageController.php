@@ -22,7 +22,7 @@ class FanPageController extends Controller
     public function index()
     {
         $fanPages = auth()->user()->fanPages;
-        return view('panel.config')->with(compact('fanPages'));
+        return view('panel.fan_pages.index')->with(compact('fanPages'));
     }
 
     public function show($id, LaravelFacebookSdk $fb)
@@ -49,7 +49,7 @@ class FanPageController extends Controller
             $fanPage->save();
         }
 
-        return view('panel.fan_page')->with(compact('fanPage'));
+        return view('panel.fan_pages.show')->with(compact('fanPage'));
     }
 
     public function promotions($id)
