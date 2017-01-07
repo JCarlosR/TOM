@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Creator;
 
 use App\FanPage;
+use App\Http\Controllers\Controller;
 use App\Promotion;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
@@ -18,7 +19,13 @@ class FanPageController extends Controller
         $this->middleware('auth');
     }
 
-    public function index($id, LaravelFacebookSdk $fb)
+    public function index()
+    {
+        $fanPages = auth()->user()->fanPages;
+        return view('panel.config')->with(compact('fanPages'));
+    }
+
+    public function show($id, LaravelFacebookSdk $fb)
     {
         $fanPage = FanPage::find($id);
         if (! $fanPage)

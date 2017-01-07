@@ -40,6 +40,6 @@ class ConfigController extends Controller
         $promotionId = $id;
         $fanPageFbId = $promotion->fanPage->fan_page_id;
 
-        return view('panel.instructions')->with(compact('promotionId', 'fanPageFbId'));
+        return view('panel.promotion.instructions')->with(compact('promotionId', 'fanPageFbId'));
     }
 }

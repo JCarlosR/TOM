@@ -5,7 +5,7 @@
             <div class="panel panel-info">
                 <div class="panel-heading">Configuración</div>
 
-                <div class="panel-body">
+                <div class="panel-body" data-step="3" data-intro="En esta sección se encuentran tus fanpages. Debes seleccionar una, y a continuación podrás registrar tu promoción.">
                     @if (session('message'))
                         <div class="alert alert-success">
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -20,7 +20,9 @@
                         </div>
                     @endif
 
-                    <p>Selecciona la fanpage en la que quieres aplicar tu promoción con TomboFans.</p>
+                    <p>
+                        Selecciona la fanpage en la que quieres aplicar tu promoción con TomboFans.
+                    </p>
                     @foreach ($fanPages as $fanPage)
                         <div class="well bs-component">
                             <a href="{{ url('config/page/'.$fanPage->id) }}" class="btn btn-primary pull-right">
@@ -40,4 +42,9 @@
                 </div>
             </div>
         </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('/vendor/introjs/intro.min.js') }}"></script>
+    <script src="{{ asset('/assets/config/step-by-step/config.js') }}"></script>
 @endsection

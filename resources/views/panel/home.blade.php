@@ -57,5 +57,5 @@
 
 @section('scripts')
     <script src="{{ asset('/vendor/introjs/intro.min.js') }}"></script>
-    <script src="{{ asset('/assets/config/step-by-step.js') }}"></script>
+    <script src="{{ asset('/assets/config/step-by-step/home.js') }}"></script>
 @endsection
