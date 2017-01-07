@@ -4,4 +4,5 @@ $(function () {
         .setOption('nextLabel', 'Siguiente')
         .setOption('prevLabel', 'Anterior')
         .setOption('skipLabel', 'Cerrar');
+    intro.start();
 });
