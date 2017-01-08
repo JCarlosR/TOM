@@ -7,10 +7,10 @@
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
-            <div class="panel-heading">
+            <div class="panel-heading" id="step-3">
                 Configuración
             </div>
-            <div class="panel-body" id="step-3">
+            <div class="panel-body">
                 @if (session('message'))
                     <div class="alert alert-success">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

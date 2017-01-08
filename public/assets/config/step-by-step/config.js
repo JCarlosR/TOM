@@ -6,6 +6,7 @@ $(function () {
             steps: [
                 {
                     element: '#step-3',
+                    step: 3,
                     intro: "En esta sección se encuentran tus fanpages. Debes seleccionar una, y a continuación podrás registrar tu promoción."
                 }
             ]
