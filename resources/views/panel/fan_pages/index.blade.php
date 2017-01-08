@@ -1,12 +1,16 @@
 @extends('layouts.dashboard')
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('/vendor/introjs/introjs.min.css') }}">
+@endsection
+
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
             <div class="panel-heading">
                 Configuración
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="step-3">
                 @if (session('message'))
                     <div class="alert alert-success">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -21,7 +25,7 @@
                     </div>
                 @endif
 
-                <p id="step-3">
+                <p>
                     Selecciona la fanpage en la que quieres aplicar tu promoción con TomboFans.
                 </p>
                 @foreach ($fanPages as $fanPage)
