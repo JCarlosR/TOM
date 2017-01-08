@@ -17,5 +17,6 @@ $(function () {
             .setOption('skipLabel', 'Cerrar');
 
         intro.start();
+        console.log('Just testing');
     }
 });
