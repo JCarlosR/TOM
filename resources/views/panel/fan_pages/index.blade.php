@@ -9,7 +9,7 @@
         <div class="panel panel-info">
             <div class="panel-heading"
                  data-step="3"
-                 data-info="En esta sección se encuentran tus fanpages. Debes seleccionar una, y a continuación podrás registrar tu promoción.">
+                 data-intro="En esta sección se encuentran tus fanpages. Debes seleccionar una, y a continuación podrás registrar tu promoción.">
                 Configuración
             </div>
             <div class="panel-body">
