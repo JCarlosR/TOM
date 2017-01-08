@@ -60,8 +60,8 @@
             <div class="panel panel-info">
                 <div class="panel-heading">Navegación</div>
                 <div class="panel-body">
-                    <a class="list-group-item" href="{{ url('/home') }}" id="menu-item-1">Datos principales</a>
-                    <a class="list-group-item" href="{{ url('/config') }}" id="menu-item-2">Configurar promociones</a>
+                    <a class="list-group-item" href="{{ url('/home') }}" id="step-1">Datos principales</a>
+                    <a class="list-group-item" href="{{ url('/config') }}" id="step-2">Configurar promociones</a>
                 </div>
             </div>
 

@@ -3,7 +3,7 @@
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
-            <div class="panel-heading" id="heading-config-pages">
+            <div class="panel-heading">
                 Configuración
             </div>
             <div class="panel-body">
@@ -21,7 +21,7 @@
                     </div>
                 @endif
 
-                <p>
+                <p id="step-3">
                     Selecciona la fanpage en la que quieres aplicar tu promoción con TomboFans.
                 </p>
                 @foreach ($fanPages as $fanPage)

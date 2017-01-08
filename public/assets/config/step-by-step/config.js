@@ -5,7 +5,7 @@ $(function () {
         intro.setOptions({
             steps: [
                 {
-                    element: '#heading-config-pages',
+                    element: '#step-3',
                     intro: "En esta sección se encuentran tus fanpages. Debes seleccionar una, y a continuación podrás registrar tu promoción."
                 }
             ]
