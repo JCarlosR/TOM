@@ -32,9 +32,11 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="35" column="88" lean-forward="false" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
-              <folding />
+            <state relative-caret-position="262">
+              <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+              <folding>
+                <element signature="e#2061#2324#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -398,12 +400,12 @@
       <workItem from="1483708749761" duration="5046000" />
       <workItem from="1483724441804" duration="5745000" />
       <workItem from="1483824582441" duration="5561000" />
-      <workItem from="1484009047843" duration="1747000" />
+      <workItem from="1484009047843" duration="1908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187737000" />
+    <option name="totallyTimeSpent" value="187898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -831,9 +833,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" column="88" lean-forward="false" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
-          <folding />
+        <state relative-caret-position="262">
+          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+          <folding>
+            <element signature="e#2061#2324#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

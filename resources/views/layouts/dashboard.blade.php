@@ -34,8 +34,10 @@
                     <li><a href="{{ url('/register') }}">Registro</a></li>
                 @else
                     <li title="Te quedan {{ auth()->user()->remaining_participations }} participaciones restantes">
-                        <i class="glyphicon glyphicon-tags"></i>
-                        {{ auth()->user()->remaining_participations }}
+                        <a href="#">
+                            <i class="glyphicon glyphicon-tags"></i>
+                            {{ auth()->user()->remaining_participations }}
+                        </a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
