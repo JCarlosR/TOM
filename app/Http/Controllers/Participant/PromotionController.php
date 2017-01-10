@@ -98,11 +98,12 @@ class PromotionController extends Controller
             return $data;
         }
 
+        $fanPage = $promotion->fanPage;
+
         /*
         // The user has liked the page?
 
         // Fan page associated with the promotion
-        $fanPage = $promotion->fanPage;
         $fanPageFbId = $fanPage->fan_page_id;
 
         $fb->setDefaultAccessToken($token);
@@ -123,15 +124,14 @@ class PromotionController extends Controller
         }
         */
 
-        // There are valid credits in the promotion?
-        // Free package only allows a max of 10 participations
-        if ($promotion->participations->count() >= 10) {
+        // There creator has still available credits for the promotion?
+        $creator = $fanPage->user;
+        if ($creator->remaining_participations <= 0) {
             $data['success'] = false;
             $data['error_type'] = 'invalid_promotion';
             // Contact information of the user
-            $responsible = $fanPage->user;
-            $data['name'] = $responsible->name;
-            $data['email'] = $responsible->email;
+            $data['name'] = $creator->name;
+            $data['email'] = $creator->email;
             return $data;
         }
 
@@ -162,6 +162,10 @@ class PromotionController extends Controller
         // a model event will fill the next fields with the proper values
         // $participation->ticket = ;
         // $participation->is_winner = ;
+
+        // Consume 1 credit
+        $creator->remaining_participations -= 1;
+        $creator->save();
 
         $data['success'] = true;
         $data['participation'] = $participation;

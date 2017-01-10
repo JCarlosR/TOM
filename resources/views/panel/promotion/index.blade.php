@@ -16,11 +16,11 @@
                 <p>Listado de promociones relacionadas con la fanpage.</p>
                 <div class="well bs-component">
                     <div class="row">
-                        <div class="col-md-6 text-center">
+                        <div class="col-md-4 text-center">
                             @include('includes.fan_page_data')
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <h2>Promociones</h2>
                             <table class="table table-hover">
                                 <thead>

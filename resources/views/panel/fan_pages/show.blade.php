@@ -29,11 +29,11 @@
                 <p>Información de la página seleccionada.</p>
                     <div class="well bs-component">
                         <div class="row">
-                            <div class="col-md-6 text-center">
+                            <div class="col-md-4 text-center">
                                 @include('includes.fan_page_data')
                             </div>
 
-                            <div class="col-md-6" id="panelOptions" @if (count($errors) > 0) style="display: none" @endif>
+                            <div class="col-md-8" id="panelOptions" @if (count($errors) > 0) style="display: none" @endif>
                                 <h3>Opciones</h3>
                                 {{--<a href="{{ url('config/page/'.$fanPage->id.'/picture') }}" class="btn btn-sm btn-primary btn-block">--}}
                                     {{--Actualizar foto--}}

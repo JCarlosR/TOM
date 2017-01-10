@@ -16,11 +16,11 @@
                 <p>Editar promoción seleccionada.</p>
                 <div class="well bs-component">
                     <div class="row">
-                        <div class="col-md-6 text-center">
+                        <div class="col-md-4 text-center">
                             @include('includes.fan_page_data')
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <h2>Datos de la promoción</h2>
                             @if (count($errors) > 0)
                                 <div class="alert alert-danger">

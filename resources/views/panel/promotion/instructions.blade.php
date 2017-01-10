@@ -1,12 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('styles')
-    <style>
-        .img-center {
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
+
 @endsection
 
 @section('dashboard_content')
