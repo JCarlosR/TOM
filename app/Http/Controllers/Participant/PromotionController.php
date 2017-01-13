@@ -43,6 +43,7 @@ class PromotionController extends Controller
         $participantName = $graphNode->getField('name');
         $participantPicture = $graphNode->getField('picture')['url'];
 
+        /*
         // The user has liked the page?
         $query = "/me/likes/$fanPageFbId";
         try {
@@ -53,6 +54,7 @@ class PromotionController extends Controller
         }
         $graphEdge = $response->getGraphEdge();
         $pageIsLiked = $graphEdge->count() > 0; // 1 when the page is liked
+        */
 
         // Is the user authenticated?
         if (! auth()->check())
@@ -63,7 +65,7 @@ class PromotionController extends Controller
 
         return view('participant.promotion.show')->with(compact(
             'participantName', 'participantPicture',
-            'promotion', 'participationsCount', 'pageIsLiked', 'locationId', 'fanPageName', 'fanPageFbId'
+            'promotion', 'participationsCount', 'locationId', 'fanPageName', 'fanPageFbId'
         ));
     }
 

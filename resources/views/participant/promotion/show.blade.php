@@ -5,11 +5,11 @@
     <style>
         @font-face {
             font-family: "PassionOne";
-            src: url("../fonts/PassionOne-Regular.otf");
+            src: url("{{ asset('/fonts/PassionOne-Regular.otf') }}");
         }
         @font-face {
             font-family: "PassionOne-Bold";
-            src: url("../fonts/PassionOne-Bold.otf");
+            src: url("{{ asset('/fonts/PassionOne-Bold.otf') }}");
             font-weight: bold;
         }
         .img-responsive {
@@ -78,7 +78,7 @@
                 </div>
 
                 {{-- If the user has not liked the page, suggests --}}
-                <div class="alert alert-info" id="alertLike" style="display: @if($pageIsLiked) none @else block @endif">
+                <div class="alert alert-info" id="alertLike">
                     <a href="#" class="close" id="closeAlertLike">&times;</a>
                     <p>Te recomendamos dar like a nuestra fanpage para estar al tanto de nuestras novedades!</p>
                     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $fanPageFbId }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
