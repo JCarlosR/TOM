@@ -72,18 +72,23 @@ class FacebookController extends Controller
             die($e->getMessage());
         }
 
+        // If the user is a participant, this variable allows the redirect
+        $promotion_id = session()->get('promotion_id');
+
         // Convert the response to a `Facebook/GraphNodes/GraphUser` collection
         $facebook_user = $response->getGraphUser();
 
-        // Create the user if it does not exist or update the existing entry.
-        // This will only work if you've added the SyncableGraphNodeTrait to your User model.
+        // Create the user if it does not exist or update the existing
+        // This will only work if you've added the SyncableGraphNodeTrait to your User model
         $user = User::createOrUpdateGraphNode($facebook_user);
+
+        if (!$user->welcome_mail_sent && !$promotion_id) // !promotion_id => logged as creator
+            $user->setAsCreator();
 
         // Log the user into Laravel
         Auth::login($user);
 
         // If the promotion param exists redirect to the proper TOM page
-        $promotion_id = session()->get('promotion_id');
         if ($promotion_id) {
             // clear to avoid future redirects
             session()->put('promotion_id', '');

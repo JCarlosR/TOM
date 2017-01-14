@@ -10,13 +10,9 @@ class User extends Authenticatable
 {
     use SyncableGraphNodeTrait;
 
-    public static function boot()
+    public function setAsCreator()
     {
-        parent::boot();
-
-        static::created(function ($user) {
-            Event::fire('user_created', $user);
-        });
+        Event::fire('creator_created', $this);
     }
 
     protected static $graph_node_field_aliases = [
