@@ -93,5 +93,13 @@ function checkInApiRequest() {
         method: 'share',
         // display: 'popup',
         href: promoLink,
-      }, function(response){});
+      }, function(response) {
+        if (!response || response.error) {
+            alert('Ha ocurrido un error inesperado!');
+            console.error(response.error);
+        } else {
+            requestCheckIn = false;
+            $btnGo.click();
+        }
+      });
 }
