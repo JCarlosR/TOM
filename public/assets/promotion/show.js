@@ -32,7 +32,7 @@ function showAlertLike() {
 
 function onClickButtonGo() {
     if (requestCheckIn) {
-        alert('Por favor comparte antes de continuar :)');
+        // alert('Por favor comparte antes de continuar :)');
         startCheckIn();
         return;
     }

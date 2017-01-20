@@ -91,7 +91,7 @@ function checkInApiRequest() {
 
       FB.ui({
         method: 'share',
-        display: 'popup',
+        // display: 'popup',
         href: promoLink,
       }, function(response){});
 }

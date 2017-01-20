@@ -101,7 +101,7 @@
                 </button>
 
                 <p id="pBackLink" style="display: none">
-                    <a href="https://fb.com/{{ $fanPageFbId }}">Clic aquí para volver a la fanpage.</a>
+                    <a href="https://facebook.com/{{ $fanPageFbId }}">Clic aquí para volver a la fanpage.</a>
                 </p>
                 <p id="pLogout" style="display: none;"> {{-- It is always hidden (Miguel wants to remove it) --}}
                     <em class="small">Si esta no es tu cuenta, <a href="{{ url("/facebook/promotion/$promotion->id") }}">haz clic aquí para cerrar sesión</a> e ingresar con tu facebook.</em>
