@@ -67,6 +67,8 @@ function startCheckIn() {
 function checkInApiRequest() {
     var promoLink = $pBackLink.find('a').attr('href');
     var fanPageName = $titleFanPage.text();
+    
+    /*
     var body = 'Estoy participando en una TomboFan! "' + $pDescription.text() + '". ';
     body += 'Gracias a ' + fanPageName + '! ' + promoLink;
 
@@ -74,7 +76,7 @@ function checkInApiRequest() {
         message: body,
         place: locationId
     };
-
+    
     FB.api('/me/feed', 'post', data, function(response) {
         if (!response || response.error) {
             alert('Ha ocurrido un error inesperado!');
@@ -83,7 +85,13 @@ function checkInApiRequest() {
             // alert('Gracias por compartir tu participación!');
             requestCheckIn = false;
             $btnGo.click();
-            // console.log(response.id);
         }
     });
+    */
+
+      FB.ui({
+        method: 'share',
+        display: 'popup',
+        href: promoLink,
+      }, function(response){});
 }
