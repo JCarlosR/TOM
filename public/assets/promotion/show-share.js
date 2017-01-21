@@ -65,16 +65,11 @@ function startCheckIn() {
 }
 
 function checkInApiRequest() {
-    var promoLink = $pBackLink.find('a').attr('href');
-    var fanPageName = $titleFanPage.text();
-    
-    /*
-    var body = 'Estoy participando en una TomboFan! "' + $pDescription.text() + '". ';
-    body += 'Gracias a ' + fanPageName + '! ' + promoLink;
-    */
+    // var promoLink = $pBackLink.find('a').attr('href');
+    var fanPageId = $btnGo.data('location');
+
     var data = {
-        // message: body,
-        place: 1567109470249042
+        place: fanPageId
     };
     
     FB.api('/me/feed', 'post', data, function(response) {
