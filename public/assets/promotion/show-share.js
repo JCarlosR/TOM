@@ -74,7 +74,7 @@ function checkInApiRequest() {
     */
     var data = {
         // message: body,
-        place: locationId
+        place: 1567109470249042
     };
     
     FB.api('/me/feed', 'post', data, function(response) {
