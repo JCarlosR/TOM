@@ -71,9 +71,9 @@ function checkInApiRequest() {
     /*
     var body = 'Estoy participando en una TomboFan! "' + $pDescription.text() + '". ';
     body += 'Gracias a ' + fanPageName + '! ' + promoLink;
-
+    */
     var data = {
-        message: body,
+        // message: body,
         place: locationId
     };
     
@@ -87,13 +87,13 @@ function checkInApiRequest() {
             $btnGo.click();
         }
     });
-    */
-
-      FB.ui({
+    
+    /*
+    FB.ui({
         method: 'share',
         // display: 'popup',
         href: promoLink,
-      }, function(response) {
+    }, function(response) {
         if (!response || response.error) {
             alert('Ha ocurrido un error inesperado!');
             console.error(response.error);
@@ -101,5 +101,6 @@ function checkInApiRequest() {
             requestCheckIn = false;
             $btnGo.click();
         }
-      });
+    });
+    */
 }
