@@ -20,6 +20,11 @@ $(function () {
 
     $btnGo.on('click', onClickButtonGo);
     $('#closeAlertLike').on('click', onClickCloseAlertLike);
+
+    var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+    if (iOS) {
+        $pBackLink.find('a').on('click', closeWindowOnClick);
+    }
 });
 
 function onClickCloseAlertLike() {
@@ -124,4 +129,10 @@ function displayAlert(type, message) {
 	alertHtml += '</div>';
 
 	$alertMessage.html(alertHtml);
+}
+
+function closeWindowOnClick() {
+    event.preventDefault();
+
+    window.close();
 }

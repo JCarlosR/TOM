@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/promotion/show.js" afterPath="$PROJECT_DIR$/public/assets/promotion/show.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +29,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show-share.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show-share.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/promotion/show-share.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+            <state relative-caret-position="2100">
+              <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/participant/promotion/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/promotion/show.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="136" column="19" lean-forward="false" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -50,7 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>guzzle</find>
       <find>mail</find>
       <find>header</find>
       <find>banner.</find>
@@ -80,6 +99,7 @@
       <find>10</find>
       <find>user</find>
       <find>isLiked</find>
+      <find>href</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -108,7 +128,6 @@
         <option value="$PROJECT_DIR$/public/assets/promotion/end-date-radio.js" />
         <option value="$PROJECT_DIR$/database/migrations/2017_01_05_205756_add_soft_deletes_to_promotions.php" />
         <option value="$PROJECT_DIR$/app/Promotion.php" />
-        <option value="$PROJECT_DIR$/public/assets/promotion/show-share.js" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/config.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/fan_page.blade.php" />
@@ -118,7 +137,6 @@
         <option value="$PROJECT_DIR$/resources/views/emails/right_configuration.blade.php" />
         <option value="$PROJECT_DIR$/app/Listeners/ParticipationListener.php" />
         <option value="$PROJECT_DIR$/public/assets/config/instructions.js" />
-        <option value="$PROJECT_DIR$/public/assets/promotion/show.js" />
         <option value="$PROJECT_DIR$/public/assets/config/step-by-step.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FanPageController.php" />
@@ -142,6 +160,8 @@
         <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Listeners/UserListener.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
+        <option value="$PROJECT_DIR$/public/assets/promotion/show-share.js" />
+        <option value="$PROJECT_DIR$/public/assets/promotion/show.js" />
       </list>
     </option>
   </component>
@@ -183,6 +203,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,7 +226,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -219,29 +244,15 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TOM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TOM" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="participant" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -249,10 +260,23 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TOM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TOM" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,11 +429,12 @@
       <workItem from="1484488237383" duration="1814000" />
       <workItem from="1484506112377" duration="42000" />
       <workItem from="1484833904260" duration="636000" />
+      <workItem from="1485092724722" duration="550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194247000" />
+    <option name="totallyTimeSpent" value="194797000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,10 +447,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25945538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -634,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/promotion/show.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -760,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/participant/promotion/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1302">
@@ -839,8 +850,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/promotion/show-share.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+        <state relative-caret-position="2100">
+          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/participant/promotion/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/promotion/show.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="136" column="19" lean-forward="false" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
           <folding />
         </state>
       </provider>
