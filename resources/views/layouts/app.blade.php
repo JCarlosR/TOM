@@ -28,6 +28,27 @@
     <!--[if lte IE 8]><script src="{{ asset('assets/js/ie/respond.min.js') }}"></script><![endif]-->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
+    {{-- Support type date for Firefox, Safary & IE --}}
+    <script>
+        jQuery.swap = function( elem, options, callback, args ) {
+            var ret, name, old = {};
+            for ( name in options ) {
+                old[ name ] = elem.style[ name ];
+                elem.style[ name ] = options[ name ];
+            }
+            ret = callback.apply( elem, args || [] );
+            for ( name in options ) {
+                elem.style[ name ] = old[ name ];
+            }
+            return ret;
+        };
+    </script>
+    <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <script>
+        webshims.setOptions('forms-ext', {types: 'date'});
+        webshims.polyfill('forms forms-ext');
+    </script>
+
     @yield('scripts')
 </body>
 </html>
