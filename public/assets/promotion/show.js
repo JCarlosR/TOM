@@ -23,7 +23,7 @@ $(function () {
 
     var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
     if (iOS) {
-        $pBackLink.find('a').on('click', closeWindowOnClick);
+        $pBackLink.remove();
     }
 });
 
@@ -129,10 +129,4 @@ function displayAlert(type, message) {
 	alertHtml += '</div>';
 
 	$alertMessage.html(alertHtml);
-}
-
-function closeWindowOnClick() {
-    event.preventDefault();
-
-    window.close();
 }
