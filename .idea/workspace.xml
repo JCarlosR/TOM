@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php" />
-    </list>
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -393,12 +391,12 @@
       <workItem from="1485092724722" duration="1351000" />
       <workItem from="1485100649892" duration="366000" />
       <workItem from="1485105500314" duration="1371000" />
-      <workItem from="1485144496462" duration="1552000" />
+      <workItem from="1485144496462" duration="1732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198887000" />
+    <option name="totallyTimeSpent" value="199067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,7 +409,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27458397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
