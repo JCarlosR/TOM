@@ -8,7 +8,7 @@
     <title>Bienvenido</title>
     <style>
         img {
-            max-width: 360px;
+            max-width: 300px;
         }
     </style>
 </head>
