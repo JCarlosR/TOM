@@ -8,14 +8,20 @@
     <title>Bienvenido</title>
     <style>
         img {
-            max-width: 420px;
+            max-width: 360px;
         }
     </style>
 </head>
 <body>
     <h3>Hola {{ $user->name }}, bienvenid@ a Tombofans.</h3>
 
-    <img src="{{ url('images/mails/welcome.jpg') }}" alt="Imagen de bienvenida">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center">
+                <img src="{{ url('images/mails/welcome.jpg') }}" alt="Imagen de bienvenida">
+            </td>
+        </tr>
+    </table>
 
     <p>
         Somos las forma más fácil de aumentar tus prospectos, clientes e interacciones en tu página de fans en Facebook, en menos de 3 minutos configurarás promociones y descuentos,
@@ -48,6 +54,8 @@
             </td>
         </tr>
     </table>
+
+    <br><br>
 
     <table cellspacing="0" cellpadding="0" width="100%" border="0">
         <tr>
