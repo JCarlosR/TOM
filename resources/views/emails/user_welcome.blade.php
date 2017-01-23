@@ -39,9 +39,9 @@
 
     <p>Para pagar solo debes dar clic en alguna de las siguentes ligas y seguir las instrucciones:</p>
 
-    <table cellspacing="0" cellpadding="0">
+    <table cellspacing="0" cellpadding="0" width="100%" border="0">
         <tr>
-            <td align="center" width="300" height="40" bgcolor="#000091" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #ffffff; display: block;">
+            <td align="center" height="42" bgcolor="#000091" style="-webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; color: #ffffff; display: block;">
                 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R4ZA62ASSQJZE" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block">
                     <span style="color: #FFFFFF">Soy mamá emprendedora de Club Momy y quiero pagar con tarjeta de débito o crédito</span>
                 </a>
@@ -49,9 +49,9 @@
         </tr>
     </table>
 
-    <table cellspacing="0" cellpadding="0">
+    <table cellspacing="0" cellpadding="0" width="100%" border="0">
         <tr>
-            <td align="center" width="300" height="40" bgcolor="#000091" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #ffffff; display: block;">
+            <td align="center" height="42" bgcolor="#000091" style="-webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; color: #ffffff; display: block;">
                 <a href="https://compropago.com/comprobante/?id=b2954834-3979-4e5f-90e7-736b112347e1" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block">
                     <span style="color: #FFFFFF">Soy mamá emprendedora de Club Momy y quiero pagar con efectivo</span>
                 </a>
