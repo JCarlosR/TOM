@@ -88,7 +88,7 @@
 
                 <p id="pInstructions">Solo da clic en el botón azul para participar.</p>
                 <button class="button facebook fit" id="btnGo" data-token="{{ csrf_token() }}" data-action="{{ url("/promotion/$promotion->id/go") }}" data-location="{{ $fanPageFbId }}">
-                    Clic aquí para participar !
+                    <span class="icon fa-facebook"></span> Clic para participar y compartir !
                 </button>
                 <p class="text-muted" id="pCount">Cantidad de veces que has participado en esta promoción: {{ $participationsCount }}</p>
 

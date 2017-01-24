@@ -38,7 +38,7 @@
     </p>
 
     <p>
-        Si eres mamá emprendedora del grupo de facebook llamado Club Momy
+        Si eres mamá emprendedora del grupo de facebook llamado <a href="https://www.facebook.com/groups/mundomoms">Club Momy</a>
         o con los que tenemos convenio, solamente pagarás $99.00 mensuales
         y tendrás una suscripción ilimitada.
     </p>
