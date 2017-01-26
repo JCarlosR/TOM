@@ -78,7 +78,7 @@ class PromotionController extends Controller
 
         session()->put('promotion_id', $promotion->id);
 
-        $loginLink = $fb->getLoginUrl(['email', 'user_location', 'user_likes']);
+        $loginLink = $fb->getLoginUrl(['email', 'user_location']);
 
         $htmlResponse = "<script>" .
             "window.top.location = '$loginLink';" .
