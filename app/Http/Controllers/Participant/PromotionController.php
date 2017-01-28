@@ -136,7 +136,7 @@ class PromotionController extends Controller
             // Contact information of the user
             $data['name'] = $creator->name;
             $data['email'] = $creator->email;
-            $this->sendNoCreditsMail($creator);
+            $this->sendNoCreditsMail($creator, false);
             return $data;
         }
 
@@ -173,17 +173,24 @@ class PromotionController extends Controller
         $creator->save();
 
         if ($creator->remaining_participations == 0)
-            $this->sendNoCreditsMail($creator);
+            $this->sendNoCreditsMail($creator, true);
 
         $data['success'] = true;
         $data['participation'] = $participation;
         return $data;
     }
 
-    public function sendNoCreditsMail(User $user) {
+    public function sendNoCreditsMail(User $user, $firstTime) {
         $data['user'] = $user;
-        Mail::send('emails.user_end_free_credits', $data, function ($m) use ($user) {
-            $m->to($user->email, $user->name)->subject('Sus participaciones se han agotado');
-        });
+
+        if ($firstTime) { // 0 credits from now
+            Mail::send('emails.user_end_free_credits', $data, function ($m) use ($user) {
+                $m->to($user->email, $user->name)->subject('Sus participaciones se han agotado');
+            });
+        } else { // impossible participations
+            Mail::send('emails.no_credits_available_for_promotion', $data, function ($m) use ($user) {
+                $m->to($user->email, $user->name)->subject('A 1 persona le interesó tu promoción pero no la pudo ver porque no has renovado tu suscripción');
+            });
+        }
     }
 }

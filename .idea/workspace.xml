@@ -42,8 +42,8 @@
       <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="185" column="90" lean-forward="false" selection-start-line="185" selection-start-column="90" selection-end-line="185" selection-end-column="90" />
+            <state relative-caret-position="466">
+              <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/guess/privacy.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/terms.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
         <option value="$PROJECT_DIR$/app/Participation.php" />
@@ -161,6 +160,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/user_end_free_credits.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/emails/no_credits_avilable_for_promotion.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" />
       </list>
     </option>
@@ -463,12 +463,12 @@
       <workItem from="1485144496462" duration="1732000" />
       <workItem from="1485300859656" duration="529000" />
       <workItem from="1485395343986" duration="320000" />
-      <workItem from="1485612399332" duration="1962000" />
+      <workItem from="1485612399332" duration="2478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201878000" />
+    <option name="totallyTimeSpent" value="202394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,16 +543,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76755">
-          <caret line="3652" column="71" lean-forward="false" selection-start-line="3652" selection-start-column="71" selection-end-line="3652" selection-end-column="71" />
-          <caret line="3653" column="74" lean-forward="false" selection-start-line="3653" selection-start-column="74" selection-end-line="3653" selection-end-column="74" />
-          <caret line="3654" column="70" lean-forward="false" selection-start-line="3654" selection-start-column="70" selection-end-line="3654" selection-end-column="70" />
-          <caret line="3655" column="66" lean-forward="false" selection-start-line="3655" selection-start-column="66" selection-end-line="3655" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/contact.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -900,10 +890,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/no_credits_avilable_for_promotion.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="185" column="90" lean-forward="false" selection-start-line="185" selection-start-column="90" selection-end-line="185" selection-end-column="90" />
+        <state relative-caret-position="466">
+          <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding />
         </state>
       </provider>
