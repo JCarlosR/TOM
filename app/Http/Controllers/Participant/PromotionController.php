@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Participant;
 use App\Http\Controllers\Controller;
 use App\Participation;
 use App\Promotion;
+use App\User;
 use Carbon\Carbon;
 use Facebook\Exceptions\FacebookSDKException;
+use Illuminate\Support\Facades\Mail;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class PromotionController extends Controller
@@ -134,6 +136,7 @@ class PromotionController extends Controller
             // Contact information of the user
             $data['name'] = $creator->name;
             $data['email'] = $creator->email;
+            $this->sendNoCreditsMail($creator);
             return $data;
         }
 
@@ -169,8 +172,18 @@ class PromotionController extends Controller
         $creator->remaining_participations -= 1;
         $creator->save();
 
+        if ($creator->remaining_participations == 0)
+            $this->sendNoCreditsMail($creator);
+
         $data['success'] = true;
         $data['participation'] = $participation;
         return $data;
+    }
+
+    public function sendNoCreditsMail(User $user) {
+        $data['user'] = $user;
+        Mail::send('emails.user_end_free_credits', $data, function ($m) use ($user) {
+            $m->to($user->email, $user->name)->subject('Sus participaciones se han agotado');
+        });
     }
 }

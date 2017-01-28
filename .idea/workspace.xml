@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +29,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_welcome.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_welcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
               <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="185" column="90" lean-forward="false" selection-start-line="185" selection-start-column="90" selection-end-line="185" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_end_free_credits.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/emails/user_end_free_credits.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -50,7 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>main</find>
       <find>landing</find>
       <find>banner.jpg</find>
       <find>participa</find>
@@ -80,6 +99,7 @@
       <find>{{-</find>
       <find>eres ma</find>
       <find>No formo par</find>
+      <find>img</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -91,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/GuessController.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/privacy.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/terms.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
@@ -140,8 +159,9 @@
         <option value="$PROJECT_DIR$/public/assets/promotion/show.js" />
         <option value="$PROJECT_DIR$/resources/views/participant/promotion/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/emails/user_end_free_credits.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" />
       </list>
     </option>
   </component>
@@ -250,6 +270,38 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TOM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TOM" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TOM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TOM" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Listeners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -265,19 +317,19 @@
     <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\TOM\public\assets\config\step-by-step" />
-      <recent name="C:\wamp\www\TOM\resources\views\emails" />
-      <recent name="C:\wamp\www\TOM\public\assets\promotion" />
-      <recent name="C:\wamp\www\TOM\resources\views\errors" />
-      <recent name="C:\wamp\www\TOM\resources\views\panel\promotion" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\TOM\public\assets\config\step-by-step" />
       <recent name="C:\wamp\www\TOM\app\Http\Controllers\Creator" />
       <recent name="C:\wamp\www\TOM\resources\views\panel\promotion" />
       <recent name="C:\wamp\www\TOM\resources\views\panel\fan_pages" />
       <recent name="C:\wamp\www\TOM\resources\views\participant" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\TOM\resources\views\emails" />
+      <recent name="C:\wamp\www\TOM\public\assets\config\step-by-step" />
+      <recent name="C:\wamp\www\TOM\public\assets\promotion" />
+      <recent name="C:\wamp\www\TOM\resources\views\errors" />
+      <recent name="C:\wamp\www\TOM\resources\views\panel\promotion" />
     </key>
   </component>
   <component name="RunManager">
@@ -411,12 +463,12 @@
       <workItem from="1485144496462" duration="1732000" />
       <workItem from="1485300859656" duration="529000" />
       <workItem from="1485395343986" duration="320000" />
-      <workItem from="1485612399332" duration="1075000" />
+      <workItem from="1485612399332" duration="1962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200991000" />
+    <option name="totallyTimeSpent" value="201878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,13 +543,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/guess/terms.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="81" column="440" lean-forward="false" selection-start-line="81" selection-start-column="440" selection-end-line="81" selection-end-column="440" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76755">
@@ -760,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Listeners/UserListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="777">
@@ -830,14 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="80" column="63" lean-forward="false" selection-start-line="80" selection-start-column="63" selection-end-line="80" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -850,6 +880,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Listeners/UserListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/emails/user_end_free_credits.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="185" column="90" lean-forward="false" selection-start-line="185" selection-start-column="90" selection-end-line="185" selection-end-column="90" />
           <folding />
         </state>
       </provider>
