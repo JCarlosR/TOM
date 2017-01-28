@@ -68,14 +68,30 @@
     </table>
 
     <p>
-        <b>No soy mamá del grupo y quiero saber si mi grupo de facebook tiene convenio:</b>
-        Envíanos un mail a hola@tombofans.com enviando el link del grupo de facebook al que perteneces.
+        <b>No formo parte de ningún grupo y quiero comprar la suscripción:</b>
     </p>
+    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+            <td align="center" height="42" bgcolor="#000091" style="-webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; color: #ffffff; display: block;">
+                <a href="https://compropago.com/comprobante/?id=e490a587-edec-44fe-81df-09208c309a55" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block">
+                    <span style="color: #FFFFFF">Quiero pagar con efectivo</span>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+            <td align="center" height="42" bgcolor="#000091" style="-webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; color: #ffffff; display: block;">
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6GPWRE6HARWUU" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block">
+                    <span style="color: #FFFFFF">Quiero pagar con tarjeta</span>
+                </a>
+            </td>
+        </tr>
+    </table>
 
     <p>
-        <b>No formo parte de ningún grupo y quiero comprar la suscripción.</b>
-        Para pago en efectivo <a href="https://compropago.com/comprobante/?id=e490a587-edec-44fe-81df-09208c309a55">clic aquí</a>
-        y para pago con tarjeta dar <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6GPWRE6HARWUU">clic aquí</a>
+        <b>No soy mamá del grupo y quiero saber si mi grupo de facebook tiene convenio:</b>
+        Envíanos un mail a hola@tombofans.com enviando el link del grupo de facebook al que perteneces.
     </p>
 
     <p>
