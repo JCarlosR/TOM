@@ -82,8 +82,8 @@
                                         <input type="file" class="form-control" name="image" id="image">
                                     </div>
                                     <div class="form-group">
-                                        <label for="attempts">Define la frecuencia de participantes ganadores <em>(Mín 1 y Máx 10)</em></label>
-                                        <input type="number" class="form-control" placeholder="¿Cada cuántas veces se gana?" min="1" max="10" value="{{ old('attempts') }}" name="attempts">
+                                        <label for="attempts">Define el criterio para seleccionar ganadores <em>(Mín 1 y Máx 10)</em></label>
+                                        <input type="number" class="form-control" placeholder="1 = todos ganan; y 2, gana 1 de cada 2 participantes" min="1" max="10" value="{{ old('attempts') }}" name="attempts">
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary">
