@@ -137,7 +137,7 @@
                 o máximo 10 personas.
             </p>
             <p>
-                Para que tu Tombofans sea ilimitada y participen todas las personas que quieras, tendrá un costo
+                Para que tu Tombofans sea ilimitada y participen todas las personas que quieras, tiene un costo
                 mensual de $595 que podrás pagar con
                 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6GPWRE6HARWUU">
                     tarjeta de débito, crédito
