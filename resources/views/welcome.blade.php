@@ -125,6 +125,36 @@
         </div>
     </section>
 
+    <section id="four" class="wrapper style5 special">
+        <div class="inner">
+            <header class="major">
+                <h2>¿Cuánto cuesta?</h2>
+            </header>
+            <p>
+                Regístrate gratis y primero prueba Tombofans, te regalamos hasta 10 participaciones de prueba,
+                esto quiere decir, que las personas que invites o les compartas tu página de fans de facebook
+                hasta 10 veces tendrán acceso a tus descuentos o promociones, ya sea  una misma persona
+                o máximo 10 personas.
+            </p>
+            <p>
+                Para que tu Tombofans sea ilimitada y participen todas las personas que quieras, tendrá un costo
+                mensual de $595 que podrás pagar con
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6GPWRE6HARWUU">
+                    tarjeta de débito, crédito
+                </a> o
+                <a href="https://compropago.com/comprobante/?id=e490a587-edec-44fe-81df-09208c309a55">
+                    efectivo
+                </a>, excepto si eres mamá emprendendora
+                que forme parte del
+                <a href="https://www.facebook.com/groups/mundomoms">Club Momy</a>
+                y/o grupos de facebook con quienes tenemos descuentos.
+            </p>
+            <p>
+                Envíanos un mail a hola@tombofans.com con el link del grupo de facebook al que perteneces para decirte si tienes descuento adicional.
+            </p>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section id="cta" class="wrapper style4">
         <div class="inner">
