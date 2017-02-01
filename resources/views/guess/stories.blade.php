@@ -25,7 +25,7 @@
         </header>
         <section class="container">
 
-            <img src="{{ asset('/images/stories/7.jpg') }}" alt="Casos de éxito - Fernanda" class="img-responsive img-rounded">
+            <img src="{{ asset('/images/stories/7.png') }}" alt="Casos de éxito - Fernanda" class="img-responsive img-rounded">
             
             <div class="text-center" style="margin-bottom: 1em;">
                 <a href="{{ url('/facebook/login') }}" class="button special">
@@ -33,7 +33,7 @@
                 </a>
             </div>
 
-            <img src="{{ asset('/images/stories/8.jpg') }}" alt="Casos de éxito - Nadia" class="img-responsive img-rounded">
+            <img src="{{ asset('/images/stories/8.png') }}" alt="Casos de éxito - Nadia" class="img-responsive img-rounded">
 
             <div class="text-center" style="margin-bottom: 1em;">
                 <a href="{{ url('/facebook/login') }}" class="button special">
@@ -41,7 +41,7 @@
                 </a>
             </div>
 
-            <img src="{{ asset('/images/stories/9.jpg') }}" alt="Casos de éxito - Romina" class="img-responsive img-rounded">
+            <img src="{{ asset('/images/stories/9.png') }}" alt="Casos de éxito - Romina" class="img-responsive img-rounded">
 
             <div class="text-center" style="margin-bottom: 1em;">
                 <a href="{{ url('/facebook/login') }}" class="button special">
@@ -49,7 +49,7 @@
                 </a>
             </div>
 
-            <img src="{{ asset('/images/stories/10.jpg') }}" alt="Casos de éxito - Karina" class="img-responsive img-rounded">
+            <img src="{{ asset('/images/stories/10.png') }}" alt="Casos de éxito - Karina" class="img-responsive img-rounded">
 
             <div class="text-center" style="margin-bottom: 1em;">
                 <a href="{{ url('/facebook/login') }}" class="button special">
