@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Maatwebsite\Excel\Facades\Excel;
+use PHPExcel_Cell_DataType;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class FanPageController extends Controller
@@ -86,7 +87,7 @@ class FanPageController extends Controller
 
                     $fbId = $participation->user->facebook_user_id;
                     $sheet->getCell('F'.($i+3))
-                        ->setValue($fbId)
+                        ->setValueExplicit($fbId, PHPExcel_Cell_DataType::TYPE_STRING)
                         ->getHyperlink()
                         ->setUrl('https://www.facebook.com/app_scoped_user_id/' . $fbId);
 
