@@ -86,9 +86,9 @@ class FanPageController extends Controller
 
                     $fbId = $participation->user->facebook_user_id;
                     $sheet->getCell('F'.($i+3))
+                        ->setValue($fbId)
                         ->getHyperlink()
-                        ->setUrl('https://www.facebook.com/app_scoped_user_id/' . $fbId)
-                        ->setTooltip($fbId);
+                        ->setUrl('https://www.facebook.com/app_scoped_user_id/' . $fbId);
 
                     $i += 1;
                 }
