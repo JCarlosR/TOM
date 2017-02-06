@@ -82,13 +82,13 @@ class FanPageController extends Controller
                     $row[3] = $participation->user->email;
                     $row[4] = $participation->is_winner ? 'Este usuario ha ganado' : 'Este usuario NO ha ganado';
                     // $row[5] = $participation->user->facebook_user_id;
+                    $sheet->appendRow($row);
 
                     $fbId = $participation->user->facebook_user_id;
                     $sheet->getCell('F'.($i+3))
                         ->getHyperlink()
                         ->setUrl('https://www.facebook.com/app_scoped_user_id/' . $fbId)
                         ->setTooltip($fbId);
-                    $sheet->appendRow($row);
 
                     $i += 1;
                 }
