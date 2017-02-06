@@ -73,6 +73,7 @@ class FanPageController extends Controller
                 // Data
                 $promotion = Promotion::find($id);
                 $participations = $promotion->participations;
+                $i = 0;
                 foreach ($participations as $participation) {
                     $row = [];
                     $row[0] = $participation->id;
@@ -80,7 +81,13 @@ class FanPageController extends Controller
                     $row[2] = $participation->ticket;
                     $row[3] = $participation->user->email;
                     $row[4] = $participation->is_winner ? 'Este usuario ha ganado' : 'Este usuario NO ha ganado';
-                    $row[5] = $participation->user->facebook_user_id;
+                    // $row[5] = $participation->user->facebook_user_id;
+
+                    $fbId = $participation->user->facebook_user_id;
+                    $sheet->getCell('F'.($i+3))
+                        ->getHyperlink()
+                        ->setUrl('https://www.facebook.com/app_scoped_user_id/' . $fbId)
+                        ->setTooltip($fbId);
                     $sheet->appendRow($row);
                 }
 
