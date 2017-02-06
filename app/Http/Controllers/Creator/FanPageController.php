@@ -89,6 +89,8 @@ class FanPageController extends Controller
                         ->setUrl('https://www.facebook.com/app_scoped_user_id/' . $fbId)
                         ->setTooltip($fbId);
                     $sheet->appendRow($row);
+
+                    $i += 1;
                 }
 
             });
