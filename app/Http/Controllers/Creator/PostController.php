@@ -27,7 +27,6 @@ class PostController extends Controller
             'message' => 'Testing from php sdk',
             'call_to_action' => 'call_to_action',
             'caption' => 'caption',
-            'description' => 'description',
             'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png'
         ];
         try {
