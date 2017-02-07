@@ -24,7 +24,11 @@ class PostController extends Controller
         $fb->setDefaultAccessToken($token);
         $queryUrl = '/344343375954777/feed';
         $params = [
-            'message' => 'Testing from php sdk'
+            'message' => 'Testing from php sdk',
+            'call_to_action' => 'call_to_action',
+            'caption' => 'caption',
+            'description' => 'description',
+            'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png'
         ];
         try {
             $response = $fb->post($queryUrl, $params);
