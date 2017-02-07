@@ -86,10 +86,12 @@ class FanPageController extends Controller
                     $sheet->appendRow($row);
 
                     $fbId = $participation->user->facebook_user_id;
+                    $fbLink = 'https://www.facebook.com/app_scoped_user_id/' . $fbId;
                     $sheet->getCell('F'.($i+3))
-                        ->setValueExplicit($fbId, PHPExcel_Cell_DataType::TYPE_STRING)
+                        ->setValueExplicit($fbLink, PHPExcel_Cell_DataType::TYPE_STRING)
                         ->getHyperlink()
-                        ->setUrl('https://www.facebook.com/app_scoped_user_id/' . $fbId);
+                        ->setUrl($fbLink)
+                        ->setTooltip('Visitar perfil ' . $fbId);
 
                     $i += 1;
                 }
