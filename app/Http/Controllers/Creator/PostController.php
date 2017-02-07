@@ -13,7 +13,8 @@ class PostController extends Controller
 {
     public function grantPermissions(LaravelFacebookSdk $fb)
     {
-        $login_url = $fb->getLoginUrl('admin/posts/callback', ['manage_pages', 'publish_actions']);
+        $login_url = $fb->getRedirectLoginHelper()
+            ->getLoginUrl('admin/posts/callback', ['manage_pages', 'publish_actions']);
         return redirect($login_url);
     }
 
