@@ -38,4 +38,6 @@ Route::match(['get', 'post'], '/facebook/promotion/{id}', 'Participant\Promotion
 Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
 
 // Post to fb group
-Route::get('/test', 'Creator\PostController@test');
+Route::get('/admin/post', 'Creator\PostController@grantPermissions');
+Route::get('/admin/posts/callback', 'Creator\PostController@test');
+

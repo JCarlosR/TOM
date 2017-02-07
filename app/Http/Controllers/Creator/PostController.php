@@ -11,9 +11,14 @@ use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class PostController extends Controller
 {
+    public function grantPermissions(LaravelFacebookSdk $fb)
+    {
+        $login_url = $fb->getLoginUrl('admin/posts/callback', ['manage_pages', 'publish_actions']);
+        return redirect($login_url);
+    }
+
     public function test(LaravelFacebookSdk $fb)
     {
-
         $token = session('fb_user_access_token');
         $fb->setDefaultAccessToken($token);
         $queryUrl = '/344343375954777/feed';
