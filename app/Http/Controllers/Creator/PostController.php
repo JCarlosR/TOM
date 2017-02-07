@@ -26,7 +26,10 @@ class PostController extends Controller
         $params = [
             'message' => 'Testing from php sdk',
             'status_type' => 'created_note',
-            'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png'
+            'link' => 'www.tombofans.com',
+            'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
+            'caption' => 'caption',
+            'description' => 'description'
         ];
         try {
             $response = $fb->post($queryUrl, $params);
