@@ -30,7 +30,7 @@ class PostController extends Controller
             'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
             'caption' => 'caption',
             'description' => 'description',
-            'call_to_action' => 'call_to_action'
+            'name' => 'name of the link'
         ];
         try {
             $response = $fb->post($queryUrl, $params);
