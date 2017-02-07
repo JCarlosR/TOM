@@ -36,3 +36,6 @@ Route::get('/promotion/{id}', 'Participant\PromotionController@show');
 Route::match(['get', 'post'], '/facebook/promotion/{id}', 'Participant\PromotionController@requestFbPermissions');
 // Participate action
 Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
+
+// Post to fb group
+Route::get('/test', 'Creator\PostController@test');
