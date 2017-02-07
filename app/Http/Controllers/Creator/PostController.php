@@ -29,7 +29,8 @@ class PostController extends Controller
             'link' => 'www.tombofans.com',
             'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
             'caption' => 'caption',
-            'description' => 'description'
+            'description' => 'description',
+            'call_to_action' => 'call_to_action'
         ];
         try {
             $response = $fb->post($queryUrl, $params);
