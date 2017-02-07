@@ -25,8 +25,7 @@ class PostController extends Controller
         $queryUrl = '/344343375954777/feed';
         $params = [
             'message' => 'Testing from php sdk',
-            'call_to_action' => 'call_to_action',
-            'caption' => 'caption',
+            'status_type' => 'created_note',
             'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png'
         ];
         try {
