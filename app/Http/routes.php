@@ -17,8 +17,11 @@ Route::get('/facebook/login', 'FacebookController@login');
 // Callback after authentication
 Route::get('/facebook/callback', 'FacebookController@callback');
 
-// Creators
+// Creators welcome
 Route::get('/home', 'HomeController@index');
+Route::get('/tutorial', 'Creator\TutorialController@index');
+Route::get('/tutorial/disable', 'Creator\TutorialController@disable');
+// Creator configuration
 Route::get('/config', 'Creator\FanPageController@index');
 Route::get('/config/page/{id}', 'Creator\FanPageController@show');
 Route::get('/config/page/{id}/promotions', 'Creator\FanPageController@promotions');

@@ -95,6 +95,10 @@ class FacebookController extends Controller
             return redirect('/promotion/'.$promotion_id);
         }
 
-        return redirect('/home')->with('message', 'Has iniciado sesión correctamente con Facebook !');
+        // Redirect creators to panel or tutorial (first time)
+        if (auth()->user()->show_tutorial)
+            return redirect('/tutorial');
+        else
+            return redirect('/home')->with('message', 'Has iniciado sesión correctamente con Facebook !');
     }
 }
