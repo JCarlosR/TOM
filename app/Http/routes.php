@@ -44,3 +44,7 @@ Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
 Route::get('/admin/post', 'Creator\PostController@grantPermissions');
 Route::get('/admin/posts/callback', 'Creator\PostController@test');
 
+// Admin routes
+Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
+    Route::get('/users', 'Admin\CreatorController@index');
+});

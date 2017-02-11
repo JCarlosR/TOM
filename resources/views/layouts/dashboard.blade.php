@@ -6,13 +6,29 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
+
                 <div class="panel panel-info">
                     <div class="panel-heading">Navegación</div>
                     <div class="panel-body">
-                        <a class="list-group-item" href="{{ url('/home') }}" id="step-1">Datos principales</a>
-                        <a class="list-group-item" href="{{ url('/config') }}" id="step-2">Configurar promociones</a>
+                        <a class="list-group-item" href="{{ url('/home') }}" id="step-1">
+                            Datos principales
+                        </a>
+                        <a class="list-group-item" href="{{ url('/config') }}" id="step-2">
+                            Configurar promociones
+                        </a>
                     </div>
                 </div>
+
+                @if (auth()->user()->is_admin)
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Administrador</div>
+                        <div class="panel-body">
+                            <a class="list-group-item" href="{{ url('/admin/users') }}">
+                                Usuarios creadores
+                            </a>
+                        </div>
+                    </div>
+                @endif
 
             </div>
 

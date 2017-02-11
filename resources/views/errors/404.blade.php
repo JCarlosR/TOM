@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">No se ha encontrado la página a la que intentaste acceder.</div>
+                <div class="title">No se ha encontrado la página buscada.</div>
             </div>
         </div>
     </body>

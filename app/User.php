@@ -34,9 +34,23 @@ class User extends Authenticatable
         return $this->hasMany('App\FanPage');
     }
 
-    public function isAdmin()
+    public function getIsAdminAttribute()
     {
         $admin_emails = ['juancagb.17@hotmail.com', 'tombofans@gmail.com'];
-        return $this->email;
+        return in_array($this->email, $admin_emails);
+    }
+
+    // Fan pages count
+
+    public function fanPagesCountRelation()
+    {   // hack to count with good performance
+        return $this->hasOne('App\FanPage') // used just to get the value instead of a collection
+            ->selectRaw('count(1) as aggregate')
+            ->groupBy('user_id');
+    }
+
+    public function getFanPagesCountAttribute()
+    {
+        return $this->fanPagesCountRelation->aggregate;
     }
 }
