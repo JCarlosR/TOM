@@ -45,7 +45,7 @@ class GuessController extends Controller
 
         // Send mail
         Mail::send('emails.contact', $request->all(), function ($m) {
-            $m->to('juancagb.17@gmail.com', 'Juan Ramos')->subject('Contacto - TomboFans');
+            $m->to('hola@tombofans.com', 'Juan Ramos')->subject('Contacto - TomboFans');
         });
 
         return back()->with('notification', 'Tu mensaje se ha enviado correctamente. Te contactaremos muy pronto.');
