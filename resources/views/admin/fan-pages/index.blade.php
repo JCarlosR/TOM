@@ -3,7 +3,7 @@
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
-            <div class="panel-heading">Listado de usuarios creadores</div>
+            <div class="panel-heading">Listado de fan pages del usuario {{ $creator->id }}</div>
 
             <div class="panel-body">
                 @if (session('message'))
@@ -13,36 +13,30 @@
                     </div>
                 @endif
 
-                <p>Listado de usuarios que tienen al menos una fanpage asociada a su registro en TOM.</p>
+                <p>Listado de fan pages asociadas al usuario {{ $creator->name }}.</p>
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-hover table-bordered table-responsive">
                             <thead>
                             <tr>
+                                <th>Fan page</th>
                                 <th>Nombre</th>
-                                <th>Email</th>
-                                <th>Fanpages</th>
+                                <th>Categoría</th>
                                 <th>Fecha de registro</th>
-                                <th>Participaciones restantes</th>
-                                <th>Última participación</th>
+                                <th>Promociones creadas</th>
                                 <th>Opciones</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($creators as $creator)
+                            @foreach ($fan_pages as $fan_page)
                                 <tr>
-                                    <td>{{ $creator->name }}</td>
-                                    <td>{{ $creator->email }}</td>
-                                    <td>{{ $creator->fanPagesCount }}</td>
-                                    <td>{{ $creator->created_at }}</td>
-                                    <td>{{ $creator->remaining_participations }}</td>
-                                    <td>{{ $creator->updated_at }}</td>
+                                    <td>{{ $fan_page->fan_page_id }}</td>
+                                    <td>{{ $fan_page->name }}</td>
+                                    <td>{{ $fan_page->category }}</td>
+                                    <td>{{ $fan_page->created_at }}</td>
+                                    <td>{{ $fan_page->promotions_count }}</td>
                                     <td>
-                                        {{--<a href="{{ url('admin/user/edit') }}" class="btn btn-primary btn-sm" title="Editar promoción">--}}
-                                            {{--<span class="fa fa-pencil"></span>--}}
-                                        {{--</a>--}}
-
-                                        <a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm" title="Ver fan pages">
+                                        <a href="{{ url('admin/fan-page/'.$fan_page->id.'/promotions') }}" class="btn btn-info btn-sm" title="Ver promociones">
                                             <span class="fa fa-eye"></span>
                                         </a>
                                     </td>

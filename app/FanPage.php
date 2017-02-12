@@ -17,4 +17,18 @@ class FanPage extends Model
     {
         return $this->hasMany('App\Promotion');
     }
+
+    // Promotions count
+
+    public function promotionsCountRelation()
+    {   // hack to count with good performance
+        return $this->hasOne('App\Promotion') // used just to get the value instead of a collection
+        ->selectRaw('count(1) as aggregate')
+            ->groupBy('fan_page_id');
+    }
+
+    public function getPromotionsCountAttribute()
+    {
+        return $this->promotionsCountRelation ? $this->promotionsCountRelation->aggregate : 0;
+    }
 }

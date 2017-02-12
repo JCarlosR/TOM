@@ -23,7 +23,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading">Administrador</div>
                         <div class="panel-body">
-                            <a class="list-group-item" href="{{ url('/admin/users') }}">
+                            <a class="list-group-item" href="{{ url('/admin/creators') }}">
                                 Usuarios creadores
                             </a>
                         </div>
