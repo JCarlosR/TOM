@@ -48,4 +48,5 @@ Route::get('/admin/posts/callback', 'Creator\PostController@test');
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('/creators', 'Admin\CreatorController@index');
     Route::get('/creator/{id}/fan-pages', 'Admin\FanPageController@index');
+    Route::get('/fan-page/{id}/promotions', 'Admin\PromotionController@index');
 });

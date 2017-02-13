@@ -29,6 +29,19 @@ class Promotion extends Model
         return $this->fanPage->user->location_name;
     }
 
+    // participations count
+    public function participationsCountRelation()
+    {   // hack to count with good performance
+        return $this->hasOne('App\Participation') // used just to get the value instead of a collection
+        ->selectRaw('count(1) as aggregate')
+            ->groupBy('promotion_id');
+    }
+
+    public function getParticipationsCountAttribute()
+    {
+        return $this->participationsCountRelation ? $this->participationsCountRelation->aggregate : 0;
+    }
+
     // relationships
 
     public function fanPage()

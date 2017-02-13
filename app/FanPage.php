@@ -18,7 +18,7 @@ class FanPage extends Model
         return $this->hasMany('App\Promotion');
     }
 
-    // Promotions count
+    // promotions count
 
     public function promotionsCountRelation()
     {   // hack to count with good performance
