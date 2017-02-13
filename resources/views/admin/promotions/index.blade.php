@@ -15,8 +15,8 @@
 
                 <p>Listado de promociones asociadas a la fan page {{ $fan_page->name }}.</p>
                 <div class="row">
-                    <div class="col-md-12">
-                        <table class="table table-hover table-bordered table-responsive">
+                    <div class="col-md-12 table-responsive">
+                        <table class="table table-hover table-bordered">
                             <thead>
                             <tr>
                                 <th>Descripción</th>

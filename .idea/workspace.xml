@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/fan-pages/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/fan-pages/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/promotions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/promotions/index.blade.php" />
@@ -42,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/creators/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="37" column="112" lean-forward="false" selection-start-line="37" selection-start-column="112" selection-end-line="37" selection-end-column="112" />
+            <state relative-caret-position="126">
+              <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -55,18 +54,18 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/fan-pages/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="33" column="92" lean-forward="false" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
+            <state relative-caret-position="21">
+              <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="32" column="104" lean-forward="false" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
+            <state relative-caret-position="291">
+              <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -172,9 +171,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PromotionController.php" />
         <option value="$PROJECT_DIR$/app/FanPage.php" />
         <option value="$PROJECT_DIR$/app/Promotion.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/fan-pages/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/promotions/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/fan-pages/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" />
       </list>
     </option>
   </component>
@@ -517,12 +516,12 @@
       <workItem from="1486824827621" duration="230000" />
       <workItem from="1486930601299" duration="204000" />
       <workItem from="1486941833120" duration="3009000" />
-      <workItem from="1487013950465" duration="753000" />
+      <workItem from="1487013950465" duration="923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230477000" />
+    <option name="totallyTimeSpent" value="230647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -923,22 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/creators/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="37" column="112" lean-forward="false" selection-start-line="37" selection-start-column="112" selection-end-line="37" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/fan-pages/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="33" column="92" lean-forward="false" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -949,8 +932,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/promotions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="32" column="104" lean-forward="false" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
+        <state relative-caret-position="291">
+          <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/fan-pages/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/creators/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
           <folding />
         </state>
       </provider>
