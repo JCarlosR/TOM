@@ -13,6 +13,13 @@
                     </div>
                 @endif
 
+                <div class="text-right">
+                    <a href="{{ url('/admin/creators/excel') }}" class="btn btn-success btn-sm">
+                        <span class="glyphicon glyphicon-export"></span>
+                        Exportar a Excel
+                    </a>
+                </div>
+
                 <p>Listado de usuarios que tienen al menos una fanpage asociada a su registro en TOM.</p>
                 <div class="row">
                     <div class="col-md-12 table-responsive">
