@@ -29,7 +29,11 @@
                             <tbody>
                             @foreach ($promotions as $promotion)
                                 <tr>
-                                    <td>{{ $promotion->description }}</td>
+                                    <td>
+                                        <a href="{{ url('/promotion/'.$promotion->id) }}" target="_blank">
+                                            {{ $promotion->description }}
+                                        </a>
+                                    </td>
                                     <td>{{ $promotion->end_date }}</td>
                                     <td>{{ $promotion->attempts }}</td>
                                     <td>{{ $promotion->participations_count }}</td>

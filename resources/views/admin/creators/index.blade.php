@@ -21,6 +21,7 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Email</th>
+                                <th>Perfil fb</th>
                                 <th>Fanpages</th>
                                 <th>Fecha de registro</th>
                                 <th>Participaciones restantes</th>
@@ -33,6 +34,11 @@
                                 <tr>
                                     <td>{{ $creator->name }}</td>
                                     <td>{{ $creator->email }}</td>
+                                    <td>
+                                        <a href="//facebook.com/{{ $creator->facebook_user_id }}" target="_blank">
+                                            {{ $creator->facebook_user_id }}
+                                        </a>
+                                    </td>
                                     <td>{{ $creator->fanPagesCount }}</td>
                                     <td>{{ $creator->created_at }}</td>
                                     <td>{{ $creator->remaining_participations }}</td>

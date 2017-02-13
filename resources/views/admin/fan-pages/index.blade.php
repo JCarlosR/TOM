@@ -30,7 +30,11 @@
                             <tbody>
                             @foreach ($fan_pages as $fan_page)
                                 <tr>
-                                    <td>{{ $fan_page->fan_page_id }}</td>
+                                    <td>
+                                        <a href="//facebook.com/{{ $fan_page->fan_page_id }}" target="_blank">
+                                            {{ $fan_page->fan_page_id }}
+                                        </a>
+                                    </td>
                                     <td>{{ $fan_page->name }}</td>
                                     <td>{{ $fan_page->category }}</td>
                                     <td>{{ $fan_page->created_at }}</td>
