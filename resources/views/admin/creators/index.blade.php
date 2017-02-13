@@ -21,7 +21,6 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Perfil fb</th>
                                 <th>Fanpages</th>
                                 <th>Fecha de registro</th>
                                 <th>Participaciones restantes</th>
@@ -32,13 +31,12 @@
                             <tbody>
                             @foreach ($creators as $creator)
                                 <tr>
-                                    <td>{{ $creator->name }}</td>
-                                    <td>{{ $creator->email }}</td>
                                     <td>
-                                        <a href="//facebook.com/{{ $creator->facebook_user_id }}" target="_blank">
-                                            {{ $creator->facebook_user_id }}
+                                        <a href="//facebook.com/{{ $creator->facebook_user_id }}" target="_blank" title="{{ $creator->facebook_user_id }}">
+                                            {{ $creator->name }}
                                         </a>
                                     </td>
+                                    <td>{{ $creator->email }}</td>
                                     <td>{{ $creator->fanPagesCount }}</td>
                                     <td>{{ $creator->created_at }}</td>
                                     <td>{{ $creator->remaining_participations }}</td>
