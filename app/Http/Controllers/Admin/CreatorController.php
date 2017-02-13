@@ -31,7 +31,8 @@ class CreatorController extends Controller
                 $sheet->row(1, ['Datos principales, fan pages y promociones de los usuarios creadores']);
                 $sheet->row(2, [
                     'Nombre', 'E-mail', 'Fan pages', 'Registro', 'Participaciones restantes', 'Última participación',
-                    'ID Fan page', 'Fan page', 'Categoría'
+                    'ID Fan page', 'Fan page', 'Categoría',
+                    'Promoción', 'Vigencia', 'Ganar cada', 'Participaciones'
                 ]);
 
                 // Data
@@ -55,20 +56,34 @@ class CreatorController extends Controller
                         $row[7] = $fanPage->name;
                         $row[8] = $fanPage->category;
 
-                        $sheet->appendRow($row);
+                        foreach ($fanPage->promotions as $promotion) {
+                            $row[9] = $promotion->description;
+                            $row[10] = $promotion->end_date;
+                            $row[11] = $promotion->attempts;
+                            $row[12] = $promotion->participations_count;
 
-                        // Creator fb profile
-                        $sheet->getCell('A'.($i+3))
-                            // ->setValueExplicit($fbProfile, PHPExcel_Cell_DataType::TYPE_STRING)
-                            ->getHyperlink()->setUrl($fbProfile);
+                            $sheet->appendRow($row);
 
-                        // Creator fb profile
-                        $fanPageLink = 'https://www.facebook.com/' . $fanPage->fan_page_id;
-                        $sheet->getCell('G'.($i+3))
-                            ->setValueExplicit($fanPageLink, PHPExcel_Cell_DataType::TYPE_STRING)
-                            ->getHyperlink()->setUrl($fanPageLink);
+                            // Creator fb profile
+                            $sheet->getCell('A'.($i+3))
+                                // ->setValueExplicit($fbProfile, PHPExcel_Cell_DataType::TYPE_STRING)
+                                ->getHyperlink()->setUrl($fbProfile);
 
-                        $i += 1;
+                            // Fan page link
+                            $fanPageLink = 'https://www.facebook.com/' . $fanPage->fan_page_id;
+                            $sheet->getCell('G'.($i+3))
+                                ->setValueExplicit($fanPageLink, PHPExcel_Cell_DataType::TYPE_STRING)
+                                ->getHyperlink()->setUrl($fanPageLink);
+
+                            // Promotion link
+                            $promotionLink = url('promotion/'.$promotion->id);
+                            $sheet->getCell('J'.($i+3))
+                                // ->setValueExplicit($promotionLink, PHPExcel_Cell_DataType::TYPE_STRING)
+                                ->getHyperlink()->setUrl($promotionLink);
+
+                            $i += 1;
+                        }
+
                     }
 
                 }
