@@ -8,8 +8,8 @@
             <div class="col-md-12">
                 <div class="panel panel-info">
                     <div class="panel-heading">Suscripción a TomboFans</div>
-
                     <div class="panel-body text-center">
+
                         <p class="text-muted">Bienvenido a la sección de suscripciones, {{ auth()->user()->name }}.</p>
                         <p>Por favor seleccione la opción de su preferencia:</p>
 
@@ -39,15 +39,12 @@
                         </div>
 
                         <div class="form-group">
-                            {{--<a href="{{ url('/tutorial/disable') }}" class="btn btn-default">--}}
-                                {{--<span class="glyphicon glyphicon-check"></span>--}}
-                                {{--No volver a mostrar el tutorial--}}
-                            {{--</a>--}}
                             <a href="{{ url('/home') }}" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-step-backward"></span>
                                 Volver al panel de usuario
                             </a>
                         </div>
+
                     </div>
                 </div>
             </div>

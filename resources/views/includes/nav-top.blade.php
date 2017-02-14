@@ -30,10 +30,16 @@
                     <li><a href="{{ url('/facebook/login') }}">Ingresar</a></li>
                     <li><a href="{{ url('/register') }}">Registro</a></li>
                 @else
-                    <li title="Te quedan {{ auth()->user()->remaining_participations }} participaciones restantes">
+                    <li title="Te quedan {{ auth()->user()->remaining_participations }} participaciones disponibles para tus promociones">
                         <a href="#">
                             <i class="glyphicon glyphicon-tags"></i>
                             {{ auth()->user()->remaining_participations }}
+                        </a>
+                    </li>
+                    <li title="Clic aquí para ver los planes de suscripción">
+                        <a href="{{ url('/subscribe') }}">
+                            <i class="glyphicon glyphicon-check"></i>
+                            Mi suscripción
                         </a>
                     </li>
                     <li class="dropdown">
@@ -42,12 +48,6 @@
                             {{ auth()->user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ url('/subscribe') }}">
-                                    <i class="glyphicon glyphicon-check"></i>
-                                    Mi suscripción
-                                </a>
-                            </li>
                             <li>
                                 <a href="{{ url('/logout') }}">
                                     <i class="fa fa-btn fa-sign-out"></i>
