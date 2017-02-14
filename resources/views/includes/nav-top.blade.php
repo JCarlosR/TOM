@@ -21,7 +21,6 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/home') }}">Inicio</a></li>
-                <li><a href="{{ url('/tutorial') }}">Tutoriales</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -43,6 +42,12 @@
                             {{ auth()->user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ url('/subscribe') }}">
+                                    <i class="glyphicon glyphicon-check"></i>
+                                    Mi suscripción
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ url('/logout') }}">
                                     <i class="fa fa-btn fa-sign-out"></i>

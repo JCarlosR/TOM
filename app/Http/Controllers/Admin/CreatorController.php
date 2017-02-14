@@ -76,7 +76,7 @@ class CreatorController extends Controller
                             $sheet->getCell('G'.($i+3))
                                 ->setValueExplicit($fanPageLink, PHPExcel_Cell_DataType::TYPE_STRING)
                                 ->getHyperlink()->setUrl($fanPageLink);
-                            
+
                             $i += 1;
                         } else {
                             foreach ($fanPage->promotions as $promotion) {

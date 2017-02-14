@@ -21,6 +21,7 @@ Route::get('/facebook/callback', 'FacebookController@callback');
 Route::get('/home', 'HomeController@index');
 Route::get('/tutorial', 'Creator\TutorialController@index');
 Route::get('/tutorial/disable', 'Creator\TutorialController@disable');
+Route::get('/subscribe', 'Creator\SubscriptionController@index');
 // Creator configuration
 Route::get('/config', 'Creator\FanPageController@index');
 Route::get('/config/page/{id}', 'Creator\FanPageController@show');
