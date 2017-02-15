@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -14,6 +15,23 @@ class GuessController extends Controller
         return view('welcome');
     }
 
+    public function invitedBy($slug, $id)
+    {
+        // check if the user exists
+        $user = User::findOrFail($id);
+        // check if the slug is associated with the name of the user
+        $slug_name = str_slug($user->name, '-');
+        if ($slug != $slug_name)
+            return redirect('/');
+
+        $affiliate_to = $id;
+        // set session variable
+        session([
+            'affiliate_to' => $affiliate_to
+        ]);
+        return view('welcome');
+    }
+
     public function getStories()
     {
         return view('guess.stories');
@@ -23,6 +41,7 @@ class GuessController extends Controller
     {
         return view('guess.contact');
     }
+
     public function postContact(Request $request)
     {
         $rules = [
@@ -59,4 +78,5 @@ class GuessController extends Controller
     {
         return view('guess.terms');
     }
+
 }

@@ -1,6 +1,7 @@
 <?php
 
 Route::get('/', 'GuessController@index');
+Route::get('/invited-by/{slug}/{id}', 'GuessController@invitedBy');
 Route::auth();
 
 // Stories
@@ -22,6 +23,8 @@ Route::get('/home', 'HomeController@index');
 Route::get('/tutorial', 'Creator\TutorialController@index');
 Route::get('/tutorial/disable', 'Creator\TutorialController@disable');
 Route::get('/subscribe', 'Creator\SubscriptionController@index');
+// Affiliate system for creators
+Route::get('/referrals', 'Creator\ReferralController@index');
 // Creator configuration
 Route::get('/config', 'Creator\FanPageController@index');
 Route::get('/config/page/{id}', 'Creator\FanPageController@show');

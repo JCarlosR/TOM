@@ -29,16 +29,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    // relationships
+
     public function fanPages()
     {
         return $this->hasMany('App\FanPage');
     }
 
-    public function getIsAdminAttribute()
-    {
-        $admin_emails = ['juancagb.17@hotmail.com', 'tombofans@gmail.com'];
-        return in_array($this->email, $admin_emails);
-    }
 
     // Fan pages count
 
@@ -51,6 +48,19 @@ class User extends Authenticatable
 
     public function getFanPagesCountAttribute()
     {
-        return $this->fanPagesCountRelation->aggregate;
+        return $this->fanPagesCountRelation ? $this->fanPagesCountRelation->aggregate : 0;
+    }
+
+
+    // accessors
+    public function getIsAdminAttribute()
+    {
+        $admin_emails = ['juancagb.17@hotmail.com', 'tombofans@gmail.com'];
+        return in_array($this->email, $admin_emails);
+    }
+
+    public function getReferralLinkAttribute()
+    {
+        return '/invited-by/'.str_slug($this->name).'/'.$this->id;
     }
 }

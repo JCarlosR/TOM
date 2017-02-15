@@ -93,6 +93,19 @@ class FacebookController extends Controller
             // clear to avoid future redirects
             session()->put('promotion_id', '');
             return redirect('/promotion/'.$promotion_id);
+        } else {
+            // it is a creator
+
+            // Update referral ID when null to
+            // 1: if there is no a referral, the first user represents an empty value
+            // X: when there is a user id in the affiliate_to session variable
+            if (! $user->referred_by) {
+                $affiliate_to = session()->get('affiliate_to', 1);
+                $user->referred_by = $affiliate_to;
+                $user->save();
+
+                session()->forget('affiliate_to');
+            }
         }
 
         // Redirect creators to panel or tutorial (first time)
