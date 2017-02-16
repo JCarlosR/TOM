@@ -38,6 +38,8 @@
                     </a>
                 </div>
 
+                <p>Información sobre los usuarios referidos.</p>
+
                 <div class="table-responsive">
                     <table class="table table-hover table-bordered">
                         <thead>
