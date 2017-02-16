@@ -57,11 +57,11 @@
                                 <td>{{ $creator->created_at }}</td>
                                 <td>{{ $creator->remaining_participations }}</td>
                                 <td>{{ $creator->updated_at }}</td>
-                                {{--<td>--}}
-                                    {{--<a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm" title="Ver fan pages">--}}
-                                        {{--<span class="fa fa-eye"></span>--}}
-                                    {{--</a>--}}
-                                {{--</td>--}}
+                                <td>
+                                    <a href="{{ url('referral/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm" title="Ver fan pages">
+                                        <span class="fa fa-eye"></span>
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

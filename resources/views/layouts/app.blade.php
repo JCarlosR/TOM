@@ -16,7 +16,7 @@
     <meta property="og:type"         content="article" />
     <meta property="og:title"        content="TomboFans" />
     <meta property="og:description"  content="Impulsa tus ventas y consigue clientes más felices" />
-    <meta property="og:image"        content="{{ url('images/1.jpg') }}" />
+    <meta property="og:image"        content="{{ url('images/participation/welcome.jpg') }}" />
 
     @yield('styles')
 </head>
