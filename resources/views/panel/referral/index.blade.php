@@ -31,6 +31,13 @@
 
             <div class="panel-body">
 
+                <div class="text-right">
+                    <a href="{{ url('/referrals/excel') }}" class="btn btn-success btn-sm">
+                        <span class="glyphicon glyphicon-export"></span>
+                        Exportar a Excel
+                    </a>
+                </div>
+
                 <div class="table-responsive">
                     <table class="table table-hover table-bordered">
                         <thead>
