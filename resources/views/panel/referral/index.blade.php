@@ -16,7 +16,7 @@
                 <p>Bienvenido a tu sección de referidos, {{ auth()->user()->name }}.</p>
                 <p>Desde esta página podrás ver un listado de los usuarios que se han registrado gracias a tu invitación.</p>
 
-                <p>Obtener tan referidos es tan sencillo como compartir el siguiente enlace con tus amigos:</p>
+                <p>Obtener referidos es tan sencillo como compartir el siguiente enlace con tus amigos:</p>
                 <input type="text" class="form-control" value="{{ url(auth()->user()->referral_link) }}">
 
                 <p>Si lo deseas también puedes incluir el siguiente código HTML en tu sitio web para incluir un banner y aumentar tus estadísticas:</p>
