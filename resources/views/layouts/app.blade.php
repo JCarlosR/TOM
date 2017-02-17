@@ -18,7 +18,7 @@
     <meta property="og:description"  content="Impulsa tus ventas y consigue clientes más felices" />
     @section('og-image')
         <meta property="og:image"    content="{{ asset('images/welcome.jpg') }}" />
-    @endsection
+    @show
 
     @yield('styles')
 </head>
