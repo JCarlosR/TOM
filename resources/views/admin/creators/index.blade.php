@@ -50,13 +50,13 @@
                                     <td>{{ $creator->updated_at }}</td>
                                     <td class="text-center">
 
-                                            <a href="{{ url('admin/creator/'.$creator->id.'/login') }}" class="btn btn-warning btn-sm btn-block" title="Iniciar sesión como este usuario">
-                                                <span class="glyphicon glyphicon-log-in"></span>
-                                            </a>
+                                        {{--<a href="{{ url('admin/creator/'.$creator->id.'/login') }}" class="btn btn-warning btn-sm btn-block" title="Iniciar sesión como este usuario">--}}
+                                            {{--<span class="glyphicon glyphicon-log-in"></span>--}}
+                                        {{--</a>--}}
 
-                                            <a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">
-                                                <span class="fa fa-list"></span>
-                                            </a>
+                                        <a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">
+                                            <span class="fa fa-list"></span>
+                                        </a>
 
                                     </td>
                                 </tr>
