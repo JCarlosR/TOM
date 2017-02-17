@@ -48,14 +48,16 @@
                                     <td>{{ $creator->created_at }}</td>
                                     <td>{{ $creator->remaining_participations }}</td>
                                     <td>{{ $creator->updated_at }}</td>
-                                    <td>
-                                        {{--<a href="{{ url('admin/user/edit') }}" class="btn btn-primary btn-sm" title="Editar promoción">--}}
-                                            {{--<span class="fa fa-pencil"></span>--}}
-                                        {{--</a>--}}
+                                    <td class="text-center">
 
-                                        <a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm" title="Ver fan pages">
-                                            <span class="fa fa-eye"></span>
-                                        </a>
+                                            <a href="{{ url('admin/creator/'.$creator->id.'/login') }}" class="btn btn-warning btn-sm btn-block" title="Iniciar sesión como este usuario">
+                                                <span class="glyphicon glyphicon-log-in"></span>
+                                            </a>
+
+                                            <a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">
+                                                <span class="fa fa-list"></span>
+                                            </a>
+
                                     </td>
                                 </tr>
                             @endforeach
