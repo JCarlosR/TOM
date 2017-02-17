@@ -83,8 +83,8 @@ class PromotionController extends Controller
         $loginLink = $fb->getLoginUrl(['email', 'user_location']);
 
         $htmlResponse = '<meta property="og:type" content="article" />
-                        <meta property="og:title" content="TomboFans" />
-                        <meta property="og:description" content="Impulsa tus ventas y consigue clientes más felices" />';
+                        <meta property="og:title" content="' . $promotion->fanPage->name . '" />
+                        <meta property="og:description" content="' . $promotion->description . '" />';
 
         $htmlResponse .= '<meta property="og:image" content="' . asset('/images/promotions/'.$promotion->image_path) . '" />';
 
