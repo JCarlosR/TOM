@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('og-image')
+    <meta property="og:image" content="{{ asset('/images/promotions/'.$promotion->image_path) }}" />
+@overwrite
+
 @section('styles')
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
     <style>
@@ -53,7 +57,6 @@
             <p class="title">TomboFans</p>
             <p>mucha suerte, porque hoy puedes ganar</p>
             <img src="{{ asset('/images/participation/hand.png') }}" alt="Hand" height="85">
-            {{--<img src="{{ asset('/images/participation/welcome.jpg') }}" alt="Welcome" class="img-responsive">--}}
         </header>
         <section class="wrapper style5">
             <div class="inner text-center">

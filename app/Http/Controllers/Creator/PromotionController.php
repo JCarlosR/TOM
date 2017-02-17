@@ -42,7 +42,7 @@ class PromotionController extends Controller
     {
         $rules = [
             'fan_page_id' => 'required|exists:fan_pages,id',
-            'description' => 'required|max:180',
+            'description' => 'required|max:220',
             'infinite' => 'integer|min:0|max:1',
             'end_date' => 'required_if:infinite,0|date|after:tomorrow',
             'image' => 'required|image',

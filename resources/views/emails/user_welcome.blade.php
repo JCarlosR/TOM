@@ -24,7 +24,7 @@
     </table>
 
     <p>
-        Somos las forma más fácil de aumentar tus prospectos, clientes e interacciones en tu página de fans en Facebook, en menos de 3 minutos configurarás promociones y descuentos,
+        Somos la forma más fácil de aumentar tus prospectos, clientes e interacciones en tu página de fans en Facebook, en menos de 3 minutos configurarás promociones y descuentos,
         sigue los pasos que te decimos en <a href="{{ url('/') }}">TomboFans.com</a>
     </p>
 
