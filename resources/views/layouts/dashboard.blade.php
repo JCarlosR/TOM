@@ -19,8 +19,8 @@
                             Configurar promociones
                         </a>
                         <a class="list-group-item" href="{{ url('/referrals') }}" id="step-2">
-                            <span class="glyphicon glyphicon-stats"></span>
-                            Mis referidos
+                            <span class="glyphicon glyphicon-usd"></span>
+                            Gana afiliando
                         </a>
                     </div>
                 </div>
