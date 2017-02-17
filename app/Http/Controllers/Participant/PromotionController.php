@@ -82,7 +82,13 @@ class PromotionController extends Controller
 
         $loginLink = $fb->getLoginUrl(['email', 'user_location']);
 
-        $htmlResponse = "<script>" .
+        $htmlResponse = '<meta property="og:type" content="article" />
+                        <meta property="og:title" content="TomboFans" />
+                        <meta property="og:description" content="Impulsa tus ventas y consigue clientes más felices" />';
+
+        $htmlResponse .= '<meta property="og:image" content="' . asset('/images/promotions/'.$promotion->image_path) . '" />';
+
+        $htmlResponse .= "<script>" .
             "window.top.location = '$loginLink';" .
             "</script>";
         return $htmlResponse;
