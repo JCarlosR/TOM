@@ -2,7 +2,7 @@
 
 @section('og-image')
     <meta property="og:image" content="{{ asset('/images/promotions/'.$promotion->image_path) }}" />
-@overwrite
+@endsection
 
 @section('styles')
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
