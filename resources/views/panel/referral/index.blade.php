@@ -31,6 +31,8 @@
 
                 <p class="small">Todas tus ganancias las recibirás en tu cuenta de paypal.</p>
 
+                <hr>
+
                 <p>
                     Obtener referidos es muy fácil, porque tombofans por ahora no tiene competencia
                     y tú puedes explicarles los beneficios de tener una aplicación muy sencilla
@@ -47,17 +49,17 @@
                     <p>En las siguientes ligas encontrarás contenido que te puede ayudar para recomendar a TomboFans:</p>
                     <ul>
                         <li>
-                            <a href="https://www.youtube.com/watch?v=TLfDkhq8HVQ">
+                            <a href="https://www.youtube.com/watch?v=TLfDkhq8HVQ" target="_blank">
                                 Video promocional
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/watch?v=daMaXaGANBU">
+                            <a href="https://www.youtube.com/watch?v=daMaXaGANBU" target="_blank">
                                 Video de funcionamiento
                             </a>
                         </li>
                         <li>
-                            <a href="https://tombofans.com/stories">
+                            <a href="https://tombofans.com/stories" target="_blank">
                                 Casos de éxito
                             </a>
                         </li>
