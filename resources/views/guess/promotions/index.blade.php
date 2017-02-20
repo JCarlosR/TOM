@@ -17,12 +17,12 @@
         }
 
         .panel .panel-heading {
-            max-height: 4em;
-            overflow-y: scroll;"
+            max-height: 6em;
+            overflow-y: auto;
         }
         .panel .panel-footer {
-            max-height: 4em;
-            overflow-y: scroll;"
+            max-height: 6em;
+            overflow-y: auto;
         }
     </style>
 @endsection
