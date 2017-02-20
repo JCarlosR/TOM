@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,8 +65,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+            <state relative-caret-position="375">
+              <caret line="57" column="151" lean-forward="false" selection-start-line="57" selection-start-column="151" selection-end-line="57" selection-end-column="151" />
               <folding />
             </state>
           </provider>
@@ -535,12 +536,12 @@
       <workItem from="1487344364070" duration="2404000" />
       <workItem from="1487347482502" duration="2230000" />
       <workItem from="1487361325142" duration="1418000" />
-      <workItem from="1487600406651" duration="3324000" />
+      <workItem from="1487600406651" duration="3481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260970000" />
+    <option name="totallyTimeSpent" value="261127000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -965,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="375">
+          <caret line="57" column="151" lean-forward="false" selection-start-line="57" selection-start-column="151" selection-end-line="57" selection-end-column="151" />
           <folding />
         </state>
       </provider>

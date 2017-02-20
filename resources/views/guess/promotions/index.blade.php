@@ -52,10 +52,10 @@
                                 <p>{{ $promotion->description }}</p>
                             </div>
                             <div class="panel-footer">
-                                <a href="//facebook.com/{{ $promotion->fanPage->fan_page_id }}" title="Visitar fan page">
+                                <a href="//facebook.com/{{ $promotion->fanPage->fan_page_id }}" title="Visitar fan page" target="_blank">
                                     <span class="fa fa-facebook"></span>
                                 </a>
-                                <a href="{{ url('/facebook/promotion/'.$promotion->id) }}" title="Ir a la promoción" class="pull-right">
+                                <a href="{{ url('/facebook/promotion/'.$promotion->id) }}" title="Ir a la promoción" class="pull-right" target="_blank">
                                     <span class="fa fa-flash"></span>
                                 </a>
                             </div>
