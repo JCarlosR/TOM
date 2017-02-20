@@ -7,9 +7,13 @@
             background: #2c3e50;
         }
 
-        .panel .panel-footer p {
+        .panel p {
             margin: 0;
             padding: 0;
+        }
+        
+        .panel .panel-body p {
+            color: #000;
         }
     </style>
 @endsection
@@ -29,14 +33,22 @@
                     <div class="col-md-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">{{ $promotion->description }}</h3>
+                                <h3 class="panel-title">
+                                    {{ $promotion->fanPage->name }}
+                                </h3>
+                                <p>{{ $promotion->fanPage->category }}</p>
                             </div>
                             <div class="panel-body">
                                 <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion->image_path) }}" alt="{{ $promotion->description }}">
+                                <p>{{ $promotion->description }}</p>
                             </div>
                             <div class="panel-footer">
-                                <p>{{ $promotion->fanPage->name }}</p>
-                                <p>{{ $promotion->fanPage->category }}</p>
+                                <a href="//facebook.com/{{ $promotion->fanPage->fan_page_id }}" title="Visitar fan page">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                                <a href="{{ url('/facebook/promotion/'.$promotion->id) }}" title="Ir a la promoción" class="pull-right">
+                                    <span class="fa fa-flash"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
