@@ -15,6 +15,15 @@
         .panel .panel-body p {
             color: #000;
         }
+
+        .panel .panel-heading {
+            max-height: 4em;
+            overflow-y: scroll;"
+        }
+        .panel .panel-footer {
+            max-height: 4em;
+            overflow-y: scroll;"
+        }
     </style>
 @endsection
 
