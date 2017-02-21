@@ -44,9 +44,18 @@
                 {{-- Fix, because header is floating --}}
                 <br class="visible-xs">
 
+                <button class="btn btn-default btn-sm" data-filter="All">
+                    All
+                </button>
+                @foreach ($categories as $category)
+                    <button class="btn btn-default btn-sm" data-filter="{{ $category }}">
+                        {{ $category }}
+                    </button>
+                @endforeach
+
                 <div class="row">
                 @foreach ($promotions as $promotion)
-                    <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-12" data-status="{{ $promotion->fanPage->category }}">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
@@ -77,4 +86,18 @@
     <!-- Footer -->
     @include('includes.footer')
 </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $('[data-filter]').on('click', function () {
+            var $target = $(this).data('filter');
+            if ($target != 'All') {
+                $('[data-status]').css('display', 'none');
+                $('[data-status="' + $target + '"]').fadeIn('slow');
+            } else {
+                $('[data-status]').css('display', 'none').fadeIn('slow');
+            }
+        });
+    </script>
 @endsection
