@@ -44,20 +44,16 @@
                 {{-- Fix, because header is floating --}}
                 <br class="visible-xs">
 
-                <ul class="actions small">
-                    <li>
-                        <button class="button special small" data-filter="All">
-                            All
-                        </button>
-                    </li>
+                <div class="btn-group">
+                    <button class="btn btn-primary btn-sm" data-filter="All">
+                        All
+                    </button>
                     @foreach ($categories as $category)
-                        <li>
-                            <button class="button special small" data-filter="{{ $category->name }}">
-                                {{ $category->name }} ({{ $category->count }})
-                            </button>
-                        </li>
+                        <button class="btn btn-primary btn-sm" data-filter="{{ $category->name }}">
+                            {{ $category->name }} ({{ $category->count }})
+                        </button>
                     @endforeach
-                </ul>
+                </div>
 
 
 
