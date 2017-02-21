@@ -2,7 +2,6 @@
 
 @section('styles')
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/equal-height-columns.css') }}" rel="stylesheet">
     <style>
         .panel .panel-footer {
             background: #2c3e50;
@@ -103,6 +102,8 @@
 @endsection
 
 @section('scripts')
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+
     <script>
         $('[data-filter]').on('click', function () {
             var target = $(this).data('filter');
