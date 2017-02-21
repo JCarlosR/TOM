@@ -27,7 +27,17 @@ class PromotionController extends Controller
         // This count represents the number of fan pages in each category
         // Not the number of promotions
 
+        /*$promotions = DB::table('promotions')
+            ->join('participations', 'promotions.id', '=', 'participations.promotion_id')
+            ->select('promotions.id as id, count(1) as count')
+            ->groupBy('promotions.id')
+            ->get();*/
+
+        // dd($promotions);
+
         $promotions = Promotion::all();
+        $promotions->sortByDesc('participations_count');
+        
         return view('guess.promotions.index')->with(compact('promotions', 'categories'));
     }
 
