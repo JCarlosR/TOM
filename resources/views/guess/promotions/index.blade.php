@@ -2,7 +2,7 @@
 
 @section('styles')
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/equal-height-columns.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/equal-height-columns.css') }}" rel="stylesheet">
     <style>
         .panel .panel-footer {
             background: #2c3e50;

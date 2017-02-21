@@ -32,10 +32,10 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="69" column="45" lean-forward="false" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
+            <state relative-caret-position="84">
+              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
               <folding>
-                <element signature="e#2119#2143#0#HTML" expanded="true" />
+                <element signature="e#2112#2136#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -438,12 +438,12 @@
       <workItem from="1487361325142" duration="1418000" />
       <workItem from="1487600406651" duration="5205000" />
       <workItem from="1487624532545" duration="73000" />
-      <workItem from="1487690966228" duration="4429000" />
+      <workItem from="1487690966228" duration="4504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267353000" />
+    <option name="totallyTimeSpent" value="267428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -877,10 +877,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="69" column="45" lean-forward="false" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
+        <state relative-caret-position="84">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding>
-            <element signature="e#2119#2143#0#HTML" expanded="true" />
+            <element signature="e#2112#2136#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
