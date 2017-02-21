@@ -67,7 +67,7 @@
                     </select>
                 </form>
 
-                <div class="row row-eq-height" style="margin-top: 1em;">
+                <div class="row" style="margin-top: 1em;">
                 @foreach ($promotions as $promotion)
                     <div class="col-md-4 col-sm-6 col-xs-12" data-status="{{ $promotion->fanPage->category }}">
                         <div class="panel panel-primary">
