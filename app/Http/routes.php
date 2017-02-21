@@ -24,7 +24,8 @@ Route::get('/tutorial', 'Creator\TutorialController@index');
 Route::get('/tutorial/disable', 'Creator\TutorialController@disable');
 Route::get('/subscribe', 'Creator\SubscriptionController@index');
 // Affiliate system for creators
-Route::get('/referrals', 'Creator\ReferralController@index');
+Route::get('/referrals/how-to', 'Creator\ReferralController@howTo');
+Route::get('/referrals', 'Creator\ReferralController@myList');
 Route::get('/referral/{id}/fan-pages', 'Creator\ReferralController@fanPages');
 Route::get('/fan-page/{id}/promotions', 'Creator\ReferralController@promotions');
 Route::get('/referrals/excel', 'Creator\ReferralController@excel');

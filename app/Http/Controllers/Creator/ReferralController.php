@@ -13,10 +13,15 @@ use PHPExcel_Cell_DataType;
 
 class ReferralController extends Controller
 {
-    public function index()
+    public function howTo()
+    {
+        return view('panel.referral.how_to');
+    }
+
+    public function myList()
     {
         $creators = User::where('referred_by', auth()->user()->id)->get();
-        return view('panel.referral.index')->with(compact('creators'));
+        return view('panel.referral.my_list')->with(compact('creators'));
     }
 
     public function fanPages($id)

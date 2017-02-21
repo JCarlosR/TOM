@@ -46,6 +46,21 @@
 
                 <hr>
 
+                <p>
+                    <span>O comparte directamente tu enlace en las redes sociales! &rarr;</span>
+                    <a href="https://twitter.com/intent/tweet?text=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans&url={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a> /
+                    <a href="https://facebook.com/sharer.php?u={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a> /
+                    <a href="https://plus.google.com/share?url={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </p>
+
+                <hr>
+
                     <p>En las siguientes ligas encontrarás contenido que te puede ayudar para recomendar a TomboFans:</p>
                     <ul>
                         <li>
@@ -64,60 +79,6 @@
                             </a>
                         </li>
                     </ul>
-            </div>
-        </div>
-
-        <div class="panel panel-info">
-            <div class="panel-heading">Mis referidos</div>
-
-            <div class="panel-body">
-
-                <div class="text-right">
-                    <a href="{{ url('/referrals/excel') }}" class="btn btn-success btn-sm">
-                        <span class="glyphicon glyphicon-export"></span>
-                        Exportar a Excel
-                    </a>
-                </div>
-
-                <p>Desde esta página podrás ver un listado de los usuarios que se han registrado gracias a tu invitación.</p>
-
-                <div class="table-responsive">
-                    <table class="table table-hover table-bordered">
-                        <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Email</th>
-                            <th>Fanpages</th>
-                            <th>Fecha de registro</th>
-                            <th>Participaciones restantes</th>
-                            <th>Última participación</th>
-                            <th>Opciones</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($creators as $creator)
-                            <tr>
-                                <td>
-                                    <a href="//facebook.com/{{ $creator->facebook_user_id }}" target="_blank" title="{{ $creator->facebook_user_id }}">
-                                        {{ $creator->name }}
-                                    </a>
-                                </td>
-                                <td>{{ $creator->email }}</td>
-                                <td>{{ $creator->fanPagesCount }}</td>
-                                <td>{{ $creator->created_at }}</td>
-                                <td>{{ $creator->remaining_participations }}</td>
-                                <td>{{ $creator->updated_at }}</td>
-                                <td>
-                                    <a href="{{ url('referral/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm" title="Ver fan pages">
-                                        <span class="fa fa-eye"></span>
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
-
             </div>
         </div>
     </div>

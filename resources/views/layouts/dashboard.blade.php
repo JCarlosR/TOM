@@ -18,9 +18,22 @@
                             <span class="glyphicon glyphicon-cog"></span>
                             Configurar promociones
                         </a>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Gana <span class="glyphicon glyphicon-usd"></span>
+                        afiliando
+                    </div>
+                    <div class="panel-body">
+                        <a class="list-group-item" href="{{ url('/referrals/how-to') }}" id="step-2">
+                            <span class="glyphicon glyphicon-paperclip"></span>
+                            Cómo obtener referidos
+                        </a>
                         <a class="list-group-item" href="{{ url('/referrals') }}" id="step-2">
-                            <span class="glyphicon glyphicon-usd"></span>
-                            Gana afiliando
+                            <span class="glyphicon glyphicon-stats"></span>
+                            Usuarios referidos
                         </a>
                     </div>
                 </div>
