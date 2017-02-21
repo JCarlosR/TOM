@@ -44,16 +44,24 @@
                 {{-- Fix, because header is floating --}}
                 <br class="visible-xs">
 
-                <button class="btn btn-default btn-sm" data-filter="All">
-                    All
-                </button>
-                @foreach ($categories as $category)
-                    <button class="btn btn-default btn-sm" data-filter="{{ $category }}">
-                        {{ $category }}
-                    </button>
-                @endforeach
+                <ul class="actions small">
+                    <li>
+                        <button class="button special small" data-filter="All">
+                            All
+                        </button>
+                    </li>
+                    @foreach ($categories as $category)
+                        <li>
+                            <button class="button special small" data-filter="{{ $category->name }}">
+                                {{ $category->name }} ({{ $category->count }})
+                            </button>
+                        </li>
+                    @endforeach
+                </ul>
 
-                <div class="row">
+
+
+                <div class="row" style="margin-top: 1em;">
                 @foreach ($promotions as $promotion)
                     <div class="col-md-4 col-sm-6 col-xs-12" data-status="{{ $promotion->fanPage->category }}">
                         <div class="panel panel-primary">

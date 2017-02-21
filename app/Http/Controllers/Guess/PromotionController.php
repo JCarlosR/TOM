@@ -7,39 +7,25 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class PromotionController extends Controller
 {
 
     public function index()
     {
-        $categories = [
-            'Entertainment Website',
-            'Website',
-            'Local Business',
-            'Clothing (Brand)',
-            'Movie',
-            'Community',
-            'Blogger',
-            'Brand',
-            'Consulting Agency',
-            'School Sports Team',
-            'Games/Toys',
-            'Real Estate',
-            'Kitchen/Cooking',
-            'Advertising/Marketing Service',
-            'Health/Beauty',
-            'Personal Blog',
-            'Medical Company',
-            'Product/Service',
-            'Fashion',
-            'Local Service',
-            'Company',
-            'Event Planning Service',
-            'Beauty',
-            'Professional Service',
-            'Public Figure'
-        ];
+        // SELECT category, COUNT(1) FROM fan_pages GROUP BY category ORDER BY category ASC
+        $categories = DB::table('promotions')
+            ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
+            ->select(DB::raw('fan_pages.category as name, count(1) as count'))
+            // ->where('status', '<>', 1)
+            ->groupBy('fan_pages.category')
+            ->get();
+
+        // dd($categories);
+
+        // This count represents the number of fan pages in each category
+        // Not the number of promotions
 
         $promotions = Promotion::all();
         return view('guess.promotions.index')->with(compact('promotions', 'categories'));
