@@ -44,7 +44,7 @@
                 {{-- Fix, because header is floating --}}
                 <br class="visible-xs">
 
-                <div class="btn-group">
+                <div class="btn-group hidden-xs">
                     <button class="btn btn-primary btn-sm" data-filter="All">
                         All
                     </button>
@@ -55,7 +55,16 @@
                     @endforeach
                 </div>
 
-
+                <form action="">
+                    <select id="select-filter" class="visible-xs">
+                        <option value="All">Todas las categorías</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->name }}">
+                                {{ $category->name }} ({{ $category->count }})
+                            </option>
+                        @endforeach
+                    </select>
+                </form>
 
                 <div class="row" style="margin-top: 1em;">
                 @foreach ($promotions as $promotion)
@@ -95,13 +104,22 @@
 @section('scripts')
     <script>
         $('[data-filter]').on('click', function () {
-            var $target = $(this).data('filter');
-            if ($target != 'All') {
+            var target = $(this).data('filter');
+            applyFilter(target);
+        });
+
+        $('#select-filter').on('change', function () {
+            var target = $(this).val();
+            applyFilter(target);
+        });
+
+        function applyFilter(target) {
+            if (target != 'All') {
                 $('[data-status]').css('display', 'none');
-                $('[data-status="' + $target + '"]').fadeIn('slow');
+                $('[data-status="' + target + '"]').fadeIn('slow');
             } else {
                 $('[data-status]').css('display', 'none').fadeIn('slow');
             }
-        });
+        }
     </script>
 @endsection
