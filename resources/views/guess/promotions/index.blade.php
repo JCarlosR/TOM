@@ -39,7 +39,7 @@
             <div class="inner">
                 <div class="row">
                 @foreach ($promotions as $promotion)
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
