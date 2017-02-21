@@ -24,6 +24,10 @@
             max-height: 6em;
             overflow-y: auto;
         }
+
+        .img-responsive {
+            margin: 0 auto;
+        }
     </style>
 @endsection
 
@@ -37,6 +41,9 @@
 
         <section class="wrapper style1">
             <div class="inner">
+                {{-- Fix, because header is floating --}}
+                <br class="visible-xs">
+
                 <div class="row">
                 @foreach ($promotions as $promotion)
                     <div class="col-md-4 col-sm-6 col-xs-12">
