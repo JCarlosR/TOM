@@ -29,11 +29,20 @@
             margin: 0 auto;
         }
 
-        .panel .panel-content {
+        .panel .panel-content-image {
+            height: 10em;
+        }
+        .panel .panel-content-image img {
+            max-height: 100%;
+            margin: 0 auto;
+        }
+
+        .panel .panel-content-description {
             height: 7em;
             position: relative;
         }
-        .panel .panel-content p {
+        .panel .panel-content-description p {
+            text-align: center;
             position: absolute;
             top: 50%;
             left:50%;
@@ -92,8 +101,10 @@
                                 <p>{{ $promotion['fanPageCategory'] }}</p>
                             </div>
                             <div class="panel-body">
-                                <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
-                                <div class="panel-content">
+                                <div class="panel-content-image">
+                                    <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
+                                </div>
+                                <div class="panel-content-description">
                                     <p>{{ $promotion['description'] }}</p>
                                 </div>
                             </div>
