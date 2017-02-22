@@ -92,6 +92,8 @@
                     </div>
                 @endforeach
                 </div>
+
+                {{ $promotions->links() }}
             </div>
         </section>
     </article>
