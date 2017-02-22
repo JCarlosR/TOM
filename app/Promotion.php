@@ -55,11 +55,12 @@ class Promotion extends Model
         return $this->hasMany('App\Participation');
     }
 
+
     // scope
 
     public function scopeActive($query)
     {
-        return $query->where('end_date', '>', Carbon::now());
+        return $query->where('end_date', '>', Carbon::now())->orWhereNull('end_date');
     }
 
 }
