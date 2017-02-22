@@ -17,7 +17,7 @@
         }
 
         .panel .panel-heading {
-            max-height: 6em;
+            height: 5em;
             overflow-y: auto;
         }
         .panel .panel-footer {
