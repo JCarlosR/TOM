@@ -35,7 +35,7 @@ class PromotionController extends Controller
 
         // dd($promotions);
 
-        $promotions = Promotion::all();
+        $promotions = Promotion::active();
         $promotions = $promotions->sortByDesc('participations_count');
         
         return view('guess.promotions.index')->with(compact('promotions', 'categories'));

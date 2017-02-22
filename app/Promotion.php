@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -52,6 +53,13 @@ class Promotion extends Model
     public function participations()
     {
         return $this->hasMany('App\Participation');
+    }
+
+    // scope
+
+    public function scopeActive($query)
+    {
+        return $query->where('end_date', '>', Carbon::now());
     }
 
 }
