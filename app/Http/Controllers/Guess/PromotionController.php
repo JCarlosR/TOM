@@ -39,10 +39,24 @@ class PromotionController extends Controller
         $promotions = Promotion::active()->get();
         $promotions = $promotions->sortByDesc('participations_count');
 
+        // Add additional fields
+        foreach ($promotions as $promotion) {
+            $fanPage = $promotion->fanPage;
+            $promotion->fanPageId = $fanPage->id;
+            $promotion->fanPageName = $fanPage->name;
+            $promotion->fanPageCategory = $fanPage->category;
+            $promotion->imagePath = $promotion->image_path;
+
+            unset($promotion->fanPage);
+            unset($promotion->fan_page_id);
+        }
 
         // Pagination logic
         $promotions = $this->paginate($request, $promotions);
         // dd($promotions);
+        /*foreach ($promotions as $promotion) {
+            dd($promotion);
+        }*/
 
         return view('guess.promotions.index')->with(compact('promotions', 'categories'));
     }
@@ -54,7 +68,7 @@ class PromotionController extends Controller
         $offset = ($page * $perPage) - $perPage;
 
         return new LengthAwarePaginator(
-            $items, // array_slice($items->toArray(), $offset, $perPage, true), // Only grab the items we need
+            array_slice($items->toArray(), $offset, $perPage, true), // Only grab the items we need
             count($items), // Total items
             $perPage, // Items per page
             $page, // Current page

@@ -68,23 +68,23 @@
 
                 <div class="row" style="margin-top: 1em;">
                 @foreach ($promotions as $promotion)
-                    <div class="col-md-4 col-sm-6 col-xs-12" data-status="{{ $promotion->fanPage->category }}">
+                    <div class="col-md-4 col-sm-6 col-xs-12" data-status="{{ $promotion['fanPageCategory'] }}">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
-                                    {{ $promotion->fanPage->name }}
+                                    {{ $promotion['fanPageName'] }}
                                 </h3>
-                                <p>{{ $promotion->fanPage->category }}</p>
+                                <p>{{ $promotion['fanPageCategory'] }}</p>
                             </div>
                             <div class="panel-body">
-                                <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion->image_path) }}" alt="{{ $promotion->description }}">
-                                <p>{{ $promotion->description }}</p>
+                                <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
+                                <p>{{ $promotion['description'] }}</p>
                             </div>
                             <div class="panel-footer">
-                                <a href="//facebook.com/{{ $promotion->fanPage->fan_page_id }}" title="Visitar fan page" target="_blank">
+                                <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
                                     <span class="fa fa-facebook"></span>
                                 </a>
-                                <a href="{{ url('/facebook/promotion/'.$promotion->id) }}" title="Ir a la promoción" class="pull-right" target="_blank">
+                                <a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">
                                     <span class="fa fa-flash"></span>
                                 </a>
                             </div>
