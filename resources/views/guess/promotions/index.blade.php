@@ -93,7 +93,7 @@
                 @endforeach
                 </div>
 
-                {{--{{ $promotions->links() }}--}}
+                {{ $promotions->links() }}
             </div>
         </section>
     </article>

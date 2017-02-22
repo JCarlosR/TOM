@@ -41,7 +41,7 @@ class PromotionController extends Controller
 
 
         // Pagination logic
-        // $promotions = $this->paginate($request, $promotions);
+        $promotions = $this->paginate($request, $promotions);
         // dd($promotions);
 
         return view('guess.promotions.index')->with(compact('promotions', 'categories'));
@@ -54,7 +54,7 @@ class PromotionController extends Controller
         $offset = ($page * $perPage) - $perPage;
 
         return new LengthAwarePaginator(
-            array_slice($items->toArray(), $offset, $perPage, true), // Only grab the items we need
+            $items, // array_slice($items->toArray(), $offset, $perPage, true), // Only grab the items we need
             count($items), // Total items
             $perPage, // Items per page
             $page, // Current page
