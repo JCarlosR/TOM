@@ -28,6 +28,21 @@
         .img-responsive {
             margin: 0 auto;
         }
+
+        .panel .panel-content {
+            height: 7em;
+            position: relative;
+        }
+        .panel .panel-content p {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            max-height: 100%;
+            width: 100%;
+            overflow: auto;
+            transform: translate(-50%,-50%);
+            /*border: 1px dashed deeppink;*/
+        }
     </style>
 @endsection
 
@@ -78,7 +93,9 @@
                             </div>
                             <div class="panel-body">
                                 <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
-                                <p>{{ $promotion['description'] }}</p>
+                                <div class="panel-content">
+                                    <p>{{ $promotion['description'] }}</p>
+                                </div>
                             </div>
                             <div class="panel-footer">
                                 <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
@@ -104,8 +121,6 @@
 @endsection
 
 @section('scripts')
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
-
     <script>
         $('[data-filter]').on('click', function () {
             var target = $(this).data('filter');
