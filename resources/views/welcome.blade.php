@@ -42,7 +42,11 @@
                     </a>
                 </li>
             </ul>
-            <em class="small text-muted">Al ingresar usted acepta nuestros <a href="{{ url('/terms') }}" target="_blank">términos y condiciones</a>.</em>
+            <em class="small text-muted">
+                Al ingresar usted acepta nuestros
+                <a href="{{ url('/terms') }}" target="_blank">términos y condiciones</a>,
+                y <a href="{{ url('/privacy') }}">normas de privacidad</a>.
+            </em>
         </div>
         <a href="#one" class="more scrolly">Ver más</a>
     </section>

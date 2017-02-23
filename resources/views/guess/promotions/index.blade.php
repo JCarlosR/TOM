@@ -62,7 +62,7 @@
 @section('content')
 <div id="page-wrapper">
     <header id="header">
-        <h1><a href="#">Tombo Fans</a></h1>
+        <h1><a href="{{ url('/') }}">Tombo Fans</a></h1>
     </header>
 
     <article id="main">
