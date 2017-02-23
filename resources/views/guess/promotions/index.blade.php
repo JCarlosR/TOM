@@ -52,6 +52,10 @@
             transform: translate(-50%,-50%);
             /*border: 1px dashed deeppink;*/
         }
+
+        .button {
+            text-transform: none;
+        }
     </style>
 @endsection
 
@@ -64,23 +68,25 @@
     <article id="main">
 
         <section class="wrapper style1">
-            <div class="inner">
+            <div class="container-fluid">
                 {{-- Fix, because header is floating --}}
                 <br class="visible-xs">
 
-                <div class="btn-group hidden-xs">
-                    <button class="btn btn-primary btn-sm" data-filter="All">
-                        All
-                    </button>
-                    @foreach ($categories as $category)
-                        <button class="btn btn-primary btn-sm" data-filter="{{ $category->name }}">
-                            {{ $category->name }} ({{ $category->count }})
-                        </button>
-                    @endforeach
+                <div class="col-md-3 hidden-xs">
+                    <ul class="actions small">
+                        <li data-filter="All">
+                            <a class="button special small">All</a>
+                        </li>
+                        @foreach ($categories as $category)
+                            <li data-filter="{{ $category->name }}">
+                                <a class="button special small">{{ $category->name }} ({{ $category->count }})</a>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
 
-                <form action="">
-                    <select id="select-filter" class="visible-xs">
+                <form action="" class="visible-xs">
+                    <select id="select-filter">
                         <option value="All">Todas las categorías</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->name }}">
@@ -90,49 +96,51 @@
                     </select>
                 </form>
 
-                <div class="row" style="margin-top: 1em;">
-                @foreach ($promotions as $promotion)
-                    <div class="col-md-4 col-sm-6 col-xs-12" data-status="{{ $promotion['fanPageCategory'] }}">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    {{ $promotion['fanPageName'] }}
-                                </h3>
-                                <p>{{ $promotion['fanPageCategory'] }}</p>
-                            </div>
-                            <div class="panel-body">
-                                <div class="panel-content-image">
-                                    <a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">
-                                        <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
-                                    </a>
-                                </div>
-                                <div class="panel-content-description">
-                                    <p>{{ $promotion['description'] }}</p>
-                                </div>
-                            </div>
-                            <div class="panel-footer">
-                                <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
-                                    <span class="fa fa-thumbs-o-up"></span>
-                                </a>
+                <div class="col-md-9 col-xs-12">
+                    <div class="row">
+                        @foreach ($promotions as $promotion)
+                            <div class="col-md-4 col-sm-6 col-xs-12" data-status="{{ $promotion['fanPageCategory'] }}">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            {{ $promotion['fanPageName'] }}
+                                        </h3>
+                                        <p>{{ $promotion['fanPageCategory'] }}</p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="panel-content-image">
+                                            <a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">
+                                                <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
+                                            </a>
+                                        </div>
+                                        <div class="panel-content-description">
+                                            <p>{{ $promotion['description'] }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
+                                            <span class="fa fa-thumbs-o-up"></span>
+                                        </a>
 
-                                <p class="pull-right">
-                                    <a href="https://twitter.com/intent/tweet?text={{ $promotion['description'] }}&url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Twitter">
-                                        <i class="fa fa-twitter"></i>
-                                    </a> /
-                                    <a href="https://facebook.com/sharer.php?u={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Facebook">
-                                        <i class="fa fa-facebook"></i>
-                                    </a> /
-                                    <a href="https://plus.google.com/share?url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </p>
-                                {{--<a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">--}}
-                                    {{--<span class="fa fa-share-alt"></span>--}}
-                                {{--</a>--}}
+                                        <p class="pull-right">
+                                            <a href="https://twitter.com/intent/tweet?text={{ $promotion['description'] }}&url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a> /
+                                            <a href="https://facebook.com/sharer.php?u={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Facebook">
+                                                <i class="fa fa-facebook"></i>
+                                            </a> /
+                                            <a href="https://plus.google.com/share?url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </p>
+                                        {{--<a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">--}}
+                                        {{--<span class="fa fa-share-alt"></span>--}}
+                                        {{--</a>--}}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
                 </div>
 
                 {{ $promotions->links() }}

@@ -39,9 +39,9 @@ class PromotionController extends Controller
         $promotions = Promotion::active()->get();
         $promotions = $promotions->sortByDesc('participations_count');
 
-        $promotions = $promotions->reject(function($promotion) {
-            return $promotion->participations_count == 0;
-        });
+//        $promotions = $promotions->reject(function($promotion) {
+//            return $promotion->participations_count == 0;
+//        });
 
         // Add additional fields
         foreach ($promotions as $promotion) {
