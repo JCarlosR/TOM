@@ -141,9 +141,11 @@
                             </div>
                         @endforeach
                     </div>
-                </div>
 
-                {{ $promotions->links() }}
+                    <div class="row">
+                        {{ $promotions->links() }}
+                    </div>
+                </div>
             </div>
         </section>
     </article>
