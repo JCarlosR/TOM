@@ -39,10 +39,14 @@ class PromotionController extends Controller
         $promotions = Promotion::active()->get();
         $promotions = $promotions->sortByDesc('participations_count');
 
+        $promotions = $promotions->reject(function($promotion) {
+            return $promotion->participations_count == 0;
+        });
+
         // Add additional fields
         foreach ($promotions as $promotion) {
             $fanPage = $promotion->fanPage;
-            $promotion->fanPageId = $fanPage->id;
+            $promotion->fanPageId = $fanPage->fan_page_id;
             $promotion->fanPageName = $fanPage->name;
             $promotion->fanPageCategory = $fanPage->category;
             $promotion->imagePath = $promotion->image_path;

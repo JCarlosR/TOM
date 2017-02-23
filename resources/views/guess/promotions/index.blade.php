@@ -102,7 +102,9 @@
                             </div>
                             <div class="panel-body">
                                 <div class="panel-content-image">
-                                    <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
+                                    <a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">
+                                        <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
+                                    </a>
                                 </div>
                                 <div class="panel-content-description">
                                     <p>{{ $promotion['description'] }}</p>
@@ -110,11 +112,23 @@
                             </div>
                             <div class="panel-footer">
                                 <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
-                                    <span class="fa fa-facebook"></span>
+                                    <span class="fa fa-thumbs-o-up"></span>
                                 </a>
-                                <a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">
-                                    <span class="fa fa-flash"></span>
-                                </a>
+
+                                <p class="pull-right">
+                                    <a href="https://twitter.com/intent/tweet?text={{ $promotion['description'] }}&url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a> /
+                                    <a href="https://facebook.com/sharer.php?u={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a> /
+                                    <a href="https://plus.google.com/share?url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </p>
+                                {{--<a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">--}}
+                                    {{--<span class="fa fa-share-alt"></span>--}}
+                                {{--</a>--}}
                             </div>
                         </div>
                     </div>
