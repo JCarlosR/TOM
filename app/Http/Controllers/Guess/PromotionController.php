@@ -15,16 +15,7 @@ class PromotionController extends Controller
 
     public function index(Request $request)
     {
-        // SELECT category, COUNT(1) FROM fan_pages GROUP BY category ORDER BY category ASC
-        $categories = DB::table('promotions')
-            ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
-            ->join('participations', 'promotions.id', '=', 'participations.promotion_id')
-            ->select(DB::raw('fan_pages.category as name, count(1) as count'))
-            // ->where('status', '<>', 1)
-            ->groupBy('fan_pages.category')
-            ->get();
-
-        // dd($categories);
+        $categories = $this->getFanPageCategories();
 
         $promotions = Promotion::active()->get();
         $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
@@ -37,6 +28,8 @@ class PromotionController extends Controller
         $query = $request->input('query');
         if (! $query)
             return redirect('/promotions');
+
+        $categories = $this->getFanPageCategories();
 
         $promotions = Promotion::active()
                         ->where('description', 'like', '%' . $query . '%')
@@ -83,5 +76,16 @@ class PromotionController extends Controller
             $page, // Current page
             ['path' => $request->url(), 'query' => $request->query()] // We need this so we can keep all old query parameters from the url
         );
+    }
+
+    public function getFanPageCategories()
+    {
+        return DB::table('promotions')
+            ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
+            ->join('participations', 'promotions.id', '=', 'participations.promotion_id')
+            ->select(DB::raw('fan_pages.category as name, count(1) as count'))
+            // ->where('status', '<>', 1)
+            ->groupBy('fan_pages.category')
+            ->get();
     }
 }

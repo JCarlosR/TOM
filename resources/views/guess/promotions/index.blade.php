@@ -103,7 +103,7 @@
                     </select>
                 </form>
 
-                <form action="{{ url('promotions/search') }}" class="form-horizontal" method="POST">
+                <form action="{{ url('promotions/search') }}" class="form-horizontal" method="GET">
                     <div class="input-group">
                         <input type="text" name="query" class="form-control" placeholder="¿Buscas algo en particular?">
                         <div class="input-group-btn">
