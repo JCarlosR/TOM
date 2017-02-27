@@ -103,6 +103,17 @@
                     </select>
                 </form>
 
+                <form action="{{ url('promotions/search') }}" class="form-horizontal" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="query" class="form-control" placeholder="¿Buscas algo en particular?">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
                 <div class="col-md-9 col-xs-12">
                     <div class="row">
                         @foreach ($promotions as $promotion)

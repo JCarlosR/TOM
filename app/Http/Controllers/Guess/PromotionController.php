@@ -23,21 +23,30 @@ class PromotionController extends Controller
             // ->where('status', '<>', 1)
             ->groupBy('fan_pages.category')
             ->get();
-        // This count represents the number of fan pages in each category
-        // Not the number of promotions
 
         // dd($categories);
 
-
-        /*$promotions = DB::table('promotions')
-            ->join('participations', 'promotions.id', '=', 'participations.promotion_id')
-            ->select('promotions.id as id, count(1) as count')
-            ->groupBy('promotions.id')
-            ->get();*/
-
-        // dd($promotions);
-
         $promotions = Promotion::active()->get();
+        $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
+
+        return view('guess.promotions.index')->with(compact('promotions', 'categories'));
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        if (! $query)
+            return redirect('/promotions');
+
+        $promotions = Promotion::active()
+                        ->where('description', 'like', '%' . $query . '%')
+                        ->get();
+
+        $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
+        return view('guess.promotions.index')->with(compact('promotions', 'categories'));
+    }
+
+    public function sortFilterFormatAndPaginate(Request $request, $promotions) {
         $promotions = $promotions->sortByDesc('participations_count');
 
         $promotions = $promotions->reject(function($promotion) {
@@ -58,13 +67,7 @@ class PromotionController extends Controller
         }
 
         // Pagination logic
-        $promotions = $this->paginate($request, $promotions);
-        // dd($promotions);
-        /*foreach ($promotions as $promotion) {
-            dd($promotion);
-        }*/
-
-        return view('guess.promotions.index')->with(compact('promotions', 'categories'));
+        return $this->paginate($request, $promotions);
     }
 
     public function paginate(Request $request, $items)
@@ -81,5 +84,4 @@ class PromotionController extends Controller
             ['path' => $request->url(), 'query' => $request->query()] // We need this so we can keep all old query parameters from the url
         );
     }
-
 }
