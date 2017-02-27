@@ -71,7 +71,7 @@
     <header id="header" class="text-center">
         <h1>
             @if (Request::is('promotions'))
-                Cuponera <a href="{{ url('/') }}">Tombo Fans</a>
+                <a href="{{ url('/') }}">Cuponera Tombo Fans</a>
             @else
                 <a href="{{ url('/promotions') }}">Cuponera Tombo Fans</a>
             @endif
