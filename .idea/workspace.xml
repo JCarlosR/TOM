@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="108" column="49" lean-forward="false" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+            <state relative-caret-position="522">
+              <caret line="103" column="50" lean-forward="true" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -71,7 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>iniciado</find>
       <find>instru</find>
       <find>from</find>
       <find>switch</find>
@@ -101,6 +99,7 @@
       <find>route</find>
       <find>&lt;img</find>
       <find>promotions</find>
+      <find>tombo</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -470,12 +469,12 @@
       <workItem from="1487884215560" duration="4270000" />
       <workItem from="1487909576925" duration="30000" />
       <workItem from="1488026406540" duration="681000" />
-      <workItem from="1488165181970" duration="2827000" />
+      <workItem from="1488165181970" duration="4028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284570000" />
+    <option name="totallyTimeSpent" value="285771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="108" column="49" lean-forward="false" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+        <state relative-caret-position="522">
+          <caret line="103" column="50" lean-forward="true" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
           <folding />
         </state>
       </provider>
