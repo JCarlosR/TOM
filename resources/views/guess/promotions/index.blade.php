@@ -105,7 +105,8 @@
 
                 <form action="{{ url('promotions/search') }}" class="form-horizontal" method="GET">
                     <div class="input-group">
-                        <input type="text" name="query" class="form-control" placeholder="¿Buscas algo en particular?">
+                        <input type="text" name="query" class="form-control" placeholder="¿Buscas algo en particular?"
+                            value="{{ $query ?: '' }}">
                         <div class="input-group-btn">
                             <button class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-search"></span>

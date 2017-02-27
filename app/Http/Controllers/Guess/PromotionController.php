@@ -36,7 +36,7 @@ class PromotionController extends Controller
                         ->get();
 
         $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
-        return view('guess.promotions.index')->with(compact('promotions', 'categories'));
+        return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query'));
     }
 
     public function sortFilterFormatAndPaginate(Request $request, $promotions) {
