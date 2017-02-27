@@ -56,6 +56,7 @@ class PromotionController extends Controller
             $promotion->fanPageName = $fanPage->name;
             $promotion->fanPageCategory = $fanPage->category;
             $promotion->imagePath = $promotion->image_path;
+            $promotion->participationsCount = $promotion->participations_count;
 
             unset($promotion->fanPage);
             unset($promotion->fan_page_id);
