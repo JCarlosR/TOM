@@ -145,6 +145,8 @@
                                         <div class="panel-content-description">
                                             <p>{{ $promotion['description'] }}</p>
                                         </div>
+
+                                        <p class="text-center small">{{ $promotion['participationsCount'] }} personas participaron</p>
                                     </div>
                                     <div class="panel-footer">
                                         <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
