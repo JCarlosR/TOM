@@ -37,6 +37,7 @@ Route::get('/config/promotion/{id}/excel', 'Creator\FanPageController@excel');
 
 // Promotions list
 Route::get('/promotions', 'Guess\PromotionController@index');
+Route::get('/promotions/search', 'Guess\PromotionController@search');
 
 // Promotions for creators
 Route::post('/promotion', 'Creator\PromotionController@store');
