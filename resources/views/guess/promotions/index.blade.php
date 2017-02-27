@@ -70,8 +70,8 @@
 <div id="page-wrapper">
     <header id="header" class="text-center">
         <h1>
-            @if (Request::is('/promotions'))
-                <a href="{{ url('/') }}">Cuponera Tombo Fans</a>
+            @if (Request::is('promotions'))
+                Cuponera <a href="{{ url('/') }}">Tombo Fans</a>
             @else
                 <a href="{{ url('/promotions') }}">Cuponera Tombo Fans</a>
             @endif

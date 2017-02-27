@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
@@ -50,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
+            <state relative-caret-position="333">
+              <caret line="73" column="50" lean-forward="false" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -162,8 +161,8 @@
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PromotionController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" />
+        <option value="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
       </list>
     </option>
   </component>
@@ -470,12 +469,12 @@
       <workItem from="1487884215560" duration="4270000" />
       <workItem from="1487909576925" duration="30000" />
       <workItem from="1488026406540" duration="681000" />
-      <workItem from="1488165181970" duration="4135000" />
+      <workItem from="1488165181970" duration="4289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285878000" />
+    <option name="totallyTimeSpent" value="286032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -869,18 +868,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="24" column="94" lean-forward="false" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="73" column="50" lean-forward="false" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
           <folding />
         </state>
       </provider>
