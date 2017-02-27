@@ -20,7 +20,9 @@ class PromotionController extends Controller
         $promotions = Promotion::active()->get();
         $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
 
-        return view('guess.promotions.index')->with(compact('promotions', 'categories'));
+        $query = '';
+
+        return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query'));
     }
 
     public function search(Request $request)
