@@ -53,8 +53,11 @@
             /*border: 1px dashed deeppink;*/
         }
 
-        .button {
-            text-transform: none;
+        #ulCategories {
+            list-style-type: none;
+        }
+        #ulCategories li {
+            margin-bottom: 1em;
         }
     </style>
 @endsection
@@ -73,13 +76,16 @@
                 <br class="visible-xs">
 
                 <div class="col-md-3 hidden-xs">
-                    <ul class="actions small">
+                    <ul id="ulCategories">
                         <li data-filter="All">
-                            <a class="button special small">All</a>
+                            <a class="btn btn-primary btn-sm">All</a>
                         </li>
                         @foreach ($categories as $category)
                             <li data-filter="{{ $category->name }}">
-                                <a class="button special small">{{ $category->name }} ({{ $category->count }})</a>
+                                <a class="btn btn-primary btn-sm">
+                                    {{ $category->name }}
+                                    {{--({{ $category->count }})--}}
+                                </a>
                             </li>
                         @endforeach
                     </ul>
@@ -90,7 +96,8 @@
                         <option value="All">Todas las categorías</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->name }}">
-                                {{ $category->name }} ({{ $category->count }})
+                                {{ $category->name }}
+                                {{--({{ $category->count }})--}}
                             </option>
                         @endforeach
                     </select>
