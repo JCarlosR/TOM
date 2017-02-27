@@ -5,10 +5,8 @@
 @endsection
 
 @section('content')
-<!-- Page Wrapper -->
 <div id="page-wrapper">
 
-    <!-- Header -->
     <header id="header" class="alt">
         <h1><a href="#">Tombo Fans</a></h1>
         <nav id="nav">
@@ -28,7 +26,6 @@
         </nav>
     </header>
 
-    <!-- Banner -->
     <section id="banner">
         <div class="inner">
             <h2>Tombo Fans</h2>
@@ -174,7 +171,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     @include('includes.footer')
 </div>
 @endsection

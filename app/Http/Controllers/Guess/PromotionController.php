@@ -18,6 +18,7 @@ class PromotionController extends Controller
         // SELECT category, COUNT(1) FROM fan_pages GROUP BY category ORDER BY category ASC
         $categories = DB::table('promotions')
             ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
+            ->join('participations', 'promotions.id', '=', 'participations.promotion_id')
             ->select(DB::raw('fan_pages.category as name, count(1) as count'))
             // ->where('status', '<>', 1)
             ->groupBy('fan_pages.category')
