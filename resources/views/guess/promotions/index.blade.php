@@ -172,6 +172,7 @@
                                         <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
                                             <span class="fa fa-thumbs-o-up"></span>
                                         </a>
+                                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $promotion['fanPageId'] }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="pborder:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
                                         <p class="pull-right">
                                             <a href="https://twitter.com/intent/tweet?text={{ $promotion['description'] }}&url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Twitter">
@@ -191,9 +192,6 @@
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
                                         </p>
-                                        {{--<a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">--}}
-                                        {{--<span class="fa fa-share-alt"></span>--}}
-                                        {{--</a>--}}
                                     </div>
                                 </div>
                             </div>
