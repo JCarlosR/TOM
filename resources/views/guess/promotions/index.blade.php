@@ -155,7 +155,7 @@
                                             </a>
                                         </div>
                                         <div class="panel-content-description">
-                                            <p>{{ $promotion['description'] }}</p>
+                                            <p>{{ $promotion['descriptionShort'] }}</p>
                                         </div>
 
                                         <p class="text-center small">

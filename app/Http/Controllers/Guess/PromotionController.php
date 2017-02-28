@@ -57,7 +57,7 @@ class PromotionController extends Controller
         // Add additional fields
         foreach ($promotions as $promotion) {
             $fanPage = $promotion->fanPage;
-            $promotion->description = mb_strimwidth($promotion->description, 0, 77, " ...");
+            $promotion->descriptionShort = mb_strimwidth($promotion->description, 0, 77, " ...");
             $promotion->fanPageId = $fanPage->fan_page_id;
             $promotion->fanPageName = $fanPage->name;
             $promotion->fanPageCategory = $fanPage->category;
