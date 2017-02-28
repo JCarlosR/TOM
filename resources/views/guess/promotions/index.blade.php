@@ -169,26 +169,28 @@
                                         </p>
                                     </div>
                                     <div class="panel-footer">
-                                        <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
-                                            <span class="fa fa-thumbs-o-up"></span>
-                                        </a>
-                                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $promotion['fanPageId'] }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="pborder:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        <p>
+                                            <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
+                                                <span class="fa fa-thumbs-o-up"></span>
+                                            </a>
+                                            <iframe class="pull-right" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $promotion['fanPageId'] }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="pborder:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                        </p>
 
-                                        <p class="pull-right">
-                                            <a href="https://twitter.com/intent/tweet?text={{ $promotion['description'] }}&url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Twitter">
+                                        <p class="text-center">
+                                            <a href="https://twitter.com/intent/tweet?text={{ $promotion['description'] }}&url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Twitter" class="btn btn-success btn-sm">
                                                 <i class="fa fa-twitter"></i>
-                                            </a> /
-                                            <a href="https://facebook.com/sharer.php?u={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Facebook">
+                                            </a> &nbsp;
+                                            <a href="https://facebook.com/sharer.php?u={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Facebook" class="btn btn-success btn-sm">
                                                 <i class="fa fa-facebook"></i>
-                                            </a> /
-                                            <a href="https://plus.google.com/share?url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
+                                            </a> &nbsp;
+                                            <a href="https://plus.google.com/share?url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Google+" class="btn btn-success btn-sm">
                                                 <i class="fa fa-google-plus"></i>
-                                            </a> /
+                                            </a> &nbsp;
                                             <a href="mailto:?subject=Mira esta promoción&amp;body=Ingresa a {{ url('/facebook/promotion/'.$promotion['id']) }}, y mira lo que puedes ganar: {{ $promotion['description'] }}"
-                                               title="Compartir vía mail">
+                                               title="Compartir vía mail" class="btn btn-success btn-sm">
                                                 <i class="fa fa-envelope"></i>
-                                            </a> /
-                                            <a href="whatsapp://send?text=Ingresa a {{ url('/facebook/promotion/'.$promotion['id']) }}, y mira lo que puedes ganar: {{ $promotion['description'] }}" data-action="share/whatsapp/share">
+                                            </a> &nbsp;
+                                            <a href="whatsapp://send?text=Ingresa a {{ url('/facebook/promotion/'.$promotion['id']) }}, y mira lo que puedes ganar: {{ $promotion['description'] }}" data-action="share/whatsapp/share" class="btn btn-success btn-sm">
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
                                         </p>
