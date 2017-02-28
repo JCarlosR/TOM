@@ -68,4 +68,4 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 // Test route
 // It exists only for testing purposes
 // The controller will change constantly
-Route::get('/test', 'Guess\PromotionController@getFanPageCategories2');
+Route::get('/test', 'Guess\PromotionController@testQuery');

@@ -100,14 +100,14 @@ class PromotionController extends Controller
         */
         return DB::table('promotions')
             ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
-            ->join('participations', 'promotions.id', '=', 'participations.promotion_id')
-            ->select(DB::raw('fan_pages.category as name, count(1) as count'))
+            ->leftJoin('category_translations', 'fan_pages.category', '=', 'category_translations.en')
+            ->select(DB::raw('IFNULL(category_translations.es, fan_pages.category) as name, count(1) as count'))
             // ->where('status', '<>', 1)
-            ->groupBy('fan_pages.category')
+            ->groupBy('fan_pages.category', 'category_translations.es')
             ->get();
     }
 
-    public function getFanPageCategories2()
+    public function testQuery()
     {
         return DB::table('promotions')
             ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
