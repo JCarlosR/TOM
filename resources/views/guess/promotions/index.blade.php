@@ -186,6 +186,13 @@
                                             </a> /
                                             <a href="https://plus.google.com/share?url={{ url('/facebook/promotion/'.$promotion['id']) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
                                                 <i class="fa fa-google-plus"></i>
+                                            </a> /
+                                            <a href="mailto:?subject=Mira esta promoción&amp;body=Ingresa a {{ url('/facebook/promotion/'.$promotion['id']) }}, y mira lo que puedes ganar: {{ $promotion['description'] }}"
+                                               title="Compartir vía mail">
+                                                <i class="fa fa-mail"></i>
+                                            </a> /
+                                            <a href="whatsapp://send?text=Ingresa a {{ url('/facebook/promotion/'.$promotion['id']) }}, y mira lo que puedes ganar: {{ $promotion['description'] }}" data-action="share/whatsapp/share">
+                                                <i class="fa fa-whatsapp"></i>
                                             </a>
                                         </p>
                                         {{--<a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">--}}
