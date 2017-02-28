@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
+use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class PromotionController extends Controller
 {
