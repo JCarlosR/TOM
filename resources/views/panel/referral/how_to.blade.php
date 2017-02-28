@@ -48,20 +48,20 @@
 
                 <p>
                     <span>O comparte directamente tu enlace en las redes sociales! &rarr;</span>
-                    <a href="https://twitter.com/intent/tweet?text=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans&url={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Twitter">
+                    <a href="https://twitter.com/intent/tweet?text=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans&url={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Twitter" class="btn btn-success btn-sm">
                         <i class="fa fa-twitter"></i>
-                    </a> /
-                    <a href="https://facebook.com/sharer.php?u={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Facebook">
+                    </a> &nbsp;
+                    <a href="https://facebook.com/sharer.php?u={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Facebook" class="btn btn-success btn-sm">
                         <i class="fa fa-facebook"></i>
-                    </a> /
-                    <a href="https://plus.google.com/share?url={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
+                    </a> &nbsp;
+                    <a href="https://plus.google.com/share?url={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Google+" class="btn btn-success btn-sm">
                         <i class="fa fa-google-plus"></i>
-                    </a> /
+                    </a> &nbsp;
                     <a href="mailto:?subject=Mira esta promoción&amp;body=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans. Regístrate en: {{ url(auth()->user()->referral_link) }}"
-                       title="Compartir vía mail">
+                       title="Compartir vía mail" class="btn btn-success btn-sm">
                         <i class="fa fa-envelope"></i>
-                    </a> /
-                    <a href="whatsapp://send?text=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans. Regístrate en: {{ url(auth()->user()->referral_link) }}" data-action="share/whatsapp/share">
+                    </a> &nbsp;
+                    <a href="whatsapp://send?text=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans. Regístrate en: {{ url(auth()->user()->referral_link) }}" data-action="share/whatsapp/share" class="btn btn-success btn-sm">
                         <i class="fa fa-whatsapp"></i>
                     </a>
                 </p>

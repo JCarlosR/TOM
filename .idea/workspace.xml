@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,18 +30,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
+      <file leaf-file-name="how_to.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="175" column="52" lean-forward="false" selection-start-line="175" selection-start-column="52" selection-end-line="175" selection-end-column="52" />
+            <state relative-caret-position="165">
+              <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
               <folding>
-                <element signature="e#6819#6848#0#HTML" expanded="true" />
-                <element signature="e#7390#7426#0#HTML" expanded="true" />
-                <element signature="e#8001#8007#0#HTML" expanded="true" />
-                <element signature="e#8368#8374#0#HTML" expanded="true" />
-                <element signature="e#8737#8743#0#HTML" expanded="true" />
-                <element signature="e#9199#9205#0#HTML" expanded="true" />
+                <element signature="e#3162#3168#0#HTML" expanded="true" />
+                <element signature="e#3447#3453#0#HTML" expanded="true" />
+                <element signature="e#3734#3740#0#HTML" expanded="true" />
+                <element signature="e#4141#4147#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,11 +154,11 @@
         <option value="$PROJECT_DIR$/database/seeds/CategoriesTranslationSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php" />
       </list>
     </option>
   </component>
@@ -473,7 +471,7 @@
       <workItem from="1488026406540" duration="681000" />
       <workItem from="1488165181970" duration="5299000" />
       <workItem from="1488284877244" duration="9752000" />
-      <workItem from="1488304732853" duration="975000" />
+      <workItem from="1488304732853" duration="1640000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -573,11 +571,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488305574257</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Small text">
+      <created>1488305714298</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1488305714298</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297769000" />
+    <option name="totallyTimeSpent" value="298434000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -640,7 +645,8 @@
     <MESSAGE value="Show fb like btn" />
     <MESSAGE value="Btn style for share btns" />
     <MESSAGE value="Center like btn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Center like btn" />
+    <MESSAGE value="Small text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small text" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -993,14 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/participant/promotion/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1011,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="175" column="52" lean-forward="false" selection-start-line="175" selection-start-column="52" selection-end-line="175" selection-end-column="52" />
+        <state relative-caret-position="399">
+          <caret line="181" column="55" lean-forward="true" selection-start-line="181" selection-start-column="49" selection-end-line="181" selection-end-column="55" />
           <folding>
             <element signature="e#6819#6848#0#HTML" expanded="true" />
             <element signature="e#7390#7426#0#HTML" expanded="true" />
@@ -1020,6 +1018,19 @@
             <element signature="e#8368#8374#0#HTML" expanded="true" />
             <element signature="e#8737#8743#0#HTML" expanded="true" />
             <element signature="e#9199#9205#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="e#3162#3168#0#HTML" expanded="true" />
+            <element signature="e#3447#3453#0#HTML" expanded="true" />
+            <element signature="e#3734#3740#0#HTML" expanded="true" />
+            <element signature="e#4141#4147#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
