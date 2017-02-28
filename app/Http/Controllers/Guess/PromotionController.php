@@ -91,11 +91,12 @@ class PromotionController extends Controller
     {
         /*
             SELECT
-                fan_pages.category as name,
+                IFNULL(category_translations.es, fan_pages.category) as name,
                 count(1) as count
             FROM promotions
             JOIN fan_pages ON promotions.fan_page_id = fan_pages.id
-            GROUP BY fan_pages.category
+            LEFT JOIN category_translations ON fan_pages.category = category_translations.en
+            GROUP BY fan_pages.category, category_translations.es
         */
         return DB::table('promotions')
             ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
@@ -110,9 +111,10 @@ class PromotionController extends Controller
     {
         return DB::table('promotions')
             ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
-            ->select(DB::raw('fan_pages.category as name, count(1) as count'))
+            ->leftJoin('category_translations', 'fan_pages.category', '=', 'category_translations.en')
+            ->select(DB::raw('IFNULL(category_translations.es, fan_pages.category) as name, count(1) as count'))
             // ->where('status', '<>', 1)
-            ->groupBy('fan_pages.category')
+            ->groupBy('fan_pages.category, category_translations.es')
             ->get();
     }
 }
