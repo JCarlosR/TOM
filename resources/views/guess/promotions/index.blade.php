@@ -146,7 +146,15 @@
                                             <p>{{ $promotion['description'] }}</p>
                                         </div>
 
-                                        <p class="text-center small">{{ $promotion['participationsCount'] }} personas participaron</p>
+                                        <p class="text-center small">
+                                            @if ($promotion['participationsCount'] == 0)
+                                                Sé el primero en participar
+                                            @elseif ($promotion['participationsCount'] == 1)
+                                                1 persona participó
+                                            @else
+                                                {{ $promotion['participationsCount'] }} personas participaron
+                                            @endif
+                                        </p>
                                     </div>
                                     <div class="panel-footer">
                                         <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
