@@ -56,6 +56,13 @@
                     </a> /
                     <a href="https://plus.google.com/share?url={{ url(auth()->user()->referral_link) }}" rel="nofollow" target="_blank" title="Compartir en Google+">
                         <i class="fa fa-google-plus"></i>
+                    </a> /
+                    <a href="mailto:?subject=Mira esta promoción&amp;body=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans. Regístrate en: {{ url(auth()->user()->referral_link) }}"
+                       title="Compartir vía mail">
+                        <i class="fa fa-envelope"></i>
+                    </a> /
+                    <a href="whatsapp://send?text=Está muy buena esta app para generar leads, clientes potenciales y más interacciones en tu página de fans. Regístrate en: {{ url(auth()->user()->referral_link) }}" data-action="share/whatsapp/share">
+                        <i class="fa fa-whatsapp"></i>
                     </a>
                 </p>
 
