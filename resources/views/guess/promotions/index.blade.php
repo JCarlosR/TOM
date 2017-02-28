@@ -86,6 +86,12 @@
                 <br class="visible-xs">
 
                 <div class="col-md-3 hidden-xs">
+                    <div class="form-group">
+                        <a href="#" class="btn btn-primary btn-block btn-small">
+                            Promueve tu negocio aquí
+                        </a>
+                    </div>
+
                     <ul id="ulCategories">
                         <li data-filter="All">
                             <a class="btn btn-primary btn-sm">All</a>
@@ -102,15 +108,23 @@
                 </div>
 
                 <form action="" class="visible-xs">
-                    <select id="select-filter">
-                        <option value="All">Todas las categorías</option>
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->name }}">
-                                {{ $category->name }}
-                                {{--({{ $category->count }})--}}
-                            </option>
-                        @endforeach
-                    </select>
+                    <div class="form-group">
+                        <a href="#" class="btn btn-primary btn-block btn-small">
+                            Promueve tu negocio aquí
+                        </a>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="select-filter">
+                            <option value="All">Todas las categorías</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->name }}">
+                                    {{ $category->name }}
+                                    {{--({{ $category->count }})--}}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </form>
 
                 <form action="{{ url('promotions/search') }}" class="form-horizontal" method="GET">
