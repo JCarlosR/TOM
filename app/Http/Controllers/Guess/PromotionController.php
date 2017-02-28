@@ -97,4 +97,15 @@ class PromotionController extends Controller
             ->groupBy('fan_pages.category')
             ->get();
     }
+
+    public function getFanPageCategories2()
+    {
+        return DB::table('promotions')
+            ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
+            ->join('participations', 'promotions.id', '=', 'participations.promotion_id')
+            ->select(DB::raw('fan_pages.category as name, count(1) as count'))
+            // ->where('status', '<>', 1)
+            ->groupBy('fan_pages.category')
+            ->get();
+    }
 }

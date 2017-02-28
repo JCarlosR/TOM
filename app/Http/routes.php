@@ -64,3 +64,8 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('/fan-page/{id}/promotions', 'Admin\PromotionController@index');
     Route::get('/creators/excel', 'Admin\CreatorController@excel');
 });
+
+// Test route
+// It exists only for testing purposes
+// The controller will change constantly
+Route::get('/test', 'PromotionController@getFanPageCategories2');
