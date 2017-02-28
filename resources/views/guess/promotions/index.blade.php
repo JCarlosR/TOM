@@ -96,12 +96,12 @@
 
                     <ul id="ulCategories">
                         <li data-filter="All">
-                            <a class="btn btn-primary btn-sm">All</a>
+                            <a class="btn btn-primary btn-sm">Todas las categorías</a>
                         </li>
                         @foreach ($categories as $category)
-                            <li data-filter="{{ $category->name }}">
+                            <li data-filter="{{ $category->en }}">
                                 <a class="btn btn-primary btn-sm">
-                                    {{ $category->name }}
+                                    {{ $category->es }}
                                     {{--({{ $category->count }})--}}
                                 </a>
                             </li>
@@ -120,8 +120,8 @@
                         <select id="select-filter">
                             <option value="All">Todas las categorías</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->name }}">
-                                    {{ $category->name }}
+                                <option value="{{ $category->en }}">
+                                    {{ $category->es }}
                                     {{--({{ $category->count }})--}}
                                 </option>
                             @endforeach
