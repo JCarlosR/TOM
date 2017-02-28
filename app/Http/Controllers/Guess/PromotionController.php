@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 class PromotionController extends Controller
 {
 
-    public function index(Request $request)
+    public function index(Request $request, LaravelFacebookSdk $fb)
     {
         $categories = $this->getFanPageCategories();
 
@@ -22,10 +22,12 @@ class PromotionController extends Controller
 
         $query = '';
 
-        return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query'));
+        $loginUrl = $fb->getLoginUrl(['email', 'user_location', 'manage_pages']);
+
+        return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query', 'loginUrl'));
     }
 
-    public function search(Request $request)
+    public function search(Request $request, LaravelFacebookSdk $fb)
     {
         $query = $request->input('query');
         if (! $query)
@@ -38,7 +40,10 @@ class PromotionController extends Controller
                         ->get();
 
         $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
-        return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query'));
+
+        $loginUrl = $fb->getLoginUrl(['email', 'user_location', 'manage_pages']);
+
+        return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query', 'loginUrl'));
     }
 
     public function sortFilterFormatAndPaginate(Request $request, $promotions) {

@@ -18,7 +18,6 @@ class FacebookController extends Controller
     {
         // Array of permissions
         $login_url = $fb->getLoginUrl(['email', 'user_location', 'manage_pages']);
-
         return redirect($login_url);
     }
 

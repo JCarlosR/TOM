@@ -86,11 +86,13 @@
                 <br class="visible-xs">
 
                 <div class="col-md-3 hidden-xs">
-                    <div class="form-group">
-                        <a href="#" class="btn btn-primary btn-block btn-small">
-                            Promueve tu negocio aquí
-                        </a>
-                    </div>
+                    <form>
+                        <div class="form-group">
+                            <a href="{{ $loginUrl }}" class="btn btn-primary btn-block btn-small">
+                                Promueve tu negocio aquí
+                            </a>
+                        </div>
+                    </form>
 
                     <ul id="ulCategories">
                         <li data-filter="All">
@@ -109,7 +111,7 @@
 
                 <form action="" class="visible-xs">
                     <div class="form-group">
-                        <a href="#" class="btn btn-primary btn-block btn-small">
+                        <a href="{{ $loginUrl }}" class="btn btn-primary btn-block btn-small">
                             Promueve tu negocio aquí
                         </a>
                     </div>
