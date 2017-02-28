@@ -189,7 +189,7 @@
                                             </a> /
                                             <a href="mailto:?subject=Mira esta promoción&amp;body=Ingresa a {{ url('/facebook/promotion/'.$promotion['id']) }}, y mira lo que puedes ganar: {{ $promotion['description'] }}"
                                                title="Compartir vía mail">
-                                                <i class="fa fa-address-book"></i>
+                                                <i class="fa fa-envelope"></i>
                                             </a> /
                                             <a href="whatsapp://send?text=Ingresa a {{ url('/facebook/promotion/'.$promotion['id']) }}, y mira lo que puedes ganar: {{ $promotion['description'] }}" data-action="share/whatsapp/share">
                                                 <i class="fa fa-whatsapp"></i>
