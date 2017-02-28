@@ -169,9 +169,9 @@
                                         </p>
                                     </div>
                                     <div class="panel-footer">
-                                        <p>
+                                        <p class="text-center" style="margin-bottom: 0.5em;">
                                             <a href="//facebook.com/{{ $promotion['fanPageId'] }}" title="Visitar fan page" target="_blank">
-                                                <span class="fa fa-thumbs-o-up"></span>
+                                                Visitar fanpage
                                             </a>
                                             <iframe class="pull-right" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2F{{ $promotion['fanPageId'] }}&width=450&layout=button_count&action=like&size=small&show_faces=false&share=false&height=80&appId" width="105" height="20" style="pborder:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                                         </p>

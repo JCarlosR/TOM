@@ -33,14 +33,15 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="175" column="69" lean-forward="false" selection-start-line="175" selection-start-column="69" selection-end-line="175" selection-end-column="69" />
+            <state relative-caret-position="189">
+              <caret line="171" column="91" lean-forward="false" selection-start-line="171" selection-start-column="91" selection-end-line="171" selection-end-column="91" />
               <folding>
-                <element signature="e#7377#7413#0#HTML" expanded="true" />
-                <element signature="e#7988#7994#0#HTML" expanded="true" />
-                <element signature="e#8355#8361#0#HTML" expanded="true" />
-                <element signature="e#8724#8730#0#HTML" expanded="true" />
-                <element signature="e#9186#9192#0#HTML" expanded="true" />
+                <element signature="e#6813#6842#0#HTML" expanded="true" />
+                <element signature="e#7403#7439#0#HTML" expanded="true" />
+                <element signature="e#8014#8020#0#HTML" expanded="true" />
+                <element signature="e#8381#8387#0#HTML" expanded="true" />
+                <element signature="e#8750#8756#0#HTML" expanded="true" />
+                <element signature="e#9212#9218#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -472,7 +473,7 @@
       <workItem from="1488026406540" duration="681000" />
       <workItem from="1488165181970" duration="5299000" />
       <workItem from="1488284877244" duration="9752000" />
-      <workItem from="1488304732853" duration="638000" />
+      <workItem from="1488304732853" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -558,11 +559,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488305023149</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Btn style for share btns">
+      <created>1488305381906</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1488305381906</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297432000" />
+    <option name="totallyTimeSpent" value="297628000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -623,7 +631,8 @@
     <MESSAGE value="Referrals count and accessor" />
     <MESSAGE value="Try Zoho SalesIQ" />
     <MESSAGE value="Show fb like btn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show fb like btn" />
+    <MESSAGE value="Btn style for share btns" />
+    <option name="LAST_COMMIT_MESSAGE" value="Btn style for share btns" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -994,14 +1003,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="175" column="69" lean-forward="false" selection-start-line="175" selection-start-column="69" selection-end-line="175" selection-end-column="69" />
+        <state relative-caret-position="189">
+          <caret line="171" column="91" lean-forward="false" selection-start-line="171" selection-start-column="91" selection-end-line="171" selection-end-column="91" />
           <folding>
-            <element signature="e#7377#7413#0#HTML" expanded="true" />
-            <element signature="e#7988#7994#0#HTML" expanded="true" />
-            <element signature="e#8355#8361#0#HTML" expanded="true" />
-            <element signature="e#8724#8730#0#HTML" expanded="true" />
-            <element signature="e#9186#9192#0#HTML" expanded="true" />
+            <element signature="e#6813#6842#0#HTML" expanded="true" />
+            <element signature="e#7403#7439#0#HTML" expanded="true" />
+            <element signature="e#8014#8020#0#HTML" expanded="true" />
+            <element signature="e#8381#8387#0#HTML" expanded="true" />
+            <element signature="e#8750#8756#0#HTML" expanded="true" />
+            <element signature="e#9212#9218#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
