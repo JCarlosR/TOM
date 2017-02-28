@@ -29,11 +29,18 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
     // relationships
 
     public function fanPages()
     {
         return $this->hasMany('App\FanPage');
+    }
+
+    // referrals count
+    public function getReferralsCountAttribute()
+    {
+        return User::where('referred_by', $this->id)->count();
     }
 
 

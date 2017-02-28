@@ -30,6 +30,7 @@
                                 <th>Email</th>
                                 <th>Fanpages</th>
                                 <th>Fecha de registro</th>
+                                <th>Referidos</th>
                                 <th>Participaciones restantes</th>
                                 <th>Última participación</th>
                                 <th>Opciones</th>
@@ -46,6 +47,7 @@
                                     <td>{{ $creator->email }}</td>
                                     <td>{{ $creator->fanPagesCount }}</td>
                                     <td>{{ $creator->created_at }}</td>
+                                    <td>{{ $creator->referrals_count }}</td>
                                     <td>{{ $creator->remaining_participations }}</td>
                                     <td>{{ $creator->updated_at }}</td>
                                     <td class="text-center">
