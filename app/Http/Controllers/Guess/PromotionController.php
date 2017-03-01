@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Guess;
 
+use App\FanPage;
 use App\Promotion;
 use Illuminate\Http\Request;
 
@@ -36,9 +37,13 @@ class PromotionController extends Controller
 
         $categories = $this->getFanPageCategories();
 
+        // Search for fan pages that includes the query string
+        $fanPagesId = FanPage::where('name', 'like', '%' . $query . '%')->pluck('id');
+
         $promotions = Promotion::active()
-                        ->where('description', 'like', '%' . $query . '%')
-                        ->get();
+            ->whereIn('fan_page_id', $fanPagesId)
+            ->orWhere('description', 'like', '%' . $query . '%')
+            ->get();
 
         $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
 
