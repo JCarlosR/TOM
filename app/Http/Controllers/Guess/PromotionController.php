@@ -114,6 +114,7 @@ class PromotionController extends Controller
             ))
             // ->where('status', '<>', 1)
             ->groupBy('fan_pages.category', 'category_translations.es')
+            ->orderByRaw('IFNULL(category_translations.es, fan_pages.category)')
             ->get();
     }
 
