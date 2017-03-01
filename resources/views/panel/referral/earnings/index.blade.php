@@ -25,7 +25,9 @@
                 <form action="{{ url('earnings/paypal') }}" method="POST">
                     <div class="form-group">
                         <label for="paypal_account">Por favor ingresa a continuación tu cuenta de Paypal:</label>
-                        <input type="email" name="paypal_account" id="paypal_account" placeholder="Paypal account">
+                        <input type="email" name="paypal_account" id="paypal_account"
+                               placeholder="Paypal account"
+                               value="{{ old('paypal_account', auth()->user()->paypal_account) }}">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Actualizar cuenta de Paypal</button>

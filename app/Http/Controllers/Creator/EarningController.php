@@ -29,7 +29,7 @@ class EarningController extends Controller
         $user = auth()->user();
         $user->paypal_account = $request->input('paypal_account');
         $user->save();
-        
+
         return back()->with('notification', 'Sus datos se actualizaron correctamente!');
     }
 }
