@@ -67,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/panel/referral/earnings/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="26" column="113" lean-forward="true" selection-start-line="26" selection-start-column="113" selection-end-line="26" selection-end-column="113" />
+              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -569,7 +569,7 @@
       <workItem from="1488284877244" duration="9752000" />
       <workItem from="1488304732853" duration="2435000" />
       <workItem from="1488321014370" duration="4865000" />
-      <workItem from="1488403796310" duration="3508000" />
+      <workItem from="1488403796310" duration="3548000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -781,11 +781,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488408908256</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Some styles">
+      <created>1488409002054</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1488409002054</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307602000" />
+    <option name="totallyTimeSpent" value="307642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,7 +841,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Show categories in ES" />
     <MESSAGE value="Fix multiple group by syntax" />
     <MESSAGE value="Apply new query" />
     <MESSAGE value="Fix filter bases on EN" />
@@ -859,7 +865,8 @@
     <MESSAGE value="Show promos with 0 participations for 40 days" />
     <MESSAGE value="Paypal account information" />
     <MESSAGE value="Paypal account value input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paypal account value input" />
+    <MESSAGE value="Some styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1242,7 +1249,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/panel/referral/earnings/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="26" column="113" lean-forward="true" selection-start-line="26" selection-start-column="113" selection-end-line="26" selection-end-column="113" />
+          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding />
         </state>
       </provider>

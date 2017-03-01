@@ -23,6 +23,8 @@
                 @endif
 
                 <form action="{{ url('earnings/paypal') }}" method="POST">
+                    {{ csrf_field() }}
+                    
                     <div class="form-group">
                         <label for="paypal_account">Por favor ingresa a continuación tu cuenta de Paypal:</label>
                         <input type="email" name="paypal_account" id="paypal_account" class="form-control"
