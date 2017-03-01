@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guess;
 
 use App\FanPage;
 use App\Promotion;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -55,8 +56,10 @@ class PromotionController extends Controller
     public function sortFilterFormatAndPaginate(Request $request, $promotions) {
         $promotions = $promotions->sortByDesc('participations_count');
 
+        // If the promotion has 0 participations and also is 40 days old, remove from the collection
         $promotions = $promotions->reject(function($promotion) {
-            return $promotion->participations_count == 0;
+            return $promotion->participations_count == 0
+                && $promotion->created_at->diffInDays(Carbon::now()) > 40;
         });
 
         // Add additional fields
