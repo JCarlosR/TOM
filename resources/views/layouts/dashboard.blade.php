@@ -35,6 +35,10 @@
                             <span class="glyphicon glyphicon-stats"></span>
                             Usuarios referidos
                         </a>
+                        <a class="list-group-item" href="{{ url('/earnings') }}" id="step-2">
+                            <span class="glyphicon glyphicon-stats"></span>
+                            Mis ganancias
+                        </a>
                     </div>
                 </div>
 
