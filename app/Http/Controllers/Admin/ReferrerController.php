@@ -13,7 +13,9 @@ class ReferrerController extends Controller
     public function index()
     {
         // The welcome mail is sent just to creators (participants receives other types of mails)
-        $referrers = User::where('welcome_mail_sent', true)->get();
+        $referrers = User::where('welcome_mail_sent', true)
+            ->where('id', '<>', 1) // i'm the first user
+            ->get();
 
         // Reject referrers with no referrals
         $referrers = $referrers->reject(function($referrer) {
