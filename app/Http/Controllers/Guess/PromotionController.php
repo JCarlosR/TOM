@@ -125,7 +125,7 @@ class PromotionController extends Controller
             ->select(DB::raw('IFNULL(category_translations.es, fan_pages.category) as name, count(1) as count'))
             // ->where('status', '<>', 1)
             ->groupBy('fan_pages.category', 'category_translations.es')
-            ->orderBy('IFNULL(category_translations.es, fan_pages.category)')
+            ->orderByRaw('IFNULL(category_translations.es, fan_pages.category)')
             ->get();
     }
 }
