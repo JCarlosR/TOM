@@ -46,6 +46,10 @@
                                 <span class="glyphicon glyphicon-user"></span>
                                 Usuarios creadores
                             </a>
+                            <a class="list-group-item" href="{{ url('/admin/referrers') }}">
+                                <span class="glyphicon glyphicon-user"></span>
+                                Usuarios reclutadores
+                            </a>
                         </div>
                     </div>
                 @endif

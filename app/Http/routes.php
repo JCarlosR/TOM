@@ -63,6 +63,8 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('/creator/{id}/fan-pages', 'Admin\FanPageController@index');
     Route::get('/fan-page/{id}/promotions', 'Admin\PromotionController@index');
     Route::get('/creators/excel', 'Admin\CreatorController@excel');
+
+    Route::get('/referrers', 'Admin\ReferrerController@index');
 });
 
 // Test route
