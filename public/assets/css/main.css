@@ -2314,7 +2314,7 @@
 		input[type="submit"].special,
 		input[type="reset"].special,
 		input[type="button"].special,
-		button.special,
+		.btn.special,button.special,
 		.button.special {
 			background-color: #ed4933;
 			box-shadow: none !important;

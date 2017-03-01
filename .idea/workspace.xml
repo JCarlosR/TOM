@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/main.css" afterPath="$PROJECT_DIR$/public/assets/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +34,18 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+            <state relative-caret-position="123">
+              <caret line="86" column="92" lean-forward="false" selection-start-line="86" selection-start-column="92" selection-end-line="86" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="2316" column="21" lean-forward="false" selection-start-line="2316" selection-start-column="21" selection-end-line="2316" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -62,7 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>href</find>
       <find>{{-</find>
       <find>eres ma</find>
       <find>No formo par</find>
@@ -92,6 +101,7 @@
       <find>name</find>
       <find>footer</find>
       <find>description</find>
+      <find>button.sp</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -104,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/panel/promotion/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/stories.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FanPageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php" />
@@ -154,6 +163,7 @@
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/main.css" />
         <option value="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
       </list>
     </option>
@@ -490,7 +500,7 @@
       <workItem from="1488165181970" duration="5299000" />
       <workItem from="1488284877244" duration="9752000" />
       <workItem from="1488304732853" duration="2435000" />
-      <workItem from="1488321014370" duration="229000" />
+      <workItem from="1488321014370" duration="1225000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -611,11 +621,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488312680566</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Short and full description">
+      <created>1488321252730</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1488321252730</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299458000" />
+    <option name="totallyTimeSpent" value="300454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -628,7 +645,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28668684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -681,7 +698,9 @@
     <MESSAGE value="Small text" />
     <MESSAGE value="Btn styles" />
     <MESSAGE value="Zoho in all pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zoho in all pages" />
+    <MESSAGE value="Short and full description" />
+    <MESSAGE value="Btn special" />
+    <option name="LAST_COMMIT_MESSAGE" value="Btn special" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -880,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-141">
-          <caret line="3675" column="29" lean-forward="false" selection-start-line="3675" selection-start-column="27" selection-end-line="3675" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1701">
@@ -1037,10 +1049,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="2316" column="21" lean-forward="false" selection-start-line="2316" selection-start-column="21" selection-end-line="2316" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+        <state relative-caret-position="123">
+          <caret line="86" column="92" lean-forward="false" selection-start-line="86" selection-start-column="92" selection-end-line="86" selection-end-column="92" />
           <folding />
         </state>
       </provider>

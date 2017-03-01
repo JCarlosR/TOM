@@ -84,7 +84,7 @@
                 <div class="col-md-3 hidden-xs">
                     <form>
                         <div class="form-group">
-                            <a href="{{ $loginUrl }}" class="btn btn-primary btn-block btn-small">
+                            <a href="{{ $loginUrl }}" class="btn special btn-block btn-small">
                                 Promueve tu negocio aquí
                             </a>
                         </div>
@@ -107,7 +107,7 @@
 
                 <form action="" class="visible-xs">
                     <div class="form-group">
-                        <a href="{{ $loginUrl }}" class="btn btn-primary btn-block btn-small">
+                        <a href="{{ $loginUrl }}" class="btn special btn-block btn-small">
                             Promueve tu negocio aquí
                         </a>
                     </div>
