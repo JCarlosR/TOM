@@ -24,4 +24,12 @@ class ReferrerController extends Controller
 
         return view('admin.referrers.index')->with(compact('referrers'));
     }
+
+    public function show($id)
+    {
+        $referrer = User::find($id);
+        $referrals = User::where('referred_by', $referrer->id)->get();
+        return view('admin.referrers.show')->with(compact('referrals'));
+    }
+
 }

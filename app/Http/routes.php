@@ -69,6 +69,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('/creators/excel', 'Admin\CreatorController@excel');
 
     Route::get('/referrers', 'Admin\ReferrerController@index');
+    Route::get('/referrer/{id}', 'Admin\ReferrerController@show');
 });
 
 // Test route
