@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReferrerController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReferrerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
@@ -51,6 +51,16 @@
               <folding>
                 <element signature="e#46#59#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="37" column="44" lean-forward="false" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,7 +165,6 @@
         <option value="$PROJECT_DIR$/resources/views/panel/referral/my_list.blade.php" />
         <option value="$PROJECT_DIR$/app/Promotion.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/user_welcome.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PromotionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_02_28_073423_create_category_translations_table.php" />
@@ -179,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/referrers/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
       </list>
     </option>
   </component>
@@ -517,7 +527,7 @@
       <workItem from="1488321014370" duration="4865000" />
       <workItem from="1488403796310" duration="4286000" />
       <workItem from="1488462875531" duration="705000" />
-      <workItem from="1488480647067" duration="1269000" />
+      <workItem from="1488480647067" duration="1834000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -764,11 +774,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488482046311</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Add missing variable">
+      <created>1488482113494</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1488482113494</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310354000" />
+    <option name="totallyTimeSpent" value="310919000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -817,7 +834,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Referrals count and accessor" />
     <MESSAGE value="Try Zoho SalesIQ" />
     <MESSAGE value="Show fb like btn" />
     <MESSAGE value="Btn style for share btns" />
@@ -842,7 +858,8 @@
     <MESSAGE value="Update menu icon" />
     <MESSAGE value="New route for promotions" />
     <MESSAGE value="Referrals list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Referrals list" />
+    <MESSAGE value="Add missing variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add missing variable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -988,13 +1005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
           <caret line="49" column="68" lean-forward="false" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3612">
-          <caret line="172" column="0" lean-forward="true" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1218,6 +1228,14 @@
           <folding>
             <element signature="e#46#59#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="37" column="44" lean-forward="false" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

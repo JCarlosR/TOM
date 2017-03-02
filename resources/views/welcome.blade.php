@@ -35,7 +35,7 @@
             <ul class="actions">
                 <li>
                     <a href="{{ url('/facebook/login') }}" class="button special">
-                        Ingresar con <span class="icon fa-facebook"></span>
+                        Regístrate / Ingresa con <span class="icon fa-facebook"></span>
                     </a>
                 </li>
             </ul>
