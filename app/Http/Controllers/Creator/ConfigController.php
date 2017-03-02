@@ -38,8 +38,9 @@ class ConfigController extends Controller
             return redirect('/');
 
         $promotionId = $id;
+        $promotionSlug = str_slug($promotion->fanPage->name, '-');;
         $fanPageFbId = $promotion->fanPage->fan_page_id;
 
-        return view('panel.promotion.instructions')->with(compact('promotionId', 'fanPageFbId'));
+        return view('panel.promotion.instructions')->with(compact('promotionId', 'promotionSlug', 'fanPageFbId'));
     }
 }

@@ -51,6 +51,7 @@ Route::get('/config/promotion/{id}/delete', 'Creator\PromotionController@delete'
 
 // Promotions for participants
 Route::get('/promotion/{id}', 'Participant\PromotionController@show');
+Route::get('/promocion/{id}/{slug}', 'Participant\PromotionController@show');
 Route::match(['get', 'post'], '/facebook/promotion/{id}', 'Participant\PromotionController@requestFbPermissions');
 // Participate action
 Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
