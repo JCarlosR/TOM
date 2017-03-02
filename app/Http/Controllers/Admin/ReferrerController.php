@@ -29,7 +29,7 @@ class ReferrerController extends Controller
     {
         $referrer = User::find($id);
         $referrals = User::where('referred_by', $referrer->id)->get();
-        return view('admin.referrers.show')->with(compact('referrals'));
+        return view('admin.referrers.show')->with(compact('referrals', 'referrer'));
     }
 
 }
