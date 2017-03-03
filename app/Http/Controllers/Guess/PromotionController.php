@@ -25,7 +25,8 @@ class PromotionController extends Controller
 
         $query = '';
 
-        $loginUrl = $fb->getLoginUrl(['email', 'user_location', 'manage_pages']);
+        $helper = $fb->getRedirectLoginHelper();
+        $loginUrl = $helper->getLoginUrl(['email', 'user_location', 'manage_pages']);
 
         return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query', 'loginUrl'));
     }
@@ -48,7 +49,8 @@ class PromotionController extends Controller
 
         $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
 
-        $loginUrl = $fb->getLoginUrl(['email', 'user_location', 'manage_pages']);
+        $helper = $fb->getRedirectLoginHelper();
+        $loginUrl = $helper->getLoginUrl(['email', 'user_location', 'manage_pages']);
 
         return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query', 'loginUrl'));
     }
