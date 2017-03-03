@@ -33,6 +33,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,8 +56,8 @@
       <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="93" column="39" lean-forward="true" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
+            <state relative-caret-position="438">
+              <caret line="52" column="68" lean-forward="false" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -64,7 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>obtene</find>
       <find>obtener</find>
       <find>img</find>
       <find>$creator</find>
@@ -94,6 +103,7 @@
       <find>promotion</find>
       <find>delete</find>
       <find>tutori</find>
+      <find>callback</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -518,7 +528,7 @@
       <workItem from="1488403796310" duration="4286000" />
       <workItem from="1488462875531" duration="705000" />
       <workItem from="1488480647067" duration="3766000" />
-      <workItem from="1488584425682" duration="185000" />
+      <workItem from="1488584425682" duration="381000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -786,11 +796,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488484822923</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Using redirect helper">
+      <created>1488584619009</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1488584619010</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313036000" />
+    <option name="totallyTimeSpent" value="313232000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -839,7 +856,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Btn style for share btns" />
     <MESSAGE value="Center like btn" />
     <MESSAGE value="Small text" />
     <MESSAGE value="Btn styles" />
@@ -864,7 +880,8 @@
     <MESSAGE value="Add missing variable" />
     <MESSAGE value="Change btn orange text" />
     <MESSAGE value="Tutorials option" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tutorials option" />
+    <MESSAGE value="Using redirect helper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using redirect helper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1219,7 +1236,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="19" />
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1234,8 +1251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="93" column="39" lean-forward="true" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
+        <state relative-caret-position="438">
+          <caret line="52" column="68" lean-forward="false" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
           <folding />
         </state>
       </provider>
