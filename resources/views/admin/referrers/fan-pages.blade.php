@@ -3,11 +3,11 @@
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
-            <div class="panel-heading">Listado de fan pages del usuario {{ $referral->id }}</div>
+            <div class="panel-heading">Listado de fan pages del usuario {{ $referrer->id }}</div>
 
             <div class="panel-body">
 
-                <p>Listado de fan pages asociadas al usuario {{ $referral->name }}.</p>
+                <p>Listado de fan pages asociadas al usuario {{ $referrer->name }}.</p>
                 <div class="row">
                     <div class="col-md-12 table-responsive">
                         <table class="table table-hover table-bordered">

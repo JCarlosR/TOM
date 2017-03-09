@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fan-pages.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fan-pages.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -84,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+            <state relative-caret-position="121">
+              <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -148,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TutorialController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/TutorialController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" />
@@ -199,6 +199,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/referral/promotions.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php" />
       </list>
     </option>
   </component>
@@ -587,7 +588,7 @@
       <workItem from="1488462875531" duration="705000" />
       <workItem from="1488480647067" duration="3766000" />
       <workItem from="1488584425682" duration="964000" />
-      <workItem from="1489080211104" duration="616000" />
+      <workItem from="1489080211104" duration="685000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -883,11 +884,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489080680722</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Change variable name">
+      <created>1489080832480</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1489080832480</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314431000" />
+    <option name="totallyTimeSpent" value="314500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -936,7 +944,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Btn styles" />
     <MESSAGE value="Zoho in all pages" />
     <MESSAGE value="Short and full description" />
     <MESSAGE value="Btn special" />
@@ -961,7 +968,8 @@
     <MESSAGE value="Using redirect helper" />
     <MESSAGE value="Absolute path redirect" />
     <MESSAGE value="Add fan pages and promotion navigation to referrers section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fan pages and promotion navigation to referrers section" />
+    <MESSAGE value="Change variable name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change variable name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1308,14 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/ReferralController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -1336,8 +1336,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+        <state relative-caret-position="121">
+          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
           <folding />
         </state>
       </provider>
