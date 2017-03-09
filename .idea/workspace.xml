@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/referrers/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/referrers/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/referral/my_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/referral/my_list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/referral/promotions.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/referral/promotions.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -591,7 +585,7 @@
       <workItem from="1488462875531" duration="705000" />
       <workItem from="1488480647067" duration="3766000" />
       <workItem from="1488584425682" duration="964000" />
-      <workItem from="1489080211104" duration="441000" />
+      <workItem from="1489080211104" duration="467000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -873,11 +867,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488584814546</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Add fan pages and promotion navigation to referrers section">
+      <created>1489080671082</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1489080671082</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314256000" />
+    <option name="totallyTimeSpent" value="314282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -926,7 +927,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Small text" />
     <MESSAGE value="Btn styles" />
     <MESSAGE value="Zoho in all pages" />
     <MESSAGE value="Short and full description" />
@@ -951,7 +951,8 @@
     <MESSAGE value="Tutorials option" />
     <MESSAGE value="Using redirect helper" />
     <MESSAGE value="Absolute path redirect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Absolute path redirect" />
+    <MESSAGE value="Add fan pages and promotion navigation to referrers section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fan pages and promotion navigation to referrers section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
