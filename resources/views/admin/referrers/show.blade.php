@@ -49,11 +49,11 @@
                                     <td>{{ $referral->created_at }}</td>
                                     <td>{{ $referral->referrals_count }}</td>
                                     <td>{{ $referral->remaining_participations }}</td>
-                                    {{--<td class="text-center">--}}
-                                        {{--<a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">--}}
-                                            {{--<span class="fa fa-list"></span>--}}
-                                        {{--</a>--}}
-                                    {{--</td>--}}
+                                    <td class="text-center">
+                                        <a href="{{ url('admin/referrer/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">
+                                            <span class="fa fa-list"></span>
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

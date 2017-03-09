@@ -34,7 +34,7 @@
                                 <th>Fecha de registro</th>
                                 <th>Referidos</th>
                                 <th>Participaciones restantes</th>
-                                <th>Opciones</th>
+                                <th>Más info</th>
                             </tr>
                             </thead>
                             <tbody>

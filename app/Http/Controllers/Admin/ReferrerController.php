@@ -32,4 +32,11 @@ class ReferrerController extends Controller
         return view('admin.referrers.show')->with(compact('referrals', 'referrer'));
     }
 
+    public function fanPages($id)
+    {
+        // by referrer
+        $referrer = User::findOrFail($id);
+        $fan_pages = $referrer->fanPages;
+        return view('admin.referrers.fan-pages')->with(compact('fan_pages', 'referrer'));
+    }
 }

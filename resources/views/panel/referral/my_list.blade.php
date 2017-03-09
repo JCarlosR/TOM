@@ -28,7 +28,7 @@
                             <th>Fecha de registro</th>
                             <th>Participaciones restantes</th>
                             <th>Última participación</th>
-                            <th>Opciones</th>
+                            <th>Más info</th>
                         </tr>
                         </thead>
                         <tbody>

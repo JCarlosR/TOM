@@ -70,6 +70,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 
     Route::get('/referrers', 'Admin\ReferrerController@index');
     Route::get('/referrer/{id}', 'Admin\ReferrerController@show');
+    Route::get('/referrer/{id}/fan-pages', 'Admin\ReferrerController@fanPages');
 });
 
 // Test route
