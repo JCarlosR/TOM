@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="promotions.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="promotions.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/referral/promotions.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -83,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="226">
+              <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -105,7 +106,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>img</find>
-      <find>$creator</find>
       <find>excel</find>
       <find>las</find>
       <find>facebook/pro</find>
@@ -134,10 +134,12 @@
       <find>tutori</find>
       <find>callback</find>
       <find>referr</find>
+      <find>$creator</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
       <replace>$referral</replace>
+      <replace>$referrer</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -193,10 +195,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/referral/my_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/referrers/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/referral/promotions.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
       </list>
     </option>
   </component>
@@ -585,7 +587,7 @@
       <workItem from="1488462875531" duration="705000" />
       <workItem from="1488480647067" duration="3766000" />
       <workItem from="1488584425682" duration="964000" />
-      <workItem from="1489080211104" duration="467000" />
+      <workItem from="1489080211104" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="Fix namespace">
       <created>1488291470027</created>
@@ -874,11 +876,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489080671082</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Add fan pages and promotion navigation to referrers section">
+      <created>1489080680722</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1489080680722</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314282000" />
+    <option name="totallyTimeSpent" value="314431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1299,14 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1329,6 +1330,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
           <folding />
         </state>
       </provider>

@@ -50,7 +50,7 @@
                                     <td>{{ $referral->referrals_count }}</td>
                                     <td>{{ $referral->remaining_participations }}</td>
                                     <td class="text-center">
-                                        <a href="{{ url('admin/referrer/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">
+                                        <a href="{{ url('admin/referrer/'.$referrer->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">
                                             <span class="fa fa-list"></span>
                                         </a>
                                     </td>
