@@ -56,12 +56,8 @@
         webshims.polyfill('forms forms-ext');
     </script>
 
-    {{-- Zoho SalesIQ / Chat --}}
-    <script type="text/javascript">
-        var $zoho = $zoho || {salesiq:{values:{},ready:function(){}}};var d=document;s=d.createElement("script");s.type="text/javascript";
-        s.defer=true;s.src="https://salesiq.zoho.com/proyectosin7sadecv/float.ls?embedname=proyectosin7sadecv";
-        t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
-    </script>
+    {{-- CLIENGO Chat --}}
+    <script>(function(){var ldk=document.createElement('script'); ldk.type='text/javascript'; ldk.async=true; ldk.src='https://s.cliengo.com/weboptimizer/58c72ab7e4b0d88d06cfb691/58c72ab9e4b0d88d06cfb695.js' ; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);})();</script>
 
     {{-- Google Analytics --}}
     <script>
