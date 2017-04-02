@@ -18,7 +18,10 @@
                     <table class="table table-hover">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
+                            <th>E-mail</th>
+                            <th>Facebook</th>
                             <th>Resultado</th>
                         </tr>
                         </thead>
@@ -26,6 +29,9 @@
                         @foreach ($participants as $participant)
                             <tr>
                                 <td>{{ $participant->user_id }}</td>
+                                <td>{{ $participant->user->name }}</td>
+                                <td>{{ $participant->user->email }}</td>
+                                <td>{{ $participant->user->facebook_user_id }}</td>
                                 <td>{{ $participant->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             </tr>
                         @endforeach
