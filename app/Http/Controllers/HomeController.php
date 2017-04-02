@@ -37,10 +37,16 @@ class HomeController extends Controller
         foreach ($fanPagesArray as $item) {
             $fanPage = FanPage::firstOrCreate([
                 'fan_page_id' => $item['id'],
-                'user_id' => auth()->user()->id,
-                'name' => $item['name'],
-                'category' => $item['category']
+                'user_id' => auth()->user()->id
             ]);
+
+            // we just have to update
+            // if it is needed
+            if ($item['name'] != $fanPage->name || $item['category'] != $fanPage->category) {
+                $fanPage->name = $item['name'];
+                $fanPage->category = $item['category'];
+                $fanPage->save();
+            }
 
             $fanPages->add($fanPage);
         }
