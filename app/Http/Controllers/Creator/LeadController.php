@@ -16,7 +16,7 @@ class LeadController extends Controller
     {
         $fan_page_ids = FanPage::where('user_id', auth()->user()->id)->pluck('id');
         $promotion_ids = Promotion::whereIn('fan_page_id', $fan_page_ids)->pluck('id');
-        $participants = Participation::whereIn('promotion_id', $promotion_ids)->get();
-        return view('panel.leads.index')->with(compact('participants'));
+        $participations = Participation::whereIn('promotion_id', $promotion_ids)->get();
+        return view('panel.leads.index')->with(compact('participations'));
     }
 }

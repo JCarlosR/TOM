@@ -14,30 +14,34 @@
                 @endif
 
                 <p>Listado de usuarios que han participado en sus promociones.</p>
-                <div class="well bs-component">
-                    <table class="table table-hover">
-                        <thead>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>E-mail</th>
+                        <th>Facebook</th>
+                        <th>Resultado</th>
+                        <th>Fecha</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($participations as $participation)
                         <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>E-mail</th>
-                            <th>Facebook</th>
-                            <th>Resultado</th>
+                            <td>{{ $participation->user_id }}</td>
+                            <td>{{ $participation->user->name }}</td>
+                            <td>{{ $participation->user->email }}</td>
+                            <td>
+                                <a href="//fb.com/{{ $participation->user->facebook_user_id }}">
+                                    Visitar facebook
+                                </a>
+                            </td>
+                            <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
+                            <td>{{ $participation->created_at }}</td>
                         </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($participants as $participant)
-                            <tr>
-                                <td>{{ $participant->user_id }}</td>
-                                <td>{{ $participant->user->name }}</td>
-                                <td>{{ $participant->user->email }}</td>
-                                <td>{{ $participant->user->facebook_user_id }}</td>
-                                <td>{{ $participant->is_winner ? 'Ganó' : 'Perdió' }}</td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
