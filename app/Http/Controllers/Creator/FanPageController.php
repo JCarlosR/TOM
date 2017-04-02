@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Creator;
 use App\FanPage;
 use App\Http\Controllers\Controller;
 use App\Promotion;
+use Carbon\Carbon;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,8 @@ class FanPageController extends Controller
         if ($fanPage->user_id != auth()->user()->id)
             return redirect('/config')->with('warning', 'Evite acciones de este tipo !');
 
-        if (! $fanPage->picture_200) {
+        // fetch picture again if the fan page was not updated from 12 days ago
+        if (! $fanPage->picture_200 || $fanPage->updated_at < Carbon::now()->subDays(12)) {
             $query = '/'.$fanPage->fan_page_id.'/picture?redirect=false&width=200&height=200';
 
             $token = session('fb_user_access_token');
