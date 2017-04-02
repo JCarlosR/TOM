@@ -18,6 +18,10 @@
                             <span class="glyphicon glyphicon-cog"></span>
                             Configurar promociones
                         </a>
+                        <a class="list-group-item" href="{{ url('/clientes') }}" id="step-2">
+                            <span class="glyphicon glyphicon-book"></span>
+                            Clientes potenciales
+                        </a>
                         <a class="list-group-item" href="{{ url('/tutorial') }}" id="step-2">
                             <span class="glyphicon glyphicon-book"></span>
                             Tutoriales

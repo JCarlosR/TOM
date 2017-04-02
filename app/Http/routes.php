@@ -20,6 +20,9 @@ Route::get('/facebook/callback', 'FacebookController@callback');
 
 // Creators welcome
 Route::get('/home', 'HomeController@index');
+// Clients, customers, leads
+Route::get('/clientes', 'Creator\LeadController@index');
+// Tutorials
 Route::get('/tutorial', 'Creator\TutorialController@index');
 Route::get('/tutorial/disable', 'Creator\TutorialController@disable');
 Route::get('/subscribe', 'Creator\SubscriptionController@index');
