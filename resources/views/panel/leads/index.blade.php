@@ -14,7 +14,7 @@
                 @endif
 
                 <p>Listado de usuarios que han participado en sus promociones.</p>
-                <table class="table table-hover">
+                <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
                         <th>ID</th>
@@ -32,7 +32,7 @@
                             <td>{{ $participation->user->name }}</td>
                             <td>{{ $participation->user->email }}</td>
                             <td>
-                                <a href="//fb.com/{{ $participation->user->facebook_user_id }}">
+                                <a href="//fb.com/{{ $participation->user->facebook_user_id }}" target="_blank">
                                     Visitar facebook
                                 </a>
                             </td>
