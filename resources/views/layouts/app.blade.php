@@ -56,9 +56,6 @@
         webshims.polyfill('forms forms-ext');
     </script>
 
-    {{-- CLIENGO Chat --}}
-    <script>(function(){var ldk=document.createElement('script'); ldk.type='text/javascript'; ldk.async=true; ldk.src='https://s.cliengo.com/weboptimizer/58c72ab7e4b0d88d06cfb691/58c72ab9e4b0d88d06cfb695.js' ; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);})();</script>
-
     {{-- Google Analytics --}}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
