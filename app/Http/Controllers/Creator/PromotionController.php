@@ -64,7 +64,7 @@ class PromotionController extends Controller
 
             $fanPage = FanPage::find($request->input('fan_page_id'));
             if ($fanPage && $fanPage->user_id != $user_id) {
-                $validator->errors()->add('fan_page_id', 'Usted no puede registrar promociones en fanpages que no le pertenecen!');
+                $validator->errors()->add('fan_page_id', 'Usted no puede registrar promociones en fanpages que no le pertenecen!p');
             }
         });
 
