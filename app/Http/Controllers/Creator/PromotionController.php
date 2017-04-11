@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Creator;
 
+use App\FanPage;
 use App\Http\Controllers\Controller;
 use App\Promotion;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
 
 class PromotionController extends Controller
@@ -49,9 +51,26 @@ class PromotionController extends Controller
             'attempts' => 'required|min:1|max:10'
         ];
 
-        $this->validate($request, $rules, $this->messages);
+        $validator = Validator::make($request->all(), $rules);
 
-        // TODO: Validate if the fan page is associated with the user
+        $validator->after(function ($validator) use ($request) {
+            $description = $request->input('description');
+            $user_id = auth()->user()->id;
+            $fan_pages_ids = FanPage::where('user_id', $user_id)->pluck('id');
+
+            if (Promotion::where('description', $description)->whereIn('fan_page_id', $fan_pages_ids)->exists()) {
+                $validator->errors()->add('description', 'Por favor use otra descripción (esta ya la ha usado anteriormente).');
+            }
+
+            $fanPage = FanPage::find($request->input('fan_page_id'));
+            if ($fanPage && $fanPage->user_id != $user_id) {
+                $validator->errors()->add('fan_page_id', 'Usted no puede registrar promociones en fanpages que no le pertenecen!');
+            }
+        });
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
 
         $promotion = Promotion::create([
             'fan_page_id' => $request->get('fan_page_id'),
@@ -93,7 +112,21 @@ class PromotionController extends Controller
             'attempts' => 'required|min:1|max:10'
         ];
 
-        $this->validate($request, $rules, $this->messages);
+        $validator = Validator::make($request->all(), $rules);
+
+        $validator->after(function ($validator) use ($request, $id) {
+            $description = $request->input('description');
+            $user_id = auth()->user()->id;
+            $fan_pages_ids = FanPage::where('user_id', $user_id)->pluck('id');
+
+            if (Promotion::where('description', $description)->where('id', '<>', $id)->whereIn('fan_page_id', $fan_pages_ids)->exists()) {
+                $validator->errors()->add('description', 'Por favor use otra descripción (esta ya la ha usado anteriormente).');
+            }
+        });
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
 
         $promotion = Promotion::findOrFail($id);
         $promotion->description = $request->get('description');
