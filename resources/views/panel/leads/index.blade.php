@@ -32,6 +32,7 @@
                         <th>Promoción</th>
                         <th>Resultado</th>
                         <th>Fecha</th>
+                        <th>Notas</th>
                         <th>Status</th>
                     </tr>
                     </thead>
@@ -58,6 +59,11 @@
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
                             <td>
+                                <button class="btn btn-primary" data-notes="edit">
+                                    <span class="fa fa-edit"></span>
+                                </button>
+                            </td>
+                            <td>
                                 <select class="form-control">
                                     <option value="A contactar">A contactar</option>
                                     <option value="En progreso">En progreso</option>
@@ -72,6 +78,27 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-edit-notes">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Notas</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="notes">Contenido</label>
+                        <textarea name="notes" id="notes" rows="3" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Volver sin guardar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 @endsection
 
 @section('scripts')
@@ -79,6 +106,7 @@
     <script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
     <script>
         $(document).ready(function(){
+            // initialize data tables
             $('#clients-table').DataTable({
                 language: {
                     url: "https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
@@ -86,9 +114,17 @@
                 autoWidth: false,
                 responsive: true,
                 columnDefs: [
-                    { targets: [4, 5], className: 'none' }
+                    { targets: [3, 4, 5], className: 'none' }
                 ]
             });
+
+            // notes edit in modal
+            var $modalEditNotes = $('#modal-edit-notes');
+            $('[data-notes]').on('click', onEditDataNotes);
+
+            function onEditDataNotes() {
+                $modalEditNotes.modal('show');
+            }
         });
     </script>
 @endsection
