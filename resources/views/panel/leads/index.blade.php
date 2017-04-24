@@ -2,6 +2,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css">
 @endsection
 
 @section('dashboard_content')
@@ -75,12 +76,15 @@
 
 @section('scripts')
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
     <script>
         $(document).ready(function(){
             $('#clients-table').DataTable({
                 language: {
                     url: "https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-                }
+                },
+                autoWidth: false,
+                responsive: true
             });
         });
     </script>
