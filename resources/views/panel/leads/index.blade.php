@@ -32,7 +32,7 @@
                         <th>Promoción</th>
                         <th>Resultado</th>
                         <th>Fecha</th>
-                        <th>Calificación</th>
+                        {{--<th>Calificación</th>--}}
                         <th>Notas</th>
                         <th>Status</th>
                     </tr>
@@ -59,15 +59,15 @@
                             </td>
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
-                            <td>
-                                <span class="text-warning" data-stars>
-                                    <i class="glyphicon glyphicon-star"></i>
-                                    <i class="glyphicon glyphicon-star"></i>
-                                    <i class="glyphicon glyphicon-star"></i>
-                                    <i class="glyphicon glyphicon-star"></i>
-                                    <i class="glyphicon glyphicon-star-empty"></i>
-                                </span>
-                            </td>
+                            {{--<td>--}}
+                                {{--<span class="text-warning" data-stars>--}}
+                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
+                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
+                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
+                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
+                                    {{--<i class="glyphicon glyphicon-star-empty"></i>--}}
+                                {{--</span>--}}
+                            {{--</td>--}}
                             <td>
                                 <button class="btn btn-primary" data-notes="edit">
                                     <span class="fa fa-edit"></span>
@@ -124,7 +124,10 @@
                 autoWidth: false,
                 responsive: true,
                 columnDefs: [
-                    { targets: [2, 3, 4, 5, 7], className: 'none' }
+                    { targets: [2, 3, 4, 5/*, 7*/], className: 'none' }
+                ],
+                buttons: [
+                    'excel', 'pdf', 'print'
                 ]
             });
 
@@ -137,7 +140,7 @@
             }
 
             // stars
-            
+
         });
     </script>
 @endsection
