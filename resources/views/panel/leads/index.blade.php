@@ -32,6 +32,7 @@
                         <th>Promoción</th>
                         <th>Resultado</th>
                         <th>Fecha</th>
+                        <th>Calificación</th>
                         <th>Notas</th>
                         <th>Status</th>
                     </tr>
@@ -58,6 +59,15 @@
                             </td>
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
+                            <td>
+                                <span>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star-o"></i>
+                                </span>
+                            </td>
                             <td>
                                 <button class="btn btn-primary" data-notes="edit">
                                     <span class="fa fa-edit"></span>
@@ -114,7 +124,7 @@
                 autoWidth: false,
                 responsive: true,
                 columnDefs: [
-                    { targets: [3, 4, 5], className: 'none' }
+                    { targets: [2, 3, 4, 5, 7], className: 'none' }
                 ]
             });
 
