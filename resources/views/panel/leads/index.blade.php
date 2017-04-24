@@ -1,5 +1,9 @@
 @extends('layouts.dashboard')
 
+@section('styles')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+@endsection
+
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
@@ -17,7 +21,7 @@
                 <p>Ahora dales seguimiento hasta conseguir la venta.</p>
 
                 <p class="text-muted">Listado de usuarios que han participado en tus promociones.</p>
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover" id="clients-table">
                     <thead>
                     <tr>
                         <th>Nombre</th>
@@ -27,6 +31,7 @@
                         <th>Promoción</th>
                         <th>Resultado</th>
                         <th>Fecha</th>
+                        <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -51,6 +56,14 @@
                             </td>
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="A contactar">A contactar</option>
+                                    <option value="En progreso">En progreso</option>
+                                    <option value="Con venta">Con venta</option>
+                                    <option value="Sin venta">Sin venta</option>
+                                </select>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -58,4 +71,17 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#clients-table').DataTable({
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });
+    </script>
 @endsection
