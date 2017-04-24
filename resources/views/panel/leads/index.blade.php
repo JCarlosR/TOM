@@ -60,12 +60,12 @@
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
                             <td>
-                                <span>
-                                    <i class="fa-star"></i>
-                                    <i class="fa-star"></i>
-                                    <i class="fa-star"></i>
-                                    <i class="fa-star"></i>
-                                    <i class="fa-star-o"></i>
+                                <span class="text-warning" data-stars>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
                                 </span>
                             </td>
                             <td>
@@ -135,6 +135,9 @@
             function onEditDataNotes() {
                 $modalEditNotes.modal('show');
             }
+
+            // stars
+            
         });
     </script>
 @endsection
