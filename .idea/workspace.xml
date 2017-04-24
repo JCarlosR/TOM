@@ -63,8 +63,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="109" lean-forward="false" selection-start-line="4" selection-start-column="109" selection-end-line="4" selection-end-column="109" />
+            <state relative-caret-position="399">
+              <caret line="88" column="57" lean-forward="false" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -523,14 +523,7 @@
       <workItem from="1491144233697" duration="599000" />
       <workItem from="1491155263190" duration="3787000" />
       <workItem from="1491913822986" duration="3453000" />
-      <workItem from="1493056083959" duration="1758000" />
-    </task>
-    <task id="LOCAL-00012" summary="Show fb like btn">
-      <created>1488305023149</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1488305023149</updated>
+      <workItem from="1493056083959" duration="2324000" />
     </task>
     <task id="LOCAL-00013" summary="Btn style for share btns">
       <created>1488305381906</created>
@@ -868,11 +861,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493057562584</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Data tables responsive">
+      <created>1493057847894</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1493057847894</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326476000" />
+    <option name="totallyTimeSpent" value="327042000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -921,7 +921,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="New route for promotions" />
     <MESSAGE value="Referrals list" />
     <MESSAGE value="Add missing variable" />
     <MESSAGE value="Change btn orange text" />
@@ -946,7 +945,8 @@
     <MESSAGE value="Add columns to the potential clients section" />
     <MESSAGE value="Fix field" />
     <MESSAGE value="Status column and data tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Status column and data tables" />
+    <MESSAGE value="Data tables responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data tables responsive" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1318,8 +1318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="109" lean-forward="false" selection-start-line="4" selection-start-column="109" selection-end-line="4" selection-end-column="109" />
+        <state relative-caret-position="399">
+          <caret line="88" column="57" lean-forward="false" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
           <folding />
         </state>
       </provider>

@@ -84,7 +84,10 @@
                     url: "https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
                 },
                 autoWidth: false,
-                responsive: true
+                responsive: true,
+                columnDefs: [
+                    { targets: [4, 5], className: 'none' }
+                ]
             });
         });
     </script>
