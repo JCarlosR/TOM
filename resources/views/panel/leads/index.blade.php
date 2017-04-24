@@ -13,14 +13,18 @@
                     </div>
                 @endif
 
-                <p>Listado de usuarios que han participado en sus promociones.</p>
+                <p><strong>Felicidades por tus posibles clientes!</strong></p>
+                <p>Ahora dales seguimiento hasta conseguir la venta.</p>
+
+                <p class="text-muted">Listado de usuarios que han participado en tus promociones.</p>
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>E-mail</th>
-                        <th>Facebook</th>
+                        <th>Ubicación</th>
+                        <th>Fanpage</th>
+                        <th>Promoción</th>
                         <th>Resultado</th>
                         <th>Fecha</th>
                     </tr>
@@ -28,12 +32,21 @@
                     <tbody>
                     @foreach ($participations as $participation)
                         <tr>
-                            <td>{{ $participation->user_id }}</td>
-                            <td>{{ $participation->user->name }}</td>
-                            <td>{{ $participation->user->email }}</td>
                             <td>
                                 <a href="//fb.com/{{ $participation->user->facebook_user_id }}" target="_blank">
-                                    Visitar facebook
+                                    {{ $participation->user->name }}
+                                </a>
+                            </td>
+                            <td>{{ $participation->user->email }}</td>
+                            <td>{{ $participation->user->location_name }}</td>
+                            <td>
+                                <a href="//fb.com/{{ $participation->promotion->fanPage->fan_page_id }}" target="_blank">
+                                    Visitar fanpage
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ $participation->promotion->fullLink }}" target="_blank" title="{{ $participation->promotion->description }}">
+                                    {{ $participation->promotion->name }}
                                 </a>
                             </td>
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>

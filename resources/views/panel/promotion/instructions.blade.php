@@ -21,7 +21,7 @@
                 <div class="well bs-component">
                     <p>
                         1. Copia el link único de tu promo:
-                        <input type="text" class="form-control" value="{{ url("/promocion/$promotionId/$promotionSlug") }}">
+                        <input type="text" class="form-control" value="{{ $promotion->fullLink }}">
                     </p>
                     <p>
                         2. Crea un botón en tu fanpage y selecciona el que dice “Jugar”.

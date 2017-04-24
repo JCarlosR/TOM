@@ -43,6 +43,14 @@ class Promotion extends Model
         return $this->participationsCountRelation ? $this->participationsCountRelation->aggregate : 0;
     }
 
+    public function getFullLinkAttribute()
+    {
+        $promotionId = $this->id;
+        $promotionSlug = str_slug($this->fanPage->name, '-');
+        return url("/promocion/$promotionId/$promotionSlug");
+    }
+
+
     // relationships
 
     public function fanPage()

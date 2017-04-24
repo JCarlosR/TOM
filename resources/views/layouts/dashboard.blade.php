@@ -19,7 +19,7 @@
                             Configurar promociones
                         </a>
                         <a class="list-group-item" href="{{ url('/clientes') }}" id="step-2">
-                            <span class="glyphicon glyphicon-piggy-bank"></span>
+                            <span class="fa fa-users"></span>
                             Clientes potenciales
                         </a>
                         <a class="list-group-item" href="{{ url('/tutorial') }}" id="step-2">
