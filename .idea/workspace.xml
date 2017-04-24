@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Promotion.php" afterPath="$PROJECT_DIR$/app/Promotion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/leads/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/leads/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/promotion/instructions.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/promotion/instructions.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
-              <caret line="47" column="148" lean-forward="false" selection-start-line="47" selection-start-column="148" selection-end-line="47" selection-end-column="148" />
+              <caret line="47" column="136" lean-forward="false" selection-start-line="47" selection-start-column="136" selection-end-line="47" selection-end-column="136" />
               <folding />
             </state>
           </provider>
@@ -527,14 +523,7 @@
       <workItem from="1491144233697" duration="599000" />
       <workItem from="1491155263190" duration="3787000" />
       <workItem from="1491913822986" duration="3453000" />
-      <workItem from="1493056083959" duration="964000" />
-    </task>
-    <task id="LOCAL-00009" summary="Share via mail and whatsapp">
-      <created>1488295186937</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1488295186937</updated>
+      <workItem from="1493056083959" duration="1109000" />
     </task>
     <task id="LOCAL-00010" summary="Referrals count and accessor">
       <created>1488295500346</created>
@@ -872,11 +861,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491917006066</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Add columns to the potential clients section">
+      <created>1493057063251</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1493057063251</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325682000" />
+    <option name="totallyTimeSpent" value="325827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,7 +921,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Some styles" />
     <MESSAGE value="CSRF field" />
     <MESSAGE value="Update menu icon" />
     <MESSAGE value="New route for promotions" />
@@ -950,7 +945,8 @@
     <MESSAGE value="unique description for the same user, fan page id validation" />
     <MESSAGE value="ignore images of the promotions" />
     <MESSAGE value="update title" />
-    <option name="LAST_COMMIT_MESSAGE" value="update title" />
+    <MESSAGE value="Add columns to the potential clients section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add columns to the potential clients section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1323,7 +1319,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
-          <caret line="47" column="148" lean-forward="false" selection-start-line="47" selection-start-column="148" selection-end-line="47" selection-end-column="148" />
+          <caret line="47" column="136" lean-forward="false" selection-start-line="47" selection-start-column="136" selection-end-line="47" selection-end-column="136" />
           <folding />
         </state>
       </provider>

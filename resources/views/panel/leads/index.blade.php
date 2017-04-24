@@ -40,13 +40,13 @@
                             <td>{{ $participation->user->email }}</td>
                             <td>{{ $participation->user->location_name }}</td>
                             <td>
-                                <a href="//fb.com/{{ $participation->promotion->fanPage->fan_page_id }}" target="_blank">
-                                    Visitar fanpage
+                                <a href="//fb.com/{{ $participation->promotion->fanPage->fan_page_id }}" target="_blank" title="Fanpage que capturó el lead">
+                                    Visitar
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ $participation->promotion->fullLink }}" target="_blank" title="{{ $participation->promotion->description }}">
-                                    {{ $participation->promotion->name }}
+                                <a href="{{ $participation->promotion->fullLink }}" target="_blank" title="Promoción en la que participó">
+                                    {{ $participation->promotion->description }}
                                 </a>
                             </td>
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
