@@ -77,8 +77,9 @@
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window,document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1635345243397630');
+        fbq('init', '419857545054647');
         fbq('track', 'PageView');
+        @yield('track-fb')
     </script>
     <noscript>
         <img height="1" width="1"

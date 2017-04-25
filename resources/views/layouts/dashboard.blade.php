@@ -72,3 +72,7 @@
         </div>
     </div>
 @endsection
+
+@section('track-fb')
+    fbq('track', 'Lead');
+@endsection
