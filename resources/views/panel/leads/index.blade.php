@@ -3,6 +3,8 @@
 @section('styles')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{ asset('/vendor/star-rating/css/star-rating.min.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -22,19 +24,20 @@
                 <p>Ahora dales seguimiento hasta conseguir la venta.</p>
 
                 <p class="text-muted">Listado de usuarios que han participado en tus promociones.</p>
+
                 <table class="table table-bordered table-hover" id="clients-table">
                     <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>E-mail</th>
-                        <th>Ubicación</th>
-                        <th>Fanpage</th>
-                        <th>Promoción</th>
-                        <th>Resultado</th>
-                        <th>Fecha</th>
-                        {{--<th>Calificación</th>--}}
-                        <th>Notas</th>
-                        <th>Status</th>
+                        <th>Nombre</th> <!-- 0 -->
+                        <th>E-mail</th> <!-- 1 -->
+                        <th>Ubicación</th> <!-- 2 -->
+                        <th>Fanpage</th> <!-- 3 -->
+                        <th>Promoción</th> <!-- 4 -->
+                        <th>Resultado</th> <!-- 5 -->
+                        <th>Fecha</th> <!-- 6 -->
+                        <th>Calificación</th> <!-- 7 -->
+                        <th>Notas</th> <!-- 8 -->
+                        <th>Status</th> <!-- 9 -->
                     </tr>
                     </thead>
                     <tbody>
@@ -59,15 +62,9 @@
                             </td>
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
-                            {{--<td>--}}
-                                {{--<span class="text-warning" data-stars>--}}
-                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
-                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
-                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
-                                    {{--<i class="glyphicon glyphicon-star"></i>--}}
-                                    {{--<i class="glyphicon glyphicon-star-empty"></i>--}}
-                                {{--</span>--}}
-                            {{--</td>--}}
+                            <td>
+                                <input data-rating="{{ $participation->id }}" type="number" class="rating" data-min="0" data-max="4" data-stars="4" data-step="1" data-size="xs">
+                            </td>
                             <td>
                                 <button class="btn btn-primary" data-notes="edit">
                                     <span class="fa fa-edit"></span>
@@ -124,7 +121,7 @@
                 autoWidth: false,
                 responsive: true,
                 columnDefs: [
-                    { targets: [2, 3, 4, 5/*, 7*/], className: 'none' }
+                    { targets: [2, 3, 5, 6, 7], className: 'none' }
                 ],
                 buttons: [
                     'excel', 'pdf', 'print'
@@ -141,6 +138,14 @@
 
             // stars
 
+        });
+    </script>
+
+    <script src="{{ asset('/vendor/star-rating/js/star-rating.min.js') }}"></script>
+    <script>
+        $('[data-rating]').on('rating.change', function(event, value, caption) {
+            console.log(value);
+            console.log(id);
         });
     </script>
 @endsection
