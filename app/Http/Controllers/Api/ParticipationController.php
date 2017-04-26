@@ -12,7 +12,7 @@ class ParticipationController extends Controller
 {
     public function getNotes($id)
     {
-        $participation = Participation::find($id)->select('notes')->get();
+        $participation = Participation::where('id', $id)->select('notes')->first();
         return $participation;
     }
 
