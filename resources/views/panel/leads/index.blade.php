@@ -126,13 +126,10 @@
                 language: {
                     url: "https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
                 },
-                autoWidth: false,
+//                autoWidth: false,
                 responsive: true,
                 columnDefs: [
                     { targets: [2, 3, 5, 6], className: 'none' }
-                ],
-                buttons: [
-                    'excel', 'pdf', 'print'
                 ],
                 "drawCallback": function(settings, json) {
                     $("[data-score]").rateYo({
