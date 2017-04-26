@@ -20,6 +20,8 @@
         <meta property="og:image"    content="{{ asset('images/welcome.png') }}" />
     @show
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     @yield('styles')
 </head>
 <body class="landing">

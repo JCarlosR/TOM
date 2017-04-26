@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css">
 
-    <link rel="stylesheet" href="{{ asset('/vendor/star-rating/css/star-rating.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 @endsection
 
 @section('dashboard_content')
@@ -63,19 +63,19 @@
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
                             <td>
-                                <input data-rating="{{ $participation->id }}" type="number" class="rating" data-min="0" data-max="4" data-stars="4" data-step="1" data-size="xs">
+                                <div data-score="1" data-rateyo-rating="{{ $participation->stars }}"></div>
                             </td>
                             <td>
-                                <button class="btn btn-primary" data-notes="edit">
+                                <button class="btn btn-primary btn-sm" data-notes="edit" data-id="{{ $participation->id }}">
                                     <span class="fa fa-edit"></span>
                                 </button>
                             </td>
                             <td>
-                                <select class="form-control">
-                                    <option value="A contactar">A contactar</option>
-                                    <option value="En progreso">En progreso</option>
-                                    <option value="Con venta">Con venta</option>
-                                    <option value="Sin venta">Sin venta</option>
+                                <select class="form-control" data-status data-id="{{ $participation->id }}">
+                                    <option value="A contactar" @if ($participation->status=='A contactar') selected @endif>A contactar</option>
+                                    <option value="En progreso" @if ($participation->status=='En progreso') selected @endif>En progreso</option>
+                                    <option value="Con venta" @if ($participation->status=='Con venta') selected @endif>Con venta</option>
+                                    <option value="Sin venta" @if ($participation->status=='Sin venta') selected @endif>Sin venta</option>
                                 </select>
                             </td>
                         </tr>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Volver sin guardar</button>
-                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                    <button type="button" id="notes-submit" class="btn btn-primary">Guardar cambios</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -111,8 +111,12 @@
 @section('scripts')
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script>
         $(document).ready(function(){
+            // CSRF
+            var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
             // initialize data tables
             $('#clients-table').DataTable({
                 language: {
@@ -121,31 +125,60 @@
                 autoWidth: false,
                 responsive: true,
                 columnDefs: [
-                    { targets: [2, 3, 5, 6, 7], className: 'none' }
+                    { targets: [2, 3, 5, 6], className: 'none' }
                 ],
                 buttons: [
                     'excel', 'pdf', 'print'
-                ]
+                ],
+                "drawCallback": function(settings, json) {
+                    $("[data-score]").rateYo({
+                        rating: $(this).data('value'), starWidth: '20px', fullStar: true
+                    }).on("rateyo.set", function (e, data) {
+                        var rating = data.rating;
+                        var postData = { stars: rating, _token: csrfToken };
+                        $.post('{{ url('/api/participation') }}/'+$(this).data('score')+'/stars', postData, function () {
+                        }, 'json');
+                    });
+                }
             });
 
             // notes edit in modal
+            var selectedParticipationId;
             var $modalEditNotes = $('#modal-edit-notes');
             $('[data-notes]').on('click', onEditDataNotes);
 
             function onEditDataNotes() {
-                $modalEditNotes.modal('show');
+                selectedParticipationId = $(this).data('id');
+                $.get('{{ url('/api/participation') }}/'+selectedParticipationId+'/notes', function (data) {
+                    $('#notes').val(data.notes);
+                    $modalEditNotes.modal('show');
+                });
             }
 
-            // stars
+            // perform update for notes
+            $('#notes-submit').on('click', function () {
+                var postData = {
+                    notes: $('#notes').val(),
+                    _token: csrfToken
+                };
+                $.post('{{ url('/api/participation') }}/'+selectedParticipationId+'/notes', postData, function (data) {
+                    if (data.success)
+                        $modalEditNotes.modal('hide');
+                }, 'json');
+            });
 
-        });
-    </script>
-
-    <script src="{{ asset('/vendor/star-rating/js/star-rating.min.js') }}"></script>
-    <script>
-        $('[data-rating]').on('rating.change', function(event, value, caption) {
-            console.log(value);
-            console.log(id);
+            // participation lead status
+            $('[data-status]').on('change', onChangeLeadStatus);
+            function onChangeLeadStatus() {
+                var id = $(this).data('id');
+                var newStatus = $(this).val();
+                var postData = {
+                    status: newStatus,
+                    _token: csrfToken
+                };
+                $.post('{{ url('/api/participation') }}/'+id+'/status', postData, function (data) {
+                }, 'json');
+            }
         });
     </script>
 @endsection

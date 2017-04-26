@@ -76,6 +76,12 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('/referrer/{id}/fan-pages', 'Admin\ReferrerController@fanPages');
 });
 
+// API routes
+Route::get('/api/participation/{id}/notes', 'Api\ParticipationController@getNotes');
+Route::post('/api/participation/{id}/notes', 'Api\ParticipationController@updateNotes');
+Route::post('/api/participation/{id}/stars', 'Api\ParticipationController@updateStars');
+Route::post('/api/participation/{id}/status', 'Api\ParticipationController@updateStatus');
+
 // Test route
 // It exists only for testing purposes
 // The controller will change constantly
