@@ -47,7 +47,7 @@ class LeadController extends Controller
                     $row[0] = $participation->user->name;
                     $row[1] = $participation->user->email;
                     $row[2] = $participation->user->location_name;
-                    $row[3] = 'Visitar';
+                    $row[3] = $participation->promotion->fanPage->name;
                     $row[4] = $participation->promotion->description;
                     $row[5] = $participation->is_winner ? 'Ganó' : 'Perdió';
                     $row[6] = $participation->created_at;

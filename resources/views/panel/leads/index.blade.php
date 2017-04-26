@@ -56,7 +56,7 @@
                             <td>{{ $participation->user->location_name }}</td>
                             <td>
                                 <a href="//fb.com/{{ $participation->promotion->fanPage->fan_page_id }}" target="_blank" title="Fanpage que capturó el lead">
-                                    Visitar
+                                    {{ $participation->promotion->fanPage->name }}
                                 </a>
                             </td>
                             <td>
