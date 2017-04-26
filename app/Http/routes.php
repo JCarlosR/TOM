@@ -22,6 +22,7 @@ Route::get('/facebook/callback', 'FacebookController@callback');
 Route::get('/home', 'HomeController@index');
 // Clients, customers, leads
 Route::get('/clientes', 'Creator\LeadController@index');
+Route::get('/clientes/excel', 'Creator\LeadController@excel');
 // Tutorials
 Route::get('/tutorial', 'Creator\TutorialController@index');
 Route::get('/tutorial/disable', 'Creator\TutorialController@disable');

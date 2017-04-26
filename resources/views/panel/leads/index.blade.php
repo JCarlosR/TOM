@@ -20,6 +20,10 @@
                     </div>
                 @endif
 
+                <a href="{{ url('/clientes/excel') }}" class="btn btn-info btn-sm pull-right">
+                    Descargar como Excel
+                </a>
+
                 <p><strong>Felicidades por tus posibles clientes!</strong></p>
                 <p>Ahora dales seguimiento hasta conseguir la venta.</p>
 
