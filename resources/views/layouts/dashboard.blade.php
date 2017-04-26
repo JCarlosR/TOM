@@ -18,11 +18,11 @@
                             <span class="glyphicon glyphicon-cog"></span>
                             Configurar promociones
                         </a>
-                        <a class="list-group-item" href="{{ url('/clientes') }}" id="step-2">
+                        <a class="list-group-item" href="{{ url('/clientes') }}" id="step-3">
                             <span class="fa fa-users"></span>
                             Clientes potenciales
                         </a>
-                        <a class="list-group-item" href="{{ url('/tutorial') }}" id="step-2">
+                        <a class="list-group-item" href="{{ url('/tutorial') }}">
                             <span class="glyphicon glyphicon-book"></span>
                             Tutoriales
                         </a>
@@ -35,15 +35,15 @@
                         afiliando
                     </div>
                     <div class="panel-body">
-                        <a class="list-group-item" href="{{ url('/referrals/how-to') }}" id="step-2">
+                        <a class="list-group-item" href="{{ url('/referrals/how-to') }}">
                             <span class="glyphicon glyphicon-paperclip"></span>
                             Cómo obtener referidos
                         </a>
-                        <a class="list-group-item" href="{{ url('/referrals') }}" id="step-2">
+                        <a class="list-group-item" href="{{ url('/referrals') }}">
                             <span class="glyphicon glyphicon-stats"></span>
                             Usuarios referidos
                         </a>
-                        <a class="list-group-item" href="{{ url('/earnings') }}" id="step-2">
+                        <a class="list-group-item" href="{{ url('/earnings') }}">
                             <span class="glyphicon glyphicon-fire"></span>
                             Mis ganancias
                         </a>

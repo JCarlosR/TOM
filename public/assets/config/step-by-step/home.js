@@ -15,6 +15,11 @@ $(function () {
                 element: '#step-2',
                 intro: "Lo primero que debes hacer es ingresar a esta opción para configurar tus promociones.",
                 position: 'right'
+            },
+            {
+                element: '#step-3',
+                intro: "Aquí encontrarás a tus posibles clientes, que han tenido interacción con tus promociones.",
+                position: 'right'
             }
         ]
     });
