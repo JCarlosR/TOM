@@ -39,7 +39,7 @@
                         <th>Promoción</th> <!-- 4 -->
                         <th>Resultado</th> <!-- 5 -->
                         <th>Fecha</th> <!-- 6 -->
-                        <th>Calificación</th> <!-- 7 -->
+                        <th>Rating</th> <!-- 7 -->
                         <th>Notas</th> <!-- 8 -->
                         <th>Status</th> <!-- 9 -->
                     </tr>
@@ -133,7 +133,7 @@
                 ],
                 "drawCallback": function(settings, json) {
                     $("[data-score]").rateYo({
-                        rating: $(this).data('value'), starWidth: '20px', fullStar: true
+                        rating: $(this).data('value'), starWidth: '18px', fullStar: true, numStars: 3
                     }).on("rateyo.set", function (e, data) {
                         var rating = data.rating;
                         var postData = { stars: rating, _token: csrfToken };
