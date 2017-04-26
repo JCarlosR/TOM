@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Stars rating">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/.github/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/.github/ISSUE_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/.github/PULL_REQUEST_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/CHANGE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/css/star-rating.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/css/star-rating.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/examples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/examples/sample.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/LANG.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/ua.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/locales/zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/star-rating.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/js/star-rating.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-fa/theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-fa/theme.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-fa/theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-fa/theme.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-svg/theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-svg/theme.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-svg/theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-svg/theme.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-uni/theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-uni/theme.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-uni/theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/star-rating/themes/krajee-uni/theme.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/panel/leads/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/leads/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +95,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="178" column="99" lean-forward="false" selection-start-line="178" selection-start-column="99" selection-end-line="178" selection-end-column="99" />
+            <state relative-caret-position="144">
+              <caret line="166" column="27" lean-forward="true" selection-start-line="166" selection-start-column="27" selection-end-line="166" selection-end-column="27" />
               <folding>
                 <marker date="1493165622552" expanded="true" signature="6144:8896" ph="..." />
                 <marker date="1493165622552" expanded="true" signature="6155:7336" ph="..." />
@@ -266,11 +304,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,29 +318,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TOM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TOM" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,14 +544,7 @@
       <workItem from="1493080428653" duration="598000" />
       <workItem from="1493090527580" duration="738000" />
       <workItem from="1493120079620" duration="616000" />
-      <workItem from="1493143616976" duration="11561000" />
-    </task>
-    <task id="LOCAL-00020" summary="Search in fan page name">
-      <created>1488328228750</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1488328228750</updated>
+      <workItem from="1493143616976" duration="11601000" />
     </task>
     <task id="LOCAL-00021" summary="Try order by after group by">
       <created>1488328392015</created>
@@ -873,11 +882,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493149832751</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Stars, notes and status">
+      <created>1493165655019</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1493165655019</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343927000" />
+    <option name="totallyTimeSpent" value="343967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,10 +906,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28668684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28668684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -926,7 +942,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Change variable name" />
     <MESSAGE value="Fix variable name" />
     <MESSAGE value="CLIENGO chat" />
     <MESSAGE value="Chat bot just in welcome (/) and promotions" />
@@ -951,7 +966,8 @@
     <MESSAGE value="test buttons data tables" />
     <MESSAGE value="Facebook pixel track code" />
     <MESSAGE value="Stars rating" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stars rating" />
+    <MESSAGE value="Stars, notes and status" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stars, notes and status" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1322,8 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="178" column="99" lean-forward="false" selection-start-line="178" selection-start-column="99" selection-end-line="178" selection-end-column="99" />
+        <state relative-caret-position="144">
+          <caret line="166" column="27" lean-forward="true" selection-start-line="166" selection-start-column="27" selection-end-line="166" selection-end-column="27" />
           <folding>
             <marker date="1493165622552" expanded="true" signature="6144:8896" ph="..." />
             <marker date="1493165622552" expanded="true" signature="6155:7336" ph="..." />
