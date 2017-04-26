@@ -63,7 +63,7 @@
                             <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
                             <td>{{ $participation->created_at }}</td>
                             <td>
-                                <div data-score="1" data-rateyo-rating="{{ $participation->stars }}"></div>
+                                <div data-score="{{ $participation->id }}" data-rateyo-rating="{{ $participation->stars }}"></div>
                             </td>
                             <td>
                                 <button class="btn btn-primary btn-sm" data-notes="edit" data-id="{{ $participation->id }}">
