@@ -133,7 +133,7 @@
                 ],
                 "drawCallback": function(settings, json) {
                     $("[data-score]").rateYo({
-                        rating: $(this).data('value'), starWidth: '18px', fullStar: true, numStars: 3
+                        rating: $(this).data('value'), starWidth: '18px', fullStar: true, numStars: 3, maxValue: 3
                     }).on("rateyo.set", function (e, data) {
                         var rating = data.rating;
                         var postData = { stars: rating, _token: csrfToken };
