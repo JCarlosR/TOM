@@ -140,7 +140,7 @@
             });
 
             // participation lead status
-            $(document).on('[data-status]', 'change', onChangeLeadStatus);
+            $(document).on('change', '[data-status]', onChangeLeadStatus);
             function onChangeLeadStatus() {
                 var id = $(this).data('id');
                 var newStatus = $(this).val();

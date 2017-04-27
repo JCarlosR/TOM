@@ -33,10 +33,10 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
+            <state relative-caret-position="256">
+              <caret line="142" column="54" lean-forward="false" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
               <folding>
-                <marker date="1493300008189" expanded="true" signature="4650:7383" ph="..." />
+                <marker date="1493300064453" expanded="true" signature="4650:7383" ph="..." />
               </folding>
             </state>
           </provider>
@@ -578,14 +578,7 @@
       <workItem from="1493143616976" duration="14489000" />
       <workItem from="1493203716987" duration="1898000" />
       <workItem from="1493222345327" duration="951000" />
-      <workItem from="1493298374503" duration="1629000" />
-    </task>
-    <task id="LOCAL-00031" summary="Some styles">
-      <created>1488409002054</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1488409002054</updated>
+      <workItem from="1493298374503" duration="1685000" />
     </task>
     <task id="LOCAL-00032" summary="CSRF field">
       <created>1488409041601</created>
@@ -923,11 +916,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493299881095</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="changeStatus">
+      <created>1493300016682</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1493300016682</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="351333000" />
+    <option name="totallyTimeSpent" value="351389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -976,7 +976,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="unique description for the same user, fan page id validation" />
     <MESSAGE value="ignore images of the promotions" />
     <MESSAGE value="update title" />
     <MESSAGE value="Add columns to the potential clients section" />
@@ -1001,7 +1000,8 @@
     <MESSAGE value="Use the fan page name" />
     <MESSAGE value="Tabs filter by status" />
     <MESSAGE value="Default status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Default status" />
+    <MESSAGE value="changeStatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="changeStatus" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1370,10 +1370,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/leads/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
+        <state relative-caret-position="256">
+          <caret line="142" column="54" lean-forward="false" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
           <folding>
-            <marker date="1493300008189" expanded="true" signature="4650:7383" ph="..." />
+            <marker date="1493300064453" expanded="true" signature="4650:7383" ph="..." />
           </folding>
         </state>
       </provider>
