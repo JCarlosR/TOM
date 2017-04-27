@@ -140,7 +140,7 @@
             });
 
             // participation lead status
-            $('[data-status]').on('change', onChangeLeadStatus);
+            $(document).on('[data-status]', 'change', onChangeLeadStatus);
             function onChangeLeadStatus() {
                 var id = $(this).data('id');
                 var newStatus = $(this).val();
@@ -149,6 +149,7 @@
                     _token: csrfToken
                 };
                 $.post('{{ url('/api/participation') }}/'+id+'/status', postData, function (data) {
+                    location.reload();
                 }, 'json');
             }
         });
