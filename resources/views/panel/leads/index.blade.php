@@ -29,63 +29,34 @@
 
                 <p class="text-muted">Listado de usuarios que han participado en tus promociones.</p>
 
-                <table class="table table-bordered table-hover" id="clients-table">
-                    <thead>
-                    <tr>
-                        <th>Nombre</th> <!-- 0 -->
-                        <th>E-mail</th> <!-- 1 -->
-                        <th>Ubicación</th> <!-- 2 -->
-                        <th>Fanpage</th> <!-- 3 -->
-                        <th>Promoción</th> <!-- 4 -->
-                        <th>Resultado</th> <!-- 5 -->
-                        <th>Fecha</th> <!-- 6 -->
-                        <th>Rating</th> <!-- 7 -->
-                        <th>Notas</th> <!-- 8 -->
-                        <th>Status</th> <!-- 9 -->
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach ($participations as $participation)
-                        <tr>
-                            <td>
-                                <a href="//fb.com/{{ $participation->user->facebook_user_id }}" target="_blank">
-                                    {{ $participation->user->name }}
-                                </a>
-                            </td>
-                            <td>{{ $participation->user->email }}</td>
-                            <td>{{ $participation->user->location_name }}</td>
-                            <td>
-                                <a href="//fb.com/{{ $participation->promotion->fanPage->fan_page_id }}" target="_blank" title="Fanpage que capturó el lead">
-                                    {{ $participation->promotion->fanPage->name }}
-                                </a>
-                            </td>
-                            <td>
-                                <a href="{{ $participation->promotion->fullLink }}" target="_blank" title="Promoción en la que participó">
-                                    {{ $participation->promotion->description }}
-                                </a>
-                            </td>
-                            <td>{{ $participation->is_winner ? 'Ganó' : 'Perdió' }}</td>
-                            <td>{{ $participation->created_at }}</td>
-                            <td>
-                                <div data-score="{{ $participation->id }}" data-rateyo-rating="{{ $participation->stars }}"></div>
-                            </td>
-                            <td>
-                                <button class="btn btn-primary btn-sm" data-notes="edit" data-id="{{ $participation->id }}">
-                                    <span class="fa fa-edit"></span>
-                                </button>
-                            </td>
-                            <td>
-                                <select class="form-control" data-status data-id="{{ $participation->id }}">
-                                    <option value="A contactar" @if ($participation->status=='A contactar') selected @endif>A contactar</option>
-                                    <option value="En progreso" @if ($participation->status=='En progreso') selected @endif>En progreso</option>
-                                    <option value="Con venta" @if ($participation->status=='Con venta') selected @endif>Con venta</option>
-                                    <option value="Sin venta" @if ($participation->status=='Sin venta') selected @endif>Sin venta</option>
-                                </select>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                <div>
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#status1" aria-controls="status1" role="tab" data-toggle="tab">A contactar</a></li>
+                        <li role="presentation"><a href="#status2" aria-controls="status2" role="tab" data-toggle="tab">En progreso</a></li>
+                        <li role="presentation"><a href="#status3" aria-controls="status3" role="tab" data-toggle="tab">Con venta</a></li>
+                        <li role="presentation"><a href="#status44" aria-controls="status44" role="tab" data-toggle="tab">Sin venta</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="status1">
+                            @include('includes.panel.leads.participations-table', ['participations' => $participations_1])
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="status2">
+                            @include('includes.panel.leads.participations-table', ['participations' => $participations_2])
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="status3">
+                            @include('includes.panel.leads.participations-table', ['participations' => $participations_3])
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="status44">
+                            @include('includes.panel.leads.participations-table', ['participations' => $participations_4])
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -122,14 +93,14 @@
             var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
             // initialize data tables
-            $('#clients-table').DataTable({
+            $('table').DataTable({
                 language: {
                     url: "https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
                 },
 //                autoWidth: false,
                 responsive: true,
                 columnDefs: [
-                    { targets: [2, 3, 5, 6], className: 'none' }
+                    { targets: [2, 3, 5, 6, 9], className: 'none' }
                 ],
                 "drawCallback": function(settings, json) {
                     $("[data-score]").rateYo({

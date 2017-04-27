@@ -23,7 +23,25 @@ class LeadController extends Controller
     public function index()
     {
         $participations = $this->getParticipationsByCreatorId(auth()->user()->id);
-        return view('panel.leads.index')->with(compact('participations'));
+
+        // by status
+        $participations_1 = collect();
+        $participations_2 = collect();
+        $participations_3 = collect();
+        $participations_4 = collect();
+
+        foreach ($participations as $participation) {
+            switch ($participation->status) {
+                case 'A contactar': $participations_1->push($participation); break;
+                case 'En progreso': $participations_2->push($participation); break;
+                case 'Con venta': $participations_3->push($participation); break;
+                case 'Sin venta': $participations_4->push($participation); break;
+            }
+        }
+
+        return view('panel.leads.index')->with(compact(
+            'participations_1', 'participations_2', 'participations_3', 'participations_4'
+        ));
     }
 
     public function excel()
