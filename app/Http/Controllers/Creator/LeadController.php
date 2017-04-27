@@ -36,6 +36,8 @@ class LeadController extends Controller
                 case 'En progreso': $participations_2->push($participation); break;
                 case 'Con venta': $participations_3->push($participation); break;
                 case 'Sin venta': $participations_4->push($participation); break;
+
+                default: $participations_1->push($participation); break;
             }
         }
 
