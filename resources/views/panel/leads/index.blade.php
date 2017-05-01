@@ -33,10 +33,10 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#status1" aria-controls="status1" role="tab" data-toggle="tab">A contactar</a></li>
-                        <li role="presentation"><a href="#status2" aria-controls="status2" role="tab" data-toggle="tab">En progreso</a></li>
-                        <li role="presentation"><a href="#status3" aria-controls="status3" role="tab" data-toggle="tab">Con venta</a></li>
-                        <li role="presentation"><a href="#status44" aria-controls="status44" role="tab" data-toggle="tab">Sin venta</a></li>
+                        <li role="presentation" class="active"><a href="#status1" aria-controls="status1" role="tab" data-toggle="tab">A contactar (<span></span>)</a></li>
+                        <li role="presentation"><a href="#status2" aria-controls="status2" role="tab" data-toggle="tab">En progreso (<span></span>)</a></li>
+                        <li role="presentation"><a href="#status3" aria-controls="status3" role="tab" data-toggle="tab">Con venta (<span></span>)</a></li>
+                        <li role="presentation"><a href="#status4" aria-controls="status4" role="tab" data-toggle="tab">Sin venta (<span></span>)</a></li>
                     </ul>
 
                     <!-- Tab panes -->
@@ -50,7 +50,7 @@
                         <div role="tabpanel" class="tab-pane" id="status3">
                             @include('includes.panel.leads.participations-table', ['participations' => $participations_3])
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="status44">
+                        <div role="tabpanel" class="tab-pane" id="status4">
                             @include('includes.panel.leads.participations-table', ['participations' => $participations_4])
                         </div>
                     </div>
@@ -93,6 +93,7 @@
             var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
             // initialize data tables
+            var readyTables = 0;
             $('table').DataTable({
                 language: {
                     url: "https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
@@ -111,6 +112,9 @@
                         $.post('{{ url('/api/participation') }}/'+$(this).data('score')+'/stars', postData, function () {
                         }, 'json');
                     });
+                    readyTables++;
+                    if (readyTables == 4)
+                        rowCountDataTable();
                 }
             });
 
@@ -148,9 +152,42 @@
                     status: newStatus,
                     _token: csrfToken
                 };
+
+                var $trChanged = $(this).parents('tr');
+                if ($trChanged.hasClass('child')) // OMG, if the row is expanded the event have to look for the real tr
+                    $trChanged = $trChanged.prevAll(".parent");
+
+                var $fromTable = $trChanged.parents('table').DataTable();
+                var $toTable;
+                switch (newStatus) {
+                    case 'A contactar': $toTable = $('#status1 table'); break;
+                    case 'En progreso': $toTable = $('#status2 table'); break;
+                    case 'Con venta': $toTable = $('#status3 table'); break;
+                    case 'Sin venta': $toTable = $('#status4 table'); break;
+                }
+                $toTable = $toTable.DataTable();
+
                 $.post('{{ url('/api/participation') }}/'+id+'/status', postData, function (data) {
-                    location.reload();
-                }, 'json');
+                    var row = $fromTable.row($trChanged);
+                    $toTable.row.add(row.data()).draw();
+                    row.remove().draw();
+                    rowCountDataTable();
+                });
+            }
+
+            // row count
+            function  rowCountDataTable() {
+                var x = $('#status1 table tbody tr[role=row]').length;
+                $('[href="#status1"] span').text(x);
+
+                x = $('#status2 table tbody tr[role=row]').length;
+                $('[href="#status2"] span').text(x);
+
+                x = $('#status3 table tbody tr[role=row]').length;
+                $('[href="#status3"] span').text(x);
+
+                 x = $('#status4 table tbody tr[role=row]').length;
+                $('[href="#status4"] span').text(x);
             }
         });
     </script>
