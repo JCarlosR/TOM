@@ -23,6 +23,8 @@ Route::get('/home', 'HomeController@index');
 // Clients, customers, leads
 Route::get('/clientes', 'Creator\LeadController@index');
 Route::get('/clientes/excel', 'Creator\LeadController@excel');
+// Welcome message (shown only the first time)
+Route::get('/bienvenido-creador', 'Creator\TutorialController@firstWelcome');
 // Tutorials
 Route::get('/tutorial', 'Creator\TutorialController@index');
 Route::get('/tutorial/disable', 'Creator\TutorialController@disable');

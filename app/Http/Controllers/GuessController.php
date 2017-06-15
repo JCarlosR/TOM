@@ -74,6 +74,7 @@ class GuessController extends Controller
     {
         return view('guess.privacy');
     }
+
     public function terms()
     {
         return view('guess.terms');

@@ -9,6 +9,16 @@ use App\Http\Controllers\Controller;
 
 class TutorialController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function firstWelcome()
+    {
+        return view('panel.first-welcome');
+    }
+
     public function index()
     {
         return view('panel.tutorial');
@@ -22,4 +32,5 @@ class TutorialController extends Controller
 
         return redirect('/home');
     }
+
 }

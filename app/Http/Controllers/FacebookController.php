@@ -51,7 +51,7 @@ class FacebookController extends Controller
             // OAuth 2.0 client handler
             $oauth_client = $fb->getOAuth2Client();
 
-            // Extend the access token.
+            // Extend the access token
             try {
                 $token = $oauth_client->getLongLivedAccessToken($token);
             } catch (FacebookSDKException $e) {
@@ -78,11 +78,15 @@ class FacebookController extends Controller
         $facebook_user = $response->getGraphUser();
 
         // Create the user if it does not exist or update the existing
-        // This will only work if you've added the SyncableGraphNodeTrait to your User model
+        // This will only work if you've added the SyncableGraphNodeTrait to the User model
         $user = User::createOrUpdateGraphNode($facebook_user);
 
-        if (!$user->welcome_mail_sent && !$promotion_id) // !promotion_id => logged as creator
+        // !promotion_id => logged as creator
+        $firstCreatorLogin = false;
+        if (!$user->welcome_mail_sent && !$promotion_id) {
             $user->setAsCreator();
+            $firstCreatorLogin = true;
+        }
 
         // Log the user into Laravel
         Auth::login($user);
@@ -95,8 +99,8 @@ class FacebookController extends Controller
         } else {
             // it is a creator
 
-            // Update referral ID when null to
-            // 1: if there is no a referral, the first user represents an empty value
+            // Update the referred_by ID (if it is not set) to
+            // 1: if there is no a referral (the first user represents an empty value)
             // X: when there is a user id in the affiliate_to session variable
             if (! $user->referred_by) {
                 $affiliate_to = session()->get('affiliate_to', 1);
@@ -107,7 +111,12 @@ class FacebookController extends Controller
             }
         }
 
-        // Redirect creators to panel or tutorial (first time)
+        // If it is a creator user, and his/her first login
+        if ($firstCreatorLogin) {
+            return redirect('/bienvenido-creador');
+        }
+
+        // Redirect creators to panel or tutorial (the first times)
         if (auth()->user()->show_tutorial)
             return redirect('/tutorial');
         else
