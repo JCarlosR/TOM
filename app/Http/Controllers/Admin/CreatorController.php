@@ -15,7 +15,7 @@ class CreatorController extends Controller
     public function index()
     {
         // only users that have at least one fan_page are returned
-        $creators = User::has('fanPages')->get();
+        $creators = User::where('welcome_mail_sent', true)->get(); // User::has('fanPages')->get();
 
         return view('admin.creators.index')->with(compact('creators'));
     }
