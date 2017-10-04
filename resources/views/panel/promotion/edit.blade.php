@@ -6,6 +6,8 @@
             <div class="panel-heading">Administrar fan page</div>
 
             <div class="panel-body">
+                @include('includes.panel.promotion.alert-image-dimensions')
+
                 @if (session('message'))
                     <div class="alert alert-success">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -13,7 +15,7 @@
                     </div>
                 @endif
 
-                <p>Editar promoción seleccionada.</p>
+                <p>A continuación puedes editar los datos de la promoción seleccionada.</p>
                 <div class="well bs-component">
                     <div class="row">
                         <div class="col-md-4 text-center">
@@ -62,6 +64,9 @@
                                     <button type="submit" class="btn btn-success">
                                         Guardar cambios
                                     </button>
+                                    <a href="{{ url('config/page/'.$promotion->fan_page_id.'/promotions') }}" class="btn btn-default">
+                                        Volver sin guardar
+                                    </a>
                                 </div>
                             </form>
                         </div>

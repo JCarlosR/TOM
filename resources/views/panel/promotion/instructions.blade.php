@@ -17,6 +17,8 @@
                     </div>
                 @endif
 
+                @include('includes.panel.promotion.alert-image-dimensions')
+
                 <p>Felicidades ya tienes configurada tu TomboFans y para que funcione realiza lo siguiente:</p>
                 <div class="well bs-component">
                     <p>

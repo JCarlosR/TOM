@@ -13,6 +13,18 @@ class Promotion extends Model
     protected $dates = ['deleted_at'];
     protected $fillable = ['fan_page_id', 'description', 'end_date', 'image', 'attempts'];
 
+    // const are public by default
+    const MIN_WIDTH_SUGGESTED = 1200;
+    const MIN_HEIGHT_SUGGESTED = 630;
+
+    // methods
+
+    public function hasSmallImage()
+    {
+        return $this->image_width && $this->image_height
+            && ($this->image_width < self::MIN_WIDTH_SUGGESTED || $this->image_height < self::MIN_HEIGHT_SUGGESTED);
+    }
+
     // accessors
 
     public function getImagePathAttribute()

@@ -87,13 +87,19 @@ class PromotionController extends Controller
 
         $path = public_path('images/promotions/' . $file_name);
 
-        Image::make($request->file('image'))
-            ->fit(1280, 720, function ($c) {
+        // just resize big images (reduce  to 1200x630)
+        // the dimensions were found here: https://developers.facebook.com/docs/sharing/best-practices/
+        $image = Image::make($request->file('image'))
+            ->fit(Promotion::MIN_WIDTH_SUGGESTED, Promotion::MIN_HEIGHT_SUGGESTED, function ($c) {
                 $c->upsize(); // don't resize smaller images
-            })
-            ->save($path);
+            });
+
+        // store image
+        $image->save($path);
 
         $promotion->image = $extension;
+        $promotion->image_width = $image->width();
+        $promotion->image_height = $image->height();
 
         if ($promotion->save()) {
             ConfigController::sendRightConfigurationMail($promotion);
@@ -138,13 +144,15 @@ class PromotionController extends Controller
             $file_name = $promotion->id . '.' . $extension;
             $path = public_path('images/promotions/' . $file_name);
 
-            Image::make($request->file('image'))
-                ->fit(1280, 720, function ($c) {
+            $image = Image::make($request->file('image'))
+                ->fit(Promotion::MIN_WIDTH_SUGGESTED, Promotion::MIN_HEIGHT_SUGGESTED, function ($c) {
                     $c->upsize(); // don't resize smaller images
-                })
-                ->save($path);
+                });
+            $image->save($path);
 
             $promotion->image = $extension;
+            $promotion->image_width = $image->width();
+            $promotion->image_height = $image->height();
         }
 
         $promotion->save();
