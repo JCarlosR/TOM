@@ -215,7 +215,7 @@
 
 @section('scripts')
     {{-- CLIENGO Chat --}}
-    <script>(function(){var ldk=document.createElement('script'); ldk.type='text/javascript'; ldk.async=true; ldk.src='https://s.cliengo.com/weboptimizer/58c72ab7e4b0d88d06cfb691/58c72ab9e4b0d88d06cfb695.js' ; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);})();</script>
+    <script>(function(){var ldk=document.createElement('script'); ldk.type='text/javascript'; ldk.async=true; ldk.src='https://s.cliengo.com/weboptimizer/58cc915ae4b07d521ea6895f/58c72ab9e4b0d88d06cfb695.js' ; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);})();</script>
 
     <script>
         $('[data-filter]').on('click', function () {
