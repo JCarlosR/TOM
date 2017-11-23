@@ -26,8 +26,8 @@ class PostController extends Controller
     public function test(LaravelFacebookSdk $fb)
     {
         $token = session('fb_user_access_token');
-        dd($token);
         $fb->setDefaultAccessToken($token);
+
         $queryUrl = '/344343375954777/feed';
         $params = [
             'message' => 'Testing from php sdk',
@@ -38,10 +38,14 @@ class PostController extends Controller
             'description' => 'description',
             'name' => 'name of the link'
         ];
+
         try {
             $response = $fb->post($queryUrl, $params);
         } catch (FacebookSDKException $e) {
-            die($e->getMessage());
+            print_r('* Catch FacebookSDKException exception');
+            var_dump($e->getTrace());
+            var_dump($e->getMessage());
+            die();
         }
 
         $graphNode = $response->getGraphNode();
