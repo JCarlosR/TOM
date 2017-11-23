@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Var dump exception">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php" />
     </list>
@@ -43,8 +43,18 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="480">
+              <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Facebook.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Facebook.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="357" column="20" lean-forward="false" selection-start-line="357" selection-start-column="20" selection-end-line="357" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -469,14 +479,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="2359000" />
-    </task>
-    <task id="LOCAL-00039" summary="Using redirect helper">
-      <created>1488584619009</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1488584619010</updated>
+      <workItem from="1511463405554" duration="2556000" />
     </task>
     <task id="LOCAL-00040" summary="Absolute path redirect">
       <created>1488584814546</created>
@@ -814,11 +817,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511465687659</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Var dump exception">
+      <created>1511465810702</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1511465810702</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367679000" />
+    <option name="totallyTimeSpent" value="367876000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -867,7 +877,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Notes buttons and modal" />
     <MESSAGE value="Show stars and hide this columns" />
     <MESSAGE value="Show stars and hide this column" />
     <MESSAGE value="test buttons data tables" />
@@ -892,7 +901,8 @@
     <MESSAGE value="Show warning for small images, and add a back button" />
     <MESSAGE value="Update Cliengo script" />
     <MESSAGE value="Check token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check token" />
+    <MESSAGE value="Var dump exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Var dump exception" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -901,13 +911,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/referral/how_to.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_02_15_072258_add_referred_by_to_users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1264,10 +1267,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Facebook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="357" column="20" lean-forward="false" selection-start-line="357" selection-start-column="20" selection-end-line="357" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state relative-caret-position="480">
+          <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
           <folding />
         </state>
       </provider>

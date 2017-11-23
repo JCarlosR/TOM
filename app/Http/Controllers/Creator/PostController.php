@@ -40,11 +40,11 @@ class PostController extends Controller
         ];
 
         try {
-            $response = $fb->post($queryUrl, $params);
+            $response = $fb->get($queryUrl, $params);
         } catch (FacebookSDKException $e) {
             print_r('* Catch FacebookSDKException exception');
             var_dump($e->getTrace());
-            var_dump($e->getMessage());
+            // var_dump($e->getMessage());
             die();
         }
 
