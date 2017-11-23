@@ -43,9 +43,7 @@ class PostController extends Controller
             $response = $fb->get($queryUrl, $params);
         } catch (FacebookSDKException $e) {
             print_r('* Catch FacebookSDKException exception');
-            var_dump($e->getTrace());
-            // var_dump($e->getMessage());
-            die();
+            die($e->getMessage());
         }
 
         $graphNode = $response->getGraphNode();
