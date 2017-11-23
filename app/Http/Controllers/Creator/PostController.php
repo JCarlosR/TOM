@@ -28,7 +28,7 @@ class PostController extends Controller
     {
         $this->getLongLivedAccessToken($facebookSdk);
 
-        $queryUrl = '/344343375954777/feed';
+        $queryUrl = '/948507005305322/feed';
         $params = [
             'message' => 'Testing from php sdk',
             'link' => 'https://tombofans.com'/*,
