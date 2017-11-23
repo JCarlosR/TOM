@@ -53,7 +53,7 @@ class PostController extends Controller
     {
         // Obtain an access token
         try {
-            $token = $fb->getAccessTokenFromRedirect();
+            $token = $fb->getAccessTokenFromRedirect(url('/admin/posts/callback'));
         } catch (FacebookSDKException $e) {
             die($e->getMessage());
         }
