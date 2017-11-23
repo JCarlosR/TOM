@@ -19,7 +19,7 @@ class PostController extends Controller
         ];
 
         $loginUrl = $fb->getLoginUrl($permissions, url('/admin/posts/callback'));
-        dd($loginUrl);
+        // dd($loginUrl);
         return redirect($loginUrl);
     }
 
