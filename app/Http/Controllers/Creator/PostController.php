@@ -30,7 +30,7 @@ class PostController extends Controller
         $queryUrl = '/344343375954777/feed';
         $params = [
             'message' => 'Testing from php sdk',
-            'link' => 'www.tombofans.com'/*,
+            'link' => 'https://tombofans.com'/*,
             'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
             'caption' => 'my caption',
             'description' => 'my description',
@@ -40,7 +40,7 @@ class PostController extends Controller
         try {
             $response = $facebookSdk->post($queryUrl, $params);
         } catch (FacebookSDKException $e) {
-            var_dump($e->getTrace());
+            var_dump($e->getMessage());
             die('** Catch FacebookSDKException exception');
         }
 
