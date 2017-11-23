@@ -33,9 +33,21 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="1356">
               <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <element signature="e#547#4159#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,10 +55,10 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state relative-caret-position="356">
+              <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
               <folding>
-                <element signature="e#1516#2878#0#PHP" expanded="false" />
+                <element signature="e#1476#2839#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -491,14 +503,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="4008000" />
-    </task>
-    <task id="LOCAL-00044" summary="Fix variable name">
-      <created>1489080902403</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1489080902403</updated>
+      <workItem from="1511463405554" duration="4320000" />
     </task>
     <task id="LOCAL-00045" summary="Fix variable name">
       <created>1489112915074</created>
@@ -836,11 +841,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511467272649</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Put token in session">
+      <created>1511467463426</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1511467463426</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369328000" />
+    <option name="totallyTimeSpent" value="369640000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -889,7 +901,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Stars rating" />
     <MESSAGE value="Stars, notes and status" />
     <MESSAGE value="Fix score id" />
     <MESSAGE value="Fix notes get" />
@@ -914,7 +925,8 @@
     <MESSAGE value="Die" />
     <MESSAGE value="Read the access token again and save it as a session variable" />
     <MESSAGE value="Check absolute url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check absolute url" />
+    <MESSAGE value="Put token in session" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put token in session" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1074,13 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2592">
-          <caret line="115" column="48" lean-forward="false" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1286,18 +1291,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="1356">
           <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#547#4159#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="356">
+          <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
           <folding>
-            <element signature="e#1516#2878#0#PHP" expanded="false" />
+            <element signature="e#1476#2839#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

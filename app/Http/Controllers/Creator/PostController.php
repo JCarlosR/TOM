@@ -18,9 +18,7 @@ class PostController extends Controller
             'publish_actions', 'user_managed_groups'
         ];
 
-        $login_url = $fb->getRedirectLoginHelper()
-            ->getLoginUrl(url('admin/posts/callback'), $permissions);
-
+        $login_url = $fb->getLoginUrl(url('admin/posts/callback'), $permissions);
         return redirect($login_url);
     }
 
@@ -85,12 +83,12 @@ class PostController extends Controller
             // Extend the access token.
             try {
                 $token = $oauth_client->getLongLivedAccessToken($token);
-                session()->put('fb_user_access_token', $token);
             } catch (FacebookSDKException $e) {
                 dd($e->getMessage());
             }
         }
 
         $fb->setDefaultAccessToken($token);
+        session()->put('fb_user_access_token', (string) $token);
     }
 }
