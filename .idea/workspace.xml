@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Post fb ms">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php" />
     </list>
@@ -43,9 +43,11 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="444">
+              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+              <folding>
+                <element signature="e#48#98#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -501,14 +503,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="6703000" />
-    </task>
-    <task id="LOCAL-00055" summary="unique description for the same user, fan page id validation">
-      <created>1491915907790</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1491915907790</updated>
+      <workItem from="1511463405554" duration="6825000" />
     </task>
     <task id="LOCAL-00056" summary="ignore images of the promotions">
       <created>1491916034418</created>
@@ -846,11 +841,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511470774758</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Post fb message">
+      <created>1511471069244</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1511471069244</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372023000" />
+    <option name="totallyTimeSpent" value="372145000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -899,7 +901,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Default status" />
     <MESSAGE value="changeStatus" />
     <MESSAGE value="Fix param order" />
     <MESSAGE value="Move rows in dataTables!, update the row count dinamically" />
@@ -924,7 +925,8 @@
     <MESSAGE value="Var dump trace" />
     <MESSAGE value="Remove status type" />
     <MESSAGE value="Very basic params for post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Very basic params for post" />
+    <MESSAGE value="Post fb message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Post fb message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1310,9 +1312,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="444">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="e#48#98#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

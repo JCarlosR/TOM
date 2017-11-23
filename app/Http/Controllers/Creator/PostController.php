@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Creator;
 
+use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
 
@@ -39,9 +40,14 @@ class PostController extends Controller
 
         try {
             $response = $facebookSdk->post($queryUrl, $params);
+        } catch (FacebookResponseException $e) {
+            $graphError = $e->getPrevious();
+            echo 'Graph API Error: ' . $e->getMessage();
+            echo ', Graph error code: ' . $graphError->getCode();
+            exit;
         } catch (FacebookSDKException $e) {
-            var_dump($e->getMessage());
-            die('** Catch FacebookSDKException exception');
+            echo 'SDK Error: ' . $e->getMessage();
+            exit;
         }
 
         $graphNode = $response->getGraphNode();
