@@ -13,6 +13,7 @@ class PostController extends Controller
 {
     public function grantPermissions(LaravelFacebookSdk $fb)
     {
+        dd(url('admin/posts/callback'));
         $permissions = [
             'publish_actions', 'user_managed_groups'
         ];
