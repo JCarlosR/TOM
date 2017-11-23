@@ -23,10 +23,9 @@ class PostController extends Controller
         return redirect($login_url);
     }
 
-    public function test(LaravelFacebookSdk $fb)
+    public function test(LaravelFacebookSdk $facebookSdk)
     {
-        $token = session('fb_user_access_token');
-        $fb->setDefaultAccessToken($token);
+        $this->getLongLivedAccessToken($facebookSdk);
 
         $queryUrl = '/344343375954777/feed';
         $params = [
@@ -40,7 +39,7 @@ class PostController extends Controller
         ];
 
         try {
-            $response = $fb->get($queryUrl, $params);
+            $response = $facebookSdk->post($queryUrl, $params);
         } catch (FacebookSDKException $e) {
             print_r('* Catch FacebookSDKException exception');
             die($e->getMessage());
@@ -48,5 +47,49 @@ class PostController extends Controller
 
         $graphNode = $response->getGraphNode();
         dd($graphNode);
+    }
+
+    public function getLongLivedAccessToken(LaravelFacebookSdk $fb)
+    {
+        // Obtain an access token
+        try {
+            $token = $fb->getAccessTokenFromRedirect();
+        } catch (FacebookSDKException $e) {
+            die($e->getMessage());
+        }
+
+        // Access token will be null if the user denied the request
+        // or if someone just hit this URL outside of the OAuth flow
+        if (! $token) {
+            // Get the redirect helper
+            $helper = $fb->getRedirectLoginHelper();
+
+            if (! $helper->getError()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            // User denied the request
+            dd(
+                $helper->getError(),
+                $helper->getErrorCode(),
+                $helper->getErrorReason(),
+                $helper->getErrorDescription()
+            );
+        }
+
+        if (! $token->isLongLived()) {
+            // OAuth 2.0 client handler
+            $oauth_client = $fb->getOAuth2Client();
+
+            // Extend the access token.
+            try {
+                $token = $oauth_client->getLongLivedAccessToken($token);
+            } catch (FacebookSDKException $e) {
+                dd($e->getMessage());
+            }
+        }
+
+        $token = session('fb_user_access_token');
+        $fb->setDefaultAccessToken($token);
     }
 }
