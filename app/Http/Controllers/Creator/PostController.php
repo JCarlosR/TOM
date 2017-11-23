@@ -18,7 +18,7 @@ class PostController extends Controller
             'publish_actions', 'user_managed_groups'
         ];
 
-        $login_url = $fb->getLoginUrl(url('admin/posts/callback'), $permissions);
+        $login_url = $fb->getLoginUrl($permissions);
         return redirect($login_url);
     }
 

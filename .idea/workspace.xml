@@ -56,9 +56,9 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
-              <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
+              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding>
-                <element signature="e#1476#2839#0#PHP" expanded="false" />
+                <element signature="e#1447#2810#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -503,14 +503,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="4320000" />
-    </task>
-    <task id="LOCAL-00045" summary="Fix variable name">
-      <created>1489112915074</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1489112915074</updated>
+      <workItem from="1511463405554" duration="4361000" />
     </task>
     <task id="LOCAL-00046" summary="CLIENGO chat">
       <created>1489718114292</created>
@@ -848,11 +841,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511467463426</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Get login url directly">
+      <created>1511467775261</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1511467775261</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369640000" />
+    <option name="totallyTimeSpent" value="369681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +901,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Stars, notes and status" />
     <MESSAGE value="Fix score id" />
     <MESSAGE value="Fix notes get" />
     <MESSAGE value="Add new step in home" />
@@ -926,7 +925,8 @@
     <MESSAGE value="Read the access token again and save it as a session variable" />
     <MESSAGE value="Check absolute url" />
     <MESSAGE value="Put token in session" />
-    <option name="LAST_COMMIT_MESSAGE" value="Put token in session" />
+    <MESSAGE value="Get login url directly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get login url directly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1273,14 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/FacebookClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="165" column="69" lean-forward="true" selection-start-line="165" selection-start-column="69" selection-end-line="165" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Facebook.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1293,6 +1285,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1356">
           <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/FacebookClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="165" column="69" lean-forward="true" selection-start-line="165" selection-start-column="69" selection-end-line="165" selection-end-column="69" />
           <folding />
         </state>
       </provider>
@@ -1310,9 +1310,9 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
-          <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding>
-            <element signature="e#1476#2839#0#PHP" expanded="false" />
+            <element signature="e#1447#2810#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
