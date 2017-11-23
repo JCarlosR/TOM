@@ -13,14 +13,20 @@ class PostController extends Controller
 {
     public function grantPermissions(LaravelFacebookSdk $fb)
     {
+        $permissions = [
+            'publish_actions', 'user_managed_groups'
+        ];
+
         $login_url = $fb->getRedirectLoginHelper()
-            ->getLoginUrl(url('admin/posts/callback'), ['publish_actions', 'user_managed_groups']);
+            ->getLoginUrl(url('admin/posts/callback'), $permissions);
+
         return redirect($login_url);
     }
 
     public function test(LaravelFacebookSdk $fb)
     {
         $token = session('fb_user_access_token');
+        dd($token);
         $fb->setDefaultAccessToken($token);
         $queryUrl = '/344343375954777/feed';
         $params = [

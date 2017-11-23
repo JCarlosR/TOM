@@ -85,7 +85,6 @@ Route::post('/api/participation/{id}/notes', 'Api\ParticipationController@update
 Route::post('/api/participation/{id}/stars', 'Api\ParticipationController@updateStars');
 Route::post('/api/participation/{id}/status', 'Api\ParticipationController@updateStatus');
 
-// Test route
+// Test routes
 // It exists only for testing purposes
-// The controller will change constantly
-Route::get('/test', 'Guess\PromotionController@testQuery');
+Route::get('/test/query/promotions', 'Guess\PromotionController@testQuery');
