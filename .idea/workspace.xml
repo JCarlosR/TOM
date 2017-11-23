@@ -33,21 +33,9 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1356">
-              <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="31" />
+            <state relative-caret-position="207">
+              <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacebookController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FacebookController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-              <folding>
-                <element signature="e#547#4159#0#PHP" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -55,10 +43,10 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="212">
+              <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
               <folding>
-                <element signature="e#1447#2810#0#PHP" expanded="false" />
+                <element signature="e#1477#2840#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,7 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>callback</find>
       <find>referr</find>
       <find>$creator</find>
       <find>$referral</find>
@@ -125,6 +112,7 @@
       <find>get</find>
       <find>getapps</find>
       <find>secret</find>
+      <find>admin/p</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -503,14 +491,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="4361000" />
-    </task>
-    <task id="LOCAL-00046" summary="CLIENGO chat">
-      <created>1489718114292</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1489718114292</updated>
+      <workItem from="1511463405554" duration="4527000" />
     </task>
     <task id="LOCAL-00047" summary="Chat bot just in welcome (/) and promotions">
       <created>1491155363133</created>
@@ -848,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511467775261</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Change arguments for method getLoginUrl">
+      <created>1511467819919</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1511467819919</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369681000" />
+    <option name="totallyTimeSpent" value="369847000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +889,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fix score id" />
     <MESSAGE value="Fix notes get" />
     <MESSAGE value="Add new step in home" />
     <MESSAGE value="Export to excel" />
@@ -926,7 +913,8 @@
     <MESSAGE value="Check absolute url" />
     <MESSAGE value="Put token in session" />
     <MESSAGE value="Get login url directly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get login url directly" />
+    <MESSAGE value="Change arguments for method getLoginUrl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change arguments for method getLoginUrl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1281,14 +1269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1356">
-          <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/FacebookClient.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1307,12 +1287,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="212">
+          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
           <folding>
-            <element signature="e#1447#2810#0#PHP" expanded="false" />
+            <element signature="e#1477#2840#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
