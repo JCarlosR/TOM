@@ -43,8 +43,8 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="180">
+              <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding>
                 <element signature="e#48#98#0#PHP" expanded="true" />
               </folding>
@@ -503,14 +503,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="7083000" />
-    </task>
-    <task id="LOCAL-00057" summary="update title">
-      <created>1491917006066</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1491917006066</updated>
+      <workItem from="1511463405554" duration="7246000" />
     </task>
     <task id="LOCAL-00058" summary="Add columns to the potential clients section">
       <created>1493057063251</created>
@@ -848,11 +841,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511471195818</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Test own group">
+      <created>1511471451951</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1511471451951</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372403000" />
+    <option name="totallyTimeSpent" value="372566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +901,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fix param order" />
     <MESSAGE value="Move rows in dataTables!, update the row count dinamically" />
     <MESSAGE value="First welcome message to creators" />
     <MESSAGE value="Show creators with 0 fan pages" />
@@ -926,7 +925,8 @@
     <MESSAGE value="Very basic params for post" />
     <MESSAGE value="Post fb message" />
     <MESSAGE value="Double exception catch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Double exception catch" />
+    <MESSAGE value="Test own group" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test own group" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1312,8 +1312,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="180">
+          <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding>
             <element signature="e#48#98#0#PHP" expanded="true" />
           </folding>
