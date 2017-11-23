@@ -30,12 +30,11 @@ class PostController extends Controller
         $queryUrl = '/344343375954777/feed';
         $params = [
             'message' => 'Testing from php sdk',
-            'status_type' => 'created_note',
             'link' => 'www.tombofans.com',
             'picture' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
-            'caption' => 'caption',
-            'description' => 'description',
-            'name' => 'name of the link'
+            'caption' => 'my caption',
+            'description' => 'my description',
+            'name' => 'name of my link'
         ];
 
         try {
