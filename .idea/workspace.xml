@@ -43,9 +43,11 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="324">
+              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <folding>
+                <element signature="e#1516#2878#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -489,14 +491,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="3820000" />
-    </task>
-    <task id="LOCAL-00043" summary="Change variable name">
-      <created>1489080832480</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1489080832480</updated>
+      <workItem from="1511463405554" duration="4008000" />
     </task>
     <task id="LOCAL-00044" summary="Fix variable name">
       <created>1489080902403</created>
@@ -834,11 +829,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511467184170</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Check absolute url">
+      <created>1511467272649</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1511467272649</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369140000" />
+    <option name="totallyTimeSpent" value="369328000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -887,7 +889,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Facebook pixel track code" />
     <MESSAGE value="Stars rating" />
     <MESSAGE value="Stars, notes and status" />
     <MESSAGE value="Fix score id" />
@@ -912,7 +913,8 @@
     <MESSAGE value="Use get instead of post verb" />
     <MESSAGE value="Die" />
     <MESSAGE value="Read the access token again and save it as a session variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Read the access token again and save it as a session variable" />
+    <MESSAGE value="Check absolute url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check absolute url" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1292,9 +1294,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="324">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="e#1516#2878#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

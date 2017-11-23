@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function grantPermissions(LaravelFacebookSdk $fb)
     {
-        dd(url('admin/posts/callback'));
+        // dd(url('admin/posts/callback')); https is here!
         $permissions = [
             'publish_actions', 'user_managed_groups'
         ];
@@ -85,12 +85,12 @@ class PostController extends Controller
             // Extend the access token.
             try {
                 $token = $oauth_client->getLongLivedAccessToken($token);
+                session()->put('fb_user_access_token', $token);
             } catch (FacebookSDKException $e) {
                 dd($e->getMessage());
             }
         }
 
-        $token = session('fb_user_access_token');
         $fb->setDefaultAccessToken($token);
     }
 }
