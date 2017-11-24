@@ -28,7 +28,30 @@ class PostController extends Controller
     {
         $this->getLongLivedAccessToken($facebookSdk);
 
-        $queryUrl = '/948507005305322/feed';
+        $groupId = '948507005305322';
+
+        // Upload a photo into a group
+        $queryUrl = "/$groupId/photos";
+        $params = [
+            'url' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
+            'message' => 'descripción de la foto'
+        ];
+        try {
+            $response = $facebookSdk->post($queryUrl, $params);
+        } catch (FacebookResponseException $e) {
+            $graphError = $e->getPrevious();
+            echo 'Graph API Error: ' . $e->getMessage();
+            echo ', Graph error code: ' . $graphError->getCode();
+            exit;
+        } catch (FacebookSDKException $e) {
+            echo 'SDK Error: ' . $e->getMessage();
+            exit;
+        }
+        $graphNode = $response->getGraphNode();
+        dd($graphNode);
+
+        // Post to a fb group
+        $queryUrl = "/$groupId/feed";
         $params = [
             'message' => 'Using external image as link and type photo',
             // 'link' => 'https://tombofans.com',

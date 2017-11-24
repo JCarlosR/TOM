@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Upload a photo using URL">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +33,11 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+            <state relative-caret-position="397">
+              <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
               <folding>
                 <element signature="e#48#98#0#PHP" expanded="true" />
+                <element signature="e#2592#3983#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -526,14 +526,7 @@
       <workItem from="1506808339419" duration="633000" />
       <workItem from="1507123857919" duration="2930000" />
       <workItem from="1510323898941" duration="673000" />
-      <workItem from="1511463405554" duration="9361000" />
-    </task>
-    <task id="LOCAL-00062" summary="Always hide certain columns">
-      <created>1493058420084</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1493058420084</updated>
+      <workItem from="1511463405554" duration="10756000" />
     </task>
     <task id="LOCAL-00063" summary="Notes buttons and modal">
       <created>1493058896348</created>
@@ -871,11 +864,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511472258246</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Using external image as link and type photo">
+      <created>1511488082782</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1511488082782</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="374681000" />
+    <option name="totallyTimeSpent" value="376076000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -924,7 +924,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Update Cliengo script" />
     <MESSAGE value="Check token" />
     <MESSAGE value="Var dump exception" />
     <MESSAGE value="Use get instead of post verb" />
@@ -949,7 +948,8 @@
     <MESSAGE value="Test with more parameters message" />
     <MESSAGE value="No link" />
     <MESSAGE value="Using external image as link param" />
-    <option name="LAST_COMMIT_MESSAGE" value="Using external image as link param" />
+    <MESSAGE value="Using external image as link and type photo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using external image as link and type photo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1337,10 +1337,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="32" column="69" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+        <state relative-caret-position="397">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
           <folding>
             <element signature="e#48#98#0#PHP" expanded="true" />
+            <element signature="e#2592#3983#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
