@@ -4,8 +4,6 @@
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -170,11 +168,11 @@
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_11_24_085713_create_scheduled_posts_table.php" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
       </list>
     </option>
   </component>
@@ -230,7 +228,13 @@
             <path>
               <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Console" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -480,14 +484,7 @@
       <workItem from="1511529111568" duration="708000" />
       <workItem from="1511530219108" duration="3608000" />
       <workItem from="1511546589417" duration="7199000" />
-      <workItem from="1511621218078" duration="5742000" />
-    </task>
-    <task id="LOCAL-00066" summary="test buttons data tables">
-      <created>1493062916607</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1493062916607</updated>
+      <workItem from="1511621218078" duration="6560000" />
     </task>
     <task id="LOCAL-00067" summary="Facebook pixel track code">
       <created>1493090975012</created>
@@ -825,11 +822,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511623827076</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Scheduled post command">
+      <created>1511626976270</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1511626976270</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395130000" />
+    <option name="totallyTimeSpent" value="395948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,7 +883,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Die" />
     <MESSAGE value="Read the access token again and save it as a session variable" />
     <MESSAGE value="Check absolute url" />
     <MESSAGE value="Put token in session" />
@@ -904,7 +907,8 @@
     <MESSAGE value="Upload a photo using URL" />
     <MESSAGE value="Check permissions at fb" />
     <MESSAGE value="Register fb access token and scheduled posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register fb access token and scheduled posts" />
+    <MESSAGE value="Scheduled post command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scheduled post command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1235,20 +1239,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="43" />
           <folding>
-            <element signature="e#48#66#0#PHP" expanded="true" />
+            <element signature="e#48#66#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1296,6 +1292,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-72">
           <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding />
         </state>
       </provider>
