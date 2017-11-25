@@ -24,6 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('posts:send')->everyMinute();
+        $schedule->command('posts:send')
+            ->everyMinute()->sendOutputTo('scheduled_posts.log');;
     }
 }
