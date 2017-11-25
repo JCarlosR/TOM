@@ -19,7 +19,7 @@ class PostController extends Controller
             'publish_actions', 'user_managed_groups'
         ];
 
-        $loginUrl = $fb->getLoginUrl($permissions, url('/admin/posts/callback'));
+        $loginUrl = $fb->getLoginUrl($permissions, url('/facebook/posts'));
         // dd($loginUrl);
         return redirect($loginUrl);
     }
@@ -38,17 +38,12 @@ class PostController extends Controller
         ];
         try {
             $response = $facebookSdk->post($queryUrl, $params);
-        } catch (FacebookResponseException $e) {
-            $graphError = $e->getPrevious();
-            echo 'Graph API Error: ' . $e->getMessage();
-            echo ', Graph error code: ' . $graphError->getCode();
-            exit;
+            $graphNode = $response->getGraphNode();
+            dd($graphNode);
         } catch (FacebookSDKException $e) {
             echo 'SDK Error: ' . $e->getMessage();
             exit;
         }
-        $graphNode = $response->getGraphNode();
-        dd($graphNode);
 
         // Post to a fb group
         $queryUrl = "/$groupId/feed";
@@ -64,11 +59,6 @@ class PostController extends Controller
 
         try {
             $response = $facebookSdk->post($queryUrl, $params);
-        } catch (FacebookResponseException $e) {
-            $graphError = $e->getPrevious();
-            echo 'Graph API Error: ' . $e->getMessage();
-            echo ', Graph error code: ' . $graphError->getCode();
-            exit;
         } catch (FacebookSDKException $e) {
             echo 'SDK Error: ' . $e->getMessage();
             exit;
@@ -82,7 +72,7 @@ class PostController extends Controller
     {
         // Obtain an access token
         try {
-            $token = $fb->getAccessTokenFromRedirect(url('/admin/posts/callback'));
+            $token = $fb->getAccessTokenFromRedirect(url('/facebook/posts'));
         } catch (FacebookSDKException $e) {
             die($e->getMessage());
         }

@@ -62,8 +62,10 @@ Route::match(['get', 'post'], '/facebook/promotion/{id}', 'Participant\Promotion
 // Participate action
 Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
 
+// Create & schedule posts
+Route::get('/facebook/posts', 'Creator\FacebookPostController@create');
 // Post to fb group
-Route::get('/admin/post', 'Creator\PostController@grantPermissions');
+Route::get('/facebook/publish-group-permissions', 'Creator\PostController@grantPermissions');
 Route::get('/admin/posts/callback', 'Creator\PostController@test');
 
 // Admin routes
