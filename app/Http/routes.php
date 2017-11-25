@@ -64,9 +64,10 @@ Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
 
 // Create & schedule posts
 Route::get('/facebook/posts', 'Creator\FacebookPostController@create');
+Route::post('/facebook/posts', 'Creator\FacebookPostController@store');
 // Post to fb group
-Route::get('/facebook/publish-group-permissions', 'Creator\PostController@grantPermissions');
-Route::get('/admin/posts/callback', 'Creator\PostController@test');
+Route::get('/facebook/publish-group-permissions', 'Creator\FbPostPermissionController@grant');
+Route::get('/facebook/posts/callback', 'Creator\FbPostPermissionController@callback');
 
 // Admin routes
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {

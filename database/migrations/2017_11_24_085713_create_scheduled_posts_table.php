@@ -13,6 +13,7 @@ class CreateScheduledPostsTable extends Migration
     public function up()
     {
         Schema::create('scheduled_posts', function (Blueprint $table) {
+            $table->engine = 'MyISAM';
             $table->increments('id');
 
             $table->string('type'); // Link, Image, Video
@@ -26,6 +27,12 @@ class CreateScheduledPostsTable extends Migration
 
             $table->date('scheduled_date')->nullable();
             $table->time('scheduled_time')->nullable();
+
+            // destination group id
+            $table->string('fb_destination_id')->nullable();
+            // author of the post
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });

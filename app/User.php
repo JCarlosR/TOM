@@ -23,6 +23,7 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name', 'email', 'password',
+        'fb_access_token', 'fb_access_token_updated_at'
     ];
 
     protected $hidden = [
@@ -34,7 +35,12 @@ class User extends Authenticatable
 
     public function fanPages()
     {
-        return $this->hasMany('App\FanPage');
+        return $this->hasMany(FanPage::class);
+    }
+
+    public function scheduledPosts()
+    {
+        return $this->hasMany(ScheduledPost::class);
     }
 
     // referrals count
