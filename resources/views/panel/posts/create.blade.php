@@ -71,7 +71,7 @@
                     </form>
                 @else
                     <p>Antes de programar una publicación, por favor otorga permisos a TOM para que pueda publicar a tu nombre.</p>
-                    <a href="{{url('/facebook/publish-group-permissions')}}" class="btn btn-primary btn-sm">Otorgar permisos a TOM</a>
+                    <a href="{{ url('/facebook/publish-group-permissions') }}" class="btn btn-primary btn-sm">Otorgar permisos a TOM</a>
                 @endif
             </div>
         </div>

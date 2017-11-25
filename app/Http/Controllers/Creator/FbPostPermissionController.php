@@ -28,45 +28,6 @@ class FbPostPermissionController extends Controller
     {
         $this->getLongLivedAccessToken($facebookSdk);
         return redirect('/facebook/posts');
-
-        $groupId = '948507005305322';
-
-        // Upload a photo into a group
-        $queryUrl = "/$groupId/photos";
-        $params = [
-            'url' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
-            'message' => 'descripción de la foto'
-        ];
-        try {
-            $response = $facebookSdk->post($queryUrl, $params);
-            $graphNode = $response->getGraphNode();
-            dd($graphNode);
-        } catch (FacebookSDKException $e) {
-            echo 'SDK Error: ' . $e->getMessage();
-            exit;
-        }
-
-        // Post to a fb group
-        $queryUrl = "/$groupId/feed";
-        $params = [
-            'message' => 'Using external image as link and type photo',
-            // 'link' => 'https://tombofans.com',
-            'link' => 'http://static.tibia.com/images/news/inspect_characterbig.png',
-            'caption' => 'my caption',
-            'description' => 'my description',
-            'name' => 'name of my link',
-            'type' => 'photo'
-        ];
-
-        try {
-            $response = $facebookSdk->post($queryUrl, $params);
-        } catch (FacebookSDKException $e) {
-            echo 'SDK Error: ' . $e->getMessage();
-            exit;
-        }
-
-        $graphNode = $response->getGraphNode();
-        dd($graphNode);
     }
 
     public function getLongLivedAccessToken(LaravelFacebookSdk $fb)
