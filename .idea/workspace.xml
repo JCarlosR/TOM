@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
+            <state relative-caret-position="835">
               <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
@@ -51,8 +51,8 @@
       <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+            <state relative-caret-position="402">
+              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -216,10 +216,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_11_24_085713_create_scheduled_posts_table.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
       </list>
     </option>
   </component>
@@ -547,14 +547,7 @@
       <workItem from="1511530219108" duration="3608000" />
       <workItem from="1511546589417" duration="7199000" />
       <workItem from="1511621218078" duration="10264000" />
-      <workItem from="1512232295554" duration="4011000" />
-    </task>
-    <task id="LOCAL-00071" summary="Fix notes get">
-      <created>1493166329446</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1493166329446</updated>
+      <workItem from="1512232295554" duration="4642000" />
     </task>
     <task id="LOCAL-00072" summary="Add new step in home">
       <created>1493167344223</created>
@@ -892,11 +885,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512235552688</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="Add name param for TOM albums (in group)">
+      <created>1512236340757</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1512236340757</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="403663000" />
+    <option name="totallyTimeSpent" value="404294000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,7 +946,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Change arguments for method getLoginUrl" />
     <MESSAGE value="2nd argument for callback url" />
     <MESSAGE value="Check generated login url" />
     <MESSAGE value="Redirect" />
@@ -971,7 +970,8 @@
     <MESSAGE value="Send output to" />
     <MESSAGE value="Test album creation" />
     <MESSAGE value="Grant user_photos permission" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grant user_photos permission" />
+    <MESSAGE value="Add name param for TOM albums (in group)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add name param for TOM albums (in group)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1357,15 +1357,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+        <state relative-caret-position="402">
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
+        <state relative-caret-position="835">
           <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
