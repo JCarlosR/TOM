@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,17 +33,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state relative-caret-position="427">
+              <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
                 <element signature="e#1919#2908#0#PHP" expanded="false" />
                 <element signature="e#2914#3783#0#PHP" expanded="false" />
-                <element signature="e#4718#5643#0#PHP" expanded="false" />
+                <element signature="e#4773#5698#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
@@ -208,9 +217,9 @@
         <option value="$PROJECT_DIR$/database/migrations/2017_11_24_085713_create_scheduled_posts_table.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
       </list>
     </option>
   </component>
@@ -538,14 +547,7 @@
       <workItem from="1511530219108" duration="3608000" />
       <workItem from="1511546589417" duration="7199000" />
       <workItem from="1511621218078" duration="10264000" />
-      <workItem from="1512232295554" duration="3215000" />
-    </task>
-    <task id="LOCAL-00070" summary="Fix score id">
-      <created>1493166230675</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1493166230675</updated>
+      <workItem from="1512232295554" duration="4011000" />
     </task>
     <task id="LOCAL-00071" summary="Fix notes get">
       <created>1493166329446</created>
@@ -883,11 +885,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512234916189</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Grant user_photos permission">
+      <created>1512235552688</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1512235552688</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="402867000" />
+    <option name="totallyTimeSpent" value="403663000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -937,7 +946,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Get login url directly" />
     <MESSAGE value="Change arguments for method getLoginUrl" />
     <MESSAGE value="2nd argument for callback url" />
     <MESSAGE value="Check generated login url" />
@@ -962,7 +970,8 @@
     <MESSAGE value="Every minute execute the posts command" />
     <MESSAGE value="Send output to" />
     <MESSAGE value="Test album creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test album creation" />
+    <MESSAGE value="Grant user_photos permission" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grant user_photos permission" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1279,14 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1322,19 +1323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-            <element signature="e#1919#2908#0#PHP" expanded="false" />
-            <element signature="e#2914#3783#0#PHP" expanded="false" />
-            <element signature="e#4718#5643#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1363,6 +1351,27 @@
             <marker date="1512235532781" expanded="true" signature="5751:5764" ph="..." />
             <marker date="1512235532781" expanded="true" signature="5865:5880" ph="..." />
             <marker date="1512235532781" expanded="true" signature="6470:6479" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
+          <folding>
+            <element signature="e#40#62#0#PHP" expanded="true" />
+            <element signature="e#1919#2908#0#PHP" expanded="false" />
+            <element signature="e#2914#3783#0#PHP" expanded="false" />
+            <element signature="e#4773#5698#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

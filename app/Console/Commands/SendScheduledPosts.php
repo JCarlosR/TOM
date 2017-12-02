@@ -128,6 +128,7 @@ class SendScheduledPosts extends Command
         $groupId = $post->fb_destination_id;
         $queryUrl = "/$groupId/albums";
         $params = [
+            'name' => 'Publicación TOM #' . $post->id,
             'message' => $post->description
         ];
 
