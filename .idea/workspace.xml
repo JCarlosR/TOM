@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,47 +37,14 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
-              <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
+            <state relative-caret-position="883">
+              <caret line="164" column="9" lean-forward="true" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
                 <element signature="e#1919#2908#0#PHP" expanded="false" />
                 <element signature="e#2914#3783#0#PHP" expanded="false" />
-                <element signature="e#4773#5698#0#PHP" expanded="false" />
+                <element signature="e#6181#7106#0#PHP" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-              <folding>
-                <element signature="e#312#388#0#PHP" expanded="false" />
-                <element signature="e#1482#3204#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FbPostPermissionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -126,8 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$creator</find>
-      <find>$referral</find>
       <find>config</find>
       <find>instructio</find>
       <find>instructions</find>
@@ -156,6 +122,8 @@
       <find>secret</find>
       <find>admin/p</find>
       <find>grant</find>
+      <find>$graphNode-&gt;</find>
+      <find>$graphNode</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -184,7 +152,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FanPageController.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_04_25_144657_add_notes_status_and_stars_to_participations.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ParticipationController.php" />
@@ -218,8 +185,9 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
       </list>
     </option>
   </component>
@@ -271,32 +239,6 @@
             <path>
               <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="posts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -547,14 +489,7 @@
       <workItem from="1511530219108" duration="3608000" />
       <workItem from="1511546589417" duration="7199000" />
       <workItem from="1511621218078" duration="10264000" />
-      <workItem from="1512232295554" duration="4642000" />
-    </task>
-    <task id="LOCAL-00072" summary="Add new step in home">
-      <created>1493167344223</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1493167344223</updated>
+      <workItem from="1512232295554" duration="5811000" />
     </task>
     <task id="LOCAL-00073" summary="Export to excel">
       <created>1493168433535</created>
@@ -892,11 +827,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512236340757</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Use appendOutputTo instead of sendOutputTo">
+      <created>1512238769573</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1512238769573</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404294000" />
+    <option name="totallyTimeSpent" value="405463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,7 +888,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="2nd argument for callback url" />
     <MESSAGE value="Check generated login url" />
     <MESSAGE value="Redirect" />
     <MESSAGE value="Use the same access token and redirect url" />
@@ -971,7 +912,8 @@
     <MESSAGE value="Test album creation" />
     <MESSAGE value="Grant user_photos permission" />
     <MESSAGE value="Add name param for TOM albums (in group)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add name param for TOM albums (in group)" />
+    <MESSAGE value="Use appendOutputTo instead of sendOutputTo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use appendOutputTo instead of sendOutputTo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -980,20 +922,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ParticipationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendor/introjs/intro.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/config/step-by-step/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -1117,13 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1288,29 +1209,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding>
-            <element signature="e#312#388#0#PHP" expanded="false" />
-            <element signature="e#1482#3204#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_11_24_085713_create_scheduled_posts_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -1355,6 +1257,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FbPostPermissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="e#312#388#0#PHP" expanded="false" />
+            <element signature="e#1482#3204#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -1363,15 +1284,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PromotionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="44" column="27" lean-forward="true" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
+        <state relative-caret-position="883">
+          <caret line="164" column="9" lean-forward="true" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
             <element signature="e#1919#2908#0#PHP" expanded="false" />
             <element signature="e#2914#3783#0#PHP" expanded="false" />
-            <element signature="e#4773#5698#0#PHP" expanded="false" />
+            <element signature="e#6181#7106#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

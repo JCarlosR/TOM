@@ -135,11 +135,12 @@ class SendScheduledPosts extends Command
         try {
             $response = $this->facebookSdk->post($queryUrl, $params);
             $graphNode = $response->getGraphNode();
+            $albumId = $graphNode->getField('id');
             $this->info("postAlbum ejecutado correctamente para el post $post->id:");
             $this->info($graphNode->asJson());
             $this->info("---");
 
-            return $this->postAlbumPhotos();
+            return $this->postAlbumPhotos($albumId);
         } catch (FacebookSDKException $e) {
             $this->info("postAlbum ejecutado con error para el post $post->id:");
             $this->info($e->getMessage());
@@ -149,9 +150,47 @@ class SendScheduledPosts extends Command
         }
     }
 
-    private function postAlbumPhotos()
+    private function postAlbumPhotos($albumId)
     {
-        return "Enviado";
+        // Upload photos into an album
+        $photosUrl = [
+            'https://static.pexels.com/photos/605096/pexels-photo-605096.jpeg',
+            'https://www.planwallpaper.com/static/images/b807c2282ab0a491bd5c5c1051c6d312_k4PiHxO.jpg',
+            'http://hdwarena.com/wp-content/uploads/2017/04/Beautiful-Wallpaper.jpg'
+        ];
+
+        $status = "Error";
+        foreach ($photosUrl as $photoUrl) {
+            $status = $this->postAlbumPhoto($albumId, $photoUrl);
+        }
+
+        return $status;
+    }
+
+    private function postAlbumPhoto($albumId, $photoUrl)
+    {
+        // Upload 1 photo to a specific album
+        $queryUrl = "/$albumId/photos";
+        $params = [
+            'url' => $photoUrl
+        ];
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+            $graphNode = $response->getGraphNode();
+            $albumId = $graphNode->getField('id');
+            $this->info("postAlbumPhoto ejecutado correctamente para el album $albumId:");
+            $this->info($graphNode->asJson());
+            $this->info("---");
+
+            return "Enviado";
+        } catch (FacebookSDKException $e) {
+            $this->info("postAlbumPhoto ejecutado con error para el album $albumId:");
+            $this->info($e->getMessage());
+            $this->info("---");
+
+            return "Error";
+        }
     }
 
     public function postVideo(ScheduledPost $post)

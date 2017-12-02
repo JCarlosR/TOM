@@ -5,6 +5,7 @@
 Homestead.yaml
 Homestead.json
 .env
+scheduled_posts.log
 
 ### PhpStorm ###
 /*.iml
