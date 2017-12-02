@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Make a post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
     </list>
@@ -37,13 +36,13 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="883">
-              <caret line="164" column="9" lean-forward="true" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+            <state relative-caret-position="331">
+              <caret line="132" column="66" lean-forward="false" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
                 <element signature="e#1919#2908#0#PHP" expanded="false" />
                 <element signature="e#2914#3783#0#PHP" expanded="false" />
-                <element signature="e#6181#7106#0#PHP" expanded="false" />
+                <element signature="e#6249#7174#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -489,14 +488,7 @@
       <workItem from="1511530219108" duration="3608000" />
       <workItem from="1511546589417" duration="7199000" />
       <workItem from="1511621218078" duration="10264000" />
-      <workItem from="1512232295554" duration="5811000" />
-    </task>
-    <task id="LOCAL-00073" summary="Export to excel">
-      <created>1493168433535</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1493168433535</updated>
+      <workItem from="1512232295554" duration="6922000" />
     </task>
     <task id="LOCAL-00074" summary="Auto width data tables">
       <created>1493204642033</created>
@@ -834,11 +826,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512238769573</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Post album photos (const urls)">
+      <created>1512239938382</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1512239938382</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405463000" />
+    <option name="totallyTimeSpent" value="406574000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -888,7 +887,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Check generated login url" />
     <MESSAGE value="Redirect" />
     <MESSAGE value="Use the same access token and redirect url" />
     <MESSAGE value="Get trace exception" />
@@ -913,7 +911,8 @@
     <MESSAGE value="Grant user_photos permission" />
     <MESSAGE value="Add name param for TOM albums (in group)" />
     <MESSAGE value="Use appendOutputTo instead of sendOutputTo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use appendOutputTo instead of sendOutputTo" />
+    <MESSAGE value="Post album photos (const urls)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Post album photos (const urls)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1310,13 +1309,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="164" column="9" lean-forward="true" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+        <state relative-caret-position="331">
+          <caret line="132" column="66" lean-forward="false" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
             <element signature="e#1919#2908#0#PHP" expanded="false" />
             <element signature="e#2914#3783#0#PHP" expanded="false" />
-            <element signature="e#6181#7106#0#PHP" expanded="false" />
+            <element signature="e#6249#7174#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
