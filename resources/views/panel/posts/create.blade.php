@@ -38,6 +38,7 @@
                                 <option value="">Seleccione un tipo de publicación</option>
                                 <option value="link">Publicar un enlace</option>
                                 <option value="image">Publicar una imagen</option>
+                                <option value="images">Publicar varias imágenes</option>
                                 <option value="video">Publicar un video</option>
                             </select>
                         </div>

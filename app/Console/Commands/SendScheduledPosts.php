@@ -52,6 +52,8 @@ class SendScheduledPosts extends Command
             $status = $this->postLink($post);
         } elseif ($post->type == 'image') {
             $status = $this->postPhoto($post);
+        } elseif ($post->type == 'images') {
+            $status = $this->postAlbum($post);
         } elseif ($post->type == 'video') {
             $status = $this->postVideo($post);
         }
@@ -118,6 +120,37 @@ class SendScheduledPosts extends Command
 
             return "Error";
         }
+    }
+
+    public function postAlbum(ScheduledPost $post)
+    {
+        // Upload a photo into a group
+        $groupId = $post->fb_destination_id;
+        $queryUrl = "/$groupId/albums";
+        $params = [
+            'message' => $post->description
+        ];
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+            $graphNode = $response->getGraphNode();
+            $this->info("postAlbum ejecutado correctamente para el post $post->id:");
+            $this->info($graphNode->asJson());
+            $this->info("---");
+
+            return $this->postAlbumPhotos();
+        } catch (FacebookSDKException $e) {
+            $this->info("postAlbum ejecutado con error para el post $post->id:");
+            $this->info($e->getMessage());
+            $this->info("---");
+
+            return "Error";
+        }
+    }
+
+    private function postAlbumPhotos()
+    {
+        return "Enviado";
     }
 
     public function postVideo(ScheduledPost $post)
