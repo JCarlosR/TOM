@@ -27,7 +27,7 @@
                     <p>Enhorabuena! TOM dispone de un token para publicar a tu nombre.</p>
                     <p class="small">Última fecha de actualización del token: {{ auth()->user()->fb_access_token_updated_at ?: 'Nunca' }}</p>
                     <p class="small">Te recomendamos actualizar este token una vez por mes. Su duración promedio es de 2 meses.</p>
-
+                    <a href="{{ url('/facebook/publish-group-permissions') }}" class="btn btn-sm btn-primary">Solicitar nuevo token</a>
                     <hr>
 
                     <form action="" method="POST">
