@@ -137,7 +137,7 @@ class SendScheduledPosts extends Command
 
         // Create post
         $postId = $this->createSimplePost($post);
-        if ($postId)
+        if (!$postId)
             return 'Error';
 
         // Associate photos with post
