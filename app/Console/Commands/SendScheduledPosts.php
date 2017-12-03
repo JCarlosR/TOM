@@ -51,9 +51,9 @@ class SendScheduledPosts extends Command
         if ($post->type == 'link') {
             $status = $this->postLink($post);
         } elseif ($post->type == 'image') {
-            $status = $this->postPhoto($post);
+            $status = $this->postPhotoStory($post);
         } elseif ($post->type == 'images') {
-            $status = $this->postAlbum($post);
+            $status = $this->postPhotosAndStory($post);
         } elseif ($post->type == 'video') {
             $status = $this->postVideo($post);
         }
@@ -81,21 +81,17 @@ class SendScheduledPosts extends Command
 
         try {
             $graphNode = $response->getGraphNode();
-            $this->info("postLink ejecutado correctamente para el post $post->id:");
-            $this->info($graphNode->asJson());
-            $this->info("---");
+            $this->prettyPrint($post->id, true, 'postLink', $graphNode->asJson());
 
             return "Enviado";
         } catch (FacebookSDKException $e) {
-            $this->info("postLink ejecutado con error para el post $post->id:");
-            $this->info($e->getMessage());
-            $this->info("---");
+            $this->prettyPrint($post->id, false, 'postLink', $e->getMessage());
 
             return "Error";
         }
     }
 
-    public function postPhoto(ScheduledPost $post)
+    public function postPhotoStory(ScheduledPost $post)
     {
         // Upload a photo into a group
         $groupId = $post->fb_destination_id;
@@ -108,19 +104,172 @@ class SendScheduledPosts extends Command
         try {
             $response = $this->facebookSdk->post($queryUrl, $params);
             $graphNode = $response->getGraphNode();
-            $this->info("postPhoto ejecutado correctamente para el post $post->id:");
-            $this->info($graphNode->asJson());
-            $this->info("---");
+            $this->prettyPrint($post->id, true, 'postPhoto', $graphNode->asJson());
 
             return "Enviado";
         } catch (FacebookSDKException $e) {
-            $this->info("postPhoto ejecutado con error para el post $post->id:");
-            $this->info($e->getMessage());
-            $this->info("---");
+            $this->prettyPrint($post->id, false, 'postPhoto', $e->getMessage());
 
             return "Error";
         }
     }
+
+    public function postPhotosAndStory(ScheduledPost $post)
+    {
+        // Upload unpublished photos
+        $photosUrl = [
+            'https://static.pexels.com/photos/605096/pexels-photo-605096.jpeg',
+            'https://www.planwallpaper.com/static/images/b807c2282ab0a491bd5c5c1051c6d312_k4PiHxO.jpg',
+            'http://hdwarena.com/wp-content/uploads/2017/04/Beautiful-Wallpaper.jpg'
+        ];
+
+        $photosId = [];
+        foreach ($photosUrl as $photoUrl) {
+            $photoId = $this->postUnpublishedPhoto($post, $photoUrl);
+            if ($photoId)
+                $photosId[] = $photoId;
+            else
+                break;
+        }
+
+        if (sizeof($photosId) == 0)
+            return 'Error';
+
+        // Create post
+        $postId = $this->createSimplePost($post);
+        if ($postId)
+            return 'Error';
+
+        // Associate photos with post
+        foreach ($photosId as $photoId) {
+            $success = $this->associateUnpublishedPhotoWithPost($photoId, $postId);
+            if (!$success)
+                return 'Error';
+        }
+
+        return 'Enviado';
+    }
+
+    private function postUnpublishedPhoto(ScheduledPost $post, $photoUrl)
+    {
+        // Upload a photo into a group
+        $groupId = $post->fb_destination_id;
+        $queryUrl = "/$groupId/photos";
+        $params = [
+            'url' => $photoUrl,
+            'published' => false
+        ];
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+            $graphNode = $response->getGraphNode();
+            $this->prettyPrint($post->id, true, 'postUnpublishedPhoto', $graphNode->asJson());
+
+            return $graphNode->getField('id');
+        } catch (FacebookSDKException $e) {
+            $this->prettyPrint($post->id, false, 'postUnpublishedPhoto', $e->getMessage());
+
+            return null;
+        }
+    }
+
+    public function createSimplePost(ScheduledPost $post)
+    {
+        // Post to a fb group
+        $groupId = $post->fb_destination_id;
+        $queryUrl = "/$groupId/feed";
+        $params = [
+            'message' => $post->description
+        ];
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+        } catch (FacebookSDKException $e) {
+            $errorMessage = 'SDK Error: ' . $e->getMessage();
+            $this->prettyPrint($post->id, false, 'createSimplePost', $errorMessage);
+            return null;
+        }
+
+        try {
+            $graphNode = $response->getGraphNode();
+            $this->prettyPrint($post->id, true, 'createSimplePost', $graphNode->asJson());
+
+            return $graphNode->getField('id');
+        } catch (FacebookSDKException $e) {
+            $this->prettyPrint($post->id, false, 'createSimplePost', $e->getMessage());
+
+            return null;
+        }
+    }
+
+    private function associateUnpublishedPhotoWithPost($photoId, $postId)
+    {
+        $queryUrl = "/$photoId";
+        $params = [
+            'target_post' => $postId
+        ];
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+        } catch (FacebookSDKException $e) {
+            $errorMessage = 'SDK Error: ' . $e->getMessage();
+            $this->prettyPrint($postId, false, 'associateUnpublishedPhotoWithPost', $errorMessage);
+            return false;
+        }
+
+        try {
+            $graphNode = $response->getGraphNode();
+            $this->prettyPrint($postId, true, 'associateUnpublishedPhotoWithPost', $graphNode->asJson());
+
+            return $graphNode->getField('success');
+        } catch (FacebookSDKException $e) {
+            $this->prettyPrint($postId, false, 'associateUnpublishedPhotoWithPost', $e->getMessage());
+
+            return false;
+        }
+    }
+
+
+    public function postVideo(ScheduledPost $post)
+    {
+        // Upload a photo into a group
+        $groupId = $post->fb_destination_id;
+        $queryUrl = "/$groupId/videos";
+        $params = [
+            'file_url' => $post->video_url,
+            'description' => $post->description
+            // 'title' => 'title of the video'
+        ];
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+            $graphNode = $response->getGraphNode();
+            $this->prettyPrint($post->id, true, 'postVideo', $graphNode->asJson());
+
+            return "Enviado";
+        } catch (FacebookSDKException $e) {
+            $this->prettyPrint($post->id, false, 'postVideo', $e->getMessage());
+
+            return "Error";
+        }
+    }
+
+
+    // pretty print for debug purposes (check the output file at Kernel.php)
+
+    public function prettyPrint($postId, $success, $method, $message)
+    {
+        if ($success)
+            $description = "Post $postId: $method ejecutado correctamente:";
+        else
+            $description = "Post $postId: $method ejecutado con error:";
+        $this->info($description);
+
+        $this->info($message);
+        $this->info("---");
+    }
+
+    // not in use, because there is no way to associate a post with an album
 
     public function postAlbum(ScheduledPost $post)
     {
@@ -137,15 +286,11 @@ class SendScheduledPosts extends Command
             $response = $this->facebookSdk->post($queryUrl, $params);
             $graphNode = $response->getGraphNode();
             $albumId = $graphNode->getField('id');
-            $this->info("postAlbum ejecutado correctamente para el post $post->id:");
-            $this->info($graphNode->asJson());
-            $this->info("---");
+            $this->prettyPrint($post->id, true, 'postAlbum', $graphNode->asJson());
 
             return $this->postAlbumPhotos($albumId);
         } catch (FacebookSDKException $e) {
-            $this->info("postAlbum ejecutado con error para el post $post->id:");
-            $this->info($e->getMessage());
-            $this->info("---");
+            $this->prettyPrint($post->id, false, 'postAlbum', $e->getMessage());
 
             return "Error";
         }
@@ -194,31 +339,4 @@ class SendScheduledPosts extends Command
         }
     }
 
-    public function postVideo(ScheduledPost $post)
-    {
-        // Upload a photo into a group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/videos";
-        $params = [
-            'file_url' => $post->video_url,
-            'description' => $post->description
-            // 'title' => 'title of the video'
-        ];
-
-        try {
-            $response = $this->facebookSdk->post($queryUrl, $params);
-            $graphNode = $response->getGraphNode();
-            $this->info("postVideo ejecutado correctamente para el post $post->id:");
-            $this->info($graphNode->asJson());
-            $this->info("---");
-
-            return "Enviado";
-        } catch (FacebookSDKException $e) {
-            $this->info("postVideo ejecutado con error para el post $post->id:");
-            $this->info($e->getMessage());
-            $this->info("---");
-
-            return "Error";
-        }
-    }
 }
