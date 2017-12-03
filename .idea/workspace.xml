@@ -36,8 +36,8 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
-              <caret line="227" column="24" lean-forward="false" selection-start-line="227" selection-start-column="24" selection-end-line="227" selection-end-column="24" />
+            <state relative-caret-position="48">
+              <caret line="219" column="13" lean-forward="true" selection-start-line="219" selection-start-column="13" selection-end-line="219" selection-end-column="13" />
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
                 <element signature="e#404#551#0#PHP" expanded="false" />
@@ -48,10 +48,9 @@
                 <element signature="e#4611#5364#0#PHP" expanded="false" />
                 <element signature="e#5370#6308#0#PHP" expanded="false" />
                 <element signature="e#7240#8008#0#PHP" expanded="false" />
-                <element signature="e#8093#8450#0#PHP" expanded="false" />
-                <element signature="e#8534#9404#0#PHP" expanded="false" />
-                <element signature="e#9410#9979#0#PHP" expanded="false" />
-                <element signature="e#9985#10831#0#PHP" expanded="false" />
+                <element signature="e#8579#9449#0#PHP" expanded="false" />
+                <element signature="e#9455#10024#0#PHP" expanded="false" />
+                <element signature="e#10030#10876#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -499,14 +498,7 @@
       <workItem from="1511621218078" duration="10264000" />
       <workItem from="1512232295554" duration="7580000" />
       <workItem from="1512251375161" duration="95000" />
-      <workItem from="1512318179155" duration="2454000" />
-    </task>
-    <task id="LOCAL-00075" summary="Rating 3 stars">
-      <created>1493204844669</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1493204844671</updated>
+      <workItem from="1512318179155" duration="2744000" />
     </task>
     <task id="LOCAL-00076" summary="maxValue == numStars">
       <created>1493205019015</created>
@@ -844,11 +836,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512242971757</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Test multi photos story">
+      <created>1512320643572</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1512320643572</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="409781000" />
+    <option name="totallyTimeSpent" value="410071000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -898,7 +897,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Use the same access token and redirect url" />
     <MESSAGE value="Get trace exception" />
     <MESSAGE value="Var dump trace" />
     <MESSAGE value="Remove status type" />
@@ -923,7 +921,8 @@
     <MESSAGE value="Use appendOutputTo instead of sendOutputTo" />
     <MESSAGE value="Post album photos (const urls)" />
     <MESSAGE value="Make an album and show it in the group feed (please)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make an album and show it in the group feed (please)" />
+    <MESSAGE value="Test multi photos story" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test multi photos story" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1303,8 +1302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="227" column="24" lean-forward="false" selection-start-line="227" selection-start-column="24" selection-end-line="227" selection-end-column="24" />
+        <state relative-caret-position="48">
+          <caret line="219" column="13" lean-forward="true" selection-start-line="219" selection-start-column="13" selection-end-line="219" selection-end-column="13" />
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
             <element signature="e#404#551#0#PHP" expanded="false" />
@@ -1315,10 +1314,9 @@
             <element signature="e#4611#5364#0#PHP" expanded="false" />
             <element signature="e#5370#6308#0#PHP" expanded="false" />
             <element signature="e#7240#8008#0#PHP" expanded="false" />
-            <element signature="e#8093#8450#0#PHP" expanded="false" />
-            <element signature="e#8534#9404#0#PHP" expanded="false" />
-            <element signature="e#9410#9979#0#PHP" expanded="false" />
-            <element signature="e#9985#10831#0#PHP" expanded="false" />
+            <element signature="e#8579#9449#0#PHP" expanded="false" />
+            <element signature="e#9455#10024#0#PHP" expanded="false" />
+            <element signature="e#10030#10876#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

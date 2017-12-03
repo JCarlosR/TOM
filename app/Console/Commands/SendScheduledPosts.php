@@ -259,6 +259,8 @@ class SendScheduledPosts extends Command
 
     public function prettyPrint($postId, $success, $method, $message)
     {
+        $dateNow = Carbon::now();
+        $this->info("-- $dateNow --");
         if ($success)
             $description = "Post $postId: $method ejecutado correctamente:";
         else
@@ -266,7 +268,6 @@ class SendScheduledPosts extends Command
         $this->info($description);
 
         $this->info($message);
-        $this->info("---");
     }
 
     // not in use, because there is no way to associate a post with an album
