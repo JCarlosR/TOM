@@ -6,6 +6,7 @@
             <div class="panel-heading">Publicaciones finalizadas</div>
 
             <div class="panel-body">
+                <p>Mostrando publicaciones que ya han finalizado, empezando por las más recientes.</p>
                 <table class="table table-bordered">
                     <thead>
                     <tr>
@@ -13,8 +14,8 @@
                         <th>Fecha</th>
                         <th>Hora</th>
                         <th>Tipo</th>
+                        <th>Descripción</th>
                         <th>Estado</th>
-                        <th>Opciones</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -28,18 +29,16 @@
                         <td>{{ $post->scheduled_date }}</td>
                         <td>{{ $post->scheduled_time }}</td>
                         <td>{{ $post->type }}</td>
+                        <td>{{ $post->description }}</td>
                         <td>
                             <span class="label label-default">{{ $post->status }}</span>
-                        </td>
-                        <td>
-                            <a href="" class="btn btn-primary btn-sm" disabled>
-                                Ver contenido
-                            </a>
                         </td>
                     </tr>
                     @endforeach
                     </tbody>
                 </table>
+
+                {{ $scheduled_posts->links() }}
 
                 <a href="{{ url('/facebook/posts') }}" class="btn btn-default btn-sm">
                     <i class="fa fa-step-backward"></i> Volver al listado de publicaciones programadas
