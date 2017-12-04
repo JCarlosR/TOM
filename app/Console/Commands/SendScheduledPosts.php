@@ -117,11 +117,12 @@ class SendScheduledPosts extends Command
     public function postPhotosAndStory(ScheduledPost $post)
     {
         // Upload unpublished photos
-        $photosUrl = [
+        /*$photosUrl = [
             'https://static.pexels.com/photos/605096/pexels-photo-605096.jpeg',
             'https://www.planwallpaper.com/static/images/b807c2282ab0a491bd5c5c1051c6d312_k4PiHxO.jpg',
             'http://hdwarena.com/wp-content/uploads/2017/04/Beautiful-Wallpaper.jpg'
-        ];
+        ];*/
+        $photosUrl = $post->images()->pluck('secure_url');
 
         $photosId = [];
         foreach ($photosUrl as $photoUrl) {

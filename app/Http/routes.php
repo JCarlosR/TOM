@@ -67,6 +67,7 @@ Route::get('/facebook/posts', 'Creator\FacebookPostController@index');
 Route::get('/facebook/posts/finished', 'Creator\FacebookPostController@finished');
 Route::get('/facebook/posts/create', 'Creator\FacebookPostController@create');
 Route::post('/facebook/posts', 'Creator\FacebookPostController@store');
+Route::post('/facebook/posts/images', 'Creator\FacebookPostImageController@store');
 Route::get('/facebook/posts/delete', 'Creator\FacebookPostController@destroy');
 // Post to fb group
 Route::get('/facebook/publish-group-permissions', 'Creator\FbPostPermissionController@grant');

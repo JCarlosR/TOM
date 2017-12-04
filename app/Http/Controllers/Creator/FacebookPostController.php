@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Creator;
 
 use App\ScheduledPost;
+use App\ScheduledPostImage;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
 
@@ -76,13 +77,15 @@ class FacebookPostController extends Controller
             'type' => 'required',
             'link' => 'required_if:type,==,link',
             'image_url' => 'required_if:type,==,image',
-            'video_url' => 'required_if:type,==,video'
+            'video_url' => 'required_if:type,==,video',
+            'imageUrls' => 'required_if:type,==,images'
         ];
         $messages = [
             'type.required' => 'Es necesario seleccionar un tipo de publicación.',
             'link.required_if' => 'Es necesario ingresar el enlace que se va a compartir.',
             'image_url.required_if' => 'Es necesario ingresar la URL de la imagen a compartir.',
-            'video_url.required_if' => 'Es necesario ingresar la URL del vide a compartir.'
+            'video_url.required_if' => 'Es necesario ingresar la URL del video a compartir.',
+            'imageUrls.required_if' => 'Debe subir al menos una imagen, o escoger otro tipo de publicación.',
         ];
         $this->validate($request, $rules, $messages);
         // dd($request->all());
@@ -99,8 +102,14 @@ class FacebookPostController extends Controller
         $scheduled_post->status = 'Pendiente';
         $scheduled_post->save();
 
+        if ($request->has('imageUrls')) {
+            ScheduledPostImage::whereIn('id', $request->input('imageUrls'))->update([
+                'scheduled_post_id' => $scheduled_post->id
+            ]);
+        }
+
         $notification = 'Se ha registrado una nueva publicación programada.';
-        return back()->with(compact('notification'));
+        return redirect('facebook/posts')->with(compact('notification'));
     }
 
     public function destroy(Request $request)
@@ -110,8 +119,10 @@ class FacebookPostController extends Controller
         ]);
 
         $post = ScheduledPost::findOrFail($request->input('post_id'));
-        if ($post->user_id == auth()->user()->id)
+        if ($post->user_id == auth()->user()->id) {
+            // $post->images()->delete(); // a garbage collector will do this, if we delete the rows, we lost the cloudinary public id
             $deleted = $post->delete();
+        }
 
         if ($deleted)
             $notification = "Se ha eliminado exitosamente la publicación programada # $post->id.";
