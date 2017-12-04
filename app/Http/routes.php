@@ -63,8 +63,11 @@ Route::match(['get', 'post'], '/facebook/promotion/{id}', 'Participant\Promotion
 Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
 
 // Create & schedule posts
-Route::get('/facebook/posts', 'Creator\FacebookPostController@create');
+Route::get('/facebook/posts', 'Creator\FacebookPostController@index');
+Route::get('/facebook/posts/finished', 'Creator\FacebookPostController@finished');
+Route::get('/facebook/posts/create', 'Creator\FacebookPostController@create');
 Route::post('/facebook/posts', 'Creator\FacebookPostController@store');
+Route::get('/facebook/posts/delete', 'Creator\FacebookPostController@destroy');
 // Post to fb group
 Route::get('/facebook/publish-group-permissions', 'Creator\FbPostPermissionController@grant');
 Route::get('/facebook/posts/callback', 'Creator\FbPostPermissionController@callback');
