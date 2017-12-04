@@ -6,6 +6,14 @@
             <div class="panel-heading">Publicaciones finalizadas</div>
 
             <div class="panel-body">
+                <p>
+                    <a href="{{ url('/facebook/posts') }}" class="btn btn-default btn-sm">
+                        <i class="fa fa-step-backward"></i> Volver al listado de publicaciones programadas
+                    </a>
+                </p>
+
+                <hr>
+
                 <p>Mostrando publicaciones que ya han finalizado, empezando por las más recientes.</p>
                 <table class="table table-bordered">
                     <thead>
@@ -39,10 +47,6 @@
                 </table>
 
                 {{ $scheduled_posts->links() }}
-
-                <a href="{{ url('/facebook/posts') }}" class="btn btn-default btn-sm">
-                    <i class="fa fa-step-backward"></i> Volver al listado de publicaciones programadas
-                </a>
             </div>
         </div>
     </div>
