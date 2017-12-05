@@ -79,7 +79,7 @@ class FacebookPostController extends Controller
             'type' => 'required',
             'link' => 'required_if:type,==,link',
             'image_file' => 'required_if:type,==,image|image',
-            'video_file' => 'required_if:type,==,video|mimes:mp4,mov,ogg,qt,wmv,asf,application/octet-stream|max:20000',
+            'video_file' => 'required_if:type,==,video|mimes:mp4,mov,ogg,qt,wmv,asf,bin|max:20000',
             'imageUrls' => 'required_if:type,==,images',
             'scheduled_time' => 'required',
             'scheduled_date' => 'required'
