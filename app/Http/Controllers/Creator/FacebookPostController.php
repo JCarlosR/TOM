@@ -74,7 +74,7 @@ class FacebookPostController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $rules = [
             'type' => 'required',
             'link' => 'required_if:type,==,link',
