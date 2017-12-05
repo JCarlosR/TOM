@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="VerifyCsrfToken.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="384">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -549,14 +548,7 @@
       <workItem from="1512251375161" duration="95000" />
       <workItem from="1512318179155" duration="4762000" />
       <workItem from="1512359948855" duration="600000" />
-      <workItem from="1512408739501" duration="20587000" />
-    </task>
-    <task id="LOCAL-00091" summary="Read the access token again and save it as a session variable">
-      <created>1511467184170</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1511467184170</updated>
+      <workItem from="1512408739501" duration="21076000" />
     </task>
     <task id="LOCAL-00092" summary="Check absolute url">
       <created>1511467272649</created>
@@ -894,11 +886,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512440269069</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Exclude csrf verification">
+      <created>1512441300506</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1512441300506</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433276000" />
+    <option name="totallyTimeSpent" value="433765000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -949,7 +948,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Scheduled post command" />
     <MESSAGE value="Every minute execute the posts command" />
     <MESSAGE value="Send output to" />
     <MESSAGE value="Test album creation" />
@@ -974,7 +972,8 @@
     <MESSAGE value="Add new mime" />
     <MESSAGE value="Comment dd" />
     <MESSAGE value="F*ck bin mime allowed" />
-    <option name="LAST_COMMIT_MESSAGE" value="F*ck bin mime allowed" />
+    <MESSAGE value="Exclude csrf verification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exclude csrf verification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1400,6 +1399,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -1414,18 +1421,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        <state relative-caret-position="384">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>

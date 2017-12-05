@@ -13,6 +13,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         '/facebook/promotion/*',
-        '/facebook/posts'
+        '/facebook/posts',
+        '/facebook/posts/create'
     ];
 }
