@@ -28,7 +28,7 @@
                 @endif
 
                 @if ($availablePermissions)
-                    <form action="{{ url('/facebook/posts') }}" method="POST" id="scheduleForm">
+                    <form action="{{ url('/facebook/posts') }}" method="POST" id="scheduleForm" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="type">Tipo de publicación</label>
@@ -48,13 +48,13 @@
                             <label for="link">Enlace</label>
                             <input type="url" name="link" id="link" class="form-control">
                         </div>
-                        <div class="form-group" id="image_url_container" style="display: none;">
-                            <label for="image_url">URL de la imagen</label>
-                            <input type="url" name="image_url" id="image_url" class="form-control">
+                        <div class="form-group" id="image_field_container" style="display: none;">
+                            <label for="image_file">URL de la imagen</label>
+                            <input type="file" name="image_file" id="image_url" class="form-control" accept="image/*">
                         </div>
-                        <div class="form-group" id="video_url_container" style="display: none;">
-                            <label for="video_url">URL del video</label>
-                            <input type="url" name="video_url" id="video_url" class="form-control">
+                        <div class="form-group" id="video_field_container" style="display: none;">
+                            <label for="video_file">URL del video</label>
+                            <input type="file" name="video_file" id="video_url" class="form-control" accept="video/mp4,video/x-m4v,video/quicktime,video/*">
                         </div>
                         <div class="form-group">
                             <label for="scheduled_date">¿En qué fecha se publicará?</label>
@@ -91,7 +91,7 @@
 @endsection
 
 @section('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.js"></script>
     <script>
         var $link, $imageUrl, $imagesZone, $videoUrl;
         var $scheduleBtn, $scheduleForm;
@@ -118,9 +118,9 @@
 
         $(function () {
             $link = $('#link_container');
-            $imageUrl = $('#image_url_container');
+            $imageUrl = $('#image_field_container');
             $imagesZone = $('#my-dropzone');
-            $videoUrl = $('#video_url_container');
+            $videoUrl = $('#video_field_container');
 
             $scheduleBtn = $('#scheduleButton');
             $scheduleForm = $('#scheduleForm');

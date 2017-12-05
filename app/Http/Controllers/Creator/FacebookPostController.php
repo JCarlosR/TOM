@@ -77,37 +77,60 @@ class FacebookPostController extends Controller
         $rules = [
             'type' => 'required',
             'link' => 'required_if:type,==,link',
-            'image_url' => 'required_if:type,==,image',
-            'video_url' => 'required_if:type,==,video',
-            'imageUrls' => 'required_if:type,==,images'
+            'image_file' => 'required_if:type,==,image|image',
+            'video_file' => 'required_if:type,==,video|mimes:mp4,mov,ogg,qt,wmv,asf|max:20000',
+            'imageUrls' => 'required_if:type,==,images',
+            'scheduled_time' => 'required',
+            'scheduled_date' => 'required'
         ];
         $messages = [
+            'scheduled_time.required' => 'Debe seleccionar una hora de publicación.',
+            'scheduled_date.required' => 'Debe seleccionar una fecha de publicación.',
             'type.required' => 'Es necesario seleccionar un tipo de publicación.',
             'link.required_if' => 'Es necesario ingresar el enlace que se va a compartir.',
-            'image_url.required_if' => 'Es necesario ingresar la URL de la imagen a compartir.',
-            'video_url.required_if' => 'Es necesario ingresar la URL del video a compartir.',
+            'image_file.required_if' => 'Es necesario subir la imagen a compartir.',
+            'image_file.image' => 'Debe subir una imagen válida.',
+            'video_file.required_if' => 'Es necesario subir el video a compartir.',
+            'video_file.mimes' => 'Debe subir un video válido.',
+            'video_file.max' => 'El video supera el límite permitido (20000).',
             'imageUrls.required_if' => 'Debe subir al menos una imagen, o escoger otro tipo de publicación.',
         ];
         $this->validate($request, $rules, $messages);
         // dd($request->all());
+
+        $postType = $request->input('type');
+
         $scheduled_post = new ScheduledPost();
-        $scheduled_post->type = $request->input('type');
+        $scheduled_post->type = $postType;
         $scheduled_post->link = $request->input('link');
-        $scheduled_post->image_url = $request->input('image_url');
-        $scheduled_post->video_url = $request->input('video_url');
         $scheduled_post->description = $request->input('description');
         $scheduled_post->scheduled_date = $request->input('scheduled_date');
         $scheduled_post->scheduled_time = $request->input('scheduled_time');
         $scheduled_post->user_id = auth()->id();
         $scheduled_post->fb_destination_id = '948507005305322'; // temporary constant value
         $scheduled_post->status = 'Pendiente';
-        $scheduled_post->save();
 
-        if ($request->has('imageUrls')) {
+        // type: image
+        if ($postType == 'image' && $request->hasFile('image_file')) {
+            $response = PostCloudinaryFile::upload($request->file('image_file'), 'image');
+            $scheduled_post->image_url = $response['secure_url'];
+        }
+        else
+        // type: video
+        if ($postType == 'video' && $request->hasFile('video_file')) {
+            ini_set('max_execution_time', 300);
+            $response = PostCloudinaryFile::upload($request->file('video_file'), 'video');
+            $scheduled_post->video_url = $response['secure_url'];
+        }
+        else
+        // type: images
+        if ($postType == 'images' && $request->has('imageUrls')) {
             ScheduledPostImage::whereIn('id', $request->input('imageUrls'))->update([
                 'scheduled_post_id' => $scheduled_post->id
             ]);
         }
+
+        $scheduled_post->save();
 
         $notification = 'Se ha registrado una nueva publicación programada.';
         return redirect('facebook/posts')->with(compact('notification'));
