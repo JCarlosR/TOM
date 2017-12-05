@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostImageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostImageController.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/ScheduledPostImage.php" afterPath="$PROJECT_DIR$/app/ScheduledPostImage.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,8 +69,8 @@
       <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="121" column="87" lean-forward="false" selection-start-line="121" selection-start-column="87" selection-end-line="121" selection-end-column="87" />
+            <state relative-caret-position="408">
+              <caret line="128" column="17" lean-forward="true" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="34" />
               <folding>
                 <element signature="e#340#416#0#PHP" expanded="false" />
                 <element signature="e#422#781#0#PHP" expanded="false" />
@@ -81,6 +79,16 @@
                 <element signature="e#2051#2280#0#PHP" expanded="false" />
                 <element signature="e#5460#6109#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduledPostImage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ScheduledPostImage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ReferrerController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/referral/promotions.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/referrers/fan-pages.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/referrers/show.blade.php" />
@@ -225,6 +232,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/PostCloudinaryFile.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostImageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
+        <option value="$PROJECT_DIR$/app/ScheduledPostImage.php" />
       </list>
     </option>
   </component>
@@ -556,14 +564,7 @@
       <workItem from="1512251375161" duration="95000" />
       <workItem from="1512318179155" duration="4762000" />
       <workItem from="1512359948855" duration="600000" />
-      <workItem from="1512408739501" duration="16563000" />
-    </task>
-    <task id="LOCAL-00082" summary="Move rows in dataTables!, update the row count dinamically">
-      <created>1493609035438</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1493609035439</updated>
+      <workItem from="1512408739501" duration="17364000" />
     </task>
     <task id="LOCAL-00083" summary="First welcome message to creators">
       <created>1497565958068</created>
@@ -901,11 +902,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512421527919</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="Upload image/video to Cloudinary">
+      <created>1512435849432</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1512435849432</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="429252000" />
+    <option name="totallyTimeSpent" value="430053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -956,7 +964,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Test own group" />
     <MESSAGE value="Test with more parameters" />
     <MESSAGE value="Test with more parameters message" />
     <MESSAGE value="No link" />
@@ -981,7 +988,8 @@
     <MESSAGE value="Multi photo story advances" />
     <MESSAGE value="Paginate finished posts" />
     <MESSAGE value="Move btn to top" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move btn to top" />
+    <MESSAGE value="Upload image/video to Cloudinary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload image/video to Cloudinary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -990,13 +998,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/tutorial.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/first-welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1104">
@@ -1403,16 +1404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostCloudinaryFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="e#49#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostImageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1423,10 +1414,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/PostCloudinaryFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#49#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ScheduledPostImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="121" column="87" lean-forward="false" selection-start-line="121" selection-start-column="87" selection-end-line="121" selection-end-column="87" />
+        <state relative-caret-position="408">
+          <caret line="128" column="17" lean-forward="true" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="34" />
           <folding>
             <element signature="e#340#416#0#PHP" expanded="false" />
             <element signature="e#422#781#0#PHP" expanded="false" />
