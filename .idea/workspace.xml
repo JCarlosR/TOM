@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,26 +33,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="81" column="90" lean-forward="false" selection-start-line="81" selection-start-column="90" selection-end-line="81" selection-end-column="90" />
+            <state relative-caret-position="91">
+              <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
               <folding>
                 <element signature="e#340#416#0#PHP" expanded="false" />
                 <element signature="e#422#781#0#PHP" expanded="false" />
                 <element signature="e#787#1749#0#PHP" expanded="false" />
                 <element signature="e#2099#2328#0#PHP" expanded="false" />
-                <element signature="e#5521#6170#0#PHP" expanded="false" />
+                <element signature="e#5461#6110#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="882">
               <caret line="56" column="100" lean-forward="false" selection-start-line="56" selection-start-column="100" selection-end-line="56" selection-end-column="100" />
               <folding>
                 <marker date="1512439262445" expanded="true" signature="9:28" ph="..." />
@@ -193,8 +193,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/PostCloudinaryFile.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostImageController.php" />
         <option value="$PROJECT_DIR$/app/ScheduledPostImage.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
       </list>
     </option>
   </component>
@@ -531,14 +531,7 @@
       <workItem from="1512251375161" duration="95000" />
       <workItem from="1512318179155" duration="4762000" />
       <workItem from="1512359948855" duration="600000" />
-      <workItem from="1512408739501" duration="18558000" />
-    </task>
-    <task id="LOCAL-00086" summary="Update Cliengo script">
-      <created>1510324288417</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1510324288418</updated>
+      <workItem from="1512408739501" duration="18794000" />
     </task>
     <task id="LOCAL-00087" summary="Check token">
       <created>1511465687659</created>
@@ -876,11 +869,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512438204804</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Remove accept">
+      <created>1512439270362</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1512439270362</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431247000" />
+    <option name="totallyTimeSpent" value="431483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,7 +931,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Using external image as link param" />
     <MESSAGE value="Using external image as link and type photo" />
     <MESSAGE value="Upload a photo using URL" />
     <MESSAGE value="Check permissions at fb" />
@@ -956,7 +955,8 @@
     <MESSAGE value="Mass assignable property" />
     <MESSAGE value="Order by scheduled_time too" />
     <MESSAGE value="Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
+    <MESSAGE value="Remove accept" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove accept" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1368,23 +1368,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="81" column="90" lean-forward="false" selection-start-line="81" selection-start-column="90" selection-end-line="81" selection-end-column="90" />
-          <folding>
-            <element signature="e#340#416#0#PHP" expanded="false" />
-            <element signature="e#422#781#0#PHP" expanded="false" />
-            <element signature="e#787#1749#0#PHP" expanded="false" />
-            <element signature="e#2099#2328#0#PHP" expanded="false" />
-            <element signature="e#5521#6170#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="882">
           <caret line="56" column="100" lean-forward="false" selection-start-line="56" selection-start-column="100" selection-end-line="56" selection-end-column="100" />
           <folding>
             <marker date="1512439262445" expanded="true" signature="9:28" ph="..." />
@@ -1406,6 +1392,20 @@
             <marker date="1512439262445" expanded="true" signature="4536:4560" ph="..." />
             <marker date="1512439262445" expanded="true" signature="4802:4811" ph="..." />
             <marker date="1512439262445" expanded="true" signature="5220:5251" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <element signature="e#340#416#0#PHP" expanded="false" />
+            <element signature="e#422#781#0#PHP" expanded="false" />
+            <element signature="e#787#1749#0#PHP" expanded="false" />
+            <element signature="e#2099#2328#0#PHP" expanded="false" />
+            <element signature="e#5461#6110#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

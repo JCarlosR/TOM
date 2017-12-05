@@ -74,7 +74,7 @@ class FacebookPostController extends Controller
 
     public function store(Request $request)
     {
-        // https://stackoverflow.com/questions/37777265/required-if-laravel-5-validation
+        dd($request->all());
         $rules = [
             'type' => 'required',
             'link' => 'required_if:type,==,link',
