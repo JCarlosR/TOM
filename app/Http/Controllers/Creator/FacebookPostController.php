@@ -58,7 +58,8 @@ class FacebookPostController extends Controller
 
     public function finished()
     {
-        $scheduled_posts = auth()->user()->scheduledPosts()->orderBy('scheduled_date', 'desc')
+        $scheduled_posts = auth()->user()->scheduledPosts()
+            ->orderBy('scheduled_date', 'desc')->orderBy('scheduled_time', 'desc')
             ->where('status', '<>', 'Pendiente')->paginate(10);
 
         return view('panel.posts.finished')
