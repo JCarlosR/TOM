@@ -36,15 +36,25 @@
       <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="61" column="80" lean-forward="false" selection-start-line="61" selection-start-column="80" selection-end-line="61" selection-end-column="80" />
+            <state relative-caret-position="379">
+              <caret line="130" column="82" lean-forward="false" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
               <folding>
                 <element signature="e#340#416#0#PHP" expanded="false" />
                 <element signature="e#422#781#0#PHP" expanded="false" />
                 <element signature="e#787#1749#0#PHP" expanded="false" />
                 <element signature="e#2099#2328#0#PHP" expanded="false" />
-                <element signature="e#5508#6157#0#PHP" expanded="false" />
+                <element signature="e#5521#6170#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduledPostImage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ScheduledPostImage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -486,14 +496,7 @@
       <workItem from="1512251375161" duration="95000" />
       <workItem from="1512318179155" duration="4762000" />
       <workItem from="1512359948855" duration="600000" />
-      <workItem from="1512408739501" duration="17462000" />
-    </task>
-    <task id="LOCAL-00084" summary="Show creators with 0 fan pages">
-      <created>1497642499030</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1497642499030</updated>
+      <workItem from="1512408739501" duration="17588000" />
     </task>
     <task id="LOCAL-00085" summary="Show warning for small images, and add a back button">
       <created>1507126495795</created>
@@ -831,11 +834,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512437977899</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Order by scheduled_time too">
+      <created>1512438077655</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1512438077655</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430151000" />
+    <option name="totallyTimeSpent" value="430277000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -886,7 +896,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Test with more parameters message" />
     <MESSAGE value="No link" />
     <MESSAGE value="Using external image as link param" />
     <MESSAGE value="Using external image as link and type photo" />
@@ -911,7 +920,8 @@
     <MESSAGE value="Move btn to top" />
     <MESSAGE value="Upload image/video to Cloudinary" />
     <MESSAGE value="Mass assignable property" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mass assignable property" />
+    <MESSAGE value="Order by scheduled_time too" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order by scheduled_time too" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1348,22 +1358,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ScheduledPostImage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <state relative-caret-position="144">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="61" column="80" lean-forward="false" selection-start-line="61" selection-start-column="80" selection-end-line="61" selection-end-column="80" />
+        <state relative-caret-position="379">
+          <caret line="130" column="82" lean-forward="false" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
           <folding>
             <element signature="e#340#416#0#PHP" expanded="false" />
             <element signature="e#422#781#0#PHP" expanded="false" />
             <element signature="e#787#1749#0#PHP" expanded="false" />
             <element signature="e#2099#2328#0#PHP" expanded="false" />
-            <element signature="e#5508#6157#0#PHP" expanded="false" />
+            <element signature="e#5521#6170#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

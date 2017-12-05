@@ -123,15 +123,16 @@ class FacebookPostController extends Controller
             $response = PostCloudinaryFile::upload($request->file('video_file'), 'video');
             $scheduled_post->video_url = $response['secure_url'];
         }
-        else
+        $scheduled_post->save();
+
         // type: images
         if ($postType == 'images' && $request->has('imageUrls')) {
             ScheduledPostImage::whereIn('id', $request->input('imageUrls'))->update([
-                'scheduled_post_id' => $scheduled_post->id
+                'scheduled_post_id' => $scheduled_post->id // after save operation
             ]);
         }
 
-        $scheduled_post->save();
+
 
         $notification = 'Se ha registrado una nueva publicación programada.';
         return redirect('facebook/posts')->with(compact('notification'));
