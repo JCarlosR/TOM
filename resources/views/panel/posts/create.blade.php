@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group" id="video_field_container" style="display: none;">
                             <label for="video_file">URL del video</label>
-                            <input type="file" name="video_file" id="video_url" class="form-control" accept="video/mp4,video/x-m4v,video/quicktime,video/*">
+                            <input type="file" name="video_file" id="video_url" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="scheduled_date">¿En qué fecha se publicará?</label>

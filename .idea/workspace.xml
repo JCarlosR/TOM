@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,17 +33,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="130" column="82" lean-forward="false" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
+            <state relative-caret-position="211">
+              <caret line="81" column="90" lean-forward="false" selection-start-line="81" selection-start-column="90" selection-end-line="81" selection-end-column="90" />
               <folding>
                 <element signature="e#340#416#0#PHP" expanded="false" />
                 <element signature="e#422#781#0#PHP" expanded="false" />
                 <element signature="e#787#1749#0#PHP" expanded="false" />
                 <element signature="e#2099#2328#0#PHP" expanded="false" />
                 <element signature="e#5521#6170#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="56" column="100" lean-forward="false" selection-start-line="56" selection-start-column="100" selection-end-line="56" selection-end-column="100" />
+              <folding>
+                <marker date="1512439262445" expanded="true" signature="9:28" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="40:48" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="182:201" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="433:456" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="643:668" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="747:765" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="887:911" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="951:959" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="1109:1130" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="1168:1192" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="1285:1299" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="2228:2248" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="3448:3471" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="3754:3777" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="3878:3909" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="4057:4071" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="4536:4560" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="4802:4811" ph="..." />
+                <marker date="1512439262445" expanded="true" signature="5220:5251" ph="..." />
               </folding>
             </state>
           </provider>
@@ -160,11 +190,11 @@
         <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/finished.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/PostImageCloudinary.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/PostCloudinaryFile.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostImageController.php" />
         <option value="$PROJECT_DIR$/app/ScheduledPostImage.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
       </list>
     </option>
   </component>
@@ -226,23 +256,28 @@
             <path>
               <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
               <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Creator" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="TOM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TOM" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="panel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="posts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -496,14 +531,7 @@
       <workItem from="1512251375161" duration="95000" />
       <workItem from="1512318179155" duration="4762000" />
       <workItem from="1512359948855" duration="600000" />
-      <workItem from="1512408739501" duration="17588000" />
-    </task>
-    <task id="LOCAL-00085" summary="Show warning for small images, and add a back button">
-      <created>1507126495795</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1507126495798</updated>
+      <workItem from="1512408739501" duration="18558000" />
     </task>
     <task id="LOCAL-00086" summary="Update Cliengo script">
       <created>1510324288417</created>
@@ -841,11 +869,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512438077655</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Fix">
+      <created>1512438204804</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1512438204804</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430277000" />
+    <option name="totallyTimeSpent" value="431247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -896,7 +931,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="No link" />
     <MESSAGE value="Using external image as link param" />
     <MESSAGE value="Using external image as link and type photo" />
     <MESSAGE value="Upload a photo using URL" />
@@ -921,7 +955,8 @@
     <MESSAGE value="Upload image/video to Cloudinary" />
     <MESSAGE value="Mass assignable property" />
     <MESSAGE value="Order by scheduled_time too" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order by scheduled_time too" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1289,37 +1324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="93" column="17" lean-forward="false" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
-          <folding>
-            <element signature="e#2642#2664#0#HTML" expanded="true" />
-            <element signature="e#2968#2990#0#HTML" expanded="true" />
-            <element signature="e#3982#4024#0#HTML" expanded="true" />
-            <marker date="1512432132059" expanded="true" signature="9:28" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="40:48" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="182:201" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="433:456" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="643:668" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="747:765" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="887:911" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="951:959" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="1109:1130" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="1168:1192" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="1285:1299" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="2228:2248" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="3503:3526" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="3809:3832" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="3933:3964" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="4112:4126" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="4591:4615" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="4857:4866" ph="..." />
-            <marker date="1512432132059" expanded="true" signature="5275:5306" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/curl/curl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-594">
@@ -1366,14 +1370,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="130" column="82" lean-forward="false" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
+        <state relative-caret-position="211">
+          <caret line="81" column="90" lean-forward="false" selection-start-line="81" selection-start-column="90" selection-end-line="81" selection-end-column="90" />
           <folding>
             <element signature="e#340#416#0#PHP" expanded="false" />
             <element signature="e#422#781#0#PHP" expanded="false" />
             <element signature="e#787#1749#0#PHP" expanded="false" />
             <element signature="e#2099#2328#0#PHP" expanded="false" />
             <element signature="e#5521#6170#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="56" column="100" lean-forward="false" selection-start-line="56" selection-start-column="100" selection-end-line="56" selection-end-column="100" />
+          <folding>
+            <marker date="1512439262445" expanded="true" signature="9:28" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="40:48" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="182:201" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="433:456" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="643:668" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="747:765" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="887:911" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="951:959" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="1109:1130" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="1168:1192" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="1285:1299" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="2228:2248" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="3448:3471" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="3754:3777" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="3878:3909" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="4057:4071" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="4536:4560" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="4802:4811" ph="..." />
+            <marker date="1512439262445" expanded="true" signature="5220:5251" ph="..." />
           </folding>
         </state>
       </provider>
