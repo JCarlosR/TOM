@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="127" column="13" lean-forward="false" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
+            <state relative-caret-position="257">
+              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
               <folding>
                 <element signature="e#373#449#0#PHP" expanded="false" />
                 <element signature="e#455#1092#0#PHP" expanded="false" />
@@ -49,23 +49,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
               <folding>
-                <element signature="e#2022#2854#0#PHP" expanded="false" />
-                <element signature="e#3661#4378#0#PHP" expanded="false" />
-                <element signature="e#4384#5559#0#PHP" expanded="false" />
-                <element signature="e#5565#6318#0#PHP" expanded="false" />
-                <element signature="e#6324#7262#0#PHP" expanded="false" />
-                <element signature="e#7268#8187#0#PHP" expanded="false" />
-                <element signature="e#8194#8962#0#PHP" expanded="false" />
-                <element signature="e#9047#9449#0#PHP" expanded="false" />
-                <element signature="e#9533#10403#0#PHP" expanded="false" />
-                <element signature="e#10409#10978#0#PHP" expanded="false" />
-                <element signature="e#10984#11830#0#PHP" expanded="false" />
+                <element signature="e#2106#2938#0#PHP" expanded="false" />
+                <element signature="e#2944#3739#0#PHP" expanded="false" />
+                <element signature="e#3745#4462#0#PHP" expanded="false" />
+                <element signature="e#4468#5643#0#PHP" expanded="false" />
+                <element signature="e#5649#6402#0#PHP" expanded="false" />
+                <element signature="e#6408#7346#0#PHP" expanded="false" />
+                <element signature="e#7352#8271#0#PHP" expanded="false" />
+                <element signature="e#8278#9046#0#PHP" expanded="false" />
+                <element signature="e#9131#9533#0#PHP" expanded="false" />
+                <element signature="e#9617#10487#0#PHP" expanded="false" />
+                <element signature="e#10493#11062#0#PHP" expanded="false" />
+                <element signature="e#11068#11914#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -109,7 +110,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'/'</find>
       <find>/tutorial</find>
       <find>setas</find>
       <find>admin/c</find>
@@ -139,6 +139,7 @@
       <find>remove</find>
       <find>date</find>
       <find>timezi</find>
+      <find>gmail</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -202,8 +203,8 @@
         <option value="$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
       </list>
     </option>
   </component>
@@ -553,14 +554,7 @@
       <workItem from="1512359948855" duration="600000" />
       <workItem from="1512408739501" duration="21684000" />
       <workItem from="1513037310982" duration="8081000" />
-      <workItem from="1513103027554" duration="8135000" />
-    </task>
-    <task id="LOCAL-00095" summary="Change arguments for method getLoginUrl">
-      <created>1511467819919</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1511467819919</updated>
+      <workItem from="1513103027554" duration="9071000" />
     </task>
     <task id="LOCAL-00096" summary="2nd argument for callback url">
       <created>1511467981828</created>
@@ -898,11 +892,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513136209418</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Reorder logic">
+      <created>1513136245542</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1513136245542</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450589000" />
+    <option name="totallyTimeSpent" value="451525000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,7 +978,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Grant user_photos permission" />
     <MESSAGE value="Add name param for TOM albums (in group)" />
     <MESSAGE value="Use appendOutputTo instead of sendOutputTo" />
     <MESSAGE value="Post album photos (const urls)" />
@@ -1002,7 +1002,8 @@
     <MESSAGE value="Trying again" />
     <MESSAGE value="Emojis textarea, detect first link, tabs" />
     <MESSAGE value="Add text post type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add text post type" />
+    <MESSAGE value="Reorder logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorder logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1400,36 +1401,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <element signature="e#2022#2854#0#PHP" expanded="false" />
-            <element signature="e#3661#4378#0#PHP" expanded="false" />
-            <element signature="e#4384#5559#0#PHP" expanded="false" />
-            <element signature="e#5565#6318#0#PHP" expanded="false" />
-            <element signature="e#6324#7262#0#PHP" expanded="false" />
-            <element signature="e#7268#8187#0#PHP" expanded="false" />
-            <element signature="e#8194#8962#0#PHP" expanded="false" />
-            <element signature="e#9047#9449#0#PHP" expanded="false" />
-            <element signature="e#9533#10403#0#PHP" expanded="false" />
-            <element signature="e#10409#10978#0#PHP" expanded="false" />
-            <element signature="e#10984#11830#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="127" column="13" lean-forward="false" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
+        <state relative-caret-position="257">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding>
             <element signature="e#373#449#0#PHP" expanded="false" />
             <element signature="e#455#1092#0#PHP" expanded="false" />
             <element signature="e#2297#2526#0#PHP" expanded="false" />
             <element signature="e#6430#7079#0#PHP" expanded="false" />
             <element signature="e#7085#7308#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding>
+            <element signature="e#2106#2938#0#PHP" expanded="false" />
+            <element signature="e#2944#3739#0#PHP" expanded="false" />
+            <element signature="e#3745#4462#0#PHP" expanded="false" />
+            <element signature="e#4468#5643#0#PHP" expanded="false" />
+            <element signature="e#5649#6402#0#PHP" expanded="false" />
+            <element signature="e#6408#7346#0#PHP" expanded="false" />
+            <element signature="e#7352#8271#0#PHP" expanded="false" />
+            <element signature="e#8278#9046#0#PHP" expanded="false" />
+            <element signature="e#9131#9533#0#PHP" expanded="false" />
+            <element signature="e#9617#10487#0#PHP" expanded="false" />
+            <element signature="e#10493#11062#0#PHP" expanded="false" />
+            <element signature="e#11068#11914#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

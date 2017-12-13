@@ -44,7 +44,8 @@ class SendScheduledPosts extends Command
     public function postAndMarkAsSent(ScheduledPost $post)
     {
         // set access token
-        $user = User::where('id', $post->user_id)->first(['fb_access_token']);
+        $user = User::where('email', 'tombofans@gmail.com')->first(['fb_access_token']);
+        // User::where('id', $post->user_id)->first(['fb_access_token']);
         if (!$user) return; // user not found (?)
         $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
 
