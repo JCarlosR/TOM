@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
@@ -68,6 +68,16 @@
                 <element signature="e#10493#11062#0#PHP" expanded="false" />
                 <element signature="e#11068#11914#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FanPageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/ConfigController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_04_25_144657_add_notes_status_and_stars_to_participations.php" />
@@ -205,6 +214,7 @@
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
       </list>
     </option>
   </component>
@@ -554,14 +564,7 @@
       <workItem from="1512359948855" duration="600000" />
       <workItem from="1512408739501" duration="21684000" />
       <workItem from="1513037310982" duration="8081000" />
-      <workItem from="1513103027554" duration="9071000" />
-    </task>
-    <task id="LOCAL-00096" summary="2nd argument for callback url">
-      <created>1511467981828</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1511467981829</updated>
+      <workItem from="1513103027554" duration="9235000" />
     </task>
     <task id="LOCAL-00097" summary="Check generated login url">
       <created>1511468024696</created>
@@ -899,11 +902,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513136245542</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Use admin token">
+      <created>1513137321818</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1513137321818</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="451525000" />
+    <option name="totallyTimeSpent" value="451689000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -978,7 +988,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Add name param for TOM albums (in group)" />
     <MESSAGE value="Use appendOutputTo instead of sendOutputTo" />
     <MESSAGE value="Post album photos (const urls)" />
     <MESSAGE value="Make an album and show it in the group feed (please)" />
@@ -1003,7 +1012,8 @@
     <MESSAGE value="Emojis textarea, detect first link, tabs" />
     <MESSAGE value="Add text post type" />
     <MESSAGE value="Reorder logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorder logic" />
+    <MESSAGE value="Use admin token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use admin token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,13 +1022,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_01_05_205756_add_soft_deletes_to_promotions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/panel/promotion/alert-image-dimensions.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -1433,6 +1436,14 @@
             <element signature="e#10493#11062#0#PHP" expanded="false" />
             <element signature="e#11068#11914#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
