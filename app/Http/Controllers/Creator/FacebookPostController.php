@@ -114,7 +114,7 @@ class FacebookPostController extends Controller
             if ($imagesQuantity == 1) {
                 $postType = 'image';
                 // set image url
-                $scheduled_post->image_url = $imagePostIds[0];
+                $scheduled_post->image_url = ScheduledPostImage::find($imagePostIds[0])->secure_url;
             } else { // qty >= 2
                 $postType = 'images';
             }
