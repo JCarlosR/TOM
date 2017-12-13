@@ -109,6 +109,7 @@
         var $scheduleBtn, $scheduleForm;
         var allowImageUpload = true;
         var $uploadedImages, $templateImage;
+        var $description;
 
         function setupButtonImage() {
             $btnLoadImage = $('#btnImage');
@@ -175,6 +176,7 @@
         $(function () {
             $scheduleBtn = $('#scheduleButton');
             $scheduleForm = $('#scheduleForm');
+            $description = $("#description")
 
             $scheduleBtn.on('click', function () {
                 $scheduleForm.submit();
@@ -182,13 +184,37 @@
 
             setupButtonImage();
             setupEmojis();
+            setupLinkDetector();
         });
 
         function setupEmojis() {
-            $("#description").emojioneArea({
+            $description.emojioneArea({
                 pickerPosition: "bottom",
                 tonesStyle: "bullet"
             });
         }
+
+        function setupLinkDetector() {
+            var delayTimer;
+            // check for previews with delay
+            function checkLinkWithDelay() {
+                clearTimeout(delayTimer);
+                delayTimer = setTimeout(function() {
+                    checkLinkPreview($(this).val());
+                }, 1000); // wait 1000 ms (1 s)
+            }
+            $description.on('click', checkLinkWithDelay);
+
+            function checkLinkPreview(text) {
+                if (!text.contains('http')) // minimum client side validation
+                    return;
+
+                $.get('/link-preview', function (data) {
+                    console.log(data);
+                });
+            }
+        }
+
+
     </script>
 @endsection

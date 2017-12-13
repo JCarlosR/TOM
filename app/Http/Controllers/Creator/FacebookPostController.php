@@ -119,7 +119,7 @@ class FacebookPostController extends Controller
                 $postType = 'images';
             }
         } else { // no images detected
-            $firstLink = $this->getFirstLink($description);
+            $firstLink = firstLink($description);
             if ($firstLink) { // contains a link
                 $postType = 'link';
                 $scheduled_post->link = $firstLink;
@@ -184,13 +184,4 @@ class FacebookPostController extends Controller
         return back()->with(compact('notification'));
     }
 
-    private function getFirstLink($string)
-    {
-        $regex = '/https?\:\/\/[^\" ]+/i';
-        $found = preg_match($regex, $string, $matches);
-        if ($found)
-            return $matches[0];
-
-        return null;
-    }
 }

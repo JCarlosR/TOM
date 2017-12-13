@@ -1,4 +1,11 @@
 <?php
 
-// For now I am not using custom helpers
-// If are required in the future, should add the helpers.php to the composer.json
+function firstLink($string)
+{
+    $regex = '/https?\:\/\/[^\" ]+/i';
+    $found = preg_match($regex, $string, $matches);
+    if ($found)
+        return $matches[0];
+
+    return null;
+}

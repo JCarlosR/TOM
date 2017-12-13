@@ -71,6 +71,8 @@ Route::get('/facebook/posts/delete', 'Creator\FacebookPostController@destroy');
 // Post to fb group
 Route::get('/facebook/publish-group-permissions', 'Creator\FbPostPermissionController@grant');
 Route::get('/facebook/posts/callback', 'Creator\FbPostPermissionController@callback');
+// Get link preview
+Route::get('/link-preview', 'Creator\LinkPreviewController@fetch');
 
 // Admin routes
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
