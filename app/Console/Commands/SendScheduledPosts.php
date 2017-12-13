@@ -50,6 +50,8 @@ class SendScheduledPosts extends Command
 
         if ($post->type == 'link') {
             $status = $this->postLink($post);
+        } elseif ($post->type == 'text') {
+            $status = $this->postText($post);
         } elseif ($post->type == 'image') {
             $status = $this->postPhotoStory($post);
         } elseif ($post->type == 'images') {
@@ -87,6 +89,32 @@ class SendScheduledPosts extends Command
         } catch (FacebookSDKException $e) {
             $this->prettyPrint($post->id, false, 'postLink', $e->getMessage());
 
+            return "Error";
+        }
+    }
+
+    public function postText(ScheduledPost $post)
+    {
+        // Post to a fb group
+        $groupId = $post->fb_destination_id;
+        $queryUrl = "/$groupId/feed";
+        $params = [
+            'message' => $post->description
+        ];
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+        } catch (FacebookSDKException $e) {
+            echo 'SDK Error: ' . $e->getMessage();
+            exit;
+        }
+
+        try {
+            $graphNode = $response->getGraphNode();
+            $this->prettyPrint($post->id, true, 'postText', $graphNode->asJson());
+            return "Enviado";
+        } catch (FacebookSDKException $e) {
+            $this->prettyPrint($post->id, false, 'postText', $e->getMessage());
             return "Error";
         }
     }

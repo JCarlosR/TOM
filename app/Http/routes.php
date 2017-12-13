@@ -64,7 +64,6 @@ Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
 
 // Create & schedule posts
 Route::get('/facebook/posts', 'Creator\FacebookPostController@index');
-Route::get('/facebook/posts/finished', 'Creator\FacebookPostController@finished');
 Route::get('/facebook/posts/create', 'Creator\FacebookPostController@create');
 Route::post('/facebook/posts', 'Creator\FacebookPostController@store');
 Route::post('/facebook/posts/images', 'Creator\FacebookPostImageController@store');

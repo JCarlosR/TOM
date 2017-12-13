@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('styles')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.css">
+    <link rel="stylesheet" href="{{ asset('/vendor/emojionearea/emojionearea.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -28,58 +28,70 @@
                 @endif
 
                 @if ($availablePermissions)
+                    <form action="" id="formImage" style="display: none;">
+                        <input type="file" id="inputImage">
+                    </form>
                     <form action="{{ url('/facebook/posts') }}" method="POST" id="scheduleForm" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="form-group">
-                            <label for="type">Tipo de publicación</label>
-                            <select name="type" id="type" required class="form-control">
-                                <option value="">Seleccione un tipo de publicación</option>
-                                <option value="link">Publicar un enlace</option>
-                                <option value="image">Publicar una imagen</option>
-                                <option value="images">Publicar varias imágenes</option>
-                                <option value="video">Publicar un video</option>
-                            </select>
-                        </div>
+                        {{--<div class="form-group">--}}
+                            {{--<label for="type">Tipo de publicación</label>--}}
+                            {{--<select name="type" id="type" required class="form-control">--}}
+                                {{--<option value="">Seleccione un tipo de publicación</option>--}}
+                                {{--<option value="link">Publicar un enlace</option>--}}
+                                {{--<option value="image">Publicar una imagen</option>--}}
+                                {{--<option value="images">Publicar varias imágenes</option>--}}
+                                {{--<option value="video">Publicar un video</option>--}}
+                            {{--</select>--}}
+                        {{--</div>--}}
                         <div class="form-group">
                             <label for="description">Descripción</label>
                             <textarea name="description" id="description" class="form-control">{{ old('description') }}</textarea>
+
+                            <button id="btnImage" class="btn btn-default btn-xs" type="button" title="Subir imagen">
+                                <i class="glyphicon glyphicon-picture"></i>
+                            </button>
                         </div>
-                        <div class="form-group" id="link_container" style="display: none;">
-                            <label for="link">Enlace</label>
-                            <input type="url" name="link" id="link" class="form-control">
-                        </div>
-                        <div class="form-group" id="image_field_container" style="display: none;">
-                            <label for="image_file">URL de la imagen</label>
-                            <input type="file" name="image_file" id="image_url" class="form-control" accept="image/*">
-                        </div>
-                        <div class="form-group" id="video_field_container" style="display: none;">
-                            <label for="video_file">URL del video</label>
-                            <input type="file" name="video_file" id="video_url" class="form-control">
+                        <div class="row" id="uploadedImages">
+                            <template id="templateImage">
+                                <div class="col-md-2">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <img src="" class="img-responsive">
+                                            <input type=hidden name=imageUrls[] value="">
+                                            <button class="btn btn-xs btn-danger btn-block" data-remove="image" type="button">
+                                                <i class="fa fa-remove"></i> Eliminar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
                         </div>
                         <div class="form-group">
                             <label for="scheduled_date">¿En qué fecha se publicará?</label>
-                            <input type="date" class="form-control" name="scheduled_date" required value="{{ old('scheduled_date') }}">
+                            <input type="date" class="form-control" name="scheduled_date" required value="{{ old('scheduled_date', date('Y-m-d')) }}">
                         </div>
                         <div class="form-group">
                             <label for="scheduled_time">¿A qué hora se publicará?</label>
-                            <input type="time" class="form-control" name="scheduled_time" required value="{{ old('scheduled_time') }}">
+                            <input type="time" class="form-control" name="scheduled_time" required value="{{ old('scheduled_time', date('H:i')) }}">
                         </div>
-                    </form>
-
-                    <form action="{{ url('/facebook/posts/images') }}" method="post" style="margin-bottom: 1em; display: none;"
-                          class="dropzone" id="my-dropzone">
-                        {{ csrf_field() }}
                     </form>
 
                     <button type="button" class="btn btn-primary btn-sm" id="scheduleButton">
                         <i class="fa fa-calendar"></i> Programar publicación
                     </button>
 
-                    @else
-                    <p>Antes de programar una publicación, por favor otorga permisos a TOM para que pueda publicar a tu nombre.</p>
+                @else
+                    <p>Al parecer, la publicación en facebook no está disponible actualmente. Por favor informa de esto al administrador.</p>
                 @endif
 
                 <hr>
+
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3MKTQ6ZZEQYU2" target="_blank" class="btn btn-info btn-sm">
+                    Pago mensual paypal
+                </a>
+                <a href="https://compropago.com/comprobante/?id=babe6e2c-0df0-4bd7-a5a7-9461d744f4c3" target="_blank" class="btn btn-info btn-sm">
+                    Pago anual efectivo
+                </a>
 
                 <a href="{{ url('/facebook/posts') }}" class="btn btn-default btn-sm">
                     <i class="fa fa-backward"></i>
@@ -91,85 +103,87 @@
 @endsection
 
 @section('scripts')
-    <script src="//cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.js"></script>
+    <script src="{{ asset('/vendor/emojionearea/emojionearea.js') }}"></script>
     <script>
-        var $link, $imageUrl, $imagesZone, $videoUrl;
+        var $btnLoadImage, $formImage, $inputImage;
         var $scheduleBtn, $scheduleForm;
+        var allowImageUpload = true;
+        var $uploadedImages, $templateImage;
 
-        setupDropzone();
+        function setupButtonImage() {
+            $btnLoadImage = $('#btnImage');
+            $formImage = $('#formImage');
+            $inputImage = $('#inputImage');
+            $uploadedImages = $('#uploadedImages');
+            $templateImage = $('#templateImage');
 
-        function setupDropzone() {
-            Dropzone.autoDiscover = false;
-            dropzoneOptions = {
-                acceptedFiles: 'image/*',
-                url: '{{ url('/facebook/posts/images') }}',
-                dictDefaultMessage: 'Arrastre fotos o imágenes a esta sección'
-            };
-            var uploader = document.querySelector('#my-dropzone');
-            var myDropzone = new Dropzone(uploader, dropzoneOptions);
+            $btnLoadImage.on('click', function () {
+                if (allowImageUpload) {
+                    $inputImage.click();
+                    allowImageUpload = false;
+                    $btnLoadImage.prop('disabled', true);
+                }
+            });
+            $inputImage.on('change', uploadImage);
 
-            myDropzone.on("success", function(file, response) {
-                if (response.id) {
-                    var hiddenInputImageId = '<input type=hidden name=imageUrls[] value="'+response.id+'">';
-                    $scheduleForm.append(hiddenInputImageId);
+            $(document).on('click', '[data-remove="image"]', removeImage);
+        }
+
+        function uploadImage() {
+            var fileData = $inputImage.prop("files")[0];
+            var formData = new FormData();
+            formData.append('file', fileData);
+            formData.append('_token', '{{ csrf_token() }}');
+
+            $.ajax({
+                url: '/facebook/posts/images',
+                type: 'POST',
+                data: formData,
+                mimeType: "multipart/form-data",
+                contentType: false,
+                cache: false,
+                processData: false,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+
+                    var uploadedImage = $templateImage.html();
+                    uploadedImage = uploadedImage.replace('src=""', 'src="'+data.secure_url+'"');
+                    uploadedImage = uploadedImage.replace('value=""', 'value="'+data.id+'"');
+                    $uploadedImages.append(uploadedImage);
+
+                    allowImageUpload = true;
+                    $btnLoadImage.prop('disabled', false);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(errorThrown);
+                    allowImageUpload = true;
+                    $btnLoadImage.prop('disabled', false);
                 }
             });
         }
 
-        $(function () {
-            $link = $('#link_container');
-            $imageUrl = $('#image_field_container');
-            $imagesZone = $('#my-dropzone');
-            $videoUrl = $('#video_field_container');
+        function removeImage() {
+            $(this).closest('.panel').remove();
+        }
 
+        $(function () {
             $scheduleBtn = $('#scheduleButton');
             $scheduleForm = $('#scheduleForm');
 
             $scheduleBtn.on('click', function () {
                 $scheduleForm.submit();
             });
-            $('#type').on('change', onChangePostType);
+
+            setupButtonImage();
+            setupEmojis();
         });
 
-        function onChangePostType() {
-            var type = $(this).val();
-
-            switch (type) {
-                case "link":
-                    $imageUrl.hide();
-                    $videoUrl.hide();
-                    $imagesZone.hide();
-                    $link.slideDown();
-                    break;
-
-                case "image":
-                    $videoUrl.hide();
-                    $link.hide();
-                    $imagesZone.hide();
-                    $imageUrl.slideDown();
-                    break;
-
-                case "images":
-                    $videoUrl.hide();
-                    $link.hide();
-                    $imageUrl.hide();
-                    $imagesZone.slideDown();
-                    break;
-
-                case "video":
-                    $imageUrl.hide();
-                    $link.hide();
-                    $imagesZone.hide();
-                    $videoUrl.slideDown();
-                    break;
-
-                default:
-                    $imagesZone.hide();
-                    $link.hide();
-                    $imageUrl.hide();
-                    $videoUrl.hide();
-                    break;
-            }
+        function setupEmojis() {
+            $("#description").emojioneArea({
+                pickerPosition: "bottom",
+                tonesStyle: "bullet"
+            });
         }
     </script>
 @endsection
