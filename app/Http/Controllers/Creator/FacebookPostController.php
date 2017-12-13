@@ -110,15 +110,8 @@ class FacebookPostController extends Controller
         // Detect type of post based on params
         if ($imagePostIds) {
             $imagesQuantity = sizeof($imagePostIds);
-            if ($imagesQuantity == 0) {
-                $firstLink = $this->getFirstLink($description);
-                if ($firstLink) { // contains a link
-                    $postType = 'link';
-                    $scheduled_post->link = $firstLink;
-                } else {
-                    $postType = 'text';
-                }
-            } elseif ($imagesQuantity == 1) {
+
+            if ($imagesQuantity == 1) {
                 $postType = 'image';
                 // set image url
                 $scheduled_post->image_url = $imagePostIds[0];
@@ -126,7 +119,13 @@ class FacebookPostController extends Controller
                 $postType = 'images';
             }
         } else { // no images detected
-            $postType = 'text';
+            $firstLink = $this->getFirstLink($description);
+            if ($firstLink) { // contains a link
+                $postType = 'link';
+                $scheduled_post->link = $firstLink;
+            } else {
+                $postType = 'text';
+            }
         }
 
         // set attributes

@@ -37,13 +37,13 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
-              <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+              <caret line="127" column="13" lean-forward="false" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
               <folding>
                 <element signature="e#373#449#0#PHP" expanded="false" />
                 <element signature="e#455#1092#0#PHP" expanded="false" />
                 <element signature="e#2297#2526#0#PHP" expanded="false" />
-                <element signature="e#6535#7184#0#PHP" expanded="false" />
-                <element signature="e#7190#7413#0#PHP" expanded="false" />
+                <element signature="e#6430#7079#0#PHP" expanded="false" />
+                <element signature="e#7085#7308#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -553,14 +553,7 @@
       <workItem from="1512359948855" duration="600000" />
       <workItem from="1512408739501" duration="21684000" />
       <workItem from="1513037310982" duration="8081000" />
-      <workItem from="1513103027554" duration="8093000" />
-    </task>
-    <task id="LOCAL-00094" summary="Get login url directly">
-      <created>1511467775261</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1511467775261</updated>
+      <workItem from="1513103027554" duration="8135000" />
     </task>
     <task id="LOCAL-00095" summary="Change arguments for method getLoginUrl">
       <created>1511467819919</created>
@@ -898,11 +891,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513135970009</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Add text post type">
+      <created>1513136209418</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1513136209418</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450547000" />
+    <option name="totallyTimeSpent" value="450589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,7 +977,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Test album creation" />
     <MESSAGE value="Grant user_photos permission" />
     <MESSAGE value="Add name param for TOM albums (in group)" />
     <MESSAGE value="Use appendOutputTo instead of sendOutputTo" />
@@ -1002,7 +1001,8 @@
     <MESSAGE value="Exclude csrf verification" />
     <MESSAGE value="Trying again" />
     <MESSAGE value="Emojis textarea, detect first link, tabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Emojis textarea, detect first link, tabs" />
+    <MESSAGE value="Add text post type" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add text post type" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1423,13 +1423,13 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
-          <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+          <caret line="127" column="13" lean-forward="false" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
           <folding>
             <element signature="e#373#449#0#PHP" expanded="false" />
             <element signature="e#455#1092#0#PHP" expanded="false" />
             <element signature="e#2297#2526#0#PHP" expanded="false" />
-            <element signature="e#6535#7184#0#PHP" expanded="false" />
-            <element signature="e#7190#7413#0#PHP" expanded="false" />
+            <element signature="e#6430#7079#0#PHP" expanded="false" />
+            <element signature="e#7085#7308#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
