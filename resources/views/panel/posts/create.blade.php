@@ -119,9 +119,11 @@
 
             $btnLoadImage.on('click', function () {
                 if (allowImageUpload) {
-                    $inputImage.click();
                     allowImageUpload = false;
                     $btnLoadImage.prop('disabled', true);
+                    $inputImage.click();
+                    allowImageUpload = true;
+                    $btnLoadImage.prop('disabled', false);
                 }
             });
             $inputImage.on('change', uploadImage);
@@ -130,6 +132,9 @@
         }
 
         function uploadImage() {
+            allowImageUpload = false;
+            $btnLoadImage.prop('disabled', true);
+
             var fileData = $inputImage.prop("files")[0];
             var formData = new FormData();
             formData.append('file', fileData);
