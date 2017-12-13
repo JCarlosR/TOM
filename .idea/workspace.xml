@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Trying again">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/finished.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,14 +36,14 @@
       <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="475">
+              <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
               <folding>
                 <element signature="e#373#449#0#PHP" expanded="false" />
                 <element signature="e#455#1092#0#PHP" expanded="false" />
                 <element signature="e#2297#2526#0#PHP" expanded="false" />
-                <element signature="e#6464#7113#0#PHP" expanded="false" />
-                <element signature="e#7119#7342#0#PHP" expanded="false" />
+                <element signature="e#6535#7184#0#PHP" expanded="false" />
+                <element signature="e#7190#7413#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -208,8 +202,8 @@
         <option value="$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
       </list>
     </option>
   </component>
@@ -559,14 +553,7 @@
       <workItem from="1512359948855" duration="600000" />
       <workItem from="1512408739501" duration="21684000" />
       <workItem from="1513037310982" duration="8081000" />
-      <workItem from="1513103027554" duration="7836000" />
-    </task>
-    <task id="LOCAL-00093" summary="Put token in session">
-      <created>1511467463426</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1511467463426</updated>
+      <workItem from="1513103027554" duration="8093000" />
     </task>
     <task id="LOCAL-00094" summary="Get login url directly">
       <created>1511467775261</created>
@@ -904,11 +891,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512441788663</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Emojis textarea, detect first link, tabs">
+      <created>1513135970009</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1513135970009</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450290000" />
+    <option name="totallyTimeSpent" value="450547000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -983,7 +977,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Send output to" />
     <MESSAGE value="Test album creation" />
     <MESSAGE value="Grant user_photos permission" />
     <MESSAGE value="Add name param for TOM albums (in group)" />
@@ -1008,7 +1001,8 @@
     <MESSAGE value="F*ck bin mime allowed" />
     <MESSAGE value="Exclude csrf verification" />
     <MESSAGE value="Trying again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying again" />
+    <MESSAGE value="Emojis textarea, detect first link, tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Emojis textarea, detect first link, tabs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1428,14 +1422,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="475">
+          <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
           <folding>
             <element signature="e#373#449#0#PHP" expanded="false" />
             <element signature="e#455#1092#0#PHP" expanded="false" />
             <element signature="e#2297#2526#0#PHP" expanded="false" />
-            <element signature="e#6464#7113#0#PHP" expanded="false" />
-            <element signature="e#7119#7342#0#PHP" expanded="false" />
+            <element signature="e#6535#7184#0#PHP" expanded="false" />
+            <element signature="e#7190#7413#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

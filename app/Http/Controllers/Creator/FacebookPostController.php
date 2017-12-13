@@ -125,6 +125,8 @@ class FacebookPostController extends Controller
             } else { // qty >= 2
                 $postType = 'images';
             }
+        } else { // no images detected
+            $postType = 'text';
         }
 
         // set attributes
