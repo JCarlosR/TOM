@@ -18,8 +18,10 @@ class PostCloudinaryFile
         ]);
 
         $userId = auth()->id();
-        
+
         $fileName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '-' . uniqid();
+        $fileName = str_slug($fileName); // remove invalid characters :D
+
         $cloudinary_public_id = "posts/user-$userId/$fileName"; // should not start with /
 
         return Uploader::upload($file, [
