@@ -1,5 +1,17 @@
 @extends('layouts.dashboard')
 
+@section('styles')
+    <style>
+        .tab-content {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 0 0 4px 4px;
+        }
+    </style>
+@endsection
+
 @section('dashboard_content')
     <div class="col-md-9">
         <div class="panel panel-info">
@@ -41,7 +53,7 @@
                 <p>¿Deseas programar una nueva publicación?</p>
                 <a href="{{ url('/facebook/posts/create') }}" class="btn btn-primary btn-sm">
                     <i class="fa fa-plus"></i>
-                    Registrar nueva publicación
+                    Nueva publicación
                 </a>
             </div>
         </div>
@@ -50,7 +62,6 @@
             <div class="panel-heading">Publicaciones programadas</div>
 
             <div class="panel-body">
-
                 <ul class="nav nav-tabs nav-justified">
                     <li>
                         <a data-toggle="tab" href="#tab-finished">

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Creator;
 
+use Dusterio\LinkPreview\Client;
+use Dusterio\LinkPreview\Exceptions\UnknownParserException;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -21,6 +23,17 @@ class LinkPreviewController extends Controller
             return null;
 
         // fetch
+        $previewClient = new Client($link);
 
+        // Get previews from all available parsers
+        // $previews = $previewClient->getPreviews();
+
+        // Get a preview from specific parser
+        try {
+            $preview = $previewClient->getPreview('general');
+            return $preview->toArray();
+        } catch (UnknownParserException $e) {
+            die($e->getMessage());
+        }
     }
 }

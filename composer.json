@@ -10,9 +10,10 @@
         "sammyk/laravel-facebook-sdk": "^3.0",
         "barryvdh/laravel-ide-helper": "^2.2",
         "intervention/image": "^2.3",
-        "guzzlehttp/guzzle": "~5.3",
+        "guzzlehttp/guzzle": "~6.1",
         "maatwebsite/excel": "~2.1.0",
-        "cloudinary/cloudinary_php": "^1.8"
+        "cloudinary/cloudinary_php": "^1.8",
+        "dusterio/link-preview": "1.2.10"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

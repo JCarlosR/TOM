@@ -78,25 +78,12 @@ class FacebookPostController extends Controller
     {
         // dd($request->all());
         $rules = [
-//            'type' => 'required',
-//            'link' => 'required_if:type,==,link',
-//            'image_file' => 'required_if:type,==,image|image',
-//            'video_file' => 'required_if:type,==,video|mimes:mp4,mov,ogg,qt,wmv,asf,bin|max:200000',
-            'imageUrls' => 'required_if:type,==,images',
             'scheduled_time' => 'required',
             'scheduled_date' => 'required'
         ];
         $messages = [
             'scheduled_time.required' => 'Debe seleccionar una hora de publicación.',
-            'scheduled_date.required' => 'Debe seleccionar una fecha de publicación.',
-//            'type.required' => 'Es necesario seleccionar un tipo de publicación.',
-//            'link.required_if' => 'Es necesario ingresar el enlace que se va a compartir.',
-//            'image_file.required_if' => 'Es necesario subir la imagen a compartir.',
-//            'image_file.image' => 'Debe subir una imagen válida.',
-//            'video_file.required_if' => 'Es necesario subir el video a compartir.',
-//            'video_file.mimes' => 'Debe subir un video válido.',
-//            'video_file.max' => 'El video supera el límite permitido (20000).',
-            'imageUrls.required_if' => 'Debe subir al menos una imagen, o escoger otro tipo de publicación.',
+            'scheduled_date.required' => 'Debe seleccionar una fecha de publicación.'
         ];
         $this->validate($request, $rules, $messages);
 

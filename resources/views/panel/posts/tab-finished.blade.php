@@ -1,5 +1,7 @@
 <h3>Publicaciones finalizadas</h3>
 <p>Mostrando publicaciones que ya han finalizado, empezando por las más recientes.</p>
+<p>En total ya has realizado {{ $finished_posts->count() }} publicaciones.</p>
+@if ($finished_posts->count() > 0)
 <table class="table table-bordered">
     <thead>
     <tr>
@@ -32,3 +34,4 @@
 </table>
 
 {{ $finished_posts->links() }}
+@endif

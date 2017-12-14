@@ -18,10 +18,10 @@
                             <span class="glyphicon glyphicon-cog"></span>
                             Configurar promociones
                         </a>
-                        @if (auth()->user()->is_admin)
+                        @if (auth()->user()->is_admin || env('APP_DEBUG'))
                             <a class="list-group-item" href="{{ url('/facebook/posts') }}" id="step-2">
                                 <span class="fa fa-facebook-official"></span>
-                                Publicaciones en grupos
+                                Publicaciones Club <img src="/images/logos/club-momy.png" alt="Logo Club Momy" height="26">
                             </a>
                         @endif
                         <a class="list-group-item" href="{{ url('/clientes') }}" id="step-3">

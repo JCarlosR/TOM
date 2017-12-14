@@ -27,7 +27,7 @@
                     </div>
                 @endif
 
-                @if ($availablePermissions)
+                @if ($availablePermissions || env('APP_DEBUG'))
                     <form action="" id="formImage" style="display: none;">
                         <input type="file" id="inputImage">
                     </form>
@@ -50,6 +50,19 @@
                             <button id="btnImage" class="btn btn-default btn-xs" type="button" title="Subir imagen">
                                 <i class="glyphicon glyphicon-picture"></i>
                             </button>
+                        </div>
+                        <div class="panel panel-default" id="previewLink" style="display: none">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="" class="img-responsive" data-cover>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p data-title>Título</p>
+                                        <p class="small" data-description>Descripción</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="row" id="uploadedImages">
                             <template id="templateImage">
@@ -109,7 +122,7 @@
         var $scheduleBtn, $scheduleForm;
         var allowImageUpload = true;
         var $uploadedImages, $templateImage;
-        var $description;
+        var $description, $previewLink;
 
         function setupButtonImage() {
             $btnLoadImage = $('#btnImage');
@@ -158,6 +171,8 @@
                     uploadedImage = uploadedImage.replace('value=""', 'value="'+data.id+'"');
                     $uploadedImages.append(uploadedImage);
 
+                    $previewLink.hide();
+
                     allowImageUpload = true;
                     $btnLoadImage.prop('disabled', false);
                 },
@@ -171,12 +186,16 @@
 
         function removeImage() {
             $(this).closest('.panel').remove();
+
+            if ($('[name="imageUrls[]"]').size() === 0)
+                checkLinkPreview($description.val()); // no change event required
         }
 
         $(function () {
             $scheduleBtn = $('#scheduleButton');
             $scheduleForm = $('#scheduleForm');
-            $description = $("#description")
+            $description = $("#description");
+            $previewLink = $('#previewLink');
 
             $scheduleBtn.on('click', function () {
                 $scheduleForm.submit();
@@ -198,23 +217,35 @@
             var delayTimer;
             // check for previews with delay
             function checkLinkWithDelay() {
+                var text = $(this).val();
                 clearTimeout(delayTimer);
                 delayTimer = setTimeout(function() {
-                    checkLinkPreview($(this).val());
+                    checkLinkPreview(text);
                 }, 1000); // wait 1000 ms (1 s)
             }
-            $description.on('click', checkLinkWithDelay);
-
-            function checkLinkPreview(text) {
-                if (!text.contains('http')) // minimum client side validation
-                    return;
-
-                $.get('/link-preview', function (data) {
-                    console.log(data);
-                });
-            }
+            $description.on('change', checkLinkWithDelay);
         }
 
+        function checkLinkPreview(text) {
+            if ($('[name="imageUrls[]"]').size() > 0) // if there are images, avoid fetch
+                return;
 
+            if (text.indexOf('http') === -1) // minimum client side validation
+                return;
+
+            $.get('/link-preview', {'text': text}, function (data) {
+                if (data) {
+                    console.log(data);
+                    renderPreview(data);
+                }
+            });
+        }
+
+        function renderPreview(data) {
+            $previewLink.find('[data-cover]').attr('src', data.cover);
+            $previewLink.find('[data-title]').text(data.title);
+            $previewLink.find('[data-description]').text(data.description);
+            $previewLink.fadeIn('slow');
+        }
     </script>
 @endsection

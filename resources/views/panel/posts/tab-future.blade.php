@@ -1,5 +1,6 @@
 <h3>Publicaciones programadas</h3>
 <p>Actualmente tienes programadas {{ $scheduled_posts->count() }} publicaciones.</p>
+@if ($scheduled_posts->count() > 0)
 <table class="table table-bordered">
     <thead>
     <tr>
@@ -38,3 +39,4 @@
     @endforeach
     </tbody>
 </table>
+@endif
