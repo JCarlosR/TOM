@@ -28,16 +28,21 @@ class SendScheduledPosts extends Command
     {
         // Get all pending posts
         $scheduled_posts = ScheduledPost::where('status', 'Pendiente')->get();
-        // Send each one when needed
+        // Send when needed
         foreach ($scheduled_posts as $post) {
             $schedule_date_time = new Carbon($post->scheduled_date. ' ' . $post->scheduled_time);
-            // dd($schedule_date_time);
+
             $now = Carbon::now();
-            // dd($now);
             // dd($now->diffInMinutes($schedule_date_time));
             if ($now->diffInMinutes($schedule_date_time) <= 1) {
                 $this->postAndMarkAsSent($post);
             }
+        }
+
+        // Send immediately
+        $scheduled_posts = ScheduledPost::where('status', 'En cola')->get();
+        foreach ($scheduled_posts as $post) {
+            $this->postAndMarkAsSent($post);
         }
     }
 

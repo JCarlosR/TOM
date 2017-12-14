@@ -2,6 +2,17 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('/vendor/emojionearea/emojionearea.css') }}">
+    <link rel="stylesheet" href="{{ asset('/vendor/datepicker/datepicker.min.css') }}">
+    <style>
+        .datepicker-container {
+            margin: 0 auto;
+        }
+        [name=scheduled_time] {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 @endsection
 
 @section('dashboard_content')
@@ -33,16 +44,7 @@
                     </form>
                     <form action="{{ url('/facebook/posts') }}" method="POST" id="scheduleForm" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        {{--<div class="form-group">--}}
-                            {{--<label for="type">Tipo de publicación</label>--}}
-                            {{--<select name="type" id="type" required class="form-control">--}}
-                                {{--<option value="">Seleccione un tipo de publicación</option>--}}
-                                {{--<option value="link">Publicar un enlace</option>--}}
-                                {{--<option value="image">Publicar una imagen</option>--}}
-                                {{--<option value="images">Publicar varias imágenes</option>--}}
-                                {{--<option value="video">Publicar un video</option>--}}
-                            {{--</select>--}}
-                        {{--</div>--}}
+
                         <div class="form-group">
                             <label for="description">Descripción</label>
                             <textarea name="description" id="description" class="form-control">{{ old('description') }}</textarea>
@@ -79,19 +81,25 @@
                                 </div>
                             </template>
                         </div>
-                        <div class="form-group">
-                            <label for="scheduled_date">¿En qué fecha se publicará?</label>
-                            <input type="date" class="form-control" name="scheduled_date" required value="{{ old('scheduled_date', date('Y-m-d')) }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="scheduled_time">¿A qué hora se publicará?</label>
-                            <input type="time" class="form-control" name="scheduled_time" required value="{{ old('scheduled_time', date('H:i')) }}">
-                        </div>
+
+                        @include('panel.posts.modal-schedule')
                     </form>
 
-                    <button type="button" class="btn btn-primary btn-sm" id="scheduleButton">
-                        <i class="fa fa-calendar"></i> Programar publicación
-                    </button>
+                    {{-- Dropdown button --}}
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-thumbs-up"></i> Programar publicación
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" id="nowButton"><i class="fa fa-bolt"></i> Publicar ahora</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#modalSchedule"><i class="fa fa-calendar"></i> Agendar publicación</a>
+                            </li>
+                        </ul>
+                    </div>
 
                 @else
                     <p>Al parecer, la publicación en facebook no está disponible actualmente. Por favor informa de esto al administrador.</p>
@@ -117,9 +125,11 @@
 
 @section('scripts')
     <script src="{{ asset('/vendor/emojionearea/emojionearea.js') }}"></script>
+    <script src="{{ asset('/vendor/datepicker/datepicker.min.js') }}"></script>
+    <script src="{{ asset('/vendor/datepicker/datepicker.es-ES.js') }}"></script>
     <script>
         var $btnLoadImage, $formImage, $inputImage;
-        var $scheduleBtn, $scheduleForm;
+        var $scheduleBtn, $scheduleForm, $nowBtn;
         var allowImageUpload = true;
         var $uploadedImages, $templateImage;
         var $description, $previewLink;
@@ -194,16 +204,29 @@
         $(function () {
             $scheduleBtn = $('#scheduleButton');
             $scheduleForm = $('#scheduleForm');
+            $nowBtn = $('#nowButton');
             $description = $("#description");
             $previewLink = $('#previewLink');
 
             $scheduleBtn.on('click', function () {
                 $scheduleForm.submit();
             });
+            $nowBtn.on('click', function () {
+                $('#modalSchedule').remove();
+                $scheduleForm.append('<input type="hidden" name="now" value="1">');
+                $scheduleForm.submit();
+            });
 
             setupButtonImage();
             setupEmojis();
             setupLinkDetector();
+            $('[data-toggle="datepicker"]').datepicker({
+                inline: true,
+                container: '#date-container',
+                startDate: 'today',
+                format: 'yyyy-mm-dd',
+                language: 'es-ES'
+            });
         });
 
         function setupEmojis() {

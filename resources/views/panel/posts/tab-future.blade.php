@@ -21,7 +21,7 @@
                 </a>
             </td>
             <td>{{ $post->scheduled_date }}</td>
-            <td>{{ $post->scheduled_time }}</td>
+            <td>{{ substr($post->scheduled_time, 0, 5) }}</td>
             <td>{{ $post->type }}</td>
             <td>
                 <span class="label label-default">{{ $post->status }}</span>

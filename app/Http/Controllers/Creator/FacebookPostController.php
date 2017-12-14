@@ -78,8 +78,8 @@ class FacebookPostController extends Controller
     {
         // dd($request->all());
         $rules = [
-            'scheduled_time' => 'required',
-            'scheduled_date' => 'required'
+            'scheduled_time' => 'required_if:now,null',
+            'scheduled_date' => 'required_if:now,null'
         ];
         $messages = [
             'scheduled_time.required' => 'Debe seleccionar una hora de publicación.',
@@ -118,11 +118,18 @@ class FacebookPostController extends Controller
         // set attributes
         $scheduled_post->type = $postType;
         $scheduled_post->description = $description;
-        $scheduled_post->scheduled_date = $request->input('scheduled_date');
-        $scheduled_post->scheduled_time = $request->input('scheduled_time');
         $scheduled_post->user_id = auth()->id();
         $scheduled_post->fb_destination_id = '948507005305322'; // temporary constant value
-        $scheduled_post->status = 'Pendiente';
+
+        if ($request->has('now') && $request->input('now')==1) {
+            $scheduled_post->scheduled_date = date('Y-m-d');
+            $scheduled_post->scheduled_time = date('H:i');
+            $scheduled_post->status = 'En cola';
+        } else {
+            $scheduled_post->scheduled_date = $request->input('scheduled_date');
+            $scheduled_post->scheduled_time = $request->input('scheduled_time');
+            $scheduled_post->status = 'Pendiente';
+        }
 
         /*
         // type: image
@@ -147,7 +154,6 @@ class FacebookPostController extends Controller
                 'scheduled_post_id' => $scheduled_post->id // after save operation
             ]);
         }
-
 
         $notification = 'Se ha registrado una nueva publicación programada.';
         return redirect('facebook/posts')->with(compact('notification'));
