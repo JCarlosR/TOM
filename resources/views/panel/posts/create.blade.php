@@ -106,13 +106,6 @@
 
                 <hr>
 
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3MKTQ6ZZEQYU2" target="_blank" class="btn btn-info btn-sm">
-                    Pago mensual paypal
-                </a>
-                <a href="https://compropago.com/comprobante/?id=babe6e2c-0df0-4bd7-a5a7-9461d744f4c3" target="_blank" class="btn btn-info btn-sm">
-                    Pago anual efectivo
-                </a>
-
                 <a href="{{ url('/facebook/posts') }}" class="btn btn-default btn-sm">
                     <i class="fa fa-backward"></i>
                     Volver al listado de publicaciones programadas
