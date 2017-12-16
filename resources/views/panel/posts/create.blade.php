@@ -83,24 +83,23 @@
                         </div>
 
                         @include('panel.posts.modal-schedule')
+
+                        {{-- Dropdown button --}}
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-thumbs-up"></i> Programar publicación
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" id="nowButton"><i class="fa fa-bolt"></i> Publicar ahora</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#modalSchedule"><i class="fa fa-calendar"></i> Agendar publicación</a>
+                                </li>
+                            </ul>
+                        </div>
                     </form>
-
-                    {{-- Dropdown button --}}
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-thumbs-up"></i> Programar publicación
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#" id="nowButton"><i class="fa fa-bolt"></i> Publicar ahora</a>
-                            </li>
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#modalSchedule"><i class="fa fa-calendar"></i> Agendar publicación</a>
-                            </li>
-                        </ul>
-                    </div>
-
                 @else
                     <p>Al parecer, la publicación en facebook no está disponible actualmente. Por favor informa de esto al administrador.</p>
                 @endif
@@ -133,6 +132,7 @@
         var allowImageUpload = true;
         var $uploadedImages, $templateImage;
         var $description, $previewLink;
+        var $scheduledDate, $scheduledTime;
 
         function setupButtonImage() {
             $btnLoadImage = $('#btnImage');
@@ -207,20 +207,20 @@
             $nowBtn = $('#nowButton');
             $description = $("#description");
             $previewLink = $('#previewLink');
+            $scheduledDate = $('#scheduledDate');
+            $scheduledTime = $('#scheduledTime');
 
-            $scheduleBtn.on('click', function () {
-                $scheduleForm.submit();
-            });
+            $scheduleBtn.on('click', sendScheduledPost);
             $nowBtn.on('click', function () {
-                $('#modalSchedule').remove();
-                $scheduleForm.append('<input type="hidden" name="now" value="1">');
-                $scheduleForm.submit();
+                // $('#modalSchedule').remove();
+                $scheduleForm.append('<input type="hidden" name="now" id="now" value="1">');
+                sendScheduledPost();
             });
 
             setupButtonImage();
             setupEmojis();
             setupLinkDetector();
-            $('[data-toggle="datepicker"]').datepicker({
+            $scheduledDate.datepicker({
                 inline: true,
                 container: '#date-container',
                 startDate: 'today',
@@ -228,6 +228,81 @@
                 language: 'es-ES'
             });
         });
+
+        var awaitingResponse = false;
+        function sendScheduledPost() {
+            if (awaitingResponse)
+                return;
+
+            var formData = $scheduleForm.serialize();
+            awaitingResponse = true;
+            $.ajax({
+                type: "POST",
+                url: $scheduleForm.attr('action'),
+                data: formData,
+                dataType: "json",
+                success: function(data) {
+                    if (data.success)
+                        performSuccessAnimation();
+                },
+                error: function(errMsg) {
+                    displayErrors(errMsg.responseJSON);
+                },
+                complete: function () {
+                    awaitingResponse = false;
+                }
+            });
+        }
+
+        function displayErrors(errorsArray) {
+            var $target;
+            if (document.getElementById('now')) {
+                $('#now').remove();
+                $target = $scheduleForm;
+            } else {
+                $target = $('#modalBody');
+            }
+
+            var alertHtml =
+                '<div class="alert alert-danger alert-dismissable">' +
+                    '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>' +
+                    '{message}' +
+                '</div>';
+            // console.log(errorsArray);
+
+            for (var prop in errorsArray) {
+                if (errorsArray.hasOwnProperty(prop)) {
+                    // console.log("prop: " + prop + " value: " + errorsArray[prop])
+                    var errorMessages = errorsArray[prop];
+                    // console.log(errorMessages);
+                    for (var i=0; i<errorMessages.length; ++i) {
+                        var $alertMessage = alertHtml.replace('{message}', errorMessages[i]);
+                        $target.prepend($alertMessage);
+                    }
+                }
+            }
+        }
+
+        function performSuccessAnimation() {
+            $('#modalSchedule').modal('hide'); // possibly open
+            $scheduleForm.slideUp('slow', function () {
+                var successMessage;
+                if (document.getElementById('now'))
+                    successMessage = 'Listo! Tu publicación se ha puesto en cola, y será publicada brevemente.';
+                else
+                    successMessage = 'Listo! Tu publicación se ha programado con éxito.';
+                var successHtml =
+                    '<div class="alert alert-success alert-dismissable">' +
+                        '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>' +
+                        successMessage +
+                    '</div>' +
+                    '<p>En breve serás redirigido al listado de publicaciones ...</p>';
+                $scheduleForm.before(successHtml);
+                setTimeout(function () {
+                    location.href = '/facebook/posts';
+                }, 5200);
+            });
+        }
 
         function setupEmojis() {
             $description.emojioneArea({

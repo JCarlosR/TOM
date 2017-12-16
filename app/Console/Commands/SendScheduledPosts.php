@@ -33,6 +33,7 @@ class SendScheduledPosts extends Command
             $schedule_date_time = new Carbon($post->scheduled_date. ' ' . $post->scheduled_time);
 
             $now = Carbon::now();
+            // dd($schedule_date_time);
             // dd($now->diffInMinutes($schedule_date_time));
             if ($now->diffInMinutes($schedule_date_time) <= 1) {
                 $this->postAndMarkAsSent($post);

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class FacebookPostController extends Controller
@@ -71,22 +72,41 @@ class FacebookPostController extends Controller
     public function create(LaravelFacebookSdk $facebookSdk)
     {
         $availablePermissions = $this->checkAvailablePermissions($facebookSdk);
-        return view('panel.posts.create')->with(compact('availablePermissions'));
+
+        // current time +10 minutes
+        $time = Carbon::now()->addMinutes(10)->format('H:i');
+
+        return view('panel.posts.create')->with(compact('availablePermissions', 'time'));
     }
 
     public function store(Request $request)
     {
-        // dd($request->all());
         $rules = [
+            'description' => 'required_without:imageUrls',
             'scheduled_time' => 'required_if:now,null',
             'scheduled_date' => 'required_if:now,null'
         ];
         $messages = [
-            'scheduled_time.required' => 'Debe seleccionar una hora de publicación.',
-            'scheduled_date.required' => 'Debe seleccionar una fecha de publicación.'
+            'description.required_without' => 'Es necesario ingresar una descripción.',
+            'scheduled_time.required_if' => 'Debes seleccionar una hora de publicación.',
+            'scheduled_date.required_if' => 'Debes seleccionar una fecha de publicación.'
         ];
-        $this->validate($request, $rules, $messages);
 
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        $validator->after(function ($validator) use ($request) {
+            if (! $request->has('now')) {
+                if ($request->has('scheduled_date') && $request->input('scheduled_date') < date('Y-m-d'))
+                    $validator->errors()->add('scheduled_date', 'No puedes enviar un mensaje al pasado!');
+                // when it fails isn't necessary to check for the time
+                elseif ($request->has('scheduled_time') && $request->input('scheduled_time') < date('H:i'))
+                    $validator->errors()->add('scheduled_time', 'Por favor verifica la hora de envío.');
+            }
+        });
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
 
         $description = $request->input('description');
         $imagePostIds = $request->input('imageUrls');
@@ -145,18 +165,19 @@ class FacebookPostController extends Controller
             $scheduled_post->video_url = $response['secure_url'];
         }
         */
-        $scheduled_post->save();
+        $saved = $scheduled_post->save();
 
         // continue based on the post type
 
-        if ($postType == 'images' || $postType == 'image') {
+        if ($saved && $postType == 'images' || $postType == 'image') {
             ScheduledPostImage::whereIn('id', $imagePostIds)->update([
                 'scheduled_post_id' => $scheduled_post->id // after save operation
             ]);
         }
 
-        $notification = 'Se ha registrado una nueva publicación programada.';
-        return redirect('facebook/posts')->with(compact('notification'));
+        $data = [];
+        $data['success'] = $saved;
+        return $data;
     }
 
     public function destroy(Request $request)

@@ -5,15 +5,15 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Agendar publicación</h4>
             </div>
-            <div class="modal-body text-center">
+            <div class="modal-body text-center" id="modalBody">
                 <div class="form-group">
                     <label for="scheduled_date">¿En qué fecha se publicará?</label>
-                    <input type="hidden" data-toggle="datepicker" class="form-control" name="scheduled_date" required value="{{ old('scheduled_date', date('Y-m-d')) }}">
+                    <input type="hidden" id="scheduledDate" class="form-control" name="scheduled_date" required value="{{ old('scheduled_date', date('Y-m-d')) }}">
                     <div id="date-container"></div>
                 </div>
                 <div class="form-group">
                     <label for="scheduled_time">¿A qué hora se publicará?</label>
-                    <input type="time" class="form-control" name="scheduled_time" required value="{{ old('scheduled_time', date('H:i')) }}">
+                    <input type="time" id="scheduledTime" class="form-control" name="scheduled_time" required value="{{ old('scheduled_time', $time) }}">
                 </div>
             </div>
             <div class="modal-footer">
