@@ -84,8 +84,8 @@ class SendScheduledPosts extends Command
         try {
             $response = $this->facebookSdk->post($queryUrl, $params);
         } catch (FacebookSDKException $e) {
-            echo 'SDK Error: ' . $e->getMessage();
-            exit;
+            $this->prettyPrint($post->id, false, 'postLink (SDK Error)', $e->getMessage());
+            return 'Error';
         }
 
         try {
@@ -112,8 +112,8 @@ class SendScheduledPosts extends Command
         try {
             $response = $this->facebookSdk->post($queryUrl, $params);
         } catch (FacebookSDKException $e) {
-            echo 'SDK Error: ' . $e->getMessage();
-            exit;
+            $this->prettyPrint($post->id, false, 'postText (SDK Error)', $e->getMessage());
+            return 'Error';
         }
 
         try {
