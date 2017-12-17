@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "12c7988676abcca72c174f5777ef1956",
+    "content-hash": "ae7800471da6c90d0c94c323c514a1e8",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -333,59 +333,6 @@
                 "string"
             ],
             "time": "2017-07-22T12:18:28+00:00"
-        },
-        {
-            "name": "dusterio/link-preview",
-            "version": "v1.2.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dusterio/link-preview.git",
-                "reference": "f244a56104867a3b57f57a6ae5b29da23fa8e774"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dusterio/link-preview/zipball/f244a56104867a3b57f57a6ae5b29da23fa8e774",
-                "reference": "f244a56104867a3b57f57a6ae5b29da23fa8e774",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.1",
-                "illuminate/support": "5.*",
-                "php": ">=5.5.0",
-                "symfony/css-selector": "^3.0",
-                "symfony/dom-crawler": "^3.0"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dusterio\\LinkPreview\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Denis Mysenko",
-                    "email": "denis@mysenko.com",
-                    "homepage": "https://www.mysenko.com"
-                }
-            ],
-            "description": "Link preview generation for PHP with Laravel support",
-            "homepage": "http://github.com/dusterio/link-preview",
-            "keywords": [
-                "laravel",
-                "php",
-                "preview",
-                "scraping",
-                "url"
-            ],
-            "time": "2017-05-26T01:10:44+00:00"
         },
         {
             "name": "facebook/graph-sdk",
@@ -782,6 +729,61 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "jcarlosr/link-preview",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JCarlosR/link-preview.git",
+                "reference": "288d64bd48a2de32661f7aa3b19819bfc1f32e30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JCarlosR/link-preview/zipball/288d64bd48a2de32661f7aa3b19819bfc1f32e30",
+                "reference": "288d64bd48a2de32661f7aa3b19819bfc1f32e30",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.1",
+                "illuminate/support": "5.*",
+                "php": ">=5.5.0",
+                "symfony/css-selector": "^3.0",
+                "symfony/dom-crawler": "^3.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dusterio\\LinkPreview\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Juan Ramos",
+                    "email": "hola@programacionymas.com",
+                    "homepage": "https://programacionymas.com"
+                }
+            ],
+            "description": "Link preview generation for PHP with Laravel support",
+            "homepage": "http://github.com/jcarlosr/link-preview",
+            "keywords": [
+                "laravel",
+                "php",
+                "preview",
+                "scraping",
+                "url"
+            ],
+            "support": {
+                "source": "https://github.com/JCarlosR/link-preview/tree/master"
+            },
+            "time": "2017-12-16T21:54:54+00:00"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -1757,7 +1759,7 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
@@ -2039,16 +2041,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "ca20b8f9ef149f40ff656d52965f240d85f7a8e4"
+                "reference": "b869cbf8a15ca6261689de2c28a7d7f2d0706835"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/ca20b8f9ef149f40ff656d52965f240d85f7a8e4",
-                "reference": "ca20b8f9ef149f40ff656d52965f240d85f7a8e4",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b869cbf8a15ca6261689de2c28a7d7f2d0706835",
+                "reference": "b869cbf8a15ca6261689de2c28a7d7f2d0706835",
                 "shasum": ""
             },
             "require": {
@@ -2098,7 +2100,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-09T14:14:31+00:00"
+            "time": "2017-12-14T19:40:10+00:00"
         },
         {
             "name": "symfony/finder",
@@ -4086,7 +4088,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "jcarlosr/link-preview": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
