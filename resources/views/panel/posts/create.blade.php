@@ -281,7 +281,7 @@
             $scheduleForm.slideUp('slow', function () {
                 var successMessage;
                 if (document.getElementById('now'))
-                    successMessage = 'Listo! Tu publicación se ha puesto en cola, y será publicada brevemente.';
+                    successMessage = 'Listo! Tu publicación será publicada de acuerdo a tus instrucciones.';
                 else
                     successMessage = 'Listo! Tu publicación se ha programado con éxito.';
                 var successHtml =
