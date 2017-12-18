@@ -40,7 +40,7 @@
 
                 @if ($availablePermissions || env('APP_DEBUG'))
                     <form action="" id="formImage" style="display: none;">
-                        <input type="file" id="inputImage">
+                        <input type="file" id="inputImage" multiple>
                     </form>
                     <form action="{{ url('/facebook/posts') }}" method="POST" id="scheduleForm" enctype="multipart/form-data">
                         {{ csrf_field() }}
@@ -143,16 +143,22 @@
                     $btnLoadImage.prop('disabled', false);
                 }
             });
-            $inputImage.on('change', uploadImage);
+            $inputImage.on('change', uploadImages);
 
             $(document).on('click', '[data-remove="image"]', removeImage);
         }
 
-        function uploadImage() {
+        function uploadImages() {
             allowImageUpload = false;
             $btnLoadImage.prop('disabled', true);
 
-            var fileData = $inputImage.prop("files")[0];
+            var filesData = $inputImage.prop("files");
+            for (var i=0; i<filesData.length; ++i) {
+                postAjaxImageData(filesData[i]);
+            }
+        }
+
+        function postAjaxImageData(fileData) {
             var formData = new FormData();
             formData.append('file', fileData);
             formData.append('_token', '{{ csrf_token() }}');
@@ -315,11 +321,6 @@
                     keyup: checkLinkWithDelay
                 }
             });
-        }
-
-        function setupLinkDetector() {
-
-            $description.on('keyup', checkLinkWithDelay);
         }
 
         function checkLinkPreview(text) {
