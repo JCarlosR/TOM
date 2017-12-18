@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/helpers.php" afterPath="$PROJECT_DIR$/app/Http/helpers.php" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,100 +33,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="313" column="23" lean-forward="true" selection-start-line="313" selection-start-column="23" selection-end-line="313" selection-end-column="23" />
-              <folding>
-                <marker date="1513556598101" expanded="true" signature="9:28" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="40:48" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="85:133" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="173:221" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="471:490" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="722:745" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="932:957" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="1036:1054" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="1176:1200" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="1240:1248" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="1398:1439" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="1640:1664" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="1757:1771" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="1994:2014" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="4023:4051" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="5296:5320" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="5562:5571" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="5592:5639" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="5672:5719" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="5752:5801" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="7191:7205" ph="..." />
-                <marker date="1513556598101" expanded="true" signature="10813:10820" ph="×" />
-                <marker date="1513556598101" expanded="true" signature="12179:12186" ph="×" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkPreviewController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/LinkPreviewController.php">
+      <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="22" />
+              <caret line="52" column="63" lean-forward="false" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/helpers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="74" lean-forward="false" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4344">
-              <caret line="181" column="4" lean-forward="false" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="87" />
-              <folding>
-                <marker date="1513533893544" expanded="true" signature="9:22" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="34:42" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="62:92" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="136:145" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="515:525" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="588:612" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="677:694" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="759:776" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="1296:1320" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="1620:1635" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="1712:1729" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="2926:2949" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="3794:3817" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="5296:5325" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="5430:5459" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="5564:5593" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="5698:5727" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="5832:5861" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="5966:5995" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="8032:8056" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="8139:8156" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="8260:8277" ph="..." />
-                <marker date="1513533893544" expanded="true" signature="8308:8317" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -142,7 +54,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>inpu</find>
       <find>datepick</find>
       <find>datepi</find>
       <find>awaiting</find>
@@ -172,6 +83,7 @@
       <find>change</find>
       <find>$description</find>
       <find>firstl</find>
+      <find>tombofa</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -226,7 +138,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/PostCloudinaryFile.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/modal-schedule.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/index.blade.php" />
         <option value="$PROJECT_DIR$/vendor/dusterio/link-preview/src/Readers/HttpReader.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel.log" />
@@ -237,6 +148,7 @@
         <option value="$PROJECT_DIR$/vendor/jcarlosr/link-preview/src/Parsers/HtmlParser.php" />
         <option value="$PROJECT_DIR$/vendor/jcarlosr/link-preview/src/Models/Link.php" />
         <option value="$PROJECT_DIR$/app/Http/helpers.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
       </list>
     </option>
   </component>
@@ -597,14 +509,7 @@
       <workItem from="1513461309333" duration="58000" />
       <workItem from="1513461369131" duration="4528000" />
       <workItem from="1513524436083" duration="5360000" />
-      <workItem from="1513559476443" duration="173000" />
-    </task>
-    <task id="LOCAL-00110" summary="Using external image as link param">
-      <created>1511472258246</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1511472258246</updated>
+      <workItem from="1513559476443" duration="1046000" />
     </task>
     <task id="LOCAL-00111" summary="Using external image as link and type photo">
       <created>1511488082782</created>
@@ -942,11 +847,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513559259914</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="Break lines">
+      <created>1513559655169</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1513559655169</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="496772000" />
+    <option name="totallyTimeSpent" value="497645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1021,7 +933,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fix" />
     <MESSAGE value="Remove accept" />
     <MESSAGE value="Upload dd" />
     <MESSAGE value="Add new mime" />
@@ -1046,7 +957,8 @@
     <MESSAGE value="Use my own link-preview package" />
     <MESSAGE value="Change successful message (instant posts)" />
     <MESSAGE value="Use on keyup event instead of change (emojiOneArea plugin event)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use on keyup event instead of change (emojiOneArea plugin event)" />
+    <MESSAGE value="Break lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Break lines" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1181,13 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="369" column="37" lean-forward="false" selection-start-line="369" selection-start-column="28" selection-end-line="369" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1379,18 +1284,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/LinkPreviewController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="74" lean-forward="false" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/LinkPreviewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="52" column="63" lean-forward="false" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
           <folding />
         </state>
       </provider>
