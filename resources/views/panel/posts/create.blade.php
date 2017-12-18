@@ -211,8 +211,8 @@
             });
 
             setupButtonImage();
-            setupEmojis();
-            setupLinkDetector();
+            setupEmojisAndLinkDetector();
+
             $scheduledDate.datepicker({
                 inline: true,
                 container: '#date-container',
@@ -297,24 +297,29 @@
             });
         }
 
-        function setupEmojis() {
-            $description.emojioneArea({
-                pickerPosition: "bottom",
-                tonesStyle: "bullet"
-            });
-        }
-
-        function setupLinkDetector() {
+        function setupEmojisAndLinkDetector() {
             var delayTimer;
             // check for previews with delay
             function checkLinkWithDelay() {
-                var text = $(this).val();
+                var text = el[0].emojioneArea.getText();
                 clearTimeout(delayTimer);
                 delayTimer = setTimeout(function() {
                     checkLinkPreview(text);
                 }, 1000); // wait 1000 ms (1 s)
             }
-            $description.on('change', checkLinkWithDelay);
+
+            var el = $description.emojioneArea({
+                pickerPosition: "bottom",
+                tonesStyle: "bullet",
+                events: {
+                    keyup: checkLinkWithDelay
+                }
+            });
+        }
+
+        function setupLinkDetector() {
+
+            $description.on('keyup', checkLinkWithDelay);
         }
 
         function checkLinkPreview(text) {
