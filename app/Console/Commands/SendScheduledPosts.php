@@ -17,6 +17,9 @@ class SendScheduledPosts extends Command
 
     private $facebookSdk;
 
+    // access tokens
+    private $fanPageAccessToken = 'EAACEdEose0cBANhF6ZCEHxcxEiZAr2HhrfY05bMhAbkXZCAIHvpTB84DeUdfjPuvHhNeuy14iWSpsBnUSyD0G4b6MlDNaap3AF9ZCNnfgp60YGE5UalCUJrFvPW9kxiZCW8380ueTecv0NlzAdTlTl0KZB2wZCWsHShL9Eo4lmeOfPqkaYD4ffVnimXgDGVtxG4CTf8fsZBEuQZDZD';
+
     public function __construct(LaravelFacebookSdk $facebookSdk)
     {
         parent::__construct();
@@ -53,7 +56,8 @@ class SendScheduledPosts extends Command
         $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']);
         // User::where('id', $post->user_id)->first(['fb_access_token']);
         if (!$user) return; // user not found (?)
-        $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
+        // $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
+        $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
 
         if ($post->type == 'link') {
             $status = $this->postLink($post);
