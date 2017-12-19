@@ -70,11 +70,20 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+            <state relative-caret-position="478">
+              <caret line="358" column="19" lean-forward="false" selection-start-line="358" selection-start-column="19" selection-end-line="358" selection-end-column="19" />
               <folding>
+                <element signature="e#459#679#0#PHP" expanded="false" />
                 <element signature="e#685#1486#0#PHP" expanded="false" />
-                <element signature="e#2495#3378#0#PHP" expanded="false" />
+                <element signature="e#2578#3461#0#PHP" expanded="false" />
+                <element signature="e#3467#4313#0#PHP" expanded="false" />
+                <element signature="e#4319#5036#0#PHP" expanded="false" />
+                <element signature="e#5042#6217#0#PHP" expanded="false" />
+                <element signature="e#6223#6976#0#PHP" expanded="false" />
+                <element signature="e#6982#7920#0#PHP" expanded="false" />
+                <element signature="e#7926#8845#0#PHP" expanded="false" />
+                <element signature="e#8852#9620#0#PHP" expanded="false" />
+                <element signature="e#9705#10107#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -576,14 +585,7 @@
       <workItem from="1513559476443" duration="1657000" />
       <workItem from="1513627138030" duration="1885000" />
       <workItem from="1513650430651" duration="1530000" />
-      <workItem from="1513717762461" duration="1859000" />
-    </task>
-    <task id="LOCAL-00119" summary="Grant user_photos permission">
-      <created>1512235552688</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1512235552688</updated>
+      <workItem from="1513717762461" duration="2674000" />
     </task>
     <task id="LOCAL-00120" summary="Add name param for TOM albums (in group)">
       <created>1512236340757</created>
@@ -921,11 +923,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513719825322</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="Use env variable to store the fan page access token">
+      <created>1513720065329</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1513720065329</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503530000" />
+    <option name="totallyTimeSpent" value="504345000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1000,7 +1009,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Add text post type" />
     <MESSAGE value="Reorder logic" />
     <MESSAGE value="Use admin token" />
     <MESSAGE value="Change charset &amp; collation for db connection" />
@@ -1025,7 +1033,8 @@
     <MESSAGE value="Post to fanpage instead to the group (temporal)" />
     <MESSAGE value="Use the fan page access token (temporal)" />
     <MESSAGE value="Use the fan page access token (fix using TOM app)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use the fan page access token (fix using TOM app)" />
+    <MESSAGE value="Use env variable to store the fan page access token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use env variable to store the fan page access token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1346,11 +1355,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+        <state relative-caret-position="478">
+          <caret line="358" column="19" lean-forward="false" selection-start-line="358" selection-start-column="19" selection-end-line="358" selection-end-column="19" />
           <folding>
+            <element signature="e#459#679#0#PHP" expanded="false" />
             <element signature="e#685#1486#0#PHP" expanded="false" />
-            <element signature="e#2495#3378#0#PHP" expanded="false" />
+            <element signature="e#2578#3461#0#PHP" expanded="false" />
+            <element signature="e#3467#4313#0#PHP" expanded="false" />
+            <element signature="e#4319#5036#0#PHP" expanded="false" />
+            <element signature="e#5042#6217#0#PHP" expanded="false" />
+            <element signature="e#6223#6976#0#PHP" expanded="false" />
+            <element signature="e#6982#7920#0#PHP" expanded="false" />
+            <element signature="e#7926#8845#0#PHP" expanded="false" />
+            <element signature="e#8852#9620#0#PHP" expanded="false" />
+            <element signature="e#9705#10107#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

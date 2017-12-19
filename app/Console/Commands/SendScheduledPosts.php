@@ -67,7 +67,8 @@ class SendScheduledPosts extends Command
         } elseif ($post->type == 'image') {
             $status = $this->postPhotoStory($post);
         } elseif ($post->type == 'images') {
-            $status = $this->postPhotosAndStory($post);
+            // $status = $this->postPhotosAndStory($post); // groups feed
+            $status = $this->postAlbum($post); // fan pages feed
         } elseif ($post->type == 'video') {
             $status = $this->postVideo($post);
         }
@@ -311,7 +312,7 @@ class SendScheduledPosts extends Command
         $this->info($message);
     }
 
-    // not in use, because there is no way to associate a post with an album
+    // there is no way to associate a post with an album (for groups feed)
 
     public function postAlbum(ScheduledPost $post)
     {
