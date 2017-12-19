@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/index.blade.php" />
       <change beforePath="$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php" afterPath="$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -106,6 +105,27 @@
                 <marker date="1513650521397" expanded="true" signature="4422:4453" ph="..." />
                 <marker date="1513650521397" expanded="true" signature="5411:5437" ph="..." />
                 <marker date="1513650521397" expanded="true" signature="5573:5597" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab-finished.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+              <folding>
+                <marker date="1513650627713" expanded="true" signature="152:178" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="205:233" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="493:517" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="585:611" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="775:798" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="824:861" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="887:900" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="926:946" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="1023:1038" ph="..." />
+                <marker date="1513650627713" expanded="true" signature="1121:1147" ph="..." />
               </folding>
             </state>
           </provider>
@@ -215,8 +235,8 @@
         <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostImageController.php" />
-        <option value="$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php" />
       </list>
     </option>
   </component>
@@ -579,14 +599,7 @@
       <workItem from="1513524436083" duration="5360000" />
       <workItem from="1513559476443" duration="1657000" />
       <workItem from="1513627138030" duration="1885000" />
-      <workItem from="1513650430651" duration="99000" />
-    </task>
-    <task id="LOCAL-00113" summary="Check permissions at fb">
-      <created>1511579324105</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1511579324105</updated>
+      <workItem from="1513650430651" duration="197000" />
     </task>
     <task id="LOCAL-00114" summary="Register fb access token and scheduled posts">
       <created>1511623827075</created>
@@ -924,11 +937,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513628312966</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Change tab titles">
+      <created>1513650529975</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1513650529975</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="500240000" />
+    <option name="totallyTimeSpent" value="500338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -941,6 +961,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1328,26 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding>
-            <element signature="e#235#1117#0#HTML" expanded="false" />
-            <marker date="1513650521362" expanded="true" signature="152:178" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="205:233" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="493:517" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="585:611" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="775:798" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="824:861" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="887:900" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="926:946" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="1023:1038" ph="..." />
-            <marker date="1513650521362" expanded="true" signature="1121:1147" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/tab-future.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1383,6 +1384,25 @@
             <marker date="1513650521397" expanded="true" signature="4422:4453" ph="..." />
             <marker date="1513650521397" expanded="true" signature="5411:5437" ph="..." />
             <marker date="1513650521397" expanded="true" signature="5573:5597" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panel/posts/tab-finished.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+          <folding>
+            <marker date="1513650627713" expanded="true" signature="152:178" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="205:233" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="493:517" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="585:611" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="775:798" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="824:861" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="887:900" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="926:946" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="1023:1038" ph="..." />
+            <marker date="1513650627713" expanded="true" signature="1121:1147" ph="..." />
           </folding>
         </state>
       </provider>
