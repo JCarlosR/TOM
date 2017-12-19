@@ -70,12 +70,11 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="310">
+              <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
               <folding>
-                <element signature="e#676#823#0#PHP" expanded="false" />
-                <element signature="e#829#1630#0#PHP" expanded="false" />
-                <element signature="e#2639#3522#0#PHP" expanded="false" />
+                <element signature="e#685#1486#0#PHP" expanded="false" />
+                <element signature="e#2495#3378#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -577,14 +576,7 @@
       <workItem from="1513559476443" duration="1657000" />
       <workItem from="1513627138030" duration="1885000" />
       <workItem from="1513650430651" duration="1530000" />
-      <workItem from="1513717762461" duration="1619000" />
-    </task>
-    <task id="LOCAL-00118" summary="Test album creation">
-      <created>1512234916188</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1512234916189</updated>
+      <workItem from="1513717762461" duration="1859000" />
     </task>
     <task id="LOCAL-00119" summary="Grant user_photos permission">
       <created>1512235552688</created>
@@ -922,11 +914,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513718777198</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Use the fan page access token (fix using TOM app)">
+      <created>1513719825322</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1513719825322</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503290000" />
+    <option name="totallyTimeSpent" value="503530000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1001,7 +1000,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Emojis textarea, detect first link, tabs" />
     <MESSAGE value="Add text post type" />
     <MESSAGE value="Reorder logic" />
     <MESSAGE value="Use admin token" />
@@ -1026,7 +1024,8 @@
     <MESSAGE value="Add many chat code" />
     <MESSAGE value="Post to fanpage instead to the group (temporal)" />
     <MESSAGE value="Use the fan page access token (temporal)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use the fan page access token (temporal)" />
+    <MESSAGE value="Use the fan page access token (fix using TOM app)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use the fan page access token (fix using TOM app)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1347,12 +1346,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
           <folding>
-            <element signature="e#676#823#0#PHP" expanded="false" />
-            <element signature="e#829#1630#0#PHP" expanded="false" />
-            <element signature="e#2639#3522#0#PHP" expanded="false" />
+            <element signature="e#685#1486#0#PHP" expanded="false" />
+            <element signature="e#2495#3378#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

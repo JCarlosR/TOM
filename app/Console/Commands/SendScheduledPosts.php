@@ -18,13 +18,14 @@ class SendScheduledPosts extends Command
     private $facebookSdk;
 
     // access tokens
-    private $fanPageAccessToken = 'EAAH31lUEZAjABAMBTf7IkzZCCHm7w4ga2ZAPO5QcvUOv2K0ZBkgEZCSDLrVCY2rZCygFFfJrGuPWd9KIctFiXp2iI7zFnwAjTCazY3XX6KVQy1QRgOJ6XXbjEtzTWHZA5z2WpR0xaIrOz75LU6CDAZBtE2PDML732ZBsYpTfCOyzRbeBt7q6AiDnvoKLel7Qi2RED5ybwJ0qI0AZDZD';
+    private $fanPageAccessToken;
 
     public function __construct(LaravelFacebookSdk $facebookSdk)
     {
         parent::__construct();
 
         $this->facebookSdk = $facebookSdk;
+        $this->fanPageAccessToken = env('FAN_PAGE_TARGET_ACCESS_TOKEN');
     }
 
     public function handle()
