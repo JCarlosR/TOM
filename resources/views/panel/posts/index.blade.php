@@ -93,12 +93,12 @@
                 <ul class="nav nav-tabs nav-justified">
                     <li>
                         <a data-toggle="tab" href="#tab-finished">
-                            Posts finalzados
+                            Publicaciones realizadas
                         </a>
                     </li>
                     <li class="active">
                         <a data-toggle="tab" href="#tab-future">
-                            Posts futuros
+                            Publicaciones programadas
                         </a>
                     </li>
                 </ul>
