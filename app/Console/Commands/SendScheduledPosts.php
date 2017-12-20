@@ -321,8 +321,7 @@ class SendScheduledPosts extends Command
         $queryUrl = "/$groupId/albums";
         $params = [
             'name' => 'Publicación TOM #' . $post->id,
-            'message' => $post->description,
-            'make_shared_album' => true // not documented property
+            'message' => $post->description
         ];
 
         try {

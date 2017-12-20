@@ -70,8 +70,8 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="358" column="19" lean-forward="false" selection-start-line="358" selection-start-column="19" selection-end-line="358" selection-end-column="19" />
+            <state relative-caret-position="406">
+              <caret line="331" column="0" lean-forward="true" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
               <folding>
                 <element signature="e#459#679#0#PHP" expanded="false" />
                 <element signature="e#685#1486#0#PHP" expanded="false" />
@@ -92,8 +92,8 @@
       <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+            <state relative-caret-position="-1824">
+              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="41" />
               <folding>
                 <element signature="e#532#608#0#PHP" expanded="false" />
                 <element signature="e#614#1251#0#PHP" expanded="false" />
@@ -585,14 +585,7 @@
       <workItem from="1513559476443" duration="1657000" />
       <workItem from="1513627138030" duration="1885000" />
       <workItem from="1513650430651" duration="1530000" />
-      <workItem from="1513717762461" duration="2674000" />
-    </task>
-    <task id="LOCAL-00120" summary="Add name param for TOM albums (in group)">
-      <created>1512236340757</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1512236340757</updated>
+      <workItem from="1513717762461" duration="4284000" />
     </task>
     <task id="LOCAL-00121" summary="Use appendOutputTo instead of sendOutputTo">
       <created>1512238769573</created>
@@ -930,11 +923,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513720065329</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Try posting an album">
+      <created>1513724303042</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1513724303042</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="504345000" />
+    <option name="totallyTimeSpent" value="505955000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1009,7 +1009,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Reorder logic" />
     <MESSAGE value="Use admin token" />
     <MESSAGE value="Change charset &amp; collation for db connection" />
     <MESSAGE value="Fix and use url instead of post image id" />
@@ -1034,7 +1033,8 @@
     <MESSAGE value="Use the fan page access token (temporal)" />
     <MESSAGE value="Use the fan page access token (fix using TOM app)" />
     <MESSAGE value="Use env variable to store the fan page access token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use env variable to store the fan page access token" />
+    <MESSAGE value="Try posting an album" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try posting an album" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1341,8 +1341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+        <state relative-caret-position="-1824">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="41" />
           <folding>
             <element signature="e#532#608#0#PHP" expanded="false" />
             <element signature="e#614#1251#0#PHP" expanded="false" />
@@ -1355,8 +1355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="358" column="19" lean-forward="false" selection-start-line="358" selection-start-column="19" selection-end-line="358" selection-end-column="19" />
+        <state relative-caret-position="406">
+          <caret line="331" column="0" lean-forward="true" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
           <folding>
             <element signature="e#459#679#0#PHP" expanded="false" />
             <element signature="e#685#1486#0#PHP" expanded="false" />
