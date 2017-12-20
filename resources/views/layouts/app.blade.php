@@ -37,6 +37,9 @@
     <!--[if lte IE 8]><script src="{{ asset('assets/js/ie/respond.min.js') }}"></script><![endif]-->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
+    {{-- ManyChat --}}
+    <script src="//widget.manychat.com/1567109470249042.js" async="async"></script>
+
     {{-- Support type date for Firefox, Safari & IE --}}
     <script>
         jQuery.swap = function( elem, options, callback, args ) {
