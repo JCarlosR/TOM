@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2017_12_21_175811_add_published_to_page_at_for_fb_posts.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
     </list>
@@ -37,22 +36,22 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="59" column="23" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="23" />
+            <state relative-caret-position="425">
+              <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
               <folding>
                 <element signature="e#459#679#0#PHP" expanded="false" />
-                <element signature="e#3705#4588#0#PHP" expanded="false" />
-                <element signature="e#4594#5440#0#PHP" expanded="false" />
-                <element signature="e#5446#6163#0#PHP" expanded="false" />
-                <element signature="e#6169#7344#0#PHP" expanded="false" />
-                <element signature="e#7350#8103#0#PHP" expanded="false" />
-                <element signature="e#8109#9047#0#PHP" expanded="false" />
-                <element signature="e#9053#9972#0#PHP" expanded="false" />
-                <element signature="e#9979#10747#0#PHP" expanded="false" />
-                <element signature="e#10832#11234#0#PHP" expanded="false" />
-                <element signature="e#11404#12213#0#PHP" expanded="false" />
-                <element signature="e#12219#12565#0#PHP" expanded="false" />
-                <element signature="e#12571#13417#0#PHP" expanded="false" />
+                <element signature="e#3761#4644#0#PHP" expanded="false" />
+                <element signature="e#4650#5496#0#PHP" expanded="false" />
+                <element signature="e#5502#6219#0#PHP" expanded="false" />
+                <element signature="e#6225#7400#0#PHP" expanded="false" />
+                <element signature="e#7406#8159#0#PHP" expanded="false" />
+                <element signature="e#8165#9103#0#PHP" expanded="false" />
+                <element signature="e#9109#10028#0#PHP" expanded="false" />
+                <element signature="e#10035#10803#0#PHP" expanded="false" />
+                <element signature="e#10888#11290#0#PHP" expanded="false" />
+                <element signature="e#11460#12269#0#PHP" expanded="false" />
+                <element signature="e#12275#12621#0#PHP" expanded="false" />
+                <element signature="e#12627#13473#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -172,8 +171,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_12_21_175811_add_published_to_page_at_for_fb_posts.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
       </list>
     </option>
   </component>
@@ -557,14 +556,7 @@
       <workItem from="1513650430651" duration="1530000" />
       <workItem from="1513717762461" duration="4774000" />
       <workItem from="1513735691822" duration="1358000" />
-      <workItem from="1513887760019" duration="3274000" />
-    </task>
-    <task id="LOCAL-00123" summary="Make an album and show it in the group feed (please)">
-      <created>1512242971757</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1512242971757</updated>
+      <workItem from="1513887760019" duration="3571000" />
     </task>
     <task id="LOCAL-00124" summary="Test multi photos story">
       <created>1512320643572</created>
@@ -902,11 +894,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513735845283</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Post to fb group + fan page">
+      <created>1513900831833</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1513900831833</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511077000" />
+    <option name="totallyTimeSpent" value="511374000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -919,6 +918,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1409,22 +1409,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="59" column="23" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="23" />
+        <state relative-caret-position="425">
+          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
           <folding>
             <element signature="e#459#679#0#PHP" expanded="false" />
-            <element signature="e#3705#4588#0#PHP" expanded="false" />
-            <element signature="e#4594#5440#0#PHP" expanded="false" />
-            <element signature="e#5446#6163#0#PHP" expanded="false" />
-            <element signature="e#6169#7344#0#PHP" expanded="false" />
-            <element signature="e#7350#8103#0#PHP" expanded="false" />
-            <element signature="e#8109#9047#0#PHP" expanded="false" />
-            <element signature="e#9053#9972#0#PHP" expanded="false" />
-            <element signature="e#9979#10747#0#PHP" expanded="false" />
-            <element signature="e#10832#11234#0#PHP" expanded="false" />
-            <element signature="e#11404#12213#0#PHP" expanded="false" />
-            <element signature="e#12219#12565#0#PHP" expanded="false" />
-            <element signature="e#12571#13417#0#PHP" expanded="false" />
+            <element signature="e#3761#4644#0#PHP" expanded="false" />
+            <element signature="e#4650#5496#0#PHP" expanded="false" />
+            <element signature="e#5502#6219#0#PHP" expanded="false" />
+            <element signature="e#6225#7400#0#PHP" expanded="false" />
+            <element signature="e#7406#8159#0#PHP" expanded="false" />
+            <element signature="e#8165#9103#0#PHP" expanded="false" />
+            <element signature="e#9109#10028#0#PHP" expanded="false" />
+            <element signature="e#10035#10803#0#PHP" expanded="false" />
+            <element signature="e#10888#11290#0#PHP" expanded="false" />
+            <element signature="e#11460#12269#0#PHP" expanded="false" />
+            <element signature="e#12275#12621#0#PHP" expanded="false" />
+            <element signature="e#12627#13473#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

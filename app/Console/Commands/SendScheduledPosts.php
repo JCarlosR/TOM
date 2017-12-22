@@ -59,7 +59,8 @@ class SendScheduledPosts extends Command
         $awaiting_posts = ScheduledPost::where('status', 'Enviado')
             ->whereNull('published_to_fan_page_at')->get();
         foreach ($awaiting_posts as $post)
-            $this->postToFacebook($post, 'page');
+            if ($this->shouldPostTo('page', $post))
+                $this->postToFacebook($post, 'page');
     }
 
     public function setFbAccessToken($type)
