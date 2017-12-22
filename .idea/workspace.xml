@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Add condition">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" afterPath="$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_11_24_085713_create_scheduled_posts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_11_24_085713_create_scheduled_posts_table.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="85" column="47" lean-forward="false" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+            <state relative-caret-position="358">
+              <caret line="342" column="93" lean-forward="false" selection-start-line="342" selection-start-column="93" selection-end-line="342" selection-end-column="93" />
               <folding>
                 <element signature="e#670#890#0#PHP" expanded="false" />
                 <element signature="e#896#1335#0#PHP" expanded="false" />
@@ -48,15 +46,12 @@
                 <element signature="e#4169#5028#0#PHP" expanded="false" />
                 <element signature="e#5034#5856#0#PHP" expanded="false" />
                 <element signature="e#5862#6546#0#PHP" expanded="false" />
-                <element signature="e#6552#7727#0#PHP" expanded="false" />
-                <element signature="e#7733#8450#0#PHP" expanded="false" />
                 <element signature="e#8456#9370#0#PHP" expanded="false" />
                 <element signature="e#9376#10295#0#PHP" expanded="false" />
                 <element signature="e#10302#11041#0#PHP" expanded="false" />
-                <element signature="e#11126#11528#0#PHP" expanded="false" />
-                <element signature="e#11698#12472#0#PHP" expanded="false" />
-                <element signature="e#12478#12824#0#PHP" expanded="false" />
-                <element signature="e#12830#13676#0#PHP" expanded="false" />
+                <element signature="e#11746#12520#0#PHP" expanded="false" />
+                <element signature="e#12526#12872#0#PHP" expanded="false" />
+                <element signature="e#12878#13724#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,7 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>die</find>
       <find>dd</find>
       <find>exception</find>
       <find>pagar</find>
@@ -129,6 +123,7 @@
       <find>fb_dest</find>
       <find>$post-&gt;fb_destination_id</find>
       <find>user</find>
+      <find>unpublished</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -577,14 +572,7 @@
       <workItem from="1513650430651" duration="1530000" />
       <workItem from="1513717762461" duration="4774000" />
       <workItem from="1513735691822" duration="1358000" />
-      <workItem from="1513887760019" duration="5248000" />
-    </task>
-    <task id="LOCAL-00125" summary="Show date time in the debug messages">
-      <created>1512320935413</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1512320935413</updated>
+      <workItem from="1513887760019" duration="6163000" />
     </task>
     <task id="LOCAL-00126" summary="Fix condition">
       <created>1512321143599</created>
@@ -922,11 +910,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513901133422</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="Use always the fan page access token">
+      <created>1513902814950</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1513902814950</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513051000" />
+    <option name="totallyTimeSpent" value="513966000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1001,7 +996,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Define helper &amp; link preview advances" />
     <MESSAGE value="Link preview, improve tabs design" />
     <MESSAGE value="Use modal for scheduled posts &amp; create a new status (en cola)" />
     <MESSAGE value="Remove invalid characters using str_slug" />
@@ -1026,7 +1020,8 @@
     <MESSAGE value="Add many chat to dashboard TOM and promotions page" />
     <MESSAGE value="Post to fb group + fan page" />
     <MESSAGE value="Add condition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add condition" />
+    <MESSAGE value="Use always the fan page access token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use always the fan page access token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1431,8 +1426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="85" column="47" lean-forward="false" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+        <state relative-caret-position="358">
+          <caret line="342" column="93" lean-forward="false" selection-start-line="342" selection-start-column="93" selection-end-line="342" selection-end-column="93" />
           <folding>
             <element signature="e#670#890#0#PHP" expanded="false" />
             <element signature="e#896#1335#0#PHP" expanded="false" />
@@ -1441,15 +1436,12 @@
             <element signature="e#4169#5028#0#PHP" expanded="false" />
             <element signature="e#5034#5856#0#PHP" expanded="false" />
             <element signature="e#5862#6546#0#PHP" expanded="false" />
-            <element signature="e#6552#7727#0#PHP" expanded="false" />
-            <element signature="e#7733#8450#0#PHP" expanded="false" />
             <element signature="e#8456#9370#0#PHP" expanded="false" />
             <element signature="e#9376#10295#0#PHP" expanded="false" />
             <element signature="e#10302#11041#0#PHP" expanded="false" />
-            <element signature="e#11126#11528#0#PHP" expanded="false" />
-            <element signature="e#11698#12472#0#PHP" expanded="false" />
-            <element signature="e#12478#12824#0#PHP" expanded="false" />
-            <element signature="e#12830#13676#0#PHP" expanded="false" />
+            <element signature="e#11746#12520#0#PHP" expanded="false" />
+            <element signature="e#12526#12872#0#PHP" expanded="false" />
+            <element signature="e#12878#13724#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

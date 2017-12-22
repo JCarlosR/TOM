@@ -338,9 +338,9 @@ class SendScheduledPosts extends Command
         $dateNow = Carbon::now();
         $this->info("-- $dateNow --");
         if ($success)
-            $description = "Post $postId: $method ejecutado correctamente:";
+            $description = "Post $postId: $method ejecutado correctamente sobre $this->targetFbId:";
         else
-            $description = "Post $postId: $method ejecutado con error:";
+            $description = "Post $postId: $method ejecutado con error sobre $this->targetFbId:";
         $this->info($description);
 
         $this->info($message);
