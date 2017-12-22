@@ -231,7 +231,7 @@ class SendScheduledPosts extends Command
         $queryUrl = "/$this->targetFbId/photos";
         $params = [
             'url' => $photoUrl,
-            'published' => false,
+            // 'published' => false,
             'target_post' => $postId
         ];
 
