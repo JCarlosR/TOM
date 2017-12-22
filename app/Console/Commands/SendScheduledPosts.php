@@ -69,22 +69,18 @@ class SendScheduledPosts extends Command
 
     public function setFbAccessTokenAndTargetId($type)
     {
-        /*
-        // For group use the admin account (fb user access token)
-        $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']);
-        // User::where('id', $post->user_id)->first(['fb_access_token']);
-        if (!$user) return; // user not found
-        $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
-        */
-
         if ($type == 'group') {
+            // For group use the admin account (fb user access token)
+            $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']); // User::where('id', $post->user_id)->first(['fb_access_token']);
+            if (!$user) return; // user not found
+
+            $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
             $this->targetFbId = $this->targetGroupId;
         } elseif ($type == 'page') {
+            // use the fan page access token
+            $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
             $this->targetFbId = $this->targetPageId;
         }
-
-        // always use the fan page access token
-        $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
     }
 
     public function postToFacebook(ScheduledPost $post, $targetType)
@@ -197,15 +193,9 @@ class SendScheduledPosts extends Command
         // Upload unpublished photos
         $photosUrl = $post->images()->pluck('secure_url');
 
-        // Create post
-        $postId = $this->createSimplePost($post);
-        if (!$postId)
-            return 'Error';
-
-        // Create unpublished photos associated with a post
         $photosId = [];
         foreach ($photosUrl as $photoUrl) {
-            $photoId = $this->postUnpublishedPhoto($post, $photoUrl, $postId);
+            $photoId = $this->postUnpublishedPhoto($post, $photoUrl);
             if ($photoId)
                 $photosId[] = $photoId;
             else
@@ -215,24 +205,28 @@ class SendScheduledPosts extends Command
         if (sizeof($photosId) == 0)
             return 'Error';
 
+        // Create post
+        $postId = $this->createSimplePost($post);
+        if (!$postId)
+            return 'Error';
+
         // Associate photos with post
-        /*foreach ($photosId as $photoId) {
+        foreach ($photosId as $photoId) {
             $success = $this->associateUnpublishedPhotoWithPost($photoId, $postId);
             if (!$success)
                 return 'Error';
-        }*/
+        }
 
         return 'Enviado';
     }
 
-    private function postUnpublishedPhoto(ScheduledPost $post, $photoUrl, $postId)
+    private function postUnpublishedPhoto(ScheduledPost $post, $photoUrl)
     {
         // Upload a photo into a group
         $queryUrl = "/$this->targetFbId/photos";
         $params = [
             'url' => $photoUrl,
-            // 'published' => false,
-            'target_post' => $postId
+            'published' => false
         ];
 
         try {
