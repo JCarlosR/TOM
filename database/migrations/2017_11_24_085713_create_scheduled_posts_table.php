@@ -28,7 +28,7 @@ class CreateScheduledPostsTable extends Migration
             $table->date('scheduled_date')->nullable();
             $table->time('scheduled_time')->nullable();
 
-            // destination group id
+            // destination group or page id
             $table->string('fb_destination_id')->nullable();
             // author of the post
             $table->integer('user_id')->unsigned();

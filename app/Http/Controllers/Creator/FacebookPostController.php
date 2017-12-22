@@ -16,9 +16,6 @@ use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class FacebookPostController extends Controller
 {
-    private $targetId = '2079845645561063';
-    // test fan page 2079845645561063
-    // test group 948507005305322
 
     public function __construct()
     {
@@ -143,7 +140,6 @@ class FacebookPostController extends Controller
         $scheduled_post->type = $postType;
         $scheduled_post->description = $description;
         $scheduled_post->user_id = auth()->id();
-        $scheduled_post->fb_destination_id = $this->targetId; // temporary constant value
 
         if ($request->has('now') && $request->input('now')==1) {
             $scheduled_post->scheduled_date = date('Y-m-d');

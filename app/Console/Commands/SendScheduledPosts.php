@@ -17,8 +17,12 @@ class SendScheduledPosts extends Command
 
     private $facebookSdk;
 
-    // access tokens
+    // fan page access token (the admin access token is taken from the fan page)
     private $fanPageAccessToken;
+
+    private $targetPageId = '2079845645561063';
+    private $targetGroupId = '948507005305322';
+    private $targetFbId; // currently selected target
 
     public function __construct(LaravelFacebookSdk $facebookSdk)
     {
@@ -40,7 +44,7 @@ class SendScheduledPosts extends Command
         return $now->diffInMinutes($scheduled_date_time) <= 1;
     }
 
-    public function handle()
+    public function handle() // TO DO: Use queries to get directly the posts that should be posted
     {
         // Post to group the pending posts
         $scheduled_posts = ScheduledPost::where('status', 'Pendiente')->get();
@@ -63,24 +67,29 @@ class SendScheduledPosts extends Command
                 $this->postToFacebook($post, 'page');
     }
 
-    public function setFbAccessToken($type)
+    public function setFbAccessTokenAndTargetId($type)
     {
-        if ($type == 'group') {
-            // For group use the admin account (fb user access token)
-            $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']);
-            // User::where('id', $post->user_id)->first(['fb_access_token']);
-            if (!$user) return; // user not found
+        /*
+        // For group use the admin account (fb user access token)
+        $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']);
+        // User::where('id', $post->user_id)->first(['fb_access_token']);
+        if (!$user) return; // user not found
+        $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
+        */
 
-            $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
+        if ($type == 'group') {
+            $this->targetFbId = $this->targetGroupId;
         } elseif ($type == 'page') {
-            // For page use the page access token
-            $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
+            $this->targetFbId = $this->targetPageId;
         }
+
+        // always use the fan page access token
+        $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
     }
 
     public function postToFacebook(ScheduledPost $post, $targetType)
     {
-        $this->setFbAccessToken($targetType);
+        $this->setFbAccessTokenAndTargetId($targetType);
 
         // the strategy to post can be the same for groups or pages
         // it only varies for the images post
@@ -107,11 +116,11 @@ class SendScheduledPosts extends Command
         $post->save();
     }
 
+
     public function postLink(ScheduledPost $post)
     {
-        // Post to a fb group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/feed";
+        // Post to a fb group or fan page
+        $queryUrl = "/$this->targetFbId/feed";
         $params = [
             'message' => $post->description,
             'link' => $post->link
@@ -138,9 +147,8 @@ class SendScheduledPosts extends Command
 
     public function postText(ScheduledPost $post)
     {
-        // Post to a fb group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/feed";
+        // Post to a fb group or fan page
+        $queryUrl = "/$this->targetFbId/feed";
         $params = [
             'message' => $post->description
         ];
@@ -164,9 +172,8 @@ class SendScheduledPosts extends Command
 
     public function postPhotoStory(ScheduledPost $post)
     {
-        // Upload a photo into a group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/photos";
+        // Post to a fb group or fan page
+        $queryUrl = "/$this->targetFbId/photos";
         $params = [
             'url' => $post->image_url,
             'message' => $post->description
@@ -225,8 +232,7 @@ class SendScheduledPosts extends Command
     private function postUnpublishedPhoto(ScheduledPost $post, $photoUrl)
     {
         // Upload a photo into a group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/photos";
+        $queryUrl = "/$this->targetFbId/photos";
         $params = [
             'url' => $photoUrl,
             'published' => false
@@ -247,9 +253,8 @@ class SendScheduledPosts extends Command
 
     public function createSimplePost(ScheduledPost $post)
     {
-        // Post to a fb group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/feed";
+        // Post to a fb group or fan page
+        $queryUrl = "/$this->targetFbId/feed";
         $params = [
             'message' => $post->description
         ];
@@ -304,9 +309,8 @@ class SendScheduledPosts extends Command
 
     public function postVideo(ScheduledPost $post)
     {
-        // Upload a photo into a group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/videos";
+        // Upload a photo into a group / page
+        $queryUrl = "/$this->targetFbId/videos";
         $params = [
             'file_url' => $post->video_url,
             'description' => $post->description
@@ -347,9 +351,8 @@ class SendScheduledPosts extends Command
 
     public function postAlbum(ScheduledPost $post)
     {
-        // Upload a photo into a group
-        $groupId = $post->fb_destination_id;
-        $queryUrl = "/$groupId/albums";
+        // Upload a photo to a fan page
+        $queryUrl = "/$this->targetFbId/albums";
         $params = [
             'name' => 'Publicación TOM #' . $post->id,
             'message' => $post->description
