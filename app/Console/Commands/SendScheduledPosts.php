@@ -232,7 +232,7 @@ class SendScheduledPosts extends Command
         $params = [
             'url' => $photoUrl,
             'published' => false,
-            'target_id' => $postId
+            'target_post' => $postId
         ];
 
         try {
