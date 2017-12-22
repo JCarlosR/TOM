@@ -195,16 +195,17 @@ class SendScheduledPosts extends Command
     public function postPhotosAndStory(ScheduledPost $post)
     {
         // Upload unpublished photos
-        /*$photosUrl = [
-            'https://static.pexels.com/photos/605096/pexels-photo-605096.jpeg',
-            'https://www.planwallpaper.com/static/images/b807c2282ab0a491bd5c5c1051c6d312_k4PiHxO.jpg',
-            'http://hdwarena.com/wp-content/uploads/2017/04/Beautiful-Wallpaper.jpg'
-        ];*/
         $photosUrl = $post->images()->pluck('secure_url');
 
+        // Create post
+        $postId = $this->createSimplePost($post);
+        if (!$postId)
+            return 'Error';
+
+        // Create unpublished photos associated with a post
         $photosId = [];
         foreach ($photosUrl as $photoUrl) {
-            $photoId = $this->postUnpublishedPhoto($post, $photoUrl);
+            $photoId = $this->postUnpublishedPhoto($post, $photoUrl, $postId);
             if ($photoId)
                 $photosId[] = $photoId;
             else
@@ -214,28 +215,24 @@ class SendScheduledPosts extends Command
         if (sizeof($photosId) == 0)
             return 'Error';
 
-        // Create post
-        $postId = $this->createSimplePost($post);
-        if (!$postId)
-            return 'Error';
-
         // Associate photos with post
-        foreach ($photosId as $photoId) {
+        /*foreach ($photosId as $photoId) {
             $success = $this->associateUnpublishedPhotoWithPost($photoId, $postId);
             if (!$success)
                 return 'Error';
-        }
+        }*/
 
         return 'Enviado';
     }
 
-    private function postUnpublishedPhoto(ScheduledPost $post, $photoUrl)
+    private function postUnpublishedPhoto(ScheduledPost $post, $photoUrl, $postId)
     {
         // Upload a photo into a group
         $queryUrl = "/$this->targetFbId/photos";
         $params = [
             'url' => $photoUrl,
-            'published' => false
+            'published' => false,
+            'target_id' => $postId
         ];
 
         try {
