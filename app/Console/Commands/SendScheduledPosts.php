@@ -100,9 +100,9 @@ class SendScheduledPosts extends Command
         } elseif ($post->type == 'image') {
             $status = $this->postPhotoStory($post);
         } elseif ($post->type == 'images') {
-            if ($targetType == 'group')
+            /*if ($targetType == 'group')
                 $status = $this->postPhotosAndStory($post); // groups feed
-            elseif ($targetType == 'page')
+            elseif ($targetType == 'page')*/
                 $status = $this->postAlbum($post); // fan pages feed
         } elseif ($post->type == 'video') {
             $status = $this->postVideo($post);
