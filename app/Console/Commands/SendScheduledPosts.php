@@ -28,38 +28,61 @@ class SendScheduledPosts extends Command
         $this->fanPageAccessToken = env('FAN_PAGE_TARGET_ACCESS_TOKEN');
     }
 
+    public function shouldPostTo($targetType, ScheduledPost $post) {
+        $scheduled_date_time = new Carbon($post->scheduled_date. ' ' . $post->scheduled_time);
+
+        if ($targetType == 'page')
+            $scheduled_date_time->addMinutes(7);
+
+        $now = Carbon::now();
+        // dd($scheduled_date_time);
+        // dd($now->diffInMinutes($scheduled_date_time));
+        return $now->diffInMinutes($scheduled_date_time) <= 1;
+    }
+
     public function handle()
     {
-        // Get all pending posts
+        // Post to group the pending posts
         $scheduled_posts = ScheduledPost::where('status', 'Pendiente')->get();
-        // Send when needed
-        foreach ($scheduled_posts as $post) {
-            $schedule_date_time = new Carbon($post->scheduled_date. ' ' . $post->scheduled_time);
 
-            $now = Carbon::now();
-            // dd($schedule_date_time);
-            // dd($now->diffInMinutes($schedule_date_time));
-            if ($now->diffInMinutes($schedule_date_time) <= 1) {
-                $this->postAndMarkAsSent($post);
-            }
+        foreach ($scheduled_posts as $post) {
+            if ($this->shouldPostTo('group', $post))
+                $this->postToFacebook($post, 'group');
         }
 
-        // Send immediately
+        // Post to group the immediately posts
         $scheduled_posts = ScheduledPost::where('status', 'En cola')->get();
-        foreach ($scheduled_posts as $post) {
-            $this->postAndMarkAsSent($post);
+        foreach ($scheduled_posts as $post)
+            $this->postToFacebook($post, 'group');
+
+        // Post to fan-page 7 minutes later
+        $awaiting_posts = ScheduledPost::where('status', 'Enviado')
+            ->whereNull('published_to_fan_page_at')->get();
+        foreach ($awaiting_posts as $post)
+            $this->postToFacebook($post, 'page');
+    }
+
+    public function setFbAccessToken($type)
+    {
+        if ($type == 'group') {
+            // For group use the admin account (fb user access token)
+            $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']);
+            // User::where('id', $post->user_id)->first(['fb_access_token']);
+            if (!$user) return; // user not found
+
+            $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
+        } elseif ($type == 'page') {
+            // For page use the page access token
+            $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
         }
     }
 
-    public function postAndMarkAsSent(ScheduledPost $post)
+    public function postToFacebook(ScheduledPost $post, $targetType)
     {
-        // set access token
-        $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']);
-        // User::where('id', $post->user_id)->first(['fb_access_token']);
-        if (!$user) return; // user not found (?)
-        // $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
-        $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
+        $this->setFbAccessToken($targetType);
 
+        // the strategy to post can be the same for groups or pages
+        // it only varies for the images post
         if ($post->type == 'link') {
             $status = $this->postLink($post);
         } elseif ($post->type == 'text') {
@@ -67,13 +90,19 @@ class SendScheduledPosts extends Command
         } elseif ($post->type == 'image') {
             $status = $this->postPhotoStory($post);
         } elseif ($post->type == 'images') {
-            // $status = $this->postPhotosAndStory($post); // groups feed
-            $status = $this->postAlbum($post); // fan pages feed
+            if ($targetType == 'group')
+                $status = $this->postPhotosAndStory($post); // groups feed
+            elseif ($targetType == 'page')
+                $status = $this->postAlbum($post); // fan pages feed
         } elseif ($post->type == 'video') {
             $status = $this->postVideo($post);
         }
 
-        $post->status = $status;
+        if ($targetType == 'group')
+            $post->status = $status; // 3 states
+        elseif ($targetType == 'page')
+            $post->published_to_fan_page_at = Carbon::now(); // mark as published
+
         $post->save();
     }
 
@@ -313,6 +342,7 @@ class SendScheduledPosts extends Command
     }
 
     // there is no way to associate a post with an album (for groups feed)
+    // but it works for fan-pages (and the multi photo strategy doesn't work for pages)
 
     public function postAlbum(ScheduledPost $post)
     {
@@ -330,7 +360,7 @@ class SendScheduledPosts extends Command
             $albumId = $graphNode->getField('id');
             $this->prettyPrint($post->id, true, 'postAlbum', $graphNode->asJson());
 
-            return $this->postAlbumPhotos($albumId);
+            return $this->postAlbumPhotos($albumId, $post);
         } catch (FacebookSDKException $e) {
             $this->prettyPrint($post->id, false, 'postAlbum', $e->getMessage());
 
@@ -338,14 +368,10 @@ class SendScheduledPosts extends Command
         }
     }
 
-    private function postAlbumPhotos($albumId)
+    private function postAlbumPhotos($albumId, ScheduledPost $post)
     {
         // Upload photos into an album
-        $photosUrl = [
-            'https://static.pexels.com/photos/605096/pexels-photo-605096.jpeg',
-            'https://www.planwallpaper.com/static/images/b807c2282ab0a491bd5c5c1051c6d312_k4PiHxO.jpg',
-            'http://hdwarena.com/wp-content/uploads/2017/04/Beautiful-Wallpaper.jpg'
-        ];
+        $photosUrl = $post->images()->pluck('secure_url');
 
         $status = "Error";
         foreach ($photosUrl as $photoUrl) {
