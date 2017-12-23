@@ -45,8 +45,13 @@ Route::get('/config/page/{id}/promotions', 'Creator\FanPageController@promotions
 Route::get('/config/promotion/{id}/excel', 'Creator\FanPageController@excel');
 
 // Promotions list
-Route::get('/promotions', 'Guess\PromotionController@index');
-Route::get('/promotions/search', 'Guess\PromotionController@search');
+Route::get('/promotions', function () {
+    return redirect('/clubmomy/cuponera', 301);
+});
+Route::get('/promotions/search', function () {
+    return redirect('/clubmomy/cuponera', 301);
+});
+Route::get('/clubmomy/cuponera', 'Guess\PromotionController@index');
 
 // Promotions for creators
 Route::post('/promotion', 'Creator\PromotionController@store');

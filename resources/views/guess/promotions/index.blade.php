@@ -3,6 +3,10 @@
 @section('styles')
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
     <style>
+        .wrapper.style1 {
+            background-color: #9E69AD;
+        }
+
         .panel .panel-footer {
             background: #2c3e50;
         }
@@ -63,6 +67,10 @@
         #header h1 {
             position: initial;
         }
+
+        .btn.special.btn-block {
+            white-space: normal;
+        }
     </style>
 @endsection
 
@@ -70,34 +78,69 @@
 <div id="page-wrapper">
     <header id="header" class="text-center">
         <h1>
-            <a href="{{ url('/promotions') }}">Cuponera Tombo Fans</a>
+            <a href="{{ url('/clubmomy/cuponera') }}">Cuponera Club Momy</a>
         </h1>
     </header>
 
     <article id="main">
 
-        <section class="wrapper style1">
+        <section class="wrapper style2">
             <div class="container-fluid">
                 {{-- Fix, because header is floating --}}
                 <br class="visible-xs">
 
-                <div class="col-md-3 hidden-xs">
-                    <form>
-                        <div class="form-group">
+                <form action="" class="form-horizontal" method="GET">
+                    <div class="input-group">
+                        <input type="text" name="query" class="form-control" placeholder="¿Qué estás buscando?"
+                               value="{{ $query }}">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <section>
+                    <div class="row uniform">
+                        <div class="col-md-6">
+                            <h2>¿Cómo funciona la cuponera?</h2>
+                            <ol>
+                                <li>Da clic en la imagen del producto o servicio que te interesó.</li>
+                                <li>Sigue las instrucciones de la promoción o el cupón de descuento.</li>
+                                <li>Recibes un mail con los datos de contacto del anunciante.</li>
+                                <li>Haz valida tu promoción o cupón de descuento.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6">
+                            {{--<a href="{{ $loginUrl }}" class="btn special btn-block btn-small">--}}
+                            {{--Promueve tu negocio aquí--}}
+                            {{--</a>--}}
+                            <p>Da clic para más información:</p>
                             <a href="{{ $loginUrl }}" class="btn special btn-block btn-small">
-                                Promueve tu negocio aquí
+                                ¿Eres mamá y quieres anunciar tus productos o servicios?
+                            </a>
+                            <a href="https://m.me/ClubMomy" class="btn special btn-block btn-small">
+                                ¿Quieres anunciar productos o servicios para mamás?
                             </a>
                         </div>
-                    </form>
+                    </div>
+                </section>
+            </div>
+        </section>
 
+        <section class="wrapper style1">
+            <div class="container-fluid">
+
+                <div class="col-md-3 hidden-xs">
                     <ul id="ulCategories">
                         <li data-filter="All">
-                            <a class="btn btn-primary btn-sm">Todas las categorías</a>
+                            <a class="btn btn-primary btn-xs">Todas las categorías</a>
                         </li>
                         @foreach ($categories as $category)
                             <li data-filter="{{ $category->en }}">
-                                <a class="btn btn-primary btn-sm">
-                                    {{ $category->es }}
+                                <a class="btn btn-primary btn-xs">
+                                    {{ $category->es }} ({{ $category->count }})
                                     {{--({{ $category->count }})--}}
                                 </a>
                             </li>
@@ -106,12 +149,6 @@
                 </div>
 
                 <form action="" class="visible-xs">
-                    <div class="form-group">
-                        <a href="{{ $loginUrl }}" class="btn special btn-block btn-small">
-                            Promueve tu negocio aquí
-                        </a>
-                    </div>
-
                     <div class="form-group">
                         <select id="select-filter">
                             <option value="All">Todas las categorías</option>
@@ -122,18 +159,6 @@
                                 </option>
                             @endforeach
                         </select>
-                    </div>
-                </form>
-
-                <form action="{{ url('promotions/search') }}" class="form-horizontal" method="GET">
-                    <div class="input-group">
-                        <input type="text" name="query" class="form-control" placeholder="¿Buscas algo en particular?"
-                            value="{{ $query }}">
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-sm">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </div>
                     </div>
                 </form>
 

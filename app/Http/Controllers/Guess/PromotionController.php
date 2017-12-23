@@ -20,10 +20,8 @@ class PromotionController extends Controller
     {
         $categories = $this->getFanPageCategories();
 
-        $promotions = Promotion::active()->get();
-        $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
-
-        $query = '';
+        $query = $request->input('query'); // empty query
+        $promotions = $this->getOrSearchPromotions($request, $query);
 
         $helper = $fb->getRedirectLoginHelper();
         $loginUrl = $helper->getLoginUrl(url('/facebook/callback'), ['email', 'user_location', 'manage_pages']);
@@ -31,13 +29,12 @@ class PromotionController extends Controller
         return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query', 'loginUrl'));
     }
 
-    public function search(Request $request, LaravelFacebookSdk $fb)
+    public function getOrSearchPromotions(Request $request, $query)
     {
-        $query = $request->input('query');
-        if (! $query)
-            return redirect('/promotions');
-
-        $categories = $this->getFanPageCategories();
+        if (!$query) { // all promotions
+            $promotions = Promotion::active()->get();
+            return $this->sortFilterFormatAndPaginate($request, $promotions);
+        }
 
         // Search for fan pages that includes the query string
         $fanPagesId = FanPage::where('name', 'like', '%' . $query . '%')->pluck('id');
@@ -47,12 +44,7 @@ class PromotionController extends Controller
             ->orWhere('description', 'like', '%' . $query . '%')
             ->get();
 
-        $promotions = $this->sortFilterFormatAndPaginate($request, $promotions);
-
-        $helper = $fb->getRedirectLoginHelper();
-        $loginUrl = $helper->getLoginUrl(url('/facebook/callback'), ['email', 'user_location', 'manage_pages']);
-
-        return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query', 'loginUrl'));
+        return $this->sortFilterFormatAndPaginate($request, $promotions);
     }
 
     public function sortFilterFormatAndPaginate(Request $request, $promotions) {
@@ -134,4 +126,5 @@ class PromotionController extends Controller
             ->orderByRaw('IFNULL(category_translations.es, fan_pages.category)')
             ->get();
     }
+
 }
