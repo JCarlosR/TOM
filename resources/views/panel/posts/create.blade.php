@@ -84,6 +84,22 @@
 
                         @include('panel.posts.modal-schedule')
 
+                        <p>Selecciona los medios de contacto que quieres que aparezcan en tu publicación:</p>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="check_page">
+                                Enlace hacia una de tus fanpage
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check_tag_user">
+                                Perfil personal de facebook
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check_other">
+                                Escribe un correo o sitio web distinto
+                            </li>
+                        </ul>
+
                         {{-- Dropdown button --}}
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -89,6 +89,8 @@
                 {{-- Fix, because header is floating --}}
                 <br class="visible-xs">
 
+                <img src="https://res.cloudinary.com/tombofans/image/upload/v1514136374/club-momy-banner-3.jpg" alt="Club Momy" class="img-responsive">
+                
                 <form action="" class="form-horizontal" method="GET">
                     <div class="input-group">
                         <input type="text" name="query" class="form-control" placeholder="¿Qué estás buscando?"
@@ -135,14 +137,11 @@
                 <div class="col-md-3 hidden-xs">
                     <ul id="ulCategories">
                         <li data-filter="All">
-                            <a class="btn btn-primary btn-xs">Todas las categorías</a>
+                            <a>Todas las categorías</a>
                         </li>
                         @foreach ($categories as $category)
                             <li data-filter="{{ $category->en }}">
-                                <a class="btn btn-primary btn-xs">
-                                    {{ $category->es }} ({{ $category->count }})
-                                    {{--({{ $category->count }})--}}
-                                </a>
+                                <a>{{ $category->es }} ({{ $category->count }})</a>
                             </li>
                         @endforeach
                     </ul>
