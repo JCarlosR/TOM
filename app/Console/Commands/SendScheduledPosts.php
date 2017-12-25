@@ -120,13 +120,7 @@ class SendScheduledPosts extends Command
         $params = [
             'message' => $post->description,
             'link' => $post->link,
-            'message_tags' => [
-                [
-                    'id' => '135645013606256',
-                    'name' => 'Victor Velasco',
-                    'type' => 'user'
-                ]
-            ]
+            'tags' => ['135645013606256']
         ];
 
         try {

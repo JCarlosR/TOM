@@ -101,8 +101,8 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="124" column="20" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
+            <state relative-caret-position="312">
+              <caret line="122" column="41" lean-forward="false" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
               <folding>
                 <element signature="e#2282#3022#0#PHP" expanded="false" />
                 <element signature="e#3028#4148#0#PHP" expanded="false" />
@@ -613,14 +613,7 @@
       <workItem from="1514043631928" duration="6277000" />
       <workItem from="1514136160614" duration="572000" />
       <workItem from="1514158098218" duration="599000" />
-      <workItem from="1514217244354" duration="4248000" />
-    </task>
-    <task id="LOCAL-00138" summary="Comment dd">
-      <created>1512439901921</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1512439901922</updated>
+      <workItem from="1514217244354" duration="4872000" />
     </task>
     <task id="LOCAL-00139" summary="F*ck bin mime allowed">
       <created>1512440269069</created>
@@ -958,11 +951,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514221886115</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="try using array of arrays">
+      <created>1514223363380</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1514223363380</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532295000" />
+    <option name="totallyTimeSpent" value="532919000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1013,7 +1013,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Change tab titles" />
     <MESSAGE value="Show total amount of finished posts" />
     <MESSAGE value="Add many chat code" />
     <MESSAGE value="Post to fanpage instead to the group (temporal)" />
@@ -1038,7 +1037,8 @@
     <MESSAGE value="Contact info: fan page, user tag, other email/web" />
     <MESSAGE value="Test message_tags params with the type link posts" />
     <MESSAGE value="Comment column that still doesn't exists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment column that still doesn't exists" />
+    <MESSAGE value="try using array of arrays" />
+    <option name="LAST_COMMIT_MESSAGE" value="try using array of arrays" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1451,8 +1451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="124" column="20" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
+        <state relative-caret-position="312">
+          <caret line="122" column="41" lean-forward="false" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
           <folding>
             <element signature="e#2282#3022#0#PHP" expanded="false" />
             <element signature="e#3028#4148#0#PHP" expanded="false" />
