@@ -119,7 +119,12 @@ class SendScheduledPosts extends Command
         $queryUrl = "/$this->targetFbId/feed";
         $params = [
             'message' => $post->description,
-            'link' => $post->link
+            'link' => $post->link,
+            'message_tags' => [
+                'id' => '135645013606256',
+                'name' => 'Victor Velasco',
+                'type' => 'user'
+            ]
         ];
 
         try {

@@ -176,7 +176,7 @@ class FacebookPostController extends Controller
             $scheduled_post->video_url = $response['secure_url'];
         }
         */
-        $scheduled_post->description = $scheduled_post->description . $this->buildContactInfo($request);
+        $scheduled_post = $this->buildContactInfo($scheduled_post, $request);
         $saved = $scheduled_post->save();
 
         // continue based on the post type
@@ -192,7 +192,7 @@ class FacebookPostController extends Controller
         return $data;
     }
 
-    public function buildContactInfo(Request $request)
+    public function buildContactInfo(ScheduledPost $post, Request $request)
     {
         $info = '';
 
@@ -205,10 +205,11 @@ class FacebookPostController extends Controller
         }
 
         if ($request->has('check_tag_user')) {
-            $fb_id = auth()->user()->facebook_user_id;
             $name = auth()->user()->name;
-            $tag = "@[$fb_id:1:$name]";
-            $info .= "\nContactar a: $tag";
+            $info .= "\nContactar a: $name";
+            // api data
+            $post->tag_author = true;
+            // $fb_id = auth()->user()->facebook_user_id;
         }
 
         if ($request->has('check_other')) {
@@ -216,7 +217,8 @@ class FacebookPostController extends Controller
             $info .= "\nMedio de contacto: $contactInfo";
         }
 
-        return $info;
+        $post->description = $post->description . $info;
+        return $post;
     }
 
     public function destroy(Request $request)
