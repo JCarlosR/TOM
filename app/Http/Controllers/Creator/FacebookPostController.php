@@ -206,10 +206,8 @@ class FacebookPostController extends Controller
 
         if ($request->has('check_tag_user')) {
             $name = auth()->user()->name;
-            $info .= "\nContactar a: $name";
-            // api data
-            // $post->tag_author = true;
-            // $fb_id = auth()->user()->facebook_user_id;
+            $fbUserId = auth()->user()->facebook_user_id;
+            $info .= "\nContactar a: $name https://fb.com/$fbUserId";
         }
 
         if ($request->has('check_other')) {
