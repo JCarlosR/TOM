@@ -208,7 +208,7 @@ class FacebookPostController extends Controller
             $name = auth()->user()->name;
             $info .= "\nContactar a: $name";
             // api data
-            $post->tag_author = true;
+            // $post->tag_author = true;
             // $fb_id = auth()->user()->facebook_user_id;
         }
 
