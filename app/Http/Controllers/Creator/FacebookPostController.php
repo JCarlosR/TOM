@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Creator;
 
+use App\FanPage;
 use App\ScheduledPost;
 use App\ScheduledPostImage;
 use App\User;
@@ -26,10 +27,12 @@ class FacebookPostController extends Controller
     {
         // $availablePermissions = $this->checkAvailablePermissions($facebookSdk);
 
-        // the posts will be performed using the access token of the group admin
-        $scheduled_posts = auth()->user()->scheduledPosts()->where('status', 'Pendiente')->get();
+        $user = auth()->user();
 
-        $finished_posts = auth()->user()->scheduledPosts()
+        // the posts will be performed using the access token of the group admin
+        $scheduled_posts = $user->scheduledPosts()->where('status', 'Pendiente')->get();
+
+        $finished_posts = $user->scheduledPosts()
             ->orderBy('scheduled_date', 'desc')->orderBy('scheduled_time', 'desc')
             ->where('status', '<>', 'Pendiente')->paginate(10);
 
@@ -77,7 +80,9 @@ class FacebookPostController extends Controller
         // current time +10 minutes
         $time = Carbon::now()->addMinutes(10)->format('H:i');
 
-        return view('panel.posts.create')->with(compact('availablePermissions', 'time'));
+        $pages = auth()->user()->fanPages;
+
+        return view('panel.posts.create')->with(compact('availablePermissions', 'time', 'pages'));
     }
 
     public function store(Request $request)
@@ -85,12 +90,18 @@ class FacebookPostController extends Controller
         $rules = [
             'description' => 'required_without:imageUrls',
             'scheduled_time' => 'required_if:now,null',
-            'scheduled_date' => 'required_if:now,null'
+            'scheduled_date' => 'required_if:now,null',
+
+            'fan_page_id' => 'required_if:check_page,on',
+            'contact_info' => 'required_if:check_other,on'
         ];
         $messages = [
             'description.required_without' => 'Es necesario ingresar una descripción.',
             'scheduled_time.required_if' => 'Debes seleccionar una hora de publicación.',
-            'scheduled_date.required_if' => 'Debes seleccionar una fecha de publicación.'
+            'scheduled_date.required_if' => 'Debes seleccionar una fecha de publicación.',
+
+            'fan_page_id.required_if' => 'Debes seleccionar una fanpage o desmarcar el check.',
+            'contact_info.required_if' => 'Debes ingresar una información de contacto o desmarcar el check.'
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -165,6 +176,7 @@ class FacebookPostController extends Controller
             $scheduled_post->video_url = $response['secure_url'];
         }
         */
+        $scheduled_post->description = $scheduled_post->description . $this->buildContactInfo($request);
         $saved = $scheduled_post->save();
 
         // continue based on the post type
@@ -178,6 +190,33 @@ class FacebookPostController extends Controller
         $data = [];
         $data['success'] = $saved;
         return $data;
+    }
+
+    public function buildContactInfo(Request $request)
+    {
+        $info = '';
+
+        if ($request->has('check_page')) {
+            $page = FanPage::find($request->input('fan_page_id'));
+            if ($page) {
+                $pageLink = 'https://fb.com/' . $page->fan_page_id;
+                $info .= "\nPágina de contacto: $pageLink";
+            }
+        }
+
+        if ($request->has('check_tag_user')) {
+            $fb_id = auth()->user()->facebook_user_id;
+            $name = auth()->user()->name;
+            $tag = "@[$fb_id:1:$name]";
+            $info .= "\nContactar a: $tag";
+        }
+
+        if ($request->has('check_other')) {
+            $contactInfo = $request->input('contact_info');
+            $info .= "\nMedio de contacto: $contactInfo";
+        }
+
+        return $info;
     }
 
     public function destroy(Request $request)

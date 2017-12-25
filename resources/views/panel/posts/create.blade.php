@@ -87,16 +87,23 @@
                         <p>Selecciona los medios de contacto que quieres que aparezcan en tu publicación:</p>
                         <ul>
                             <li>
-                                <input type="checkbox" name="check_page">
+                                <input type="checkbox" name="check_page" id="checkPage">
                                 Enlace hacia una de tus fanpage
+                                <select name="fan_page_id" id="selectFanPage" class="form-control" style="display: none">
+                                    <option value="">Selecciona una fan page</option>
+                                    @foreach ($pages as $page)
+                                        <option value="{{ $page->id }}">{{ $page->name }}</option>
+                                    @endforeach
+                                </select>
                             </li>
                             <li>
-                                <input type="checkbox" name="check_tag_user">
+                                <input type="checkbox" name="check_tag_user" checked>
                                 Perfil personal de facebook
                             </li>
                             <li>
-                                <input type="checkbox" name="check_other">
+                                <input type="checkbox" name="check_other" id="checkOther">
                                 Escribe un correo o sitio web distinto
+                                <input type="text" class="form-control" name="contact_info" style="display: none" id="contactInfo">
                             </li>
                         </ul>
 
@@ -142,6 +149,7 @@
         var $uploadedImages, $templateImage;
         var $description, $previewLink;
         var $scheduledDate, $scheduledTime;
+        var $checkPage, $checkOther;
 
         function setupButtonImage() {
             $btnLoadImage = $('#btnImage');
@@ -242,7 +250,22 @@
                 format: 'yyyy-mm-dd',
                 language: 'es-ES'
             });
+
+            setupContactOptions();
         });
+
+        function setupContactOptions() {
+            $checkPage = $('#checkPage');
+            $checkOther = $('#checkOther');
+
+            $checkPage.on('change', function () {
+                $('#selectFanPage').slideToggle();
+            });
+
+            $checkOther.on('change', function () {
+                $('#contactInfo').slideToggle();
+            });
+        }
 
         var awaitingResponse = false;
         function sendScheduledPost() {
