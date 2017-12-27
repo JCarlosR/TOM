@@ -38,6 +38,7 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     {{-- ManyChat --}}
+    <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = “//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=532160876956612”;fjs.parentNode.insertBefore(js, fjs);}(document, ‘script’, ‘facebook­jssdk’));</script>
     <script src="//widget.manychat.com/1567109470249042.js" async="async"></script>
 
     {{-- Support type date for Firefox, Safari & IE --}}
