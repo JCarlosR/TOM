@@ -18,7 +18,7 @@
                             <span class="glyphicon glyphicon-cog"></span>
                             Configurar promociones
                         </a>
-                        @if (auth()->user()->is_admin || env('APP_DEBUG'))
+                        @if (!auth()->user()->fb_posts_revoked_permission)
                             <a class="list-group-item" href="{{ url('/facebook/posts') }}" id="step-2">
                                 <span class="fa fa-facebook-official"></span>
                                 Publicaciones Club <img src="/images/logos/club-momy.png" alt="Logo Club Momy" height="26">
