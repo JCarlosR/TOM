@@ -33,7 +33,7 @@ class SendScheduledPosts extends Command
     }
 
     public function shouldPostTo($targetType, ScheduledPost $post) {
-        $scheduled_date_time = new Carbon($post->scheduled_date. ' ' . $post->scheduled_time);
+        $scheduled_date_time = $post->getScheduledDateTime();
 
         if ($targetType == 'page')
             $scheduled_date_time->addMinutes(7);

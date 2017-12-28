@@ -177,6 +177,7 @@ class FacebookPostController extends Controller
         }
         */
         $scheduled_post = $this->buildContactInfo($scheduled_post, $request);
+        $this->applyDelayIfNeeded($scheduled_post); // update scheduled date & time if needed
         $saved = $scheduled_post->save();
 
         // continue based on the post type
@@ -217,6 +218,16 @@ class FacebookPostController extends Controller
 
         $post->description = $post->description . $info;
         return $post;
+    }
+
+    public function applyDelayIfNeeded(ScheduledPost $post)
+    {
+        while (ScheduledPost::existsCollisionsWith($post)) {
+            $newDateTime = $post->getScheduledDateTime()->addMinutes(2);
+            $post->scheduled_date = $newDateTime->format('Y-m-d');
+            $post->scheduled_time = $newDateTime->format('H:i');
+        }
+        $post->save();
     }
 
     public function destroy(Request $request)
