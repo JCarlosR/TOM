@@ -51,7 +51,7 @@ Route::get('/promotions', function () {
 Route::get('/promotions/search', function () {
     return redirect('/clubmomy/cuponera', 301);
 });
-Route::get('/clubmomy/cuponera', 'Guess\PromotionController@index');
+Route::get('/clubmomy/cuponera', 'Guess\PromotionController@index')->name('cuponera');
 
 // Promotions for creators
 Route::post('/promotion', 'Creator\PromotionController@store');

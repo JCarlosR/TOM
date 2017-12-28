@@ -16,8 +16,15 @@ class PromotionController extends Controller
     public function show($id, LaravelFacebookSdk $fb)
     {
         $promotion = Promotion::find($id);
-        if (! $promotion)
-            return redirect('/');
+        if (! $promotion) {
+            $notification = 'La promoción a la que intentaste acceder no existe.';
+            return redirect()->route('cuponera')->with(compact('notification'));
+        }
+        if ($promotion->end_date < date('Y-m-d')) {
+            $notification = 'La promoción a la que intentaste acceder ha caducado.';
+            return redirect()->route('cuponera')->with(compact('notification'));
+        }
+
 
         // Request permissions if the user still have not authenticated
         $token = session('fb_user_access_token');
