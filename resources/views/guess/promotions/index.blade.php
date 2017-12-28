@@ -14,16 +14,13 @@
         .panel .panel-footer {
             background: #2c3e50;
         }
-
         .panel p {
             margin: 0;
             padding: 0;
         }
-        
         .panel .panel-body p {
             color: #000;
         }
-
         .panel .panel-heading {
             height: 5em;
             overflow-y: auto;
@@ -74,6 +71,7 @@
 
         .btn.special.btn-block {
             white-space: normal;
+            background: #9E69AD;
         }
     </style>
 @endsection
@@ -132,7 +130,7 @@
                             <a href="{{ $loginUrl }}" class="btn special btn-block btn-small">
                                 ¿Eres mamá y quieres anunciar tus productos o servicios?
                             </a>
-                            <a href="https://m.me/ClubMomy" class="btn special btn-block btn-small">
+                            <a href="https://m.me/ClubMomy" class="btn special btn-block btn-small" target="_blank">
                                 ¿Quieres anunciar productos o servicios para mamás?
                             </a>
                         </div>
