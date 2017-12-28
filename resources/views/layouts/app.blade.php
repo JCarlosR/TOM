@@ -12,7 +12,7 @@
     {{-- Styles --}}
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 
-    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="TomboFans" />
     <meta property="og:description" content="Impulsa tus ventas y consigue clientes más felices" />
