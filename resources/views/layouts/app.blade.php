@@ -17,7 +17,7 @@
     <meta property="og:title" content="TomboFans" />
     <meta property="og:description" content="Impulsa tus ventas y consigue clientes más felices" />
     @section('og-image')
-        <meta property="og:image" content="{{ asset('images/welcome.png') }}" />
+        <meta property="og:image" content="{{ asset('images/welcome.png') }}">
     @show
 
     <meta name="csrf-token" content="{{ csrf_token() }}">

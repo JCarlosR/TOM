@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('og-image')
+    <meta property="og:image" content="https://res.cloudinary.com/tombofans/image/upload/v1514136374/club-momy-banner-3.jpg">
+@endsection
+
 @section('styles')
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
     <style>
