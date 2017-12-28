@@ -23,11 +23,37 @@ class FacebookPostController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function askPassword()
     {
-        // $availablePermissions = $this->checkAvailablePermissions($facebookSdk);
+        return view('panel.posts.ask_password');
+    }
+
+    public function verifyPassword(Request $request)
+    {
+        $rules = [
+            'pass' => 'in:Momy2018'
+        ];
+        $messages = [
+            'pass.in' => 'La contraseña ingresada no es correcta.'
+        ];
+        $this->validate($request, $rules, $messages);
 
         $user = auth()->user();
+        $user->entered_password_for_fb_posts = true;
+        $user->save();
+
+        $notification = 'Has ingresado correctamente la contraseña!';
+        return redirect('/facebook/posts')->with(compact('notification'));
+    }
+
+    public function index()
+    {
+        $user = auth()->user();
+        if (!$user->entered_password_for_fb_posts) // 0
+            return redirect('/facebook/posts/password');
+
+        // $availablePermissions = $this->checkAvailablePermissions($facebookSdk);
+
 
         // the posts will be performed using the access token of the group admin
         $scheduled_posts = $user->scheduledPosts()->where('status', 'Pendiente')->get();
