@@ -18,12 +18,6 @@
                             <span class="glyphicon glyphicon-cog"></span>
                             Configurar promociones
                         </a>
-                        @if (!auth()->user()->fb_posts_revoked_permission)
-                            <a class="list-group-item" href="{{ url('/facebook/posts') }}" id="step-2">
-                                <span class="fa fa-facebook-official"></span>
-                                Publicaciones Club <img src="/images/logos/club-momy.png" alt="Logo Club Momy" height="26">
-                            </a>
-                        @endif
                         <a class="list-group-item" href="{{ url('/clientes') }}" id="step-3">
                             <span class="fa fa-users"></span>
                             Clientes potenciales
@@ -32,6 +26,22 @@
                             <span class="glyphicon glyphicon-book"></span>
                             Tutoriales
                         </a>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">Club Momypreneur</div>
+                    <div class="panel-body">
+                        @if (!auth()->user()->fb_posts_revoked_permission)
+                            <a class="list-group-item" href="{{ url('/facebook/posts') }}" id="step-2">
+                                <span class="fa fa-facebook-official"></span>
+                                Publicaciones Club <img src="/images/logos/club-momy.png" alt="Logo Club Momy" height="26">
+                            </a>
+                        @endif
+                            <a class="list-group-item" href="{{ url('/config') }}" id="step-2">
+                                <span class="glyphicon glyphicon-cog"></span>
+                                Cuponera Digital <img src="/images/logos/club-momy.png" alt="Logo Club Momy" height="26">
+                            </a>
                     </div>
                 </div>
 
