@@ -144,12 +144,16 @@
 
                 <div class="col-md-3 hidden-xs">
                     <ul id="ulCategories">
-                        <li data-filter="All">
-                            <a>Todas las categorías</a>
+                        <li>
+                            <a href="{{ url('/clubmomy/cuponera') }}">
+                                Todas las categorías
+                            </a>
                         </li>
                         @foreach ($categories as $category)
-                            <li data-filter="{{ $category->en }}">
-                                <a>{{ $category->es }} ({{ $category->count }})</a>
+                            <li>
+                                <a href="{{ url('/clubmomy/cuponera?categoria='.$category->en) }}">
+                                    {{ $category->es }} ({{ $category->count }})
+                                </a>
                             </li>
                         @endforeach
                     </ul>
@@ -236,11 +240,12 @@
                         {{ $promotions->links() }}
                     </div>
                 </div>
+
             </div>
         </section>
+
     </article>
 
-    <!-- Footer -->
     @include('includes.footer')
 </div>
 @endsection
@@ -254,23 +259,9 @@
     <script src="//widget.manychat.com/1567109470249042.js" async="async"></script>
 
     <script>
-        $('[data-filter]').on('click', function () {
-            var target = $(this).data('filter');
-            applyFilter(target);
-        });
-
         $('#select-filter').on('change', function () {
             var target = $(this).val();
-            applyFilter(target);
+            location.href = '{{ url('clubmomy/cuponera?categoria=') }}' + target;
         });
-
-        function applyFilter(target) {
-            if (target != 'All') {
-                $('[data-status]').css('display', 'none');
-                $('[data-status="' + target + '"]').fadeIn('slow');
-            } else {
-                $('[data-status]').css('display', 'none').fadeIn('slow');
-            }
-        }
     </script>
 @endsection

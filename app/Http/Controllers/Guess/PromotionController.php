@@ -29,19 +29,29 @@ class PromotionController extends Controller
         return view('guess.promotions.index')->with(compact('promotions', 'categories', 'query', 'loginUrl'));
     }
 
-    public function getOrSearchPromotions(Request $request, $query)
+    public function getOrSearchPromotions(Request $request, $searchText)
     {
-        if (!$query) { // all promotions
-            $promotions = Promotion::active()->get();
+        // DB::enableQueryLog();
+        $query = Promotion::active();
+
+        $category_en = $request->input('categoria');
+        if ($category_en)
+            $query = $query->whereHas('fanPage', function ($page) use ($category_en) {
+                        $page->where('category', $category_en);
+                    });
+
+        // dd(DB::getQueryLog());
+        if (!$searchText) { // all promotions
+            $promotions = $query->get();
             return $this->sortFilterFormatAndPaginate($request, $promotions);
         }
 
         // Search for fan pages that includes the query string
-        $fanPagesId = FanPage::where('name', 'like', '%' . $query . '%')->pluck('id');
+        $fanPagesId = FanPage::where('name', 'like', '%' . $searchText . '%')->pluck('id');
 
-        $promotions = Promotion::active()
+        $promotions = $query
             ->whereIn('fan_page_id', $fanPagesId)
-            ->orWhere('description', 'like', '%' . $query . '%')
+            ->orWhere('description', 'like', '%' . $searchText . '%')
             ->get();
 
         return $this->sortFilterFormatAndPaginate($request, $promotions);
@@ -99,11 +109,16 @@ class PromotionController extends Controller
             FROM promotions
             JOIN fan_pages ON promotions.fan_page_id = fan_pages.id
             LEFT JOIN category_translations ON fan_pages.category = category_translations.en
+            WHERE end_date > GETDATE() OR end_date is null
             GROUP BY fan_pages.category, category_translations.es
         */
         return DB::table('promotions')
             ->join('fan_pages', 'promotions.fan_page_id', '=', 'fan_pages.id')
             ->leftJoin('category_translations', 'fan_pages.category', '=', 'category_translations.en')
+            ->whereNull('deleted_at')
+            ->where(function ($query) {
+                $query->where('end_date', '>', Carbon::now())->orWhereNull('end_date'); // where active promotion
+            })
             ->select(DB::raw(
                 'fan_pages.category as en, 
                 IFNULL(category_translations.es, fan_pages.category) as es, 
