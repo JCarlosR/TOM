@@ -166,7 +166,7 @@
                             @foreach ($categories as $category)
                                 <option value="{{ $category->en }}">
                                     {{ $category->es }}
-                                    {{--({{ $category->count }})--}}
+                                    ({{ $category->count }})
                                 </option>
                             @endforeach
                         </select>
