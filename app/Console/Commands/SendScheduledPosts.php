@@ -86,6 +86,7 @@ class SendScheduledPosts extends Command
     public function postToFacebook(ScheduledPost $post, $targetType)
     {
         $this->setFbAccessTokenAndTargetId($targetType);
+        $status = $post->status; // avoid change for error situations
 
         // the strategy to post can be the same for groups or pages
         // it only varies for the images post
@@ -104,11 +105,17 @@ class SendScheduledPosts extends Command
             $status = $this->postVideo($post);
         }
 
-        if ($targetType == 'group')
-            $post->status = $status; // 3 states
-        elseif ($targetType == 'page')
-            $post->published_to_fan_page_at = Carbon::now(); // mark as published
+        if ($status == 'Error') {
+            // re integrate the discounted credit
+            $user = $post->user;
+            $user->remaining_participations = $user->remaining_participations +1;
+            $user->save();
+        } elseif ($status == 'Enviado' &&  $targetType == 'page') {
+            // mark as published
+            $post->published_to_fan_page_at = Carbon::now();
+        }
 
+        $post->status = $status; // 3 states
         $post->save();
     }
 

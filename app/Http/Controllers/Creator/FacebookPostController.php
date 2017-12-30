@@ -140,6 +140,8 @@ class FacebookPostController extends Controller
                 elseif ($request->has('scheduled_time') && $request->input('scheduled_time') < date('H:i'))
                     $validator->errors()->add('scheduled_time', 'Por favor verifica la hora de envío.');
             }
+            if (auth()->user()->remaining_participations == 0)
+                $validator->errors()->add('no_credits', 'No dispones de créditos.');
         });
 
         if ($validator->fails()) {
@@ -208,10 +210,16 @@ class FacebookPostController extends Controller
 
         // continue based on the post type
 
-        if ($saved && $postType == 'images' || $postType == 'image') {
-            ScheduledPostImage::whereIn('id', $imagePostIds)->update([
-                'scheduled_post_id' => $scheduled_post->id // after save operation
-            ]);
+        if ($saved) {
+            if ($postType == 'images' || $postType == 'image')
+                ScheduledPostImage::whereIn('id', $imagePostIds)->update([
+                    'scheduled_post_id' => $scheduled_post->id // after save operation
+                ]);
+
+            // discount credit
+            $user = auth()->user();
+            $user->remaining_participations = $user->remaining_participations-1;
+            $user->save();
         }
 
         $data = [];

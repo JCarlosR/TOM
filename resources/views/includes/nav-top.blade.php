@@ -30,8 +30,8 @@
                     <li><a href="{{ url('/facebook/login') }}">Ingresar</a></li>
                     <li><a href="{{ url('/register') }}">Registro</a></li>
                 @else
-                    <li title="Te quedan {{ auth()->user()->remaining_participations }} participaciones disponibles para tus promociones">
-                        <a href="#">
+                    <li title="Te quedan {{ auth()->user()->remaining_participations }} créditos disponibles">
+                        <a href="#ª">
                             <i class="glyphicon glyphicon-tags"></i>
                             {{ auth()->user()->remaining_participations }}
                         </a>
