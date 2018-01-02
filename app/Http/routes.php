@@ -12,6 +12,8 @@ Route::post('/contact', 'GuessController@postContact');
 // Privacy & terms
 Route::get('/privacy', 'GuessController@privacy');
 Route::get('/terms', 'GuessController@terms');
+// Club landing
+Route::get('/ClubMomypreneur', 'GuessController@landing');
 
 // Generate a login URL
 Route::get('/facebook/login', 'FacebookController@login');

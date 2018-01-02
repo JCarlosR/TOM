@@ -80,4 +80,9 @@ class GuessController extends Controller
         return view('guess.terms');
     }
 
+    public function landing()
+    {
+        return view('guess.club-landing');
+    }
+
 }
