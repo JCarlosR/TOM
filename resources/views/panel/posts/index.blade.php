@@ -35,20 +35,9 @@
                     </div>
                 @endif
 
-                {{--@if ($availablePermissions)--}}
-                    {{--<p>Enhorabuena! TOM dispone de un token para publicar a tu nombre.</p>--}}
-                    {{--<p class="small">Última fecha de actualización del token: {{ auth()->user()->fb_access_token_updated_at ?: 'Nunca' }}</p>--}}
-                    {{--<p class="small">Te recomendamos actualizar este token una vez por mes. Su duración promedio es de 2 meses.</p>--}}
-                    {{--<a href="{{ url('/facebook/publish-group-permissions') }}" class="btn btn-sm btn-primary">--}}
-                        {{--<i class="fa fa-key"></i> Solicitar nuevo token--}}
-                    {{--</a>--}}
-                {{--@else--}}
-                    {{--<p>Antes de programar una publicación, por favor otorga permisos a TOM para que pueda publicar a tu nombre.</p>--}}
-                    {{--<a href="{{ url('/facebook/publish-group-permissions') }}" class="btn btn-primary btn-sm">--}}
-                        {{--<i class="fa fa-key"></i> Otorgar permisos a TOM--}}
-                    {{--</a>--}}
-                {{--@endif--}}
-                {{--<hr>--}}
+                @if (auth()->user()->is_admin)
+                    @include('panel.posts.token-renewal')
+                @endif
 
                 <p><strong>Bienvenida al Grupo exclusivo de Momypreneurs</strong></p>
 

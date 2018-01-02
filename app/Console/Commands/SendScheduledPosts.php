@@ -20,8 +20,17 @@ class SendScheduledPosts extends Command
     // fan page access token (the admin access token is taken from the fan page)
     private $fanPageAccessToken;
 
-    private $targetPageId = '2079845645561063';
-    private $targetGroupId = '948507005305322';
+    private $destinationFbIds = [
+        'club' => [
+            'page' => '1567109470249042',
+            'group' => '248133372209026'
+        ],
+        'test' => [
+            'page' => '2079845645561063', // Página de prueba TOM
+            'group' => '948507005305322' // Grupo Prueba TOM
+        ]
+    ];
+
     private $targetFbId; // currently selected target
 
     public function __construct(LaravelFacebookSdk $facebookSdk)
@@ -29,7 +38,6 @@ class SendScheduledPosts extends Command
         parent::__construct();
 
         $this->facebookSdk = $facebookSdk;
-        $this->fanPageAccessToken = env('FAN_PAGE_TARGET_ACCESS_TOKEN');
     }
 
     public function shouldPostTo($targetType, ScheduledPost $post) {
@@ -67,25 +75,52 @@ class SendScheduledPosts extends Command
                 $this->postToFacebook($post, 'page');
     }
 
-    public function setFbAccessTokenAndTargetId($type)
+    public function setFbAccessTokenAndTargetId($type, User $user)
     {
+        // target fb id
+        if ($user->is_admin) {
+            $this->targetFbId = $this->destinationFbIds['test'][$type];
+        } else {
+            $this->targetFbId = $this->destinationFbIds['club'][$type];
+        }
+
         if ($type == 'group') {
-            // For group use the admin account (fb user access token)
-            $user = User::where('email', 'vdesconocido777@gmail.com')->first(['fb_access_token']); // User::where('id', $post->user_id)->first(['fb_access_token']);
-            if (!$user) return; // user not found
+            // use the fb user access token of an admin
+
+            // the admins will post to a different group (test)
+            if ($user->is_admin)
+                $fbGroupAdmin = 'vdesconocido777@gmail.com';
+            else
+                $fbGroupAdmin = 'tombolavirtual@clubmomy.com';
+
+
+            $user = User::where('email', $fbGroupAdmin)->first(['fb_access_token']); // User::where('id', $post->user_id)->first(['fb_access_token']);
+            if (!$user) return false; // user not found
 
             $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
-            $this->targetFbId = $this->targetGroupId;
         } elseif ($type == 'page') {
             // use the fan page access token
+
+            // the token of the page is different for test and club
+            if ($user->is_admin)
+                $this->fanPageAccessToken = env('FAN_PAGE_TEST_ACCESS_TOKEN');
+            else
+                $this->fanPageAccessToken = env('FAN_PAGE_CLUB_ACCESS_TOKEN');
+
             $this->facebookSdk->setDefaultAccessToken($this->fanPageAccessToken);
-            $this->targetFbId = $this->targetPageId;
         }
+
+        return true;
     }
 
     public function postToFacebook(ScheduledPost $post, $targetType)
     {
-        $this->setFbAccessTokenAndTargetId($targetType);
+        $successfulSetup = $this->setFbAccessTokenAndTargetId($targetType, $post->user);
+        if (!$successfulSetup) {
+            $this->prettyPrint($post->id, false, 'postToFacebook', 'No access token');
+            return;
+        }
+
         $status = $post->status; // avoid change for error situations
 
         // the strategy to post can be the same for groups or pages

@@ -68,7 +68,12 @@ class User extends Authenticatable
     // accessors
     public function getIsAdminAttribute()
     {
-        $admin_emails = ['juancagb.17@hotmail.com', 'tombofans@gmail.com'];
+        $admin_emails = [
+            'juancagb.17@hotmail.com',
+            'tombofans@gmail.com',
+            'vdesconocido777@gmail.com',
+            'tombolavirtual@clubmomy.com'
+        ];
         return in_array($this->email, $admin_emails);
     }
 

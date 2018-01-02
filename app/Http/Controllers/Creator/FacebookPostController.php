@@ -46,14 +46,16 @@ class FacebookPostController extends Controller
         return redirect('/facebook/posts')->with(compact('notification'));
     }
 
-    public function index()
+    public function index(LaravelFacebookSdk $facebookSdk)
     {
         $user = auth()->user();
-        if (!$user->entered_password_for_fb_posts) // 0
+        if (!$user->entered_password_for_fb_posts)
             return redirect('/facebook/posts/password');
 
-        // $availablePermissions = $this->checkAvailablePermissions($facebookSdk);
-
+        if (auth()->user()->is_admin)
+            $availablePermissions = $this->checkAvailablePermissions($facebookSdk);
+        else
+            $availablePermissions = null;
 
         // the posts will be performed using the access token of the group admin
         $scheduled_posts = $user->scheduledPosts()->where('status', 'Pendiente')->get();
