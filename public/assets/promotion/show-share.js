@@ -1,12 +1,3 @@
-window.fbAsyncInit = function() {
-    FB.init({
-        appId      : '553974898124336',
-        xfbml      : true,
-        version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
-};
-
 (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {return;}
@@ -42,7 +33,7 @@ function onClickButtonShare() {
             name: 'Wow, miren lo que gane en esta TomboFans!',
             caption: '#GanadorTomboFans',
             description: $pDescription.text(),
-            link: 'https://tombofans.com/facebook/promotion/'+promoId,
+            link: 'https://tombofans.com/promotion/'+promoId,
             picture: $imgPromo.attr('src')
         },
 

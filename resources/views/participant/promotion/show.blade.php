@@ -118,5 +118,15 @@
 
 @section('scripts')
     <script src="{{ asset('/assets/promotion/show.js') }}"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '{{ env('FACEBOOK_APP_ID') }}',
+                xfbml      : true,
+                version    : 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+    </script>
     <script src="{{ asset('/assets/promotion/show-share.js') }}"></script>
 @endsection

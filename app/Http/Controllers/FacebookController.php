@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Promotion;
 use App\User;
 use Facebook\Exceptions\FacebookSDKException;
 use Illuminate\Http\Request;
@@ -24,11 +25,7 @@ class FacebookController extends Controller
     public function callback(LaravelFacebookSdk $fb)
     {
         // Obtain an access token
-        try {
-            $token = $fb->getAccessTokenFromRedirect();
-        } catch (FacebookSDKException $e) {
-            die($e->getMessage());
-        }
+        $token = $fb->getAccessTokenFromRedirect();
 
         // Token will be null if the user denied the request
         if (! $token) {
@@ -37,18 +34,15 @@ class FacebookController extends Controller
                 abort(403, 'Unauthorized action.');
             }
 
-            // If the promotion param exists redirect to the proper TOM page
-            $promotion_id = session()->get('promotion_id');
-            if ($promotion_id) {
-                session()->put('promotion_id', '');
-                return redirect('/promotion/'.$promotion_id);
-            } else {
-                return redirect('/');
-            }
+            // if the promotion param exists redirect to the proper url
+            $promotion_id = session('request_login_for_promotion');
+            $promotion = Promotion::findOrFail($promotion_id);
+            session()->put('request_login_for_promotion', ''); // clear
+            return redirect($promotion->full_link);
         }
 
         if (! $token->isLongLived()) {
-            // OAuth 2.0 client handler
+            // OAuth 2.0 client
             $oauth_client = $fb->getOAuth2Client();
 
             // Extend the access token
@@ -72,12 +66,12 @@ class FacebookController extends Controller
         }
 
         // If the user is a participant, this variable allows the redirect
-        $promotion_id = session()->get('promotion_id');
+        $promotion_id = session('request_login_for_promotion');
 
         // Convert the response to a `Facebook/GraphNodes/GraphUser` collection
         $facebook_user = $response->getGraphUser();
 
-        // Create the user if it does not exist or update the existing
+        // Create the user if it doesn't exist, or update the existing one
         // This will only work if you've added the SyncableGraphNodeTrait to the User model
         $user = User::createOrUpdateGraphNode($facebook_user);
 
@@ -91,13 +85,14 @@ class FacebookController extends Controller
         // Log the user into Laravel
         Auth::login($user);
 
-        // If the promotion param exists redirect to the proper TOM page
+        // If the promotion param exists redirect to the proper url
         if ($promotion_id) {
             // clear to avoid future redirects
-            session()->put('promotion_id', '');
-            return redirect('/promotion/'.$promotion_id);
+            session()->put('request_login_for_promotion', '');
+            $promotion = Promotion::findOrFail($promotion_id);
+            return redirect($promotion->full_link);
         } else {
-            // it is a creator
+            // the user is a creator
 
             // Update the referred_by ID (if it is not set) to
             // 1: if there is no a referral (the first user represents an empty value)
@@ -116,7 +111,7 @@ class FacebookController extends Controller
             return redirect('/bienvenido-creador');
         }
 
-        // Redirect creators to panel or tutorial (the first times)
+        // Redirect creators to panel or tutorial (the first time)
         if (auth()->user()->show_tutorial)
             return redirect('/tutorial');
         else

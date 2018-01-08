@@ -25,6 +25,14 @@ class Promotion extends Model
             && ($this->image_width < self::MIN_WIDTH_SUGGESTED || $this->image_height < self::MIN_HEIGHT_SUGGESTED);
     }
 
+    public function hasEnded()
+    {
+        if ($this->end_date)
+            return $this->end_date < date('Y-m-d');
+
+        return false;
+    }
+
     // accessors
 
     public function getImagePathAttribute()
@@ -55,12 +63,18 @@ class Promotion extends Model
         return $this->participationsCountRelation ? $this->participationsCountRelation->aggregate : 0;
     }
 
+    public function getFanPageSlugAttribute()
+    {
+        return str_slug($this->fanPage->name);
+    }
+
     public function getFullLinkAttribute()
     {
         $promotionId = $this->id;
-        $promotionSlug = str_slug($this->fanPage->name, '-');
+        $promotionSlug = $this->fan_page_slug;
         return url("/promocion/$promotionId/$promotionSlug");
     }
+
 
 
     // relationships

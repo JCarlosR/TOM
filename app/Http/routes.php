@@ -63,9 +63,12 @@ Route::post('/config/promotion/{id}/edit', 'Creator\PromotionController@update')
 Route::get('/config/promotion/{id}/delete', 'Creator\PromotionController@delete');
 
 // Promotions for participants
-Route::get('/promotion/{id}', 'Participant\PromotionController@show');
-Route::get('/promocion/{id}/{slug}', 'Participant\PromotionController@show');
-Route::match(['get', 'post'], '/facebook/promotion/{id}', 'Participant\PromotionController@requestFbPermissions');
+Route::get('/promotion/{id}', 'Participant\PromotionController@show')->name('promotion');
+Route::get('/promocion/{id}/{slug}', 'Participant\PromotionController@showSlug');
+Route::get('/facebook/promotion/{id}', function ($id) {
+    return redirect("promotion/$id", 301);
+});
+Route::match(['get', 'post'], '/facebook/promotion/login-request', 'Participant\PromotionController@requestFbPermissions');
 // Participate action
 Route::post('/promotion/{id}/go', 'Participant\PromotionController@go');
 

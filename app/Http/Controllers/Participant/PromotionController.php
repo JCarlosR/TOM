@@ -15,21 +15,35 @@ class PromotionController extends Controller
 {
     public function show($id, LaravelFacebookSdk $fb)
     {
+        return $this->showSlug($id, null, $fb);
+    }
+
+    public function showSlug($id, $slug, LaravelFacebookSdk $fb)
+    {
         $promotion = Promotion::find($id);
+
         if (! $promotion) {
             $notification = 'La promoción a la que intentaste acceder no existe.';
             return redirect()->route('cuponera')->with(compact('notification'));
         }
-        if ($promotion->end_date < date('Y-m-d')) {
+
+        if ($promotion->hasEnded()) {
             $notification = 'La promoción a la que intentaste acceder ha caducado.';
             return redirect()->route('cuponera')->with(compact('notification'));
         }
 
+        // use always the right fan page slug
+        if ($promotion->fan_page_slug != $slug) {
+            return redirect($promotion->full_link);
+        }
 
         // Request permissions if the user still have not authenticated
         $token = session('fb_user_access_token');
-        if (! $token)
-            return redirect("/facebook/promotion/$id");
+        if (!$token || !auth()->check()) {
+            session()->put('request_login_for_promotion', $promotion->id);
+            return redirect("/facebook/promotion/login-request");
+        }
+
 
         // Fan page associated with the promotion
         $fanPage = $promotion->fanPage;
@@ -37,7 +51,7 @@ class PromotionController extends Controller
         $fanPageName = $fanPage->name;
         $fanPageFbId = $fanPage->fan_page_id;
 
-        // Use token to perform the queries
+        // Set token
         $fb->setDefaultAccessToken($token);
 
         // Authenticated user info
@@ -65,11 +79,8 @@ class PromotionController extends Controller
         $pageIsLiked = $graphEdge->count() > 0; // 1 when the page is liked
         */
 
-        // Is the user authenticated?
-        if (! auth()->check())
-            return redirect("/facebook/promotion/$id");
         // Show a counter for the participations
-        $userId = auth()->user()->id;
+        $userId = auth()->id();
         $participationsCount = Participation::where('user_id', $userId)->where('promotion_id', $id)->count();
 
         return view('participant.promotion.show')->with(compact(
@@ -78,14 +89,13 @@ class PromotionController extends Controller
         ));
     }
 
-    public function requestFbPermissions($id, LaravelFacebookSdk $fb)
+    public function requestFbPermissions(LaravelFacebookSdk $fb)
     {
-        // Get the appropriate promotion or redirect
-        $promotion = Promotion::find($id);
-        if (! $promotion)
-            return redirect('/');
+        // get the promotion destination or redirect
+        $id = session('request_login_for_promotion');
 
-        session()->put('promotion_id', $promotion->id);
+        $promotion = Promotion::findOrFail($id);
+
 
         $loginLink = $fb->getLoginUrl(['email', 'user_location']);
 
@@ -95,17 +105,13 @@ class PromotionController extends Controller
 
         $htmlResponse .= '<meta property="og:image" content="' . asset('/images/promotions/'.$promotion->image_path) . '" />';
 
-        $htmlResponse .= "<script>" .
-            "window.top.location = '$loginLink';" .
-            "</script>";
+        $htmlResponse .= "<script>window.top.location = '$loginLink';</script>";
         return $htmlResponse;
     }
 
     public function go($id, LaravelFacebookSdk $fb)
     {
-        $promotion = Promotion::find($id);
-        if (! $promotion)
-            return redirect('/');
+        $promotion = Promotion::findOrFail($id);
 
         $token = session('fb_user_access_token');
         if (! $token) {
@@ -155,9 +161,10 @@ class PromotionController extends Controller
 
         // Is the user authenticated?
         if (! auth()->check())
-            return redirect("/facebook/promotion/$id");
+            return redirect($promotion->full_link);
+
         // Check last participation
-        $userId = auth()->user()->id;
+        $userId = auth()->id();
         $lastParticipation = Participation::where('user_id', $userId)->where('promotion_id', $id)
             ->orderBy('created_at', 'desc')->first(); // last
         if ($lastParticipation) {
