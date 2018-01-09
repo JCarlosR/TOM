@@ -186,7 +186,7 @@
                                     </div>
                                     <div class="panel-body">
                                         <div class="panel-content-image">
-                                            <a href="{{ url('/facebook/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">
+                                            <a href="{{ url('/promotion/'.$promotion['id']) }}" title="Ir a la promoción" class="pull-right" target="_blank">
                                                 <img class="img-responsive" src="{{ asset('images/promotions/'.$promotion['imagePath']) }}" alt="{{ $promotion['description'] }}">
                                             </a>
                                         </div>
