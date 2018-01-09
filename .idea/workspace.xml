@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Remove manyChat from promotions">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="66" column="81" lean-forward="false" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="81" />
+            <state relative-caret-position="235">
+              <caret line="65" column="123" lean-forward="false" selection-start-line="65" selection-start-column="123" selection-end-line="65" selection-end-column="123" />
               <folding />
             </state>
           </provider>
@@ -108,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PromotionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="263">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="e#7131#7813#0#PHP" expanded="false" />
               </folding>
@@ -131,7 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>description</find>
       <find>facebook</find>
       <find>promotioncontroller</find>
       <find>cuponera</find>
@@ -161,6 +160,7 @@
       <find>532160876956612</find>
       <find>href</find>
       <find>show</find>
+      <find>no existe</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -219,13 +219,13 @@
         <option value="$PROJECT_DIR$/resources/views/guess/club-landing.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
         <option value="$PROJECT_DIR$/app/Promotion.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" />
         <option value="$PROJECT_DIR$/public/assets/promotion/show-share.js" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/participant/promotion/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/promotions/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -560,14 +560,7 @@
       <workItem from="1514923873784" duration="2388000" />
       <workItem from="1515257278127" duration="1056000" />
       <workItem from="1515367905866" duration="6151000" />
-      <workItem from="1515460916097" duration="188000" />
-    </task>
-    <task id="LOCAL-00155" summary="Add instructions">
-      <created>1513391228895</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1513391228895</updated>
+      <workItem from="1515460916097" duration="655000" />
     </task>
     <task id="LOCAL-00156" summary="Use my own link-preview package">
       <created>1513468914743</created>
@@ -905,11 +898,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514927334786</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="Change promos url at cuponera">
+      <created>1515461111596</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1515461111596</updated>
+    </task>
+    <option name="localTasksCounter" value="205" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="566130000" />
+    <option name="totallyTimeSpent" value="566597000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -960,7 +960,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Posting a photo associated to a post (without unpublished state)" />
     <MESSAGE value="Post using user access token for group posts" />
     <MESSAGE value="Apply redirect" />
     <MESSAGE value="Add club mommy banner, and change categories btn style" />
@@ -985,7 +984,8 @@
     <MESSAGE value="Use the group or page target and the user access token based on the authenticated user role" />
     <MESSAGE value="Club landing advances" />
     <MESSAGE value="Remove manyChat from promotions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove manyChat from promotions" />
+    <MESSAGE value="Change promos url at cuponera" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change promos url at cuponera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1457,6 +1457,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#7131#7813#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Guess/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -1467,19 +1477,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="66" column="81" lean-forward="false" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="81" />
+        <state relative-caret-position="235">
+          <caret line="65" column="123" lean-forward="false" selection-start-line="65" selection-start-column="123" selection-end-line="65" selection-end-column="123" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Participant/PromotionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#7131#7813#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
