@@ -26,27 +26,23 @@ $(function () {
 });
 
 function onClickButtonShare() {
-    var promoId = $(this).data('id');
+    // var promoId = $(this).data('id');
     FB.ui(
         {
             method: 'feed',
             name: 'Wow, miren lo que gane en esta TomboFans!',
             caption: '#GanadorTomboFans',
             description: $pDescription.text(),
-            link: 'https://tombofans.com/promotion/'+promoId,
+            link: location.href,
             picture: $imgPromo.attr('src')
         },
 
         function(response)
         {
             if (response && response.post_id)
-            {
                 alert('Gracias por compartirlo!');
-            }
             else
-            {
                 alert('El post no fue publicado');
-            }
         }
     );
 }

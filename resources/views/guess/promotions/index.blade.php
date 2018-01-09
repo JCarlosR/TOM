@@ -255,7 +255,6 @@
     <script>(function(){var ldk=document.createElement('script'); ldk.type='text/javascript'; ldk.async=true; ldk.src='https://s.cliengo.com/weboptimizer/58cc915ae4b07d521ea6895f/58c72ab9e4b0d88d06cfb695.js' ; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s);})();</script>
 
     {{-- ManyChat --}}
-    <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = “//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=532160876956612”;fjs.parentNode.insertBefore(js, fjs);}(document, ‘script’, ‘facebook­jssdk’));</script>
     <script src="//widget.manychat.com/1567109470249042.js" async="async"></script>
 
     <script>
