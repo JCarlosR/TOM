@@ -91,7 +91,7 @@ class SendScheduledPosts extends Command
             if ($user->is_admin)
                 $fbGroupAdmin = 'vdesconocido777@gmail.com';
             else
-                $fbGroupAdmin = 'tombolavirtual@clubmomy.com';
+                $fbGroupAdmin = 'mamis@clubmomy.com';
 
 
             $user = User::where('email', $fbGroupAdmin)->first(['fb_access_token']); // User::where('id', $post->user_id)->first(['fb_access_token']);

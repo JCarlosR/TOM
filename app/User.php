@@ -72,7 +72,7 @@ class User extends Authenticatable
             'juancagb.17@hotmail.com',
             'tombofans@gmail.com',
             'vdesconocido777@gmail.com',
-            'tombolavirtual@clubmomy.com'
+            'mamis@clubmomy.com'
         ];
         return in_array($this->email, $admin_emails);
     }
