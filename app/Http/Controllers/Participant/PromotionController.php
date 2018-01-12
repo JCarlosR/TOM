@@ -41,7 +41,7 @@ class PromotionController extends Controller
         $token = session('fb_user_access_token');
         if (!$token || !auth()->check()) {
             session()->put('request_login_for_promotion', $promotion->id);
-            return redirect("/facebook/promotion/login-request");
+            return $this->requestFbPermissions($fb);
         }
 
 
@@ -60,7 +60,8 @@ class PromotionController extends Controller
             $response = $fb->get($query);
         } catch (FacebookSDKException $e) {
             // It happens when the user revokes the permissions
-            return redirect("/facebook/promotion/$id");
+            session()->put('request_login_for_promotion', $promotion->id);
+            return $this->requestFbPermissions($fb);
         }
         $graphNode = $response->getGraphNode();
         $participantName = $graphNode->getField('name');
@@ -93,9 +94,7 @@ class PromotionController extends Controller
     {
         // get the promotion destination or redirect
         $id = session('request_login_for_promotion');
-
         $promotion = Promotion::findOrFail($id);
-
 
         $loginLink = $fb->getLoginUrl(['email', 'user_location']);
 
