@@ -33,7 +33,7 @@ function onClickButtonShare() {
             name: 'Wow, miren lo que gane en esta TomboFans!',
             caption: '#GanadorTomboFans',
             description: $pDescription.text(),
-            link: location.href,
+            link: location.href.replace(location.hash,""),
             picture: $imgPromo.attr('src')
         },
 
