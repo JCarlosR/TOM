@@ -47,8 +47,14 @@
                     <li>Difundiremos tu marca en facebook para que obtengas más clientes potenciales.</li>
                     <li>Agrega a tus publicaciones, precio, lugar de entrega, precio y forma de pago.</li>
                     <li>También puedes publicar en la cuponera virtual, accediendo a la <a href="/config">sección de promociones</a> sin pagar extras.</li>
-                    <li><small>Cancelaremos tu membresía si publicas armas de fuego, animales, tráfico de personas, fraudes,  inversiones milagrosas, inmuebles, bazares, o cualquier solicitud de dinero sin un producto o servicio.</small></li>
-                    <li>Y lo mejor es que solo pagas por tu membresía una cuota de recuperación mínima de 59 pesos mensuales <small>(50% usados para cubrir el uso de la plataforma y el otro 50% en marketing digital)</small>.</li>
+                    <li>
+                        <small>
+                            Cancelaremos tu membresía si publicas armas de fuego, animales, tráfico de personas, fraudes,
+                            inversiones milagrosas, inmuebles, bazares, piratería, cualquier solicitud de dinero
+                            sin un producto o servicio y aquello que no cumpla con las reglas del grupo (ver descripción del grupo en facebook).
+                        </small>
+                    </li>
+                    <li>Y lo mejor es que solo pagas por tu membresía una cuota de recuperación mínima de 99 pesos mensuales <small>(50% usados para cubrir el uso de la plataforma y el otro 50% en marketing digital)</small>.</li>
                 </ul>
 
                 <p>Solo sigue estos <strong>dos pasos</strong>:</p>
