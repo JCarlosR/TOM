@@ -233,11 +233,16 @@
             $scheduledDate = $('#scheduledDate');
             $scheduledTime = $('#scheduledTime');
 
-            $scheduleBtn.on('click', sendScheduledPost);
+
+            $scheduleBtn.on('click', function () {
+                if (validateAtLeastOneCheck())
+                    sendScheduledPost();
+            });
             $nowBtn.on('click', function () {
-                // $('#modalSchedule').remove();
-                $scheduleForm.append('<input type="hidden" name="now" id="now" value="1">');
-                sendScheduledPost();
+                if (validateAtLeastOneCheck()) {
+                    $scheduleForm.append('<input type="hidden" name="now" id="now" value="1">');
+                    sendScheduledPost();
+                }
             });
 
             setupButtonImage();
@@ -253,6 +258,16 @@
 
             setupContactOptions();
         });
+
+        function validateAtLeastOneCheck() {
+            var checkedCount = $('input:checkbox:checked').length;
+            if (checkedCount === 0) {
+                alert('Debe seleccionar al menos un medio de contacto');
+                return false;
+            }
+
+            return true;
+        }
 
         function setupContactOptions() {
             $checkPage = $('#checkPage');
