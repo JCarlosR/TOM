@@ -17,6 +17,7 @@ class UserListener
             $m->to($user->email, $user->name)->subject('Bienvenido a TomboFans');
         });
 
+        $user->remaining_participations = 1;
         $user->welcome_mail_sent = true;
         $user->save();
     }

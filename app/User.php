@@ -22,7 +22,7 @@ class User extends Authenticatable
     ];
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'remaining_participations',
         'fb_access_token', 'fb_access_token_updated_at'
     ];
 
