@@ -108,3 +108,15 @@ Route::post('/api/participation/{id}/status', 'Api\ParticipationController@updat
 // Test routes
 // It exists only for testing purposes
 Route::get('/test/query/promotions', 'Guess\PromotionController@testQuery');
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/scraping', 'ScrapingController@example');
