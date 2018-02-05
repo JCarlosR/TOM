@@ -29,7 +29,8 @@ class ScrapingController extends Controller
     {
         // create csv file
         $fileName = date('Y-m-d').'.csv'; // 2018-02-04.csv
-        $file = fopen($fileName, 'w');
+        $filePath = public_path($fileName);
+        $file = fopen($filePath, 'w');
 
         // write to the file
         /*$contacts = [];
@@ -44,7 +45,7 @@ class ScrapingController extends Controller
         }
 
         // generate file download
-        return response()->download($fileName);
+        return response()->download($filePath);
     }
 
     public function extractContactsFrom(Crawler $crawler)
