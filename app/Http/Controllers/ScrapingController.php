@@ -40,6 +40,8 @@ class ScrapingController extends Controller
         $contact2['name'] = 'Carlos';
         $contact2['email'] = 'hola2@programacionymas.com';
         $contacts[] = $contact2;*/
+        fprintf($file, chr(0xEF).chr(0xBB).chr(0xBF));
+        // encoding to show special chars at excel
         foreach ($this->contacts as $contact) {
             fputcsv($file, $contact);
         }
