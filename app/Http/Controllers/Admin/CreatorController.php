@@ -74,7 +74,7 @@ class CreatorController extends Controller
 
                             // Fan page link
                             $fanPageLink = 'https://www.facebook.com/' . $fanPage->fan_page_id;
-                            $sheet->getCell('G'.($i+3))
+                            $sheet->getCell('H'.($i+3))
                                 ->setValueExplicit($fanPageLink, PHPExcel_Cell_DataType::TYPE_STRING)
                                 ->getHyperlink()->setUrl($fanPageLink);
 
@@ -95,13 +95,13 @@ class CreatorController extends Controller
 
                                 // Fan page link
                                 $fanPageLink = 'https://www.facebook.com/' . $fanPage->fan_page_id;
-                                $sheet->getCell('G'.($i+3))
+                                $sheet->getCell('H'.($i+3))
                                     ->setValueExplicit($fanPageLink, PHPExcel_Cell_DataType::TYPE_STRING)
                                     ->getHyperlink()->setUrl($fanPageLink);
 
                                 // Promotion link
                                 $promotionLink = url('promotion/'.$promotion->id);
-                                $sheet->getCell('J'.($i+3))
+                                $sheet->getCell('K'.($i+3))
                                     // ->setValueExplicit($promotionLink, PHPExcel_Cell_DataType::TYPE_STRING)
                                     ->getHyperlink()->setUrl($promotionLink);
 

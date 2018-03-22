@@ -92,8 +92,8 @@
       <file leaf-file-name="CreatorController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="256">
+              <caret line="103" column="50" lean-forward="false" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -597,14 +597,7 @@
       <workItem from="1518890286978" duration="889000" />
       <workItem from="1519181338385" duration="606000" />
       <workItem from="1520300266937" duration="648000" />
-      <workItem from="1521741770798" duration="2284000" />
-    </task>
-    <task id="LOCAL-00169" summary="Try posting an album">
-      <created>1513724303042</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1513724303042</updated>
+      <workItem from="1521741770798" duration="2667000" />
     </task>
     <task id="LOCAL-00170" summary="Remove invalid parameter (for pages)">
       <created>1513735206049</created>
@@ -942,11 +935,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521760768329</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="Add scheduled posts count to excel">
+      <created>1521761265381</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1521761265381</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="604217000" />
+    <option name="totallyTimeSpent" value="604600000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1021,7 +1021,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Override og image for cuponera page" />
     <MESSAGE value="Fix og url to show the current" />
     <MESSAGE value="Show message and redirect for ended or cancelled promos" />
     <MESSAGE value="Change btn colors" />
@@ -1046,7 +1045,8 @@
     <MESSAGE value="Fix encoding" />
     <MESSAGE value="Add new admin email" />
     <MESSAGE value="Add scheduled posts count (sent)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add scheduled posts count (sent)" />
+    <MESSAGE value="Add scheduled posts count to excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scheduled posts count to excel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1448,8 +1448,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+        <state relative-caret-position="256">
+          <caret line="103" column="50" lean-forward="false" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
           <folding />
         </state>
       </provider>
