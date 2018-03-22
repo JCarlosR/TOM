@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="Add">
+    <list default="true" id="83297269-bb3b-482f-910f-d474536a2fd9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,28 +64,46 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="90" column="48" lean-forward="false" selection-start-line="90" selection-start-column="48" selection-end-line="90" selection-end-column="48" />
+            <state relative-caret-position="213">
+              <caret line="76" column="32" lean-forward="false" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreatorController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FacebookPostController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="e#1152#2037#0#PHP" expanded="false" />
+                <element signature="e#2043#3236#0#PHP" expanded="false" />
+                <element signature="e#3242#3632#0#PHP" expanded="false" />
+                <element signature="e#3638#8445#0#PHP" expanded="false" />
+                <element signature="e#8451#9323#0#PHP" expanded="false" />
+                <element signature="e#9329#9695#0#PHP" expanded="false" />
+                <element signature="e#9701#10350#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreatorController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="213">
+              <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/creators/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="52" column="77" lean-forward="false" selection-start-line="52" selection-start-column="77" selection-end-line="52" selection-end-column="77" />
+            <state relative-caret-position="403">
+              <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="102" />
               <folding>
                 <marker date="1521760749222" expanded="true" signature="9:28" ph="..." />
                 <marker date="1521760749222" expanded="true" signature="40:59" ph="..." />
@@ -121,8 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$targetFbId</find>
-      <find>targetFbId</find>
       <find>laravelfac</find>
       <find>fanp</find>
       <find>flex</find>
@@ -151,6 +167,8 @@
       <find>membre</find>
       <find>59</find>
       <find>set</find>
+      <find>posts/pass</find>
+      <find>row[</find>
     </findStrings>
     <replaceStrings>
       <replace>TOM</replace>
@@ -165,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Creator/PostImageCloudinary.php" />
         <option value="$PROJECT_DIR$/app/ScheduledPostImage.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/resources/views/panel/posts/finished.blade.php" />
@@ -216,6 +233,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ScrapingController.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/creators/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php" />
       </list>
     </option>
   </component>
@@ -579,14 +597,7 @@
       <workItem from="1518890286978" duration="889000" />
       <workItem from="1519181338385" duration="606000" />
       <workItem from="1520300266937" duration="648000" />
-      <workItem from="1521741770798" duration="1787000" />
-    </task>
-    <task id="LOCAL-00168" summary="Use env variable to store the fan page access token">
-      <created>1513720065329</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1513720065329</updated>
+      <workItem from="1521741770798" duration="2284000" />
     </task>
     <task id="LOCAL-00169" summary="Try posting an album">
       <created>1513724303042</created>
@@ -924,11 +935,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520300311796</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="Add scheduled posts count (sent)">
+      <created>1521760768328</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1521760768329</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="603720000" />
+    <option name="totallyTimeSpent" value="604217000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1003,7 +1021,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Show menu item for all users, and use the new field" />
     <MESSAGE value="Override og image for cuponera page" />
     <MESSAGE value="Fix og url to show the current" />
     <MESSAGE value="Show message and redirect for ended or cancelled promos" />
@@ -1028,7 +1045,8 @@
     <MESSAGE value="Add public path" />
     <MESSAGE value="Fix encoding" />
     <MESSAGE value="Add new admin email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new admin email" />
+    <MESSAGE value="Add scheduled posts count (sent)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scheduled posts count (sent)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1205,13 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/promotion/show.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1562">
@@ -1317,13 +1328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Listeners/UserListener.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1383,26 +1387,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="90" column="48" lean-forward="false" selection-start-line="90" selection-start-column="48" selection-end-line="90" selection-end-column="48" />
+        <state relative-caret-position="660">
+          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="213">
+          <caret line="76" column="32" lean-forward="false" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Creator/FacebookPostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#1152#2037#0#PHP" expanded="false" />
+            <element signature="e#2043#3236#0#PHP" expanded="false" />
+            <element signature="e#3242#3632#0#PHP" expanded="false" />
+            <element signature="e#3638#8445#0#PHP" expanded="false" />
+            <element signature="e#8451#9323#0#PHP" expanded="false" />
+            <element signature="e#9329#9695#0#PHP" expanded="false" />
+            <element signature="e#9701#10350#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/creators/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="52" column="77" lean-forward="false" selection-start-line="52" selection-start-column="77" selection-end-line="52" selection-end-column="77" />
+        <state relative-caret-position="403">
+          <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="102" />
           <folding>
             <marker date="1521760749222" expanded="true" signature="9:28" ph="..." />
             <marker date="1521760749222" expanded="true" signature="40:59" ph="..." />
@@ -1423,6 +1443,14 @@
             <marker date="1521760749222" expanded="true" signature="3346:3395" ph="..." />
             <marker date="1521760749222" expanded="true" signature="3890:3899" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CreatorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

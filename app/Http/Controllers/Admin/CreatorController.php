@@ -30,7 +30,7 @@ class CreatorController extends Controller
                 $sheet->mergeCells('A1:F1');
                 $sheet->row(1, ['Datos principales, fan pages y promociones de los usuarios creadores']);
                 $sheet->row(2, [
-                    'Nombre', 'E-mail', 'Fan pages', 'Registro', 'Participaciones restantes', 'Última participación',
+                    'Nombre', 'E-mail', 'Fan pages', 'Registro', 'Créditos', 'Última participación', 'Publicaciones realizadas',
                     'ID Fan page', 'Fan page', 'Categoría',
                     'Promoción', 'Vigencia', 'Ganar cada', 'Participaciones'
                 ]);
@@ -47,22 +47,23 @@ class CreatorController extends Controller
                     $row[3] = $creator->created_at;
                     $row[4] = $creator->remaining_participations;
                     $row[5] = $creator->updated_at;
+                    $row[6] = $creator->scheduledPosts()->whereStatus('Enviado')->count();
 
                     $fbId = $creator->facebook_user_id;
                     $fbProfile = 'https://www.facebook.com/app_scoped_user_id/' . $fbId;
 
                     foreach ($creator->fanPages as $fanPage) {
-                        $row[6] = $fanPage->fan_page_id;
-                        $row[7] = $fanPage->name;
-                        $row[8] = $fanPage->category;
+                        $row[7] = $fanPage->fan_page_id;
+                        $row[8] = $fanPage->name;
+                        $row[9] = $fanPage->category;
 
                         $promotions = $fanPage->promotions;
                         if (sizeof($promotions) == 0)
                         {
-                            $row[9] = '0';
                             $row[10] = '0';
                             $row[11] = '0';
                             $row[12] = '0';
+                            $row[13] = '0';
 
                             $sheet->appendRow($row);
 
@@ -80,10 +81,10 @@ class CreatorController extends Controller
                             $i += 1;
                         } else {
                             foreach ($fanPage->promotions as $promotion) {
-                                $row[9] = $promotion->description;
-                                $row[10] = $promotion->end_date;
-                                $row[11] = $promotion->attempts;
-                                $row[12] = $promotion->participations_count;
+                                $row[10] = $promotion->description;
+                                $row[11] = $promotion->end_date;
+                                $row[12] = $promotion->attempts;
+                                $row[13] = $promotion->participations_count;
 
                                 $sheet->appendRow($row);
 
