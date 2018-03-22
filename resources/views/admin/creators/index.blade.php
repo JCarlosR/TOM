@@ -31,8 +31,9 @@
                                 <th>Fanpages</th>
                                 <th>Fecha de registro</th>
                                 <th>Referidos</th>
-                                <th>Participaciones restantes</th>
+                                <th title="Créditos disponibles, usados en participaciones y/o publicaciones">Créditos</th>
                                 <th>Última participación</th>
+                                <th>Publicaciones realizadas</th>
                                 <th>Opciones</th>
                             </tr>
                             </thead>
@@ -46,20 +47,18 @@
                                     </td>
                                     <td>{{ $creator->email }}</td>
                                     <td>{{ $creator->fanPagesCount }}</td>
-                                    <td>{{ $creator->created_at }}</td>
+                                    <td><small>{{ $creator->created_at }}</small></td>
                                     <td>{{ $creator->referrals_count }}</td>
                                     <td>{{ $creator->remaining_participations }}</td>
-                                    <td>{{ $creator->updated_at }}</td>
+                                    <td><small>{{ $creator->updated_at }}</small></td>
+                                    <td>{{ $creator->scheduledPosts()->whereStatus('Enviado')->count() }}</td>
                                     <td class="text-center">
-
                                         {{--<a href="{{ url('admin/creator/'.$creator->id.'/login') }}" class="btn btn-warning btn-sm btn-block" title="Iniciar sesión como este usuario">--}}
                                             {{--<span class="glyphicon glyphicon-log-in"></span>--}}
                                         {{--</a>--}}
-
                                         <a href="{{ url('admin/creator/'.$creator->id.'/fan-pages') }}" class="btn btn-info btn-sm btn-block" title="Ver fan pages">
                                             <span class="fa fa-list"></span>
                                         </a>
-
                                     </td>
                                 </tr>
                             @endforeach
