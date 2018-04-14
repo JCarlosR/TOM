@@ -72,7 +72,7 @@ class SendScheduledPosts extends Command
         */
 
         // Post to fan-page (0 minutes later)
-        $awaiting_posts = ScheduledPost::where('status', 'Pendiente')
+        $awaiting_posts = ScheduledPost::whereIn('status', ['Pendiente', 'En cola'])
             ->whereNull('published_to_fan_page_at')->get();
         foreach ($awaiting_posts as $post)
             if ($this->shouldPostTo('page', $post))

@@ -46,11 +46,11 @@
       <file leaf-file-name="SendScheduledPosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2066">
-              <caret line="122" column="20" lean-forward="false" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+            <state relative-caret-position="338">
+              <caret line="74" column="81" lean-forward="false" selection-start-line="74" selection-start-column="81" selection-end-line="74" selection-end-column="81" />
               <folding>
                 <element signature="e#887#1034#0#PHP" expanded="false" />
-                <element signature="e#6341#7163#0#PHP" expanded="false" />
+                <element signature="e#6356#7178#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -564,14 +564,7 @@
       <workItem from="1521741770798" duration="3277000" />
       <workItem from="1523233905481" duration="1499000" />
       <workItem from="1523317497659" duration="4176000" />
-      <workItem from="1523653290481" duration="1805000" />
-    </task>
-    <task id="LOCAL-00171" summary="Add many chat to dashboard TOM and promotions page">
-      <created>1513735845283</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1513735845283</updated>
+      <workItem from="1523653290481" duration="2006000" />
     </task>
     <task id="LOCAL-00172" summary="Post to fb group + fan page">
       <created>1513900831833</created>
@@ -909,11 +902,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521761645666</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="Disable temporarily the group posts, and post only to fan page">
+      <created>1523664003413</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1523664003414</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="612690000" />
+    <option name="totallyTimeSpent" value="612891000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -988,7 +988,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Show message and redirect for ended or cancelled promos" />
     <MESSAGE value="Change btn colors" />
     <MESSAGE value="Change menu items" />
     <MESSAGE value="Fix category promos count (use deleted_at), and create search based on category name EN" />
@@ -1013,7 +1012,8 @@
     <MESSAGE value="Add scheduled posts count (sent)" />
     <MESSAGE value="Add scheduled posts count to excel" />
     <MESSAGE value="Fix column names based in the new order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix column names based in the new order" />
+    <MESSAGE value="Disable temporarily the group posts, and post only to fan page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Disable temporarily the group posts, and post only to fan page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1390,11 +1390,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/SendScheduledPosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2066">
-          <caret line="122" column="20" lean-forward="false" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+        <state relative-caret-position="338">
+          <caret line="74" column="81" lean-forward="false" selection-start-line="74" selection-start-column="81" selection-end-line="74" selection-end-column="81" />
           <folding>
             <element signature="e#887#1034#0#PHP" expanded="false" />
-            <element signature="e#6341#7163#0#PHP" expanded="false" />
+            <element signature="e#6356#7178#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
