@@ -43,8 +43,10 @@ class SendScheduledPosts extends Command
     public function shouldPostTo($targetType, ScheduledPost $post) {
         $scheduled_date_time = $post->getScheduledDateTime();
 
+        /*
         if ($targetType == 'page')
             $scheduled_date_time->addMinutes(7);
+        */
 
         $now = Carbon::now();
         // dd($scheduled_date_time);
@@ -54,6 +56,7 @@ class SendScheduledPosts extends Command
 
     public function handle() // TO DO: Use queries to get directly the posts that should be posted
     {
+        /*
         // Post to group the pending posts
         $scheduled_posts = ScheduledPost::where('status', 'Pendiente')->get();
 
@@ -66,9 +69,10 @@ class SendScheduledPosts extends Command
         $scheduled_posts = ScheduledPost::where('status', 'En cola')->get();
         foreach ($scheduled_posts as $post)
             $this->postToFacebook($post, 'group');
+        */
 
-        // Post to fan-page 7 minutes later
-        $awaiting_posts = ScheduledPost::where('status', 'Enviado')
+        // Post to fan-page (0 minutes later)
+        $awaiting_posts = ScheduledPost::where('status', 'Pendiente')
             ->whereNull('published_to_fan_page_at')->get();
         foreach ($awaiting_posts as $post)
             if ($this->shouldPostTo('page', $post))
@@ -94,7 +98,10 @@ class SendScheduledPosts extends Command
                 $fbGroupAdmin = 'mamis@clubmomy.com';
 
 
-            $user = User::where('email', $fbGroupAdmin)->first(['fb_access_token']); // User::where('id', $post->user_id)->first(['fb_access_token']);
+            // User::where('id', $post->user_id)->first(['fb_access_token']);
+            $user = User::where('email', $fbGroupAdmin)
+                ->first(['fb_access_token']);
+
             if (!$user) return false; // user not found
 
             $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
