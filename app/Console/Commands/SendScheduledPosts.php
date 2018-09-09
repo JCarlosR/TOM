@@ -6,7 +6,9 @@ use App\ScheduledPost;
 use App\User;
 use Carbon\Carbon;
 use Facebook\Exceptions\FacebookSDKException;
+use function foo\func;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class SendScheduledPosts extends Command
@@ -36,7 +38,6 @@ class SendScheduledPosts extends Command
     public function __construct(LaravelFacebookSdk $facebookSdk)
     {
         parent::__construct();
-
         $this->facebookSdk = $facebookSdk;
     }
 
@@ -47,31 +48,29 @@ class SendScheduledPosts extends Command
         if ($targetType == 'page')
             $scheduled_date_time->addMinutes(7);
         */
-
         $now = Carbon::now();
-        // dd($scheduled_date_time);
-        // dd($now->diffInMinutes($scheduled_date_time));
+        // Log::info($scheduled_date_time);
+        // Log::info($now->diffInMinutes($scheduled_date_time));
         return $now->diffInMinutes($scheduled_date_time) <= 1;
     }
 
     public function handle() // TO DO: Use queries to get directly the posts that should be posted
     {
-        /*
         // Post to group the pending posts
         $scheduled_posts = ScheduledPost::where('status', 'Pendiente')->get();
 
-        foreach ($scheduled_posts as $post) {
+        $scheduled_posts->each(function ($post) {
             if ($this->shouldPostTo('group', $post))
                 $this->postToFacebook($post, 'group');
-        }
+        });
 
         // Post to group the immediately posts
         $scheduled_posts = ScheduledPost::where('status', 'En cola')->get();
         foreach ($scheduled_posts as $post)
             $this->postToFacebook($post, 'group');
-        */
 
-        // Post to fan-page (0 minutes later)
+
+        // Post to fan-page right now
         $awaiting_posts = ScheduledPost::whereIn('status', ['Pendiente', 'En cola'])
             ->whereNull('published_to_fan_page_at')->get();
         foreach ($awaiting_posts as $post)
@@ -140,7 +139,7 @@ class SendScheduledPosts extends Command
             $status = $this->postPhotoStory($post);
         } elseif ($post->type == 'images') {
             if ($targetType == 'group')
-                $status = $this->postPhotosAndStory($post); // groups feed
+                $status = $this->postStoryAndPhotos($post); // groups feed
             elseif ($targetType == 'page')
                 $status = $this->postAlbum($post); // fan pages feed
         } elseif ($post->type == 'video') {
@@ -323,7 +322,7 @@ class SendScheduledPosts extends Command
     {
         $queryUrl = "/$photoId";
         $params = [
-            'target_post' => $postId
+            'target' => $postId
         ];
 
         try {
@@ -387,7 +386,7 @@ class SendScheduledPosts extends Command
     }
 
     // there is no way to associate a post with an album (for groups feed)
-    // but it works for fan-pages (and the multi photo strategy doesn't work for pages)
+    // but it works for fan-pages (by other side, multi photo doesn't work for pages)
 
     public function postAlbum(ScheduledPost $post)
     {
@@ -451,4 +450,54 @@ class SendScheduledPosts extends Command
         }
     }
 
+    // postPhotosAndStory stopped working: publish_actions is deprecated and doesn't allow to update the unpublished photos
+    // let's try creating a story and uploading photos to it
+
+    public function postStoryAndPhotos(ScheduledPost $post)
+    {
+        // Upload photos
+        $photosUrl = $post->images()->pluck('secure_url');
+        $photosId = [];
+        foreach ($photosUrl as $photoUrl) {
+            $photoId = $this->postUnpublishedPhoto($post, $photoUrl);
+            if ($photoId)
+                $photosId[] = $photoId;
+            else
+                break;
+        }
+
+        if (sizeof($photosId) == 0)
+            return 'Error';
+
+        $postId = $this->createPostWithMediaPhotos($post, $photosId);
+        if (!$postId)
+            return 'Error';
+
+        return 'Enviado';
+    }
+
+    public function createPostWithMediaPhotos(ScheduledPost $post, $photosId)
+    {   // https://developers.facebook.com/docs/graph-api/photo-uploads
+        $queryUrl = "/$this->targetFbId/feed";
+        $params = [
+            'message' => $post->description
+        ];
+
+        // add media photos
+        foreach ($photosId as $key => $photoId) {
+            $params['attached_media['.$key.']'] = '{"media_fbid":"'.$photoId.'"}';
+        }
+
+        try {
+            $response = $this->facebookSdk->post($queryUrl, $params);
+            $graphNode = $response->getGraphNode();
+            $this->prettyPrint($post->id, true, 'createPostWithMediaPhotos', $graphNode->asJson());
+
+            return "Enviado";
+        } catch (FacebookSDKException $e) {
+            $this->prettyPrint($post->id, false, 'createPostWithMediaPhotos', $e->getMessage());
+
+            return "Error";
+        }
+    }
 }

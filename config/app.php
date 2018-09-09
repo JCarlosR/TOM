@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'America/Mexico_City', // America/Lima
+    'timezone' => env('APP_TIMEZONE', 'America/Mexico_City'),
 
     /*
     |--------------------------------------------------------------------------

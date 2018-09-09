@@ -17,7 +17,9 @@ class FbPostPermissionController extends Controller
     {
         // dd(url('admin/posts/callback')); https is here!
         $permissions = [
-            'publish_actions', 'user_managed_groups', 'user_photos'
+            'publish_pages', 'publish_to_groups', // these are a replacement of `publish_actions`
+            // 'groups_access_member_info', // `user_managed_groups` doesn't exist anymore
+            // 'user_photos' // this is not required now
         ];
 
         $loginUrl = $fb->getLoginUrl($permissions, url('/facebook/posts/callback'));
