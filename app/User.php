@@ -74,7 +74,7 @@ class User extends Authenticatable
             'vdesconocido777@gmail.com',
             'mamis@clubmomy.com',
             'estefannyramsa@gmail.com',
-            'open_ptiusni_user@tfbnw.net'
+            'dpuaqjmcyq_1536612099@tfbnw.net'
         ];
         return in_array($this->email, $admin_emails);
     }
