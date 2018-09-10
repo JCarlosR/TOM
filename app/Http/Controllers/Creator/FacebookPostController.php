@@ -85,8 +85,9 @@ class FacebookPostController extends Controller
                 $permissions = $graphEdge->all();
 
                 $availablePermissions = false;
+                // TO DO: Add check of publish_to_groups
                 foreach ($permissions as $permission) {
-                    if ($permission['permission'] == 'publish_actions' && $permission['status'] == 'granted') {
+                    if ($permission['permission'] == 'publish_pages' && $permission['status'] == 'granted') {
                         $availablePermissions = true;
                         break;
                     }
