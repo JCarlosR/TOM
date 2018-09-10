@@ -41,40 +41,29 @@ class SendScheduledPosts extends Command
         $this->facebookSdk = $facebookSdk;
     }
 
-    public function shouldPostTo($targetType, ScheduledPost $post) {
-        $scheduled_date_time = $post->getScheduledDateTime();
-
-        /*
-        if ($targetType == 'page')
-            $scheduled_date_time->addMinutes(7);
-        */
-        $now = Carbon::now();
-        // Log::info($scheduled_date_time);
-        // Log::info($now->diffInMinutes($scheduled_date_time));
-        return $now->diffInMinutes($scheduled_date_time) <= 1;
-    }
-
-    public function handle() // TO DO: Use queries to get directly the posts that should be posted
+    public function handle()
     {
         // Post to group the pending posts
-        $scheduled_posts = ScheduledPost::where('status', 'Pendiente')->get();
+        $scheduled_posts = ScheduledPost::where('status', 'Pendiente')
+            ->whereDate('scheduled_date', '>=', Carbon::today())->get();
 
         $scheduled_posts->each(function ($post) {
-            if ($this->shouldPostTo('group', $post))
+            if ($post->isAtTheRightPublishTime('group'))
                 $this->postToFacebook($post, 'group');
         });
 
-        // Post to group the immediately posts
+        // Post to group the immediately scheduled posts
         $scheduled_posts = ScheduledPost::where('status', 'En cola')->get();
         foreach ($scheduled_posts as $post)
             $this->postToFacebook($post, 'group');
 
 
-        // Post to fan-page right now
-        $awaiting_posts = ScheduledPost::whereIn('status', ['Pendiente', 'En cola'])
-            ->whereNull('published_to_fan_page_at')->get();
+        // Post to fan-page
+        $awaiting_posts = ScheduledPost::whereNull('published_to_fan_page_at')
+            ->whereDate('scheduled_date', '>=', Carbon::today())->get();
+        // Log::info("awaiting_posts => " . count($awaiting_posts));
         foreach ($awaiting_posts as $post)
-            if ($this->shouldPostTo('page', $post))
+            if ($this->isAtTheRightPublishTime('page'))
                 $this->postToFacebook($post, 'page');
     }
 
@@ -101,9 +90,11 @@ class SendScheduledPosts extends Command
             $user = User::where('email', $fbGroupAdmin)
                 ->first(['fb_access_token']);
 
-            if (!$user) return false; // user not found
+            if (!$user)
+                return false; // user not found
 
             $this->facebookSdk->setDefaultAccessToken($user->fb_access_token);
+
         } elseif ($type == 'page') {
             // use the fan page access token
 

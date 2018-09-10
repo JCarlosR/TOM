@@ -73,7 +73,8 @@ class User extends Authenticatable
             'tombofans@gmail.com',
             'vdesconocido777@gmail.com',
             'mamis@clubmomy.com',
-            'estefannyramsa@gmail.com'
+            'estefannyramsa@gmail.com',
+            'open_ptiusni_user@tfbnw.net'
         ];
         return in_array($this->email, $admin_emails);
     }

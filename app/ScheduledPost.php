@@ -17,6 +17,8 @@ class ScheduledPost extends Model
         return $this->hasMany(ScheduledPostImage::class);
     }
 
+    // useful methods
+
     public function getScheduledDateTime()
     {
         return new Carbon($this->scheduled_date. ' ' . $this->scheduled_time);
@@ -26,5 +28,19 @@ class ScheduledPost extends Model
     {
         return ScheduledPost::where('scheduled_date', $post->scheduled_date)
             ->where('scheduled_time', $post->scheduled_time)->exists();
+    }
+
+    public function isAtTheRightPublishTime($targetType) {
+        $scheduled_date_time = $this->getScheduledDateTime();
+
+        if ($targetType == 'page')
+            $scheduled_date_time->addMinutes(3);
+
+        $now = Carbon::now();
+
+        // Log::info($scheduled_date_time);
+        // Log::info($now->diffInMinutes($scheduled_date_time));
+
+        return $now->diffInMinutes($scheduled_date_time) <= 1;
     }
 }
