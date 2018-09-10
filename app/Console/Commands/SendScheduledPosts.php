@@ -63,7 +63,7 @@ class SendScheduledPosts extends Command
             ->whereDate('scheduled_date', '>=', Carbon::today())->get();
         // Log::info("awaiting_posts => " . count($awaiting_posts));
         foreach ($awaiting_posts as $post)
-            if ($this->isAtTheRightPublishTime('page'))
+            if ($post->isAtTheRightPublishTime('page'))
                 $this->postToFacebook($post, 'page');
     }
 
